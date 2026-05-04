@@ -1,0 +1,24 @@
+# Environment variables - never upload
+.env
+
+# Generated outputs - too large for GitHub
+/outputs/
+/reports/
+*.html
+intelligence_report_*.json
+article_*.html
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+*.egg-info/
+
+# System files
+.DS_Store
+Thumbs.db
+
