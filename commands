@@ -1,0 +1,9 @@
+cd ~/equinoxen-intelligence
+git add .
+git status
+
+git commit -m "Update intelligence and content pipeline scripts"
+#push to github
+git push origin main 
+#pull from github
+git pull origin main

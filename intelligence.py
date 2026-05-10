@@ -1,9 +1,9 @@
 import os
 import json
 import time
-import praw
+import requests
+import feedparser
 import pandas as pd
-from pytrends.request import TrendReq
 from dotenv import load_dotenv
 from datetime import datetime
 import anthropic
@@ -14,7 +14,7 @@ load_dotenv()
 # ─── CONFIGURATION ────────────────────────────────────────────
 NICHES = [
     "CRM software",
-    "email marketing software", 
+    "email marketing software",
     "project management software",
     "SEO tools",
     "business automation software",
@@ -26,140 +26,254 @@ NICHES = [
 SUBREDDITS = [
     "entrepreneur",
     "smallbusiness",
-    "marketing",
-    "startups",
     "SaaS",
+    "marketing",
     "productivity",
+    "startups",
     "digitalnomad",
     "freelance",
 ]
 
-# ─── REDDIT SETUP ─────────────────────────────────────────────
-reddit = praw.Reddit(
-    client_id=os.getenv("REDDIT_CLIENT_ID"),
-    client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
-    username=os.getenv("REDDIT_USERNAME"),
-    password=os.getenv("REDDIT_PASSWORD"),
-    user_agent=os.getenv("REDDIT_USER_AGENT"),
-)
+PAIN_POINT_KEYWORDS = [
+    'recommend', 'alternative', 'looking for', 'best tool',
+    'which software', 'need help', 'frustrated', 'switch from',
+    'better than', 'replace', 'comparison', 'vs ', 'review',
+    'anyone use', 'thoughts on', 'worth it', 'pricing',
+    'too expensive', 'free alternative', 'open source',
+    'best crm', 'best email', 'best project', 'help choosing',
+    'which tool', 'recommendation', 'suggestions', 'advice',
+]
 
-# ─── GOOGLE TRENDS SETUP ──────────────────────────────────────
-pytrends = TrendReq(hl='en-US', tz=360)
-
-# ─── LAYER 1: GOOGLE TRENDS ───────────────────────────────────
-def get_trending_topics(niche):
-    """Get trending searches for a niche from Google Trends"""
-    print(f"\n📈 Checking Google Trends for: {niche}")
+# ─── LAYER 1: GOOGLE TRENDS VIA SERPAPI ───────────────────────
+def get_trending_topics_serpapi(niche):
+    """Get trending topics via SerpAPI - handles rate limits automatically"""
+    print(f"\n📈 Checking trends for: {niche}")
+    
+    serpapi_key = os.getenv("SERPAPI_KEY")
+    if not serpapi_key:
+        print("  ⚠️  No SERPAPI_KEY found in .env - skipping trends")
+        return []
+    
     try:
-        pytrends.build_payload([niche], timeframe='now 7-d', geo='US')
-        related_queries = pytrends.related_queries()
+        params = {
+            "engine": "google_trends",
+            "q": niche,
+            "date": "now 7-d",
+            "geo": "US",
+            "api_key": serpapi_key
+        }
         
-        results = []
-        if niche in related_queries:
-            rising = related_queries[niche].get('rising')
-            top = related_queries[niche].get('top')
-            
-            if rising is not None and not rising.empty:
-                for _, row in rising.head(5).iterrows():
-                    results.append({
-                        'keyword': row['query'],
-                        'type': 'rising',
-                        'value': row['value'],
-                        'niche': niche
-                    })
-            
-            if top is not None and not top.empty:
-                for _, row in top.head(5).iterrows():
-                    results.append({
-                        'keyword': row['query'],
-                        'type': 'top',
-                        'value': row['value'],
-                        'niche': niche
-                    })
+        response = requests.get(
+            "https://serpapi.com/search",
+            params=params,
+            timeout=30
+        )
         
-        time.sleep(2)  # Respect rate limits
-        return results
+        if response.status_code != 200:
+            print(f"  ⚠️  SerpAPI error: {response.status_code}")
+            return []
+        
+        data = response.json()
+        trending = []
+        
+        # Get related queries
+        related = data.get("related_queries", {})
+        rising = related.get("rising", [])
+        top = related.get("top", [])
+        
+        for item in rising[:5]:
+            trending.append({
+                'keyword': item.get('query', ''),
+                'type': 'rising',
+                'value': item.get('value', 0),
+                'niche': niche,
+                'source': 'google_trends'
+            })
+        
+        for item in top[:5]:
+            trending.append({
+                'keyword': item.get('query', ''),
+                'type': 'top',
+                'value': item.get('value', 0),
+                'niche': niche,
+                'source': 'google_trends'
+            })
+        
+        print(f"  Found {len(trending)} trending keywords")
+        time.sleep(3)
+        return trending
+        
     except Exception as e:
-        print(f"  ⚠️  Trends error for {niche}: {e}")
+        print(f"  ⚠️  SerpAPI error: {e}")
         return []
 
-# ─── LAYER 2: REDDIT PAIN POINTS ──────────────────────────────
-def get_reddit_pain_points(subreddit_name, limit=25):
-    """Find SaaS pain points from Reddit posts"""
-    print(f"\n🔍 Scanning r/{subreddit_name}...")
+# ─── LAYER 2: REDDIT VIA RSS (NO API NEEDED) ──────────────────
+def get_reddit_via_rss(subreddit_name, limit=25):
+    """Get Reddit posts via RSS - zero credentials needed"""
+    print(f"\n🔍 Scanning r/{subreddit_name} via RSS...")
+    
     pain_points = []
     
+    # Try hot and new feeds
+    feed_urls = [
+        f"https://www.reddit.com/r/{subreddit_name}/hot.rss",
+        f"https://www.reddit.com/r/{subreddit_name}/new.rss",
+    ]
+    
+    headers = {
+        'User-Agent': 'EquinoxenMedia/1.0 (content research; equinoxen.com)'
+    }
+    
+    seen_titles = set()
+    
+    for feed_url in feed_urls:
+        try:
+            response = requests.get(
+                feed_url,
+                headers=headers,
+                timeout=15
+            )
+            
+            if response.status_code != 200:
+                print(f"  ⚠️  RSS error {response.status_code} for {feed_url}")
+                continue
+            
+            feed = feedparser.parse(response.content)
+            
+            for entry in feed.entries[:limit]:
+                title = entry.get('title', '')
+                
+                # Skip duplicates
+                if title in seen_titles:
+                    continue
+                seen_titles.add(title)
+                
+                title_lower = title.lower()
+                
+                # Score by keyword relevance
+                score = sum(
+                    1 for kw in PAIN_POINT_KEYWORDS 
+                    if kw in title_lower
+                )
+                
+                if score >= 1:
+                    pain_points.append({
+                        'title': title,
+                        'link': entry.get('link', ''),
+                        'relevance': score,
+                        'subreddit': subreddit_name,
+                        'source': 'reddit_rss'
+                    })
+            
+            time.sleep(2)
+            
+        except Exception as e:
+            print(f"  ⚠️  RSS error for r/{subreddit_name}: {e}")
+            continue
+    
+    # Sort by relevance
+    pain_points.sort(key=lambda x: x['relevance'], reverse=True)
+    top_posts = pain_points[:10]
+    
+    print(f"  Found {len(top_posts)} relevant posts")
+    return top_posts
+
+# ─── LAYER 3: KEYWORD SEARCH VIA SERPAPI ──────────────────────
+def get_keyword_data(keyword):
+    """Get search volume and competition data for a keyword"""
+    
+    serpapi_key = os.getenv("SERPAPI_KEY")
+    if not serpapi_key:
+        return {}
+    
     try:
-        subreddit = reddit.subreddit(subreddit_name)
+        params = {
+            "engine": "google",
+            "q": keyword,
+            "location": "United States",
+            "api_key": serpapi_key,
+            "num": 10
+        }
         
-        # Check hot posts
-        for post in subreddit.hot(limit=limit):
-            score = 0
-            keywords = [
-                'recommend', 'alternative', 'looking for', 'best tool',
-                'which software', 'need help', 'frustrated', 'switch from',
-                'better than', 'replace', 'comparison', 'vs ', 'review',
-                'anyone use', 'thoughts on', 'worth it', 'pricing',
-                'too expensive', 'free alternative', 'open source'
-            ]
-            
-            title_lower = post.title.lower()
-            for kw in keywords:
-                if kw in title_lower:
-                    score += 1
-            
-            if score >= 1:
-                pain_points.append({
-                    'title': post.title,
-                    'score': post.score,
-                    'comments': post.num_comments,
-                    'relevance': score,
-                    'url': f"https://reddit.com{post.permalink}",
-                    'subreddit': subreddit_name
-                })
+        response = requests.get(
+            "https://serpapi.com/search",
+            params=params,
+            timeout=30
+        )
         
-        # Sort by relevance and engagement
-        pain_points.sort(key=lambda x: x['relevance'] * x['score'], reverse=True)
-        return pain_points[:10]
+        if response.status_code != 200:
+            return {}
+        
+        data = response.json()
+        
+        # Check organic results count as competition signal
+        organic = data.get("organic_results", [])
+        ads = data.get("ads", [])
+        
+        return {
+            'keyword': keyword,
+            'organic_results': len(organic),
+            'has_ads': len(ads) > 0,
+            'competition': 'high' if len(ads) > 3 else 'medium' if len(ads) > 0 else 'low'
+        }
         
     except Exception as e:
-        print(f"  ⚠️  Reddit error for r/{subreddit_name}: {e}")
-        return []
+        return {}
 
-# ─── LAYER 3: CLAUDE ANALYSIS ─────────────────────────────────
+# ─── LAYER 4: CLAUDE ANALYSIS ─────────────────────────────────
 def analyze_opportunities(trends_data, reddit_data):
-    """Use Claude to identify the best content opportunities"""
+    """Use Claude to identify best content opportunities"""
     print("\n🤖 Analyzing opportunities with Claude...")
     
-    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+    if not anthropic_key:
+        print("  ❌ No ANTHROPIC_API_KEY found in .env")
+        return []
     
-    # Prepare data summary
-    trends_summary = json.dumps(trends_data[:20], indent=2)
-    reddit_summary = json.dumps(reddit_data[:20], indent=2)
+    client = anthropic.Anthropic(api_key=anthropic_key)
     
-    prompt = f"""You are an expert SaaS affiliate content strategist for Equinoxen Media, 
-an independent SaaS review and comparison website.
+    # Prepare summaries
+    trends_summary = json.dumps(trends_data[:20], indent=2) if trends_data else "No trends data available"
+    
+    reddit_summary = json.dumps([{
+        'title': p['title'],
+        'subreddit': p['subreddit'],
+        'relevance': p['relevance']
+    } for p in reddit_data[:30]], indent=2)
+    
+    prompt = f"""You are an expert SaaS affiliate content strategist for Equinoxen Media,
+an independent SaaS review and comparison website targeting business owners,
+marketers and entrepreneurs.
 
-Analyze these trending topics and Reddit pain points to identify the TOP 10 content 
-opportunities for affiliate review articles.
+Analyze these trending topics and Reddit pain points to identify the TOP 10
+content opportunities for affiliate review articles.
 
 GOOGLE TRENDS DATA:
 {trends_summary}
 
-REDDIT PAIN POINTS:
+REDDIT PAIN POINTS (from r/entrepreneur, r/smallbusiness, r/SaaS etc):
 {reddit_summary}
 
-For each opportunity provide:
-1. Suggested article title (SEO optimized)
-2. Target keyword (1-3 words, high commercial intent)
-3. Content type (review/comparison/buying guide)
-4. Estimated affiliate programs to target
+For each opportunity identify:
+1. A compelling SEO optimized article title
+2. Primary target keyword (2-4 words, high commercial intent)
+3. Content type: review, comparison, or buying_guide
+4. Affiliate programs to target from this list:
+   HubSpot, Monday.com, Semrush, Notion, Webflow, Jotform, 
+   Zoho, Unbounce, Klaviyo, Asana, ClickUp, Ahrefs,
+   QuickBooks, FreshBooks, Zapier, Canva, Grammarly
 5. Why this opportunity is strong right now
-6. Urgency score (1-10)
+6. Urgency score 1-10
 
-Return ONLY a JSON array. No markdown. No explanation. Just raw JSON:
-[{{"title":"...","keyword":"...","type":"...","programs":["..."],"why":"...","urgency":8}}]"""
+Rules for good opportunities:
+- High commercial intent keywords (best, review, alternative, vs, comparison)
+- Products with affiliate programs paying 20%+ commission
+- Topics with clear buyer intent from Reddit discussions
+- Avoid overly broad topics — be specific
 
+Return ONLY a valid JSON array. No markdown. No explanation:
+[{{"title":"...","keyword":"...","type":"review","programs":["HubSpot"],"why":"...","urgency":8}}]"""
+    
     try:
         message = client.messages.create(
             model="claude-sonnet-4-5",
@@ -167,23 +281,31 @@ Return ONLY a JSON array. No markdown. No explanation. Just raw JSON:
             messages=[{"role": "user", "content": prompt}]
         )
         
-        response_text = message.content[0].text
+        response_text = message.content[0].text.strip()
+        
         # Clean up response
-        response_text = response_text.strip()
-        if response_text.startswith('```'):
+        if '```' in response_text:
             response_text = response_text.split('```')[1]
             if response_text.startswith('json'):
                 response_text = response_text[4:]
         
+        # Find JSON array
+        start = response_text.find('[')
+        end = response_text.rfind(']') + 1
+        if start >= 0 and end > 0:
+            response_text = response_text[start:end]
+        
         opportunities = json.loads(response_text)
+        print(f"  ✅ Found {len(opportunities)} opportunities")
         return opportunities
+        
     except Exception as e:
-        print(f"  ⚠️  Claude analysis error: {e}")
+        print(f"  ❌ Claude analysis error: {e}")
         return []
 
-# ─── LAYER 4: SAVE RESULTS ────────────────────────────────────
+# ─── LAYER 5: SAVE RESULTS ────────────────────────────────────
 def save_results(trends_data, reddit_data, opportunities):
-    """Save all results to a JSON file"""
+    """Save all results to JSON file"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
     output = {
@@ -208,52 +330,63 @@ def save_results(trends_data, reddit_data, opportunities):
 # ─── MAIN RUNNER ──────────────────────────────────────────────
 def run_intelligence():
     print("=" * 60)
-    print("  EQUINOXEN MEDIA — INTELLIGENCE LAYER")
-    print(f"  Running at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("  EQUINOXEN MEDIA — INTELLIGENCE LAYER v2")
+    print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("  Reddit: RSS feeds (no API needed)")
+    print("  Trends: SerpAPI")
     print("=" * 60)
     
     all_trends = []
     all_reddit = []
     
-    # Collect Google Trends data
-    print("\n📊 PHASE 1: Google Trends Analysis")
-    print("-" * 40)
-    for niche in NICHES[:4]:  # Start with 4 niches
-        trends = get_trending_topics(niche)
-        all_trends.extend(trends)
-        print(f"  Found {len(trends)} trending keywords for {niche}")
+    # Phase 1 — Google Trends via SerpAPI
+    if os.getenv("SERPAPI_KEY"):
+        print("\n📊 PHASE 1: Google Trends via SerpAPI")
+        print("-" * 40)
+        for niche in NICHES[:4]:
+            trends = get_trending_topics_serpapi(niche)
+            all_trends.extend(trends)
+            time.sleep(3)
+    else:
+        print("\n⚠️  Skipping Google Trends — no SERPAPI_KEY in .env")
     
-    # Collect Reddit data
-    print("\n💬 PHASE 2: Reddit Pain Point Analysis")
+    # Phase 2 — Reddit via RSS
+    print("\n💬 PHASE 2: Reddit RSS Analysis")
     print("-" * 40)
-    for sub in SUBREDDITS[:4]:  # Start with 4 subreddits
-        posts = get_reddit_pain_points(sub)
+    for sub in SUBREDDITS:
+        posts = get_reddit_via_rss(sub)
         all_reddit.extend(posts)
-        print(f"  Found {len(posts)} relevant posts in r/{sub}")
+        time.sleep(3)
     
-    # Analyze with Claude
+    # Phase 3 — Claude Analysis
     print("\n🧠 PHASE 3: AI Opportunity Analysis")
     print("-" * 40)
     opportunities = analyze_opportunities(all_trends, all_reddit)
     
-    # Display top opportunities
-    print("\n🎯 TOP CONTENT OPPORTUNITIES:")
-    print("=" * 60)
-    for i, opp in enumerate(opportunities[:5], 1):
-        print(f"\n{i}. {opp.get('title', 'N/A')}")
-        print(f"   Keyword: {opp.get('keyword', 'N/A')}")
-        print(f"   Type: {opp.get('type', 'N/A')}")
-        print(f"   Programs: {', '.join(opp.get('programs', []))}")
-        print(f"   Urgency: {opp.get('urgency', 'N/A')}/10")
-        print(f"   Why: {opp.get('why', 'N/A')}")
+    # Display results
+    if opportunities:
+        print("\n🎯 TOP CONTENT OPPORTUNITIES:")
+        print("=" * 60)
+        for i, opp in enumerate(opportunities[:5], 1):
+            print(f"\n{i}. {opp.get('title', 'N/A')}")
+            print(f"   Keyword: {opp.get('keyword', 'N/A')}")
+            print(f"   Type: {opp.get('type', 'N/A')}")
+            print(f"   Programs: {', '.join(opp.get('programs', []))}")
+            print(f"   Urgency: {opp.get('urgency', 'N/A')}/10")
+            print(f"   Why: {opp.get('why', 'N/A')}")
+    else:
+        print("\n⚠️  No opportunities identified")
+        print("   Check your ANTHROPIC_API_KEY in .env")
     
-    # Save everything
+    # Save report
     filename = save_results(all_trends, all_reddit, opportunities)
     
     print("\n" + "=" * 60)
     print("  INTELLIGENCE RUN COMPLETE")
-    print(f"  {len(all_trends)} trends + {len(all_reddit)} Reddit posts analyzed")
-    print(f"  {len(opportunities)} content opportunities identified")
+    print(f"  Trends: {len(all_trends)} keywords")
+    print(f"  Reddit: {len(all_reddit)} posts analyzed")
+    print(f"  Opportunities: {len(opportunities)} identified")
+    print(f"  Report: {filename}")
     print("=" * 60)
     
     return opportunities
