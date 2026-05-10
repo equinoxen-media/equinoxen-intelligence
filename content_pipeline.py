@@ -33,15 +33,16 @@ CURRENT_YEAR = datetime.now().year
 # Category IDs from WordPress
 # Update these after checking your WordPress categories
 CATEGORIES = {
-    "crm": 1,
-    "email_marketing": 2,
-    "seo_tools": 3,
-    "project_management": 4,
-    "business_automation": 5,
-    "ai_tools": 6,
-    "finance": 7,
-    "website_builders": 8,
-}
+    "general": 1,
+    "crm": 4,
+    "email_marketing": 5,
+    "seo_tools": 6,
+    "project_management": 7,
+    "business_automation": 8,
+    "ai_tools": 9,
+    "finance": 10,
+    "website_builders": 11,
+ }
 
 # ─── STEP 1: LOAD INTELLIGENCE REPORT ────────────────────────
 def load_latest_intelligence():
@@ -254,33 +255,84 @@ def assign_category(keyword, programs):
     keyword_lower = keyword.lower()
     
     category_map = {
+        # CRM — ID 4
         "crm": CATEGORIES.get("crm", 1),
         "salesforce": CATEGORIES.get("crm", 1),
         "hubspot": CATEGORIES.get("crm", 1),
+        "zoho": CATEGORIES.get("crm", 1),
+        "pipedrive": CATEGORIES.get("crm", 1),
+        
+        # Email Marketing — ID 5
         "email": CATEGORIES.get("email_marketing", 1),
         "mailchimp": CATEGORIES.get("email_marketing", 1),
         "klaviyo": CATEGORIES.get("email_marketing", 1),
+        "omnisend": CATEGORIES.get("email_marketing", 1),
+        "convertkit": CATEGORIES.get("email_marketing", 1),
+        "newsletter": CATEGORIES.get("email_marketing", 1),
+        
+        # SEO Tools — ID 6
         "seo": CATEGORIES.get("seo_tools", 1),
         "semrush": CATEGORIES.get("seo_tools", 1),
         "ahrefs": CATEGORIES.get("seo_tools", 1),
+        "keyword": CATEGORIES.get("seo_tools", 1),
+        "backlink": CATEGORIES.get("seo_tools", 1),
+        "rank": CATEGORIES.get("seo_tools", 1),
+        
+        # Project Management — ID 7
         "project": CATEGORIES.get("project_management", 1),
         "monday": CATEGORIES.get("project_management", 1),
         "notion": CATEGORIES.get("project_management", 1),
         "asana": CATEGORIES.get("project_management", 1),
+        "clickup": CATEGORIES.get("project_management", 1),
+        "trello": CATEGORIES.get("project_management", 1),
+        "task": CATEGORIES.get("project_management", 1),
+        
+        # Business Automation — ID 8
         "automation": CATEGORIES.get("business_automation", 1),
         "zapier": CATEGORIES.get("business_automation", 1),
+        "make": CATEGORIES.get("business_automation", 1),
+        "workflow": CATEGORIES.get("business_automation", 1),
+        "integrate": CATEGORIES.get("business_automation", 1),
+        
+        # AI Tools — ID 9
         "ai": CATEGORIES.get("ai_tools", 1),
+        "artificial intelligence": CATEGORIES.get("ai_tools", 1),
+        "chatgpt": CATEGORIES.get("ai_tools", 1),
+        "jasper": CATEGORIES.get("ai_tools", 1),
+        "grammarly": CATEGORIES.get("ai_tools", 1),
+        "copy.ai": CATEGORIES.get("ai_tools", 1),
+        
+        # Finance Software — ID 10
         "accounting": CATEGORIES.get("finance", 1),
         "quickbooks": CATEGORIES.get("finance", 1),
+        "freshbooks": CATEGORIES.get("finance", 1),
+        "xero": CATEGORIES.get("finance", 1),
+        "invoice": CATEGORIES.get("finance", 1),
+        "bookkeeping": CATEGORIES.get("finance", 1),
+        "payroll": CATEGORIES.get("finance", 1),
+        "finance": CATEGORIES.get("finance", 1),
+        
+        # Website Builders — ID 11
         "landing page": CATEGORIES.get("website_builders", 1),
         "webflow": CATEGORIES.get("website_builders", 1),
+        "unbounce": CATEGORIES.get("website_builders", 1),
+        "leadpages": CATEGORIES.get("website_builders", 1),
+        "website builder": CATEGORIES.get("website_builders", 1),
+        "wix": CATEGORIES.get("website_builders", 1),
     }
     
     for key, cat_id in category_map.items():
         if key in keyword_lower:
             return cat_id
     
-    return 1  # Default category
+    # Check programs list if keyword didn't match
+    for program in programs:
+        program_lower = program.lower()
+        for key, cat_id in category_map.items():
+            if key in program_lower:
+                return cat_id
+    
+    return CATEGORIES.get("general", 1)  # Default to General
 
 # ─── STEP 5: PUBLISH TO WORDPRESS ─────────────────────────────
 def publish_to_wordpress(title, content, metadata, category_id, draft=True):
@@ -298,6 +350,8 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True):
         "slug": metadata.get("slug", ""),
         "excerpt": metadata.get("excerpt", ""),
         "categories": [category_id],
+        "tags": [],
+        "format": "standard",
         "meta": {
             "rank_math_title": metadata.get("seo_title", ""),
             "rank_math_description": metadata.get("meta_description", ""),
