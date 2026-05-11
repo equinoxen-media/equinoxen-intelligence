@@ -222,6 +222,7 @@ def get_keyword_data(keyword):
 
 # ─── LAYER 4: CLAUDE ANALYSIS ─────────────────────────────────
 def analyze_opportunities(trends_data, reddit_data):
+    current_year = datetime.now().year
     """Use Claude to identify best content opportunities"""
     print("\n🤖 Analyzing opportunities with Claude...")
     
@@ -245,6 +246,10 @@ def analyze_opportunities(trends_data, reddit_data):
 an independent SaaS review and comparison website targeting business owners,
 marketers and entrepreneurs.
 
+CRITICAL: Today is {datetime.now().strftime('%B %d, %Y')}. 
+The current year is {current_year}.
+ALL article titles MUST use {current_year} — never use 2024, 2023 or any past year.
+
 Analyze these trending topics and Reddit pain points to identify the TOP 10
 content opportunities for affiliate review articles.
 
@@ -255,7 +260,7 @@ REDDIT PAIN POINTS (from r/entrepreneur, r/smallbusiness, r/SaaS etc):
 {reddit_summary}
 
 For each opportunity identify:
-1. A compelling SEO optimized article title
+1. A compelling SEO optimized article title using {current_year} where relevant
 2. Primary target keyword (2-4 words, high commercial intent)
 3. Content type: review, comparison, or buying_guide
 4. Affiliate programs to target from this list:
@@ -272,7 +277,7 @@ Rules for good opportunities:
 - Avoid overly broad topics — be specific
 
 Return ONLY a valid JSON array. No markdown. No explanation:
-[{{"title":"...","keyword":"...","type":"review","programs":["HubSpot"],"why":"...","urgency":8}}]"""
+[{{"title":"...{current_year}...","keyword":"...","type":"review","programs":["HubSpot"],"why":"...","urgency":8}}]"""
     
     try:
         message = client.messages.create(

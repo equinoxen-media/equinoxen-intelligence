@@ -130,10 +130,6 @@ def check_wordpress_for_duplicate(slug):
     except Exception as e:
         return False
 
-def show_published():
-    """Show all tracked published posts"""
-    list_published_posts()
-
 # ─── STEP 1: LOAD INTELLIGENCE REPORT ────────────────────────
 def load_latest_intelligence():
     """Load the most recent intelligence report"""
@@ -424,196 +420,8 @@ def assign_category(keyword, programs):
     
     return CATEGORIES.get("general", 1)  # Default to General
 
-#---- STEP 4.1  FETCH IMAGE FROM UNSPLASH -----
-def get_featured_image_unsplash(keyword):
-    """Fetch relevant image from Unsplash API"""
-    access_key = os.getenv("UNSPLASH_ACCESS_KEY")
-    if not access_key:
-        print("   ⚠️  No UNSPLASH_ACCESS_KEY — skipping featured image")
-        return None
-    
-    try:
-        # Search for relevant image
-        search_term = keyword.replace('-', ' ')
-        
-        response = requests.get(
-            "https://api.unsplash.com/search/photos",
-            params={
-                "query": f"{search_term} software technology",
-                "per_page": 5,
-                "orientation": "landscape",
-                "content_filter": "high"
-            },
-            headers={
-                "Authorization": f"Client-ID {access_key}"
-            }
-        )
-        
-        if response.status_code != 200:
-            return None
-        
-        data = response.json()
-        results = data.get("results", [])
-        
-        if not results:
-            return None
-        
-        # Get first result
-        photo = results[0]
-        image_url = photo["urls"]["regular"]
-        photographer = photo["user"]["name"]
-        
-        print(f"   📸 Found image by {photographer}")
-        return image_url
-        
-    except Exception as e:
-        print(f"   ⚠️  Unsplash error: {e}")
-        return None
-
-
-def upload_image_to_wordpress(image_url, title):
-    """Download image and upload to WordPress media library"""
-    try:
-        print(f"   📤 Uploading featured image...")
-        
-        # Download image
-        img_response = requests.get(image_url, timeout=30)
-        if img_response.status_code != 200:
-            return None
-        
-        # Clean filename
-        filename = title.lower()
-        filename = ''.join(c if c.isalnum() or c == '-' else '-' for c in filename)
-        filename = f"{filename[:50]}.jpg"
-        
-        # Upload to WordPress media library
-        media_url = f"{WP_URL}/wp-json/wp/v2/media"
-        
-        headers = {
-            "Content-Disposition": f'attachment; filename="{filename}"',
-            "Content-Type": "image/jpeg"
-        }
-        
-        media_response = requests.post(
-            media_url,
-            data=img_response.content,
-            headers=headers,
-            auth=(WP_USER, WP_PASS)
-        )
-        
-        if media_response.status_code in [200, 201]:
-            media = media_response.json()
-            media_id = media.get("id")
-            print(f"   ✅ Image uploaded — Media ID: {media_id}")
-            return media_id
-        else:
-            print(f"   ⚠️  Image upload failed: {media_response.status_code}")
-            return None
-            
-    except Exception as e:
-        print(f"   ⚠️  Image upload error: {e}")
-        return None
-
-
-def generate_branded_image(title, keyword):
-    """Generate a simple branded featured image using Pillow"""
-    try:
-        from PIL import Image, ImageDraw, ImageFont
-        import io
-        
-        # Create image
-        W, H = 1200, 630
-        img = Image.new('RGB', (W, H), (11, 11, 13))  # Midnight background
-        draw = ImageDraw.Draw(img)
-        
-        # Gold accent bar at top
-        draw.rectangle([(0, 0), (W, 6)], fill=(212, 175, 55))
-        
-        # Gold accent bar at bottom
-        draw.rectangle([(0, H-6), (W, H)], fill=(212, 175, 55))
-        
-        # Category label
-        draw.rectangle([(60, 60), (260, 95)], fill=(26, 28, 32))
-        draw.text((80, 68), keyword.upper()[:25], fill=(212, 175, 55))
-        
-        # Main title — wrap text
-        words = title.split()
-        lines = []
-        current_line = []
-        for word in words:
-            current_line.append(word)
-            if len(' '.join(current_line)) > 35:
-                lines.append(' '.join(current_line[:-1]))
-                current_line = [word]
-        if current_line:
-            lines.append(' '.join(current_line))
-        
-        # Draw title
-        y_text = H//2 - len(lines) * 35
-        for line in lines[:4]:
-            draw.text((60, y_text), line, fill=(230, 226, 216))
-            y_text += 70
-        
-        # Brand name bottom
-        draw.text((60, H-50), "EQUINOXEN MEDIA", fill=(212, 175, 55))
-        draw.text((W-250, H-50), "equinoxen.com", fill=(107, 107, 122))
-        
-        # Save to bytes
-        img_bytes = io.BytesIO()
-        img.save(img_bytes, format='JPEG', quality=90)
-        img_bytes.seek(0)
-        
-        return img_bytes.getvalue()
-        
-    except ImportError:
-        print("   ⚠️  Pillow not installed — skipping branded image")
-        return None
-    except Exception as e:
-        print(f"   ⚠️  Image generation error: {e}")
-        return None
-
-
-def upload_branded_image_to_wordpress(title, keyword):
-    """Generate and upload a branded image to WordPress"""
-    try:
-        print(f"   🎨 Generating branded featured image...")
-        
-        img_data = generate_branded_image(title, keyword)
-        if not img_data:
-            return None
-        
-        # Clean filename
-        filename = keyword.lower().replace(' ', '-')[:50] + '.jpg'
-        
-        media_url = f"{WP_URL}/wp-json/wp/v2/media"
-        
-        headers = {
-            "Content-Disposition": f'attachment; filename="{filename}"',
-            "Content-Type": "image/jpeg"
-        }
-        
-        response = requests.post(
-            media_url,
-            data=img_data,
-            headers=headers,
-            auth=(WP_USER, WP_PASS)
-        )
-        
-        if response.status_code in [200, 201]:
-            media = response.json()
-            media_id = media.get("id")
-            print(f"   ✅ Branded image uploaded — ID: {media_id}")
-            return media_id
-        else:
-            print(f"   ⚠️  Upload failed: {response.status_code}")
-            return None
-            
-    except Exception as e:
-        print(f"   ⚠️  Error: {e}")
-        return None
-
 # ─── STEP 5: PUBLISH TO WORDPRESS ─────────────────────────────
-def publish_to_wordpress(title, content, metadata, category_id, draft=True, featured_image_id=None):
+def publish_to_wordpress(title, content, metadata, category_id, draft=True):
     """Publish article to WordPress via REST API"""
     
     status = "draft" if draft else "publish"
@@ -628,16 +436,14 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
         "slug": metadata.get("slug", ""),
         "excerpt": metadata.get("excerpt", ""),
         "categories": [category_id],
+        "tags": [],
+        "format": "standard",
         "meta": {
             "rank_math_title": metadata.get("seo_title", ""),
             "rank_math_description": metadata.get("meta_description", ""),
             "rank_math_focus_keyword": metadata.get("focus_keyword", ""),
         }
     }
-    
-    # Add featured image if provided
-    if featured_image_id:
-        post_data["featured_media"] = featured_image_id
     
     try:
         response = requests.post(
@@ -724,102 +530,88 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
     
     results = []
     
-    for i, opp in enumerate(opportunities[:num_articles]):
-        print(f"\n{'='*60}")
-        print(f"  ARTICLE {i+1} of {num_articles}")
-        print(f"{'='*60}")
+for i, opp in enumerate(opportunities[:num_articles]):
+    print(f"\n{'='*60}")
+    print(f"  ARTICLE {i+1} of {num_articles}")
+    print(f"{'='*60}")
     
-        title = opp.get('title', '')
-        keyword = opp.get('keyword', '')
+    title = opp.get('title', '')
+    keyword = opp.get('keyword', '')
     
-        # Generate slug for checking
-        test_slug = keyword.lower().replace(' ', '-')
+    # Generate slug for checking
+    test_slug = keyword.lower().replace(' ', '-')
     
-        # ── CHECK IF ALREADY PUBLISHED ──────────────────────────
-        already_done, reason = is_already_published(title, keyword, test_slug)
-        if already_done:
-            print(f"⏭️  Skipping — already published ({reason} match):")
-            print(f"   {title}")
-            continue
+    # ── CHECK IF ALREADY PUBLISHED ──────────────────────────
+    already_done, reason = is_already_published(title, keyword, test_slug)
+    if already_done:
+        print(f"⏭️  Skipping — already published ({reason} match):")
+        print(f"   {title}")
+        continue
     
-        # Also check WordPress directly
-        if check_wordpress_for_duplicate(test_slug):
-            print(f"⏭️  Skipping — already exists in WordPress")
-            print(f"   {title}")
-            continue
+    # Also check WordPress directly
+    if check_wordpress_for_duplicate(test_slug):
+        print(f"⏭️  Skipping — already exists in WordPress")
+        continue
 
-        # Generate article
-        article_content = generate_article(opp)
-        if not article_content:
-            continue
+    # Generate article
+    article_content = generate_article(opp)
+    if not article_content:
+        continue
     
-        # Generate metadata
-        metadata = generate_seo_metadata(
-            title,
-            keyword,
-            article_content
-        )
+    # Generate metadata
+    metadata = generate_seo_metadata(
+        title,
+        keyword,
+        article_content
+    )
     
-        # Assign category
-        category_id = assign_category(
-            keyword,
-            opp.get('programs', [])
-        )
+    # Assign category
+    category_id = assign_category(
+        keyword,
+        opp.get('programs', [])
+    )
     
-        # Save locally
-        local_file = save_article_locally(
+    # Save locally
+    local_file = save_article_locally(
+        title,
+        article_content,
+        metadata
+    )
+    
+    # Publish to WordPress
+    post_id = None
+    post_url = None
+    if publish_to_wp:
+        post_id, post_url = publish_to_wordpress(
             title,
             article_content,
-            metadata
+            metadata,
+            category_id,
+            draft=publish_as_draft
         )
     
-# Get featured image
-        featured_image_id = None
-        if publish_to_wp:
-            # Try Unsplash first
-            image_url = get_featured_image_unsplash(keyword)
-            if image_url:
-                featured_image_id = upload_image_to_wordpress(image_url, title)
-            
-            # Fall back to branded image if Unsplash fails
-            if not featured_image_id:
-                featured_image_id = upload_branded_image_to_wordpress(title, keyword)
-        
-        # Publish to WordPress
-        post_id = None
-        post_url = None
-        if publish_to_wp:
-            post_id, post_url = publish_to_wordpress(
-                title,
-                article_content,
-                metadata,
-                category_id,
-                draft=publish_as_draft,
-                featured_image_id=featured_image_id
-            )
+    # ── TRACK IF PUBLISHED SUCCESSFULLY ─────────────────────
+    if post_id:
+        save_published_post(
+            title,
+            metadata.get("slug", test_slug),
+            keyword,
+            post_id,
+            post_url
+        )
     
-        # ── TRACK IF PUBLISHED SUCCESSFULLY ─────────────────────
-        if post_id:
-            save_published_post(
-                title,
-                metadata.get("slug", test_slug),
-                keyword,
-                post_id,
-                post_url
-            )
+    results.append({
+        "title": title,
+        "keyword": keyword,
+        "local_file": local_file,
+        "post_id": post_id,
+        "post_url": post_url,
+        "status": "draft" if publish_as_draft else "published"
+    })
     
-        results.append({
-            "title": title,
-            "keyword": keyword,
-            "local_file": local_file,
-            "post_id": post_id,
-            "post_url": post_url,
-            "status": "draft" if publish_as_draft else "published"
-        })
-    
-        if i < num_articles - 1:
-            print(f"\n⏳ Waiting 5 seconds before next article...")
-            time.sleep(5)
+    if i < num_articles - 1:
+        print(f"\n⏳ Waiting 5 seconds before next article...")
+        time.sleep(5)
     
     # Final summary
     print("\n" + "=" * 60)
@@ -841,7 +633,7 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
     print("   4. Review and publish when ready")
     
     return results
-    
+
 #def show_published():
 #    """Show all tracked published posts"""
 #    list_published_posts()
