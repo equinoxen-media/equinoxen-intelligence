@@ -129,11 +129,27 @@ def check_wordpress_for_duplicate(slug):
         
     except Exception as e:
         return False
-
+    
 def show_published():
     """Show all tracked published posts"""
     list_published_posts()
-
+    
+def clean_html_response(text):
+    """Remove markdown code fences from Claude response"""
+    text = text.strip()
+    
+    # Remove ```html at start
+    if text.startswith('```html'):
+        text = text[7:]
+    elif text.startswith('```'):
+        text = text[3:]
+    
+    # Remove ``` at end
+    if text.endswith('```'):
+        text = text[:-3]
+    
+    return text.strip()
+    
 # ─── STEP 1: LOAD INTELLIGENCE REPORT ────────────────────────
 def load_latest_intelligence():
     """Load the most recent intelligence report"""
@@ -189,6 +205,10 @@ def generate_article(opportunity):
         )
         
         content = message.content[0].text
+        
+        # Clean markdown code fences
+        content = clean_html_response(content)
+        
         print(f"   ✅ Article generated ({len(content)} characters)")
         return content
         
@@ -214,26 +234,29 @@ ARTICLE REQUIREMENTS:
 - Length: 2,500-3,000 words
 - Tone: Expert, honest, helpful — never salesy
 - Structure: Use H2 and H3 headings
-- Include affiliate disclosure at the very top
 - Natural keyword usage — not stuffed
 
 REQUIRED STRUCTURE:
-1. Affiliate Disclosure (one sentence at top)
-2. Introduction — what problem does this solve (150 words)
-3. What is [Product] — overview (200 words)
-4. Key Features — 5-7 features with H3 subheadings (600 words)
-5. Pricing — all tiers clearly explained (200 words)
-6. Pros and Cons — honest bullet points (150 words)
-7. Who is it best for — specific use cases (150 words)
-8. [Product] Alternatives — 2-3 competitors briefly (200 words)
-9. Our Verdict — final recommendation with star rating out of 5 (150 words)
-10. CTA — Try [Product] with affiliate link (50 words)
+1. Introduction — what problem does this solve (150 words)
+2. What is [Product] — overview (200 words)
+3. Key Features — 5-7 features with H3 subheadings (600 words)
+4. Pricing — all tiers clearly explained (200 words)
+5. Pros and Cons — honest bullet points (150 words)
+6. Who is it best for — specific use cases (150 words)
+7. [Product] Alternatives — 2-3 competitors briefly (200 words)
+8. Our Verdict — final recommendation with star rating out of 5 (150 words)
+9. CTA — Try [Product] with affiliate link (50 words)
 
 FORMAT REQUIREMENTS:
 - Use HTML formatting (h2, h3, p, ul, li, strong tags)
 - Include a star rating like: ⭐⭐⭐⭐⭐ (X/5)
 - Make the CTA button: <a href="AFFILIATE_LINK" rel="nofollow sponsored" target="_blank" class="button">Try [Product] Free →</a>
-- Affiliate disclosure: <p class="disclosure"><strong>Disclosure:</strong> This review contains affiliate links. We may earn a commission if you purchase through our links at no extra cost to you.</p>
+
+CRITICAL FORMATTING RULES:
+- Return ONLY raw HTML — no markdown
+- Do NOT wrap in ```html or ``` tags
+- Start your response directly with the disclosure paragraph
+- No preamble or explanation before the HTML
 
 Write the complete article now in HTML format:"""
 
@@ -253,21 +276,26 @@ Year: {CURRENT_YEAR}
 Affiliate links: {affiliate_links}
 
 REQUIRED STRUCTURE:
-1. Affiliate Disclosure (one sentence)
-2. Introduction — why this comparison matters (150 words)
-3. Quick Verdict — summary table showing winner in each category (HTML table)
-4. {product1} Overview — key features and pricing (300 words)
-5. {product2} Overview — key features and pricing (300 words)
-6. Head-to-Head Comparison — 5 categories with winner declared each time (500 words)
-7. Pricing Comparison — clear breakdown (200 words)
-8. Who Should Choose {product1} — specific use cases (150 words)
-9. Who Should Choose {product2} — specific use cases (150 words)
-10. Final Verdict — clear recommendation (150 words)
-11. CTAs for both products with affiliate links
+1. Introduction — why this comparison matters (150 words)
+2. Quick Verdict — summary table showing winner in each category (HTML table)
+3. {product1} Overview — key features and pricing (300 words)
+4. {product2} Overview — key features and pricing (300 words)
+5. Head-to-Head Comparison — 5 categories with winner declared each time (500 words)
+6. Pricing Comparison — clear breakdown (200 words)
+7. Who Should Choose {product1} — specific use cases (150 words)
+8. Who Should Choose {product2} — specific use cases (150 words)
+9. Final Verdict — clear recommendation (150 words)
+10. CTAs for both products with affiliate links
 
 FORMAT: Use HTML with h2, h3, p, ul, li, table tags.
 Include comparison table with checkmarks ✓ and ✗
 Star ratings for each product.
+
+CRITICAL FORMATTING RULES:
+- Return ONLY raw HTML — no markdown
+- Do NOT wrap in ```html or ``` tags  
+- Start directly with the disclosure paragraph
+- No preamble or explanation
 
 Write the complete article now in HTML:"""
 
@@ -284,21 +312,26 @@ Year: {CURRENT_YEAR}
 Affiliate links: {affiliate_links}
 
 REQUIRED STRUCTURE:
-1. Affiliate Disclosure
-2. Introduction — why this category matters (150 words)
-3. What to look for — buying criteria with H3 subheadings (300 words)
-4. Top picks — 5-7 products each with (800 words total):
+1. Introduction — why this category matters (150 words)
+2. What to look for — buying criteria with H3 subheadings (300 words)
+3. Top picks — 5-7 products each with (800 words total):
    - Brief overview
    - Key features
    - Pricing
    - Best for
    - Affiliate link CTA
-5. Comparison table — all products side by side (HTML table)
-6. How to choose — decision framework (200 words)
-7. Final recommendations — top 3 for different needs (150 words)
+4. Comparison table — all products side by side (HTML table)
+5. How to choose — decision framework (200 words)
+6. Final recommendations — top 3 for different needs (150 words)
 
 FORMAT: Use HTML. Include star ratings.
 Each product section should have an affiliate CTA button.
+
+CRITICAL FORMATTING RULES:
+- Return ONLY raw HTML — no markdown
+- Do NOT wrap in ```html or ``` tags
+- Start directly with the disclosure paragraph
+- No preamble or explanation
 
 Write the complete article now in HTML:"""
 
@@ -676,18 +709,6 @@ def save_article_locally(title, content, metadata):
 <meta charset="UTF-8">
 <meta name="description" content="{metadata.get('meta_description', '')}">
 <title>{metadata.get('seo_title', title)}</title>
-<style>
-body {{ font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.7; }}
-h1 {{ color: #0B0B0D; border-bottom: 3px solid #D4AF37; padding-bottom: 10px; }}
-h2 {{ color: #2D2D2D; margin-top: 40px; }}
-h3 {{ color: #444; }}
-.disclosure {{ background: #FDF8E8; border-left: 4px solid #D4AF37; padding: 12px 16px; margin-bottom: 24px; font-size: 14px; }}
-.button {{ display: inline-block; background: #D4AF37; color: #000; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold; margin: 16px 0; }}
-table {{ width: 100%; border-collapse: collapse; margin: 20px 0; }}
-th {{ background: #0B0B0D; color: #D4AF37; padding: 10px; text-align: left; }}
-td {{ padding: 10px; border-bottom: 1px solid #eee; }}
-tr:nth-child(even) {{ background: #f9f9f9; }}
-</style>
 </head>
 <body>
 <h1>{title}</h1>
