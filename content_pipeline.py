@@ -24,6 +24,8 @@ AFFILIATE_LINKS = {
     "jotform": os.getenv("AFFILIATE_JOTFORM"),
     "zoho": os.getenv("AFFILIATE_ZOHO"),
     "unbounce": os.getenv("AFFILIATE_UNBOUNCE"),
+    "klaviyo": os.getenv("AFFILIATE_KLAVIYO"),
+    "asana": os.getenv("AFFILIATE_ASANAE"),
 }
 
 SITE_NAME = "Equinoxen Media"
