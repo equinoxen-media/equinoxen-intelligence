@@ -63,12 +63,13 @@ LINKEDIN_ACCESS_TOKEN = os.getenv("LINKEDIN_ACCESS_TOKEN")
 LINKEDIN_ORGANIZATION_ID = os.getenv("LINKEDIN_ORGANIZATION_ID")
 
 PINTEREST_ACCESS_TOKEN = os.getenv("PINTEREST_ACCESS_TOKEN")
-PINTEREST_BOARD_ID = os.getenv("PINTEREST_BOARD_ID")
 
 X_CONSUMER_KEY = os.getenv("X_CONSUMER_KEY")
 X_CONSUMER_KEY_SECRET = os.getenv("X_CONSUMER_KEY_SECRET")
 X_ACCESS_TOKEN = os.getenv("X_ACCESS_TOKEN")
 X_ACCESS_TOKEN_SECRET = os.getenv("X_ACCESS_TOKEN_SECRET")
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 #----PINTEREST BOARD CATEGORIES---------------------------------
 def get_pinterest_board(category_id):
@@ -273,17 +274,20 @@ def post_to_pinterest(title, excerpt, post_url, board_id, image_url=None):
         print(f"   ❌ Pinterest error: {e}")
         return False
 
-def post_to_social(title, excerpt, post_url, category_id=1, image_url=None):
-    """Post to all social platforms after WordPress publish"""
+def post_to_social(title, excerpt, post_url, category_id=1, image_url=None, article_position=0):
     print("\n📱 Posting to social media...")
-
     time.sleep(2)
 
-    post_to_linkedin(title, excerpt, post_url)
-    time.sleep(2)
+    # LinkedIn — first article only
+    if article_position == 0:
+        post_to_linkedin(title, excerpt, post_url)
+        time.sleep(2)
+
+    # X — all articles
     post_to_x(title, post_url)
     time.sleep(2)
 
+    # Pinterest — all articles
     board_id = get_pinterest_board(category_id)
     post_to_pinterest(title, excerpt, post_url, board_id, image_url)
 
@@ -830,7 +834,7 @@ Style requirements:
             quality="medium",
             output_compression=70,
             n=1,
-            response_format="webp",
+            output_format="webp",
         )
         
         import base64
@@ -876,7 +880,7 @@ def upload_branded_image_to_wordpress(title, keyword):
             media_id = media.get("id")
             wordpress_image_url = media.get("source_url")
             print(f"   ✅ AI image uploaded — Media ID: {media_id}")
-            return media_id, image_url
+            return media_id, wordpress_image_url
         else:
             print(f"   ⚠️  Upload failed: {response.status_code}")
             return None, None
@@ -963,7 +967,7 @@ def save_article_locally(title, content, metadata):
     return filename
 
 # ─── MAIN PIPELINE ────────────────────────────────────────────
-def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
+def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print("=" * 60)
     print("  EQUINOXEN MEDIA — CONTENT PIPELINE")
     print(f"  Running at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -1034,17 +1038,24 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
             metadata
         )
     
-# Get featured image
+        # Get featured image
         featured_image_id = None
+        image_url = None
         if publish_to_wp:
-            # Try Unsplash first
-            image_url = get_featured_image_unsplash(keyword)
-            if image_url:
-                featured_image_id = upload_image_to_wordpress(image_url, title)
+            # Try gpt-image-2 first
+            featured_image_id, image_url = upload_branded_image_to_wordpress(title, keyword)
+            
+            # Fall back to Unsplash if AI generation fails
+            if not featured_image_id:
+                unsplash_url = get_featured_image_unsplash(keyword)
+                if unsplash_url:
+                    featured_image_id = upload_image_to_wordpress(unsplash_url, title)
+                    image_url = unsplash_url
             
             # Fall back to branded image if Unsplash fails
             if not featured_image_id:
                 featured_image_id, image_url = upload_branded_image_to_wordpress(title, keyword)        
+            
         # Publish to WordPress
         post_id = None
         post_url = None
@@ -1069,13 +1080,14 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
             )
     
         # Post to social media if published successfully
-if post_id and not publish_as_draft:
+        if post_id and not publish_as_draft:
             post_to_social(
                 title,
                 metadata.get("excerpt", ""),
                 post_url,
                 category_id=category_id,
-                image_url=image_url if 'image_url' in locals() else None
+                image_url=image_url,
+                article_position=i
             )
     
         results.append({
