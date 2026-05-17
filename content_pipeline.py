@@ -44,7 +44,250 @@ CATEGORIES = {
     "ai_tools": 9,
     "finance": 10,
     "website_builders": 11,
- }
+}
+#Pinterest Board IDs
+PINTEREST_BOARDS = {
+    "crm": os.getenv("PINTEREST_BOARD_CRM"),
+    "email_marketing": os.getenv("PINTEREST_BOARD_EMAIL_MARKETING"),
+    "seo_tools": os.getenv("PINTEREST_BOARD_SEO_TOOLS"),
+    "project_management": os.getenv("PINTEREST_BOARD_PROJECT_MANAGEMENT"),
+    "business_automation": os.getenv("PINTEREST_BOARD_BUSINESS_AUTOMATION"),
+    "ai_tools": os.getenv("PINTEREST_BOARD_AI_TOOLS"),
+    "finance": os.getenv("PINTEREST_BOARD_FINANCE"),
+    "website_builders": os.getenv("PINTEREST_BOARD_WEBSITE_BUILDERS"),
+    "general": os.getenv("PINTEREST_BOARD_GENERAL"),
+}
+
+# ─── SOCIAL MEDIA CREDENTIALS ─────────────────────────────────
+LINKEDIN_ACCESS_TOKEN = os.getenv("LINKEDIN_ACCESS_TOKEN")
+LINKEDIN_ORGANIZATION_ID = os.getenv("LINKEDIN_ORGANIZATION_ID")
+
+PINTEREST_ACCESS_TOKEN = os.getenv("PINTEREST_ACCESS_TOKEN")
+PINTEREST_BOARD_ID = os.getenv("PINTEREST_BOARD_ID")
+
+X_CONSUMER_KEY = os.getenv("X_CONSUMER_KEY")
+X_CONSUMER_KEY_SECRET = os.getenv("X_CONSUMER_KEY_SECRET")
+X_ACCESS_TOKEN = os.getenv("X_ACCESS_TOKEN")
+X_ACCESS_TOKEN_SECRET = os.getenv("X_ACCESS_TOKEN_SECRET")
+
+#----PINTEREST BOARD CATEGORIES---------------------------------
+def get_pinterest_board(category_id):
+    """Match WordPress category ID to Pinterest board ID"""
+    category_board_map = {
+        4: PINTEREST_BOARDS.get("crm"),
+        5: PINTEREST_BOARDS.get("email_marketing"),
+        6: PINTEREST_BOARDS.get("seo_tools"),
+        7: PINTEREST_BOARDS.get("project_management"),
+        8: PINTEREST_BOARDS.get("business_automation"),
+        9: PINTEREST_BOARDS.get("ai_tools"),
+        10: PINTEREST_BOARDS.get("finance"),
+        11: PINTEREST_BOARDS.get("website_builders"),
+        1: PINTEREST_BOARDS.get("general"),
+    }
+    return category_board_map.get(category_id, PINTEREST_BOARDS.get("general"))
+
+# ─── SOCIAL POSTING ───────────────────────────────────────────
+def post_to_linkedin(title, excerpt, post_url):
+    """Post article to LinkedIn company page"""
+    if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN_ORGANIZATION_ID:
+        print("   ⚠️  LinkedIn credentials missing — skipping")
+        return False
+
+    print("   📤 Posting to LinkedIn...")
+
+    headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Content-Type": "application/json",
+        "X-Restli-Protocol-Version": "2.0.0"
+    }
+
+    post_body = {
+        "author": f"urn:li:organization:{LINKEDIN_ORGANIZATION_ID}",
+        "lifecycleState": "PUBLISHED",
+        "specificContent": {
+            "com.linkedin.ugc.ShareContent": {
+                "shareCommentary": {
+                    "text": f"{title}\n\n{excerpt}\n\nRead the full article 👇\n{post_url}"
+                },
+                "shareMediaCategory": "ARTICLE",
+                "media": [
+                    {
+                        "status": "READY",
+                        "originalUrl": post_url,
+                        "title": {"text": title}
+                    }
+                ]
+            }
+        },
+        "visibility": {
+            "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+        }
+    }
+
+    try:
+        response = requests.post(
+            "https://api.linkedin.com/v2/ugcPosts",
+            headers=headers,
+            json=post_body
+        )
+        if response.status_code in [200, 201]:
+            print("   ✅ LinkedIn posted successfully")
+            return True
+        else:
+            print(f"   ❌ LinkedIn failed: {response.status_code} — {response.text[:200]}")
+            return False
+    except Exception as e:
+        print(f"   ❌ LinkedIn error: {e}")
+        return False
+
+
+def post_to_x(title, post_url):
+    """Post article to X (Twitter)"""
+    if not all([X_CONSUMER_KEY, X_CONSUMER_KEY_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET]):
+        print("   ⚠️  X credentials missing — skipping")
+        return False
+
+    print("   📤 Posting to X...")
+
+    try:
+        import hmac
+        import hashlib
+        import base64
+        import urllib.parse
+        import uuid
+
+        # Build tweet text — max 280 chars
+        tweet = f"{title[:200]}... {post_url} #SaaS #BusinessTools"
+        if len(tweet) > 280:
+            tweet = f"{title[:180]}... {post_url}"
+
+        # OAuth 1.0a signing
+        oauth_timestamp = str(int(time.time()))
+        oauth_nonce = uuid.uuid4().hex
+
+        oauth_params = {
+            "oauth_consumer_key": X_CONSUMER_KEY,
+            "oauth_nonce": oauth_nonce,
+            "oauth_signature_method": "HMAC-SHA1",
+            "oauth_timestamp": oauth_timestamp,
+            "oauth_token": X_ACCESS_TOKEN,
+            "oauth_version": "1.0"
+        }
+
+        post_params = {"text": tweet}
+        all_params = {**oauth_params}
+
+        # Build signature base string
+        sorted_params = "&".join(
+            f"{urllib.parse.quote(k, safe='')}={urllib.parse.quote(v, safe='')}"
+            for k, v in sorted(all_params.items())
+        )
+
+        base_url = "https://api.twitter.com/2/tweets"
+        signature_base = (
+            "POST&" +
+            urllib.parse.quote(base_url, safe="") +
+            "&" +
+            urllib.parse.quote(sorted_params, safe="")
+        )
+
+        signing_key = (
+            urllib.parse.quote(X_CONSUMER_KEY_SECRET, safe="") +
+            "&" +
+            urllib.parse.quote(X_ACCESS_TOKEN_SECRET, safe="")
+        )
+
+        signature = base64.b64encode(
+            hmac.new(
+                signing_key.encode("utf-8"),
+                signature_base.encode("utf-8"),
+                hashlib.sha1
+            ).digest()
+        ).decode("utf-8")
+
+        oauth_params["oauth_signature"] = signature
+
+        auth_header = "OAuth " + ", ".join(
+            f'{urllib.parse.quote(k, safe="")}="{urllib.parse.quote(v, safe="")}"'
+            for k, v in sorted(oauth_params.items())
+        )
+
+        response = requests.post(
+            base_url,
+            headers={
+                "Authorization": auth_header,
+                "Content-Type": "application/json"
+            },
+            json=post_params
+        )
+
+        if response.status_code in [200, 201]:
+            print("   ✅ X posted successfully")
+            return True
+        else:
+            print(f"   ❌ X failed: {response.status_code} — {response.text[:200]}")
+            return False
+
+    except Exception as e:
+        print(f"   ❌ X error: {e}")
+        return False
+
+
+def post_to_pinterest(title, excerpt, post_url, board_id, image_url=None):
+    """Post article as a Pin to Pinterest"""
+    if not PINTEREST_ACCESS_TOKEN or not board_id:
+        print("   ⚠️  Pinterest credentials missing — skipping")
+        return False
+
+    print("   📤 Posting to Pinterest...")
+
+    headers = {
+        "Authorization": f"Bearer {PINTEREST_ACCESS_TOKEN}",
+        "Content-Type": "application/json"
+    }
+
+    pin_data = {
+        "board_id": board_id,
+        "title": title,
+        "description": excerpt,
+        "link": post_url,
+        "media_source": {
+            "source_type": "image_url",
+            "url": image_url if image_url else f"https://equinoxen.com/wp-content/uploads/equinoxen-default.jpg"
+        }
+    }
+
+    try:
+        response = requests.post(
+            "https://api.pinterest.com/v5/pins",
+            headers=headers,
+            json=pin_data
+        )
+        if response.status_code in [200, 201]:
+            print("   ✅ Pinterest posted successfully")
+            return True
+        else:
+            print(f"   ❌ Pinterest failed: {response.status_code} — {response.text[:200]}")
+            return False
+    except Exception as e:
+        print(f"   ❌ Pinterest error: {e}")
+        return False
+
+def post_to_social(title, excerpt, post_url, category_id=1, image_url=None):
+    """Post to all social platforms after WordPress publish"""
+    print("\n📱 Posting to social media...")
+
+    time.sleep(2)
+
+    post_to_linkedin(title, excerpt, post_url)
+    time.sleep(2)
+    post_to_x(title, post_url)
+    time.sleep(2)
+
+    board_id = get_pinterest_board(category_id)
+    post_to_pinterest(title, excerpt, post_url, board_id, image_url)
+
+    print("   📱 Social posting complete")
 
 # ─── PUBLISHED POSTS TRACKER ──────────────────────────────────
 PUBLISHED_TRACKER = "published_posts.json"
@@ -551,80 +794,74 @@ def upload_image_to_wordpress(image_url, title):
 
 
 def generate_branded_image(title, keyword):
-    """Generate a simple branded featured image using Pillow"""
+    """Generate featured image using gpt-image-1 via OpenAI API"""
     try:
-        from PIL import Image, ImageDraw, ImageFont
+        import openai
         import io
         
-        # Create image
-        W, H = 1200, 630
-        img = Image.new('RGB', (W, H), (11, 11, 13))  # Midnight background
-        draw = ImageDraw.Draw(img)
+        openai_key = os.getenv("OPENAI_API_KEY")
+        if not openai_key:
+            print("   ⚠️  No OPENAI_API_KEY — skipping AI image generation")
+            return None, None
         
-        # Gold accent bar at top
-        draw.rectangle([(0, 0), (W, 6)], fill=(212, 175, 55))
+        client = openai.OpenAI(api_key=openai_key)
         
-        # Gold accent bar at bottom
-        draw.rectangle([(0, H-6), (W, H)], fill=(212, 175, 55))
+        print(f"   🎨 Generating AI featured image for: {title}")
         
-        # Category label
-        draw.rectangle([(60, 60), (260, 95)], fill=(26, 28, 32))
-        draw.text((80, 68), keyword.upper()[:25], fill=(212, 175, 55))
+        # Build prompt
+        prompt = f"""Create a professional featured image for a blog post titled: '{title}'
+
+Style requirements:
+- Flat-lay image composition
+- All critical design elements centered in the middle of the frame
+- Clean, modern, professional business/tech aesthetic
+- Suitable for a SaaS software review publication
+- No text or typography in the image
+- Visual metaphor representing the topic: {keyword}
+- Dark sophisticated color palette with gold accents
+- High contrast, visually striking
+- Suitable as a webpage featured image"""
+
+        # Generate image with gpt-image-1
+        response = client.images.generate(
+            model="gpt-image-2",
+            prompt=prompt,
+            size="1024x1536",
+            quality="medium",
+            output_compression=70,
+            n=1,
+            response_format="webp",
+        )
         
-        # Main title — wrap text
-        words = title.split()
-        lines = []
-        current_line = []
-        for word in words:
-            current_line.append(word)
-            if len(' '.join(current_line)) > 35:
-                lines.append(' '.join(current_line[:-1]))
-                current_line = [word]
-        if current_line:
-            lines.append(' '.join(current_line))
+        import base64
+        image_data = base64.b64decode(response.data[0].b64_json)
         
-        # Draw title
-        y_text = H//2 - len(lines) * 35
-        for line in lines[:4]:
-            draw.text((60, y_text), line, fill=(230, 226, 216))
-            y_text += 70
-        
-        # Brand name bottom
-        draw.text((60, H-50), "EQUINOXEN MEDIA", fill=(212, 175, 55))
-        draw.text((W-250, H-50), "equinoxen.com", fill=(107, 107, 122))
-        
-        # Save to bytes
-        img_bytes = io.BytesIO()
-        img.save(img_bytes, format='JPEG', quality=90)
-        img_bytes.seek(0)
-        
-        return img_bytes.getvalue()
+        print(f"   ✅ AI image generated ({len(image_data) // 1024}KB)")
+        return image_data, None
         
     except ImportError:
-        print("   ⚠️  Pillow not installed — skipping branded image")
-        return None
+        print("   ⚠️  openai not installed")
+        return None, None
     except Exception as e:
         print(f"   ⚠️  Image generation error: {e}")
-        return None
-
+        return None, None
 
 def upload_branded_image_to_wordpress(title, keyword):
-    """Generate and upload a branded image to WordPress"""
+    """Generate and upload a branded AI image to WordPress"""
     try:
-        print(f"   🎨 Generating branded featured image...")
+        print(f"   🎨 Generating AI featured image...")
         
-        img_data = generate_branded_image(title, keyword)
+        img_data, image_url = generate_branded_image(title, keyword)
         if not img_data:
-            return None
+            return None, None
         
         # Clean filename
-        filename = keyword.lower().replace(' ', '-')[:50] + '.jpg'
-        
+        filename = keyword.lower().replace(' ', '-')[:50] + '.webp'
         media_url = f"{WP_URL}/wp-json/wp/v2/media"
         
         headers = {
             "Content-Disposition": f'attachment; filename="{filename}"',
-            "Content-Type": "image/jpeg"
+            "Content-Type": "image/webp"
         }
         
         response = requests.post(
@@ -637,15 +874,16 @@ def upload_branded_image_to_wordpress(title, keyword):
         if response.status_code in [200, 201]:
             media = response.json()
             media_id = media.get("id")
-            print(f"   ✅ Branded image uploaded — ID: {media_id}")
-            return media_id
+            wordpress_image_url = media.get("source_url")
+            print(f"   ✅ AI image uploaded — Media ID: {media_id}")
+            return media_id, image_url
         else:
             print(f"   ⚠️  Upload failed: {response.status_code}")
-            return None
+            return None, None
             
     except Exception as e:
         print(f"   ⚠️  Error: {e}")
-        return None
+        return None, None
 
 # ─── STEP 5: PUBLISH TO WORDPRESS ─────────────────────────────
 def publish_to_wordpress(title, content, metadata, category_id, draft=True, featured_image_id=None):
@@ -806,8 +1044,7 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
             
             # Fall back to branded image if Unsplash fails
             if not featured_image_id:
-                featured_image_id = upload_branded_image_to_wordpress(title, keyword)
-        
+                featured_image_id, image_url = upload_branded_image_to_wordpress(title, keyword)        
         # Publish to WordPress
         post_id = None
         post_url = None
@@ -829,6 +1066,16 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
                 keyword,
                 post_id,
                 post_url
+            )
+    
+        # Post to social media if published successfully
+if post_id and not publish_as_draft:
+            post_to_social(
+                title,
+                metadata.get("excerpt", ""),
+                post_url,
+                category_id=category_id,
+                image_url=image_url if 'image_url' in locals() else None
             )
     
         results.append({
@@ -865,10 +1112,6 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
     
     return results
     
-#def show_published():
-#    """Show all tracked published posts"""
-#    list_published_posts()
-
 # ─── RUN ──────────────────────────────────────────────────────
 if __name__ == "__main__":
     import sys

@@ -1,5 +1,6 @@
 # Environment variables - never upload
 .env
+.env.save
 
 # Generated outputs - too large for GitHub
 /outputs/
@@ -7,6 +8,7 @@
 *.html
 intelligence_report_*.json
 article_*.html
+
 
 # Python
 __pycache__/
@@ -22,3 +24,6 @@ venv/
 .DS_Store
 Thumbs.db
 
+#test files
+get_token.py
+pinterest_board_id.py

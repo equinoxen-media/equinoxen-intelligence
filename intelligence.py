@@ -331,49 +331,7 @@ def get_reddit_via_rss(subreddit_name, limit=25):
     print(f"  Found {len(top_posts)} relevant posts")
     return top_posts
 
-# ─── LAYER 3: KEYWORD SEARCH VIA SERPAPI ──────────────────────
-def get_keyword_data(keyword):
-    """Get search volume and competition data for a keyword"""
-    
-    serpapi_key = os.getenv("SERPAPI_KEY")
-    if not serpapi_key:
-        return {}
-    
-    try:
-        params = {
-            "engine": "google",
-            "q": keyword,
-            "location": "United States",
-            "api_key": serpapi_key,
-            "num": 10
-        }
-        
-        response = requests.get(
-            "https://serpapi.com/search",
-            params=params,
-            timeout=30
-        )
-        
-        if response.status_code != 200:
-            return {}
-        
-        data = response.json()
-        
-        # Check organic results count as competition signal
-        organic = data.get("organic_results", [])
-        ads = data.get("ads", [])
-        
-        return {
-            'keyword': keyword,
-            'organic_results': len(organic),
-            'has_ads': len(ads) > 0,
-            'competition': 'high' if len(ads) > 3 else 'medium' if len(ads) > 0 else 'low'
-        }
-        
-    except Exception as e:
-        return {}
-
-# ─── LAYER 3.2: CHECK KEYWORD COMPETITION  VIA SERPAPI ──────────────────────
+# ─── LAYER 3: CHECK KEYWORD COMPETITION  VIA SERPAPI ──────────────────────
 def check_keyword_competition(keyword):
     """Check how competitive a keyword is using SerpAPI"""
     serpapi_key = os.getenv("SERPAPI_KEY")
