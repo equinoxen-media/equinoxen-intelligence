@@ -11,7 +11,7 @@ WP_PASS = os.getenv("WORDPRESS_APP_PASSWORD")
 post = {
     "title": "API Test Post",
     "content": "This was created via API.",
-    "status": "draft"
+    "status": "publish"
 }
 
 response = requests.post(

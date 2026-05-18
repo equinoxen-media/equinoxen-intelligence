@@ -1,0 +1,57 @@
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-05-17 07:06:11
+  Generating 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260517_055915.json
+
+📋 Found 10 opportunities
+   Processing top 1...
+
+============================================================
+  ARTICLE 1 of 1
+============================================================
+
+✍️  Generating article: 11 Best CRM Software for Small Business in 2026 (Tested & Compared)
+   Keyword: best crm small business
+   Type: buying_guide
+   ✅ Article generated (14951 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_best-crm-small-business-2026_20260517_070720.html
+   🎨 Generating AI featured image...
+   🎨 Generating AI featured image for: 11 Best CRM Software for Small Business in 2026 (Tested & Compared)
+   ✅ AI image generated (2177KB)
+   ✅ AI image uploaded — Media ID: 254
+   🔍 DEBUG — draft parameter received: False
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 255
+   🔗 URL: https://equinoxen.com/best-crm-small-business-2026-3/
+   📝 Tracked: 11 Best CRM Software for Small Business in 2026 (Tested & Compared)
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   ✅ LinkedIn posted successfully
+   📤 Posting to X...
+   ❌ X failed: 403 — {"title":"Forbidden","status":403,"detail":"Your client app is not configured with the appropriate oauth1 app permissions for this endpoint.","type":"https://api.twitter.com/2/problems/oauth1-permissi
+   📤 Posting to Pinterest...
+   ❌ Pinterest failed: 401 — {"code":2,"message":"Authentication failed.","status":"failure"}
+   📱 Social posting complete
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Generated 1 articles:
+
+  📄 11 Best CRM Software for Small Business in 2026 (Tested & Compared)
+     Keyword: best crm small business
+     Local: article_best-crm-small-business-2026_20260517_070720.html
+     WordPress: https://equinoxen.com/best-crm-small-business-2026-3/
+     Status: published
+
+💡 Next steps:
+   1. Review draft articles in WordPress
+   2. Add featured images to each post
+   3. Verify affiliate links are working
+   4. Review and publish when ready

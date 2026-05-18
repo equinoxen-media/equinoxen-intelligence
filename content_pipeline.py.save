@@ -449,7 +449,7 @@ def generate_article(opportunity):
     try:
         message = client.messages.create(
             model="claude-sonnet-4-5",
-            max_tokens=8000,
+            max_tokens=4000,
             messages=[{"role": "user", "content": prompt}]
         )
         
@@ -480,7 +480,7 @@ Year: {CURRENT_YEAR}
 Affiliate links to include: {affiliate_links}
 
 ARTICLE REQUIREMENTS:
-- Length: 2,000-2,500 words
+- Length: 2,500-3,000 words
 - Tone: Expert, honest, helpful — never salesy
 - Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
@@ -488,16 +488,13 @@ ARTICLE REQUIREMENTS:
 REQUIRED STRUCTURE:
 1. Introduction — what problem does this solve (150 words)
 2. What is [Product] — overview (200 words)
-   - Include CTA button here: Try [Product] Free →
 3. Key Features — 5-7 features with H3 subheadings (600 words)
 4. Pricing — all tiers clearly explained (200 words)
 5. Pros and Cons — honest bullet points (150 words)
-   - Include CTA button here: Try [Product] Free →
 6. Who is it best for — specific use cases (150 words)
 7. [Product] Alternatives — 2-3 competitors briefly (200 words)
 8. Our Verdict — final recommendation with star rating out of 5 (150 words)
 9. CTA — Try [Product] with affiliate link (50 words)
-   - Include CTA button here
 
 FORMAT REQUIREMENTS:
 - Use HTML formatting (h2, h3, p, ul, li, strong tags)
@@ -507,11 +504,8 @@ FORMAT REQUIREMENTS:
 CRITICAL FORMATTING RULES:
 - Return ONLY raw HTML — no markdown
 - Do NOT wrap in ```html or ``` tags
+- Start your response directly with the disclosure paragraph
 - No preamble or explanation before the HTML
-- Do NOT add any inline styles, style attributes, or background colors
-- Do NOT add class attributes except for the CTA button class="button"
-- Let the website CSS handle all visual styling
-- No style="..." on any element whatsoever
 
 Write the complete article now in HTML format:"""
 
@@ -520,8 +514,8 @@ def build_comparison_prompt(title, keyword, programs, affiliate_links):
     product1 = programs[0] if len(programs) > 0 else "Product A"
     product2 = programs[1] if len(programs) > 1 else "Product B"
     
-    return f"""You are an expert SaaS reviewer writing for {SITE_NAME},  an independent
-software review publication. Write a comprehensive, SEO-optimized comparison article.
+    return f"""You are an expert SaaS reviewer writing for {SITE_NAME}. 
+Write a comprehensive comparison article.
 
 ARTICLE DETAILS:
 Title: {title}
@@ -530,19 +524,12 @@ Products compared: {product1} vs {product2}
 Year: {CURRENT_YEAR}
 Affiliate links: {affiliate_links}
 
-ARTICLE REQUIREMENTS:
-- Length: 2,000-2,500 words
-- Tone: Expert, honest, helpful — never salesy
-- Natural keyword usage — not stuffed
-
 REQUIRED STRUCTURE:
 1. Introduction — why this comparison matters (150 words)
 2. Quick Verdict — summary table showing winner in each category (HTML table)
-   - Include CTA button here for both products: Try [Product] Free →
 3. {product1} Overview — key features and pricing (300 words)
 4. {product2} Overview — key features and pricing (300 words)
 5. Head-to-Head Comparison — 5 categories with winner declared each time (500 words)
-   - Include CTA button here: Try [Product] Free →
 6. Pricing Comparison — clear breakdown (200 words)
 7. Who Should Choose {product1} — specific use cases (150 words)
 8. Who Should Choose {product2} — specific use cases (150 words)
@@ -555,19 +542,16 @@ Star ratings for each product.
 
 CRITICAL FORMATTING RULES:
 - Return ONLY raw HTML — no markdown
-- Do NOT wrap in ```html or ``` tags
+- Do NOT wrap in ```html or ``` tags  
+- Start directly with the disclosure paragraph
 - No preamble or explanation
-- Do NOT add any inline styles, style attributes, or background colors
-- Do NOT add class attributes except for the CTA button class="button"
-- Let the website CSS handle all visual styling
-- No style="..." on any element whatsoever
 
 Write the complete article now in HTML:"""
 
 # ─── BUYING GUIDE PROMPT ──────────────────────────────────────
 def build_buying_guide_prompt(title, keyword, programs, affiliate_links):
-    return f"""You are an expert SaaS reviewer writing for {SITE_NAME}, an independent
-software review publication. Write a comprehensive, SEO-optimized buying guidearticle.
+    return f"""You are an expert SaaS reviewer writing for {SITE_NAME}.
+Write a comprehensive buying guide.
 
 ARTICLE DETAILS:
 Title: {title}
@@ -576,15 +560,10 @@ Products to feature: {', '.join(programs)}
 Year: {CURRENT_YEAR}
 Affiliate links: {affiliate_links}
 
-ARTICLE REQUIREMENTS:
-- Length: 2,000-2,500 words
-- Tone: Expert, honest, helpful — never salesy
-- Natural keyword usage — not stuffed
-
 REQUIRED STRUCTURE:
 1. Introduction — why this category matters (150 words)
 2. What to look for — buying criteria with H3 subheadings (300 words)
-3. Top picks — 3-5 products each ending with an affiliate CTA button (800 words total section):
+3. Top picks — 5-7 products each with (800 words total):
    - Brief overview
    - Key features
    - Pricing
@@ -600,11 +579,8 @@ Each product section should have an affiliate CTA button.
 CRITICAL FORMATTING RULES:
 - Return ONLY raw HTML — no markdown
 - Do NOT wrap in ```html or ``` tags
+- Start directly with the disclosure paragraph
 - No preamble or explanation
-- Do NOT add any inline styles, style attributes, or background colors
-- Do NOT add class attributes except for the CTA button class="button"
-- Let the website CSS handle all visual styling
-- No style="..." on any element whatsoever
 
 Write the complete article now in HTML:"""
 
@@ -730,7 +706,7 @@ def assign_category(keyword, programs):
     
     return CATEGORIES.get("general", 1)  # Default to General
 
-#---- STEP 4.1  CREATE IMAGE -----
+#---- STEP 4.1  FETCH IMAGE FROM UNSPLASH -----
 def get_featured_image_unsplash(keyword):
     """Fetch relevant image from Unsplash API"""
     access_key = os.getenv("UNSPLASH_ACCESS_KEY")
@@ -822,7 +798,7 @@ def upload_image_to_wordpress(image_url, title):
 
 
 def generate_branded_image(title, keyword):
-    """Generate featured image using gpt-image-2 via OpenAI API"""
+    """Generate featured image using via OpenAI API"""
     try:
         import openai
         import io
@@ -850,15 +826,15 @@ Style requirements:
 - High contrast, visually striking
 - Suitable as a webpage featured image"""
 
-        # Generate image with gpt-image-2
+        # Generate image with gpt-image-1
         response = client.images.generate(
             model="gpt-image-2",
             prompt=prompt,
             size="1024x1536",
             quality="medium",
             output_compression=70,
-            output_format="webp",
             n=1,
+            output_format="webp",
         )
         
         import base64
@@ -882,8 +858,6 @@ def upload_branded_image_to_wordpress(title, keyword):
         img_data, image_url = generate_branded_image(title, keyword)
         if not img_data:
             return None, None
-        # Debug — check actual file type
-        print(f"   🔍 Image header bytes: {img_data[:4].hex()}")
         
         # Clean filename
         filename = keyword.lower().replace(' ', '-')[:50] + '.webp'
@@ -892,7 +866,6 @@ def upload_branded_image_to_wordpress(title, keyword):
         headers = {
             "Content-Disposition": f'attachment; filename="{filename}"',
             "Content-Type": "image/webp"
-            "X-WP-Upload-Type": "image/webp"
         }
         
         response = requests.post(
