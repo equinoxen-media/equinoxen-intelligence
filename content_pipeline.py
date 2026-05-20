@@ -25,7 +25,14 @@ AFFILIATE_LINKS = {
     "zoho": os.getenv("AFFILIATE_ZOHO"),
     "unbounce": os.getenv("AFFILIATE_UNBOUNCE"),
     "klaviyo": os.getenv("AFFILIATE_KLAVIYO"),
-    "asana": os.getenv("AFFILIATE_ASANAE"),
+    "asana": os.getenv("AFFILIATE_ASANA"),
+    "quickbooks": os.getenv("AFFILIATE_QUICKBOOKS"),
+    "freshbooks": os.getenv("AFFILIATE_FRESHBOOKS"),
+    "zapier": os.getenv("AFFILIATE_ZAPIER"),
+    "ahrefs": os.getenv("AFFILIATE_AHREFS"),
+    "clickup": os.getenv("AFFILIATE_CLICKUP"),
+    "grammarly": os.getenv("AFFILIATE_GRAMMARLY"),
+    "canva": os.getenv("AFFILIATE_CANVA"),
 }
 
 SITE_NAME = "Equinoxen Media"
@@ -274,22 +281,20 @@ def post_to_pinterest(title, excerpt, post_url, board_id, image_url=None):
         print(f"   ❌ Pinterest error: {e}")
         return False
 
-def post_to_social(title, excerpt, post_url, category_id=1, image_url=None, article_position=0):
+def post_to_social(title, excerpt, post_url, category_id=1, image_url=None, pinterest_image_url=None, article_position=0):
     print("\n📱 Posting to social media...")
     time.sleep(2)
 
-    # LinkedIn — first article only
     if article_position == 0:
         post_to_linkedin(title, excerpt, post_url)
         time.sleep(2)
 
-    # X — all articles
     post_to_x(title, post_url)
     time.sleep(2)
-
-    # Pinterest — all articles
-    board_id = get_pinterest_board(category_id)
-    post_to_pinterest(title, excerpt, post_url, board_id, image_url)
+    
+    # ── PINTEREST DISABLED — API pending approval ────────────
+   # board_id = get_pinterest_board(category_id)
+   # post_to_pinterest(title, excerpt, post_url, board_id, pinterest_image_url or image_url)
 
     print("   📱 Social posting complete")
 
@@ -505,13 +510,25 @@ FORMAT REQUIREMENTS:
 - Make the CTA button: <a href="AFFILIATE_LINK" rel="nofollow sponsored" target="_blank" class="button">Try [Product] Free →</a>
 
 CRITICAL FORMATTING RULES:
+- Do NOT use H1 tags anywhere in the article — the page title is already H1
+- Use H2 for all main section headings
+- Use H3 for all subsection headings
 - Return ONLY raw HTML — no markdown
 - Do NOT wrap in ```html or ``` tags
 - No preamble or explanation before the HTML
-- Do NOT add any inline styles, style attributes, or background colors
-- Do NOT add class attributes except for the CTA button class="button"
-- Let the website CSS handle all visual styling
-- No style="..." on any element whatsoever
+
+CRITICAL STYLING RULES:
+- Do NOT add any inline styles except on tables
+- Do NOT add background-color to any element
+- Do NOT add style attributes to p, h2, h3, ul, li, div elements
+- For tables use only these inline styles:
+  - table: style="width:100%; border-collapse:collapse;"
+  - th: style="border:1px solid #D4AF37; padding:8px; text-align:left;"
+  - td: style="border:1px solid #D4AF37; padding:8px;"
+- Use Eclipse Gold #D4AF37 for table borders to match brand colors
+- CTA buttons must use: class="button" — this is the only allowed class attribute
+- Let the website CSS handle all other visual styling
+- No style="..." on any element except table, th, and td
 
 Write the complete article now in HTML format:"""
 
@@ -533,6 +550,7 @@ Affiliate links: {affiliate_links}
 ARTICLE REQUIREMENTS:
 - Length: 2,000-2,500 words
 - Tone: Expert, honest, helpful — never salesy
+- Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
 
 REQUIRED STRUCTURE:
@@ -551,16 +569,28 @@ REQUIRED STRUCTURE:
 
 FORMAT: Use HTML with h2, h3, p, ul, li, table tags.
 Include comparison table with checkmarks ✓ and ✗
-Star ratings for each product.
+Star ratings for each product. ⭐⭐⭐⭐⭐ (X/5)
 
 CRITICAL FORMATTING RULES:
+- Do NOT use H1 tags anywhere in the article — the page title is already H1
+- Use H2 for all main section headings
+- Use H3 for all subsection headings
 - Return ONLY raw HTML — no markdown
 - Do NOT wrap in ```html or ``` tags
 - No preamble or explanation
-- Do NOT add any inline styles, style attributes, or background colors
-- Do NOT add class attributes except for the CTA button class="button"
-- Let the website CSS handle all visual styling
-- No style="..." on any element whatsoever
+
+CRITICAL STYLING RULES:
+- Do NOT add any inline styles except on tables
+- Do NOT add background-color to any element
+- Do NOT add style attributes to p, h2, h3, ul, li, div elements
+- For tables use only these inline styles:
+  - table: style="width:100%; border-collapse:collapse;"
+  - th: style="border:1px solid #D4AF37; padding:8px; text-align:left;"
+  - td: style="border:1px solid #D4AF37; padding:8px;"
+- Use Eclipse Gold #D4AF37 for table borders to match brand colors
+- CTA buttons must use: class="button" — this is the only allowed class attribute
+- Let the website CSS handle all other visual styling
+- No style="..." on any element except table, th, and td
 
 Write the complete article now in HTML:"""
 
@@ -579,6 +609,7 @@ Affiliate links: {affiliate_links}
 ARTICLE REQUIREMENTS:
 - Length: 2,000-2,500 words
 - Tone: Expert, honest, helpful — never salesy
+- Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
 
 REQUIRED STRUCTURE:
@@ -594,17 +625,29 @@ REQUIRED STRUCTURE:
 5. How to choose — decision framework (200 words)
 6. Final recommendations — top 3 for different needs (150 words)
 
-FORMAT: Use HTML. Include star ratings.
+FORMAT: Use HTML. Include star ratings. ⭐⭐⭐⭐⭐ (X/5)
 Each product section should have an affiliate CTA button.
 
 CRITICAL FORMATTING RULES:
+- Do NOT use H1 tags anywhere in the article — the page title is already H1
+- Use H2 for all main section headings
+- Use H3 for all subsection headings
 - Return ONLY raw HTML — no markdown
 - Do NOT wrap in ```html or ``` tags
 - No preamble or explanation
-- Do NOT add any inline styles, style attributes, or background colors
-- Do NOT add class attributes except for the CTA button class="button"
-- Let the website CSS handle all visual styling
-- No style="..." on any element whatsoever
+
+CRITICAL STYLING RULES:
+- Do NOT add any inline styles except on tables
+- Do NOT add background-color to any element
+- Do NOT add style attributes to p, h2, h3, ul, li, div elements
+- For tables use only these inline styles:
+  - table: style="width:100%; border-collapse:collapse;"
+  - th: style="border:1px solid #D4AF37; padding:8px; text-align:left;"
+  - td: style="border:1px solid #D4AF37; padding:8px;"
+- Use Eclipse Gold #D4AF37 for table borders to match brand colors
+- CTA buttons must use: class="button" — this is the only allowed class attribute
+- Let the website CSS handle all other visual styling
+- No style="..." on any element except table, th, and td
 
 Write the complete article now in HTML:"""
 
@@ -820,12 +863,12 @@ def upload_image_to_wordpress(image_url, title):
         print(f"   ⚠️  Image upload error: {e}")
         return None
 
-
-def generate_branded_image(title, keyword):
+def generate_branded_image(title, keyword, programs=None, orientation="landscape"):
     """Generate featured image using gpt-image-2 via OpenAI API"""
     try:
         import openai
         import io
+        from PIL import Image
         
         openai_key = os.getenv("OPENAI_API_KEY")
         if not openai_key:
@@ -834,86 +877,145 @@ def generate_branded_image(title, keyword):
         
         client = openai.OpenAI(api_key=openai_key)
         
-        print(f"   🎨 Generating AI featured image for: {title}")
+        print(f"   🎨 Generating {orientation} AI image for: {title}")
         
-        # Build prompt
+        # Build color hints
+        color_hints = {
+            "hubspot": "orange accents",
+            "monday": "vibrant red and yellow accents",
+            "semrush": "orange and blue accents",
+            "notion": "black and white minimal accents",
+            "webflow": "blue accents",
+            "zoho": "red accents",
+            "asana": "coral pink accents",
+            "klaviyo": "green accents",
+            "quickbooks": "green accents",
+            "freshbooks": "teal accents",
+            "zapier": "orange accents",
+            "ahrefs": "blue and orange accents",
+            "clickup": "purple accents",
+            "grammarly": "green accents",
+            "unbounce": "purple and teal accents",
+            "jotform": "orange and purple accents",
+            "canva": "purple and turquoise accents",
+        }
+        
+        accent_colors = []
+        if programs:
+            for program in programs:
+                for key, color in color_hints.items():
+                    if key in program.lower() and color not in accent_colors:
+                        accent_colors.append(color)
+        
+        color_instruction = f"Subtle {', '.join(accent_colors[:2])} incorporated into the design" if accent_colors else "Eclipse Gold accents"
+        
+        # Size and composition based on orientation
+        if orientation == "portrait":
+            size = "1024x1536"
+            composition = "vertical Pinterest-style composition with strong visual flow from top to bottom"
+        else:
+            size = "1536x1024"
+            composition = "horizontal landscape composition optimized for blog featured image display"
+        
         prompt = f"""Create a professional featured image for a blog post titled: '{title}'
 
 Style requirements:
-- Flat-lay image composition
-- All critical design elements centered in the middle of the frame
+- {composition}
+- Flat-lay image style
+- All critical design elements centered in the frame
 - Clean, modern, professional business/tech aesthetic
 - Suitable for a SaaS software review publication
 - No text or typography in the image
 - Visual metaphor representing the topic: {keyword}
-- Dark sophisticated color palette with gold accents
-- High contrast, visually striking
-- Suitable as a webpage featured image"""
+- Dark sophisticated base with gold accents
+- {color_instruction} as subtle design elements
+- High contrast, visually striking"""
 
-        # Generate image with gpt-image-2
         response = client.images.generate(
             model="gpt-image-2",
             prompt=prompt,
-            size="1024x1536",
+            size=size,
             quality="medium",
-            output_compression=70,
-            output_format="webp",
             n=1,
         )
         
         import base64
         image_data = base64.b64decode(response.data[0].b64_json)
         
-        print(f"   ✅ AI image generated ({len(image_data) // 1024}KB)")
+        # Convert to webp
+        img = Image.open(io.BytesIO(image_data))
+        webp_bytes = io.BytesIO()
+        img.save(webp_bytes, format='WEBP', quality=70, method=6, optimize=True)
+        webp_bytes.seek(0)
+        image_data = webp_bytes.getvalue()
+        
+        print(f"   ✅ {orientation.capitalize()} image generated ({len(image_data) // 1024}KB)")
         return image_data, None
         
     except ImportError:
-        print("   ⚠️  openai not installed")
+        print("   ⚠️  openai or Pillow not installed")
         return None, None
     except Exception as e:
         print(f"   ⚠️  Image generation error: {e}")
         return None, None
 
-def upload_branded_image_to_wordpress(title, keyword):
-    """Generate and upload a branded AI image to WordPress"""
+def upload_branded_image_to_wordpress(title, keyword, programs=None):
+    """Generate and upload landscape for WordPress and portrait for Pinterest"""
     try:
-        print(f"   🎨 Generating AI featured image...")
+        print(f"   🎨 Generating AI featured images...")
         
-        img_data, image_url = generate_branded_image(title, keyword)
-        if not img_data:
-            return None, None
-        # Debug — check actual file type
-        print(f"   🔍 Image header bytes: {img_data[:4].hex()}")
+        base_filename = keyword.lower().replace(' ', '-')[:50]
         
-        # Clean filename
-        filename = keyword.lower().replace(' ', '-')[:50] + '.webp'
+        # Landscape for WordPress featured image
+        landscape_data, _ = generate_branded_image(title, keyword, programs, orientation="landscape")
+        landscape_id = None
+        wordpress_image_url = None
+        if landscape_data:
+            landscape_id, wordpress_image_url = upload_single_image(
+                landscape_data,
+                f"{base_filename}-featured.webp",
+                "image/webp"
+            )
+        
+        # ── PINTEREST IMAGE DISABLED — API pending approval ────────────
+
+        # Portrait for Pinterest
+#        portrait_data, _ = generate_branded_image(title, keyword, programs, orientation="portrait")
+#        pinterest_image_url = None
+#        if portrait_data:
+#            _, pinterest_image_url = upload_single_image(
+#                portrait_data,
+#                f"{base_filename}-pinterest.webp",
+#                "image/webp"
+#            )
+        pinterest_image_url = None  # ← set to None while pinterest disabled 
+        
+        return landscape_id, wordpress_image_url, pinterest_image_url
+        
+    except Exception as e:
+        print(f"   ⚠️  Error: {e}")
+        return None, None, None
+
+def upload_single_image(img_data, filename, content_type):
+    """Upload a single image to WordPress media library"""
+    try:
         media_url = f"{WP_URL}/wp-json/wp/v2/media"
-        
         headers = {
             "Content-Disposition": f'attachment; filename="{filename}"',
-            "Content-Type": "image/webp"
-            "X-WP-Upload-Type": "image/webp"
+            "Content-Type": content_type
         }
-        
         response = requests.post(
             media_url,
             data=img_data,
             headers=headers,
             auth=(WP_USER, WP_PASS)
         )
-        
         if response.status_code in [200, 201]:
             media = response.json()
-            media_id = media.get("id")
-            wordpress_image_url = media.get("source_url")
-            print(f"   ✅ AI image uploaded — Media ID: {media_id}")
-            return media_id, wordpress_image_url
-        else:
-            print(f"   ⚠️  Upload failed: {response.status_code}")
-            return None, None
-            
+            return media.get("id"), media.get("source_url")
+        return None, None
     except Exception as e:
-        print(f"   ⚠️  Error: {e}")
+        print(f"   ⚠️  Upload error: {e}")
         return None, None
 
 # ─── STEP 5: PUBLISH TO WORDPRESS ─────────────────────────────
@@ -995,14 +1097,13 @@ def save_article_locally(title, content, metadata):
     return filename
 
 # ─── MAIN PIPELINE ────────────────────────────────────────────
-def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
+def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print("=" * 60)
     print("  EQUINOXEN MEDIA — CONTENT PIPELINE")
     print(f"  Running at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"  Generating {num_articles} articles")
+    print(f"  Target: {num_articles} articles")
     print("=" * 60)
     
-    # Load intelligence report
     intelligence = load_latest_intelligence()
     if not intelligence:
         return
@@ -1013,73 +1114,67 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
         return
     
     print(f"\n📋 Found {len(opportunities)} opportunities")
-    print(f"   Processing top {num_articles}...")
     
     results = []
+    published_count = 0  # Track successful publishes
+    linkedin_posted = False  # Track LinkedIn — only post once
+    opp_index = 0  # Track position in opportunity list
     
-    for i, opp in enumerate(opportunities[:num_articles]):
+    while published_count < num_articles and opp_index < len(opportunities):
+        opp = opportunities[opp_index]
+        opp_index += 1
+        
         print(f"\n{'='*60}")
-        print(f"  ARTICLE {i+1} of {num_articles}")
+        print(f"  ARTICLE {published_count + 1} of {num_articles} (opportunity {opp_index} of {len(opportunities)})")
         print(f"{'='*60}")
-    
+       
         title = opp.get('title', '')
         keyword = opp.get('keyword', '')
-    
-        # Generate slug for checking
         test_slug = keyword.lower().replace(' ', '-')
-    
+       
         # ── CHECK IF ALREADY PUBLISHED ──────────────────────────
         already_done, reason = is_already_published(title, keyword, test_slug)
         if already_done:
             print(f"⏭️  Skipping — already published ({reason} match):")
             print(f"   {title}")
             continue
-    
-        # Also check WordPress directly
+        
         if check_wordpress_for_duplicate(test_slug):
             print(f"⏭️  Skipping — already exists in WordPress")
             print(f"   {title}")
             continue
-
+        
         # Generate article
         article_content = generate_article(opp)
         if not article_content:
             continue
-    
+        
         # Generate metadata
-        metadata = generate_seo_metadata(
-            title,
-            keyword,
-            article_content
-        )
-    
+        metadata = generate_seo_metadata(title, keyword, article_content)
+        
         # Assign category
-        category_id = assign_category(
-            keyword,
-            opp.get('programs', [])
-        )
-    
+        category_id = assign_category(keyword, opp.get('programs', []))
+       
         # Save locally
-        local_file = save_article_locally(
-            title,
-            article_content,
-            metadata
-        )
-    
+        local_file = save_article_locally(title, article_content, metadata)
+       
         # Get featured image
         featured_image_id = None
         image_url = None
+        pinterest_image_url = None  # ← add this
         if publish_to_wp:
-            # Try gpt-image-2 first
-            featured_image_id, image_url = upload_branded_image_to_wordpress(title, keyword)
-            
-            # Fall back to Unsplash if AI generation fails
+            featured_image_id, image_url, pinterest_image_url = upload_branded_image_to_wordpress(
+                title,
+                keyword,
+                programs=opp.get('programs', [])
+            )
             if not featured_image_id:
                 unsplash_url = get_featured_image_unsplash(keyword)
                 if unsplash_url:
                     featured_image_id = upload_image_to_wordpress(unsplash_url, title)
                     image_url = unsplash_url
-            
+                    pinterest_image_url = unsplash_url
+        
         # Publish to WordPress
         post_id = None
         post_url = None
@@ -1092,7 +1187,7 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
                 draft=publish_as_draft,
                 featured_image_id=featured_image_id
             )
-    
+        
         # ── TRACK IF PUBLISHED SUCCESSFULLY ─────────────────────
         if post_id:
             save_published_post(
@@ -1102,8 +1197,9 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
                 post_id,
                 post_url
             )
+            published_count += 1  # Only increment on successful publish
     
-        # Post to social media if published successfully
+        # ── POST TO SOCIAL MEDIA ─────────────────────────────────
         if post_id and not publish_as_draft:
             post_to_social(
                 title,
@@ -1111,8 +1207,10 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
                 post_url,
                 category_id=category_id,
                 image_url=image_url,
-                article_position=i
+                pinterest_image_url=pinterest_image_url,
+                article_position=0 if not linkedin_posted else 1
             )
+            linkedin_posted = True  # LinkedIn only gets the first successful post
     
         results.append({
             "title": title,
@@ -1123,7 +1221,7 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
             "status": "draft" if publish_as_draft else "published"
         })
     
-        if i < num_articles - 1:
+        if published_count < num_articles:
             print(f"\n⏳ Waiting 5 seconds before next article...")
             time.sleep(5)
     
@@ -1131,7 +1229,7 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
     print("\n" + "=" * 60)
     print("  PIPELINE COMPLETE")
     print("=" * 60)
-    print(f"\n✅ Generated {len(results)} articles:")
+    print(f"\n✅ Published {published_count} of {num_articles} target articles:")
     for r in results:
         print(f"\n  📄 {r['title']}")
         print(f"     Keyword: {r['keyword']}")
@@ -1140,11 +1238,12 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True):
             print(f"     WordPress: {r['post_url']}")
         print(f"     Status: {r['status']}")
     
+    if published_count < num_articles:
+        print(f"\n⚠️  Only published {published_count} of {num_articles} — run intelligence.py for fresh opportunities")
+    
     print("\n💡 Next steps:")
-    print("   1. Review draft articles in WordPress")
-    print("   2. Add featured images to each post")
-    print("   3. Verify affiliate links are working")
-    print("   4. Review and publish when ready")
+    print("   1. Review articles in WordPress")
+    print("   2. Verify affiliate links are working")
     
     return results
     
@@ -1158,7 +1257,7 @@ if __name__ == "__main__":
     else:
         # Run pipeline normally    
         run_pipeline(
-            num_articles=1,        # How many articles to generate
+            num_articles=3,        # How many articles to generate
             publish_as_draft=False, # True = draft, False = live
             publish_to_wp=True     # True = send to WordPress
         )

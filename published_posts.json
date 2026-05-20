@@ -1,12 +1,27 @@
 {
   "slugs": [
-    "best-crm-small-business-2026"
+    "best-crm-small-business-2026",
+    "best-crm-construction-companies-2026-guide",
+    "best-crm-software-startups-2026-reviews-pricing",
+    "best-crm-for-nonprofits-2026-free-affordable-options",
+    "best-crm-free-software-2026",
+    "best-crm-reddit-software-reviews-2026"
   ],
   "titles": [
-    "11 best crm software for small business in 2026 (tested & compared)"
+    "11 best crm software for small business in 2026 (tested & compared)",
+    "best crm software for construction companies in 2026: complete guide",
+    "best crm software for startups in 2026: reviews & pricing",
+    "best crm software for nonprofits in 2026: free & affordable options",
+    "best free crm software in 2026: 9 tools that don't require a credit card",
+    "best crm software according to reddit users in 2026: real reviews"
   ],
   "keywords": [
-    "best crm small business"
+    "best crm small business",
+    "crm construction companies",
+    "crm software startups",
+    "crm for nonprofits",
+    "best crm free",
+    "best crm reddit"
   ],
   "posts": [
     {
@@ -16,6 +31,46 @@
       "post_id": 255,
       "post_url": "https://equinoxen.com/best-crm-small-business-2026-3/",
       "created_at": "2026-05-17T07:08:20.566047"
+    },
+    {
+      "title": "Best CRM Software for Construction Companies in 2026: Complete Guide",
+      "slug": "best-crm-construction-companies-2026-guide",
+      "keyword": "crm construction companies",
+      "post_id": 261,
+      "post_url": "https://equinoxen.com/best-crm-construction-companies-2026-guide/",
+      "created_at": "2026-05-18T05:19:19.693465"
+    },
+    {
+      "title": "Best CRM Software for Startups in 2026: Reviews & Pricing",
+      "slug": "best-crm-software-startups-2026-reviews-pricing",
+      "keyword": "crm software startups",
+      "post_id": 263,
+      "post_url": "https://equinoxen.com/best-crm-software-startups-2026-reviews-pricing/",
+      "created_at": "2026-05-18T05:21:56.868134"
+    },
+    {
+      "title": "Best CRM Software for Nonprofits in 2026: Free & Affordable Options",
+      "slug": "best-crm-for-nonprofits-2026-free-affordable-options",
+      "keyword": "crm for nonprofits",
+      "post_id": 286,
+      "post_url": "https://equinoxen.com/best-crm-for-nonprofits-2026-free-affordable-options/",
+      "created_at": "2026-05-19T05:22:01.632038"
+    },
+    {
+      "title": "Best Free CRM Software in 2026: 9 Tools That Don't Require a Credit Card",
+      "slug": "best-crm-free-software-2026",
+      "keyword": "best crm free",
+      "post_id": 288,
+      "post_url": "https://equinoxen.com/best-crm-free-software-2026/",
+      "created_at": "2026-05-19T05:24:29.711357"
+    },
+    {
+      "title": "Best CRM Software According to Reddit Users in 2026: Real Reviews",
+      "slug": "best-crm-reddit-software-reviews-2026",
+      "keyword": "best crm reddit",
+      "post_id": 292,
+      "post_url": "https://equinoxen.com/best-crm-reddit-software-reviews-2026/",
+      "created_at": "2026-05-19T05:27:06.279039"
     }
   ]
 }

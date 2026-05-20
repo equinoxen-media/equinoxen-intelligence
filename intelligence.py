@@ -195,71 +195,6 @@ def get_google_autocomplete(niche):
     print(f"  Found {len(results)} autocomplete suggestions")
     return results
 
-# ─── LAYER 1: GOOGLE TRENDS VIA SERPAPI ───────────────────────
-#def get_trending_topics_serpapi(niche):
-#    """Get trending topics via SerpAPI - handles rate limits automatically"""
-#    print(f"\n📈 Checking trends for: {niche}")
-    
-#    serpapi_key = os.getenv("SERPAPI_KEY")
-#    if not serpapi_key:
-#        print("  ⚠️  No SERPAPI_KEY found in .env - skipping trends")
-#        return []
-    
-#    try:
-#        params = {
-#            "engine": "google_trends",
-#            "q": niche,
-#            "date": "now 7-d",
-#            "geo": "US",
-#            "api_key": serpapi_key
-#        }
-        
-#        response = requests.get(
-#            "https://serpapi.com/search",
-#            params=params,
-#            timeout=30
-#        )
-        
-#        if response.status_code != 200:
-#            print(f"  ⚠️  SerpAPI error: {response.status_code}")
-#            return []
-        
-#        data = response.json()
-#        trending = []
-        
-#        # Get related queries
-#        related = data.get("related_queries", {})
-#        rising = related.get("rising", [])
-#        top = related.get("top", [])
-        
-#        for item in rising[:5]:
-#            trending.append({
-#                'keyword': item.get('query', ''),
-#                'type': 'rising',
-#                'value': item.get('value', 0),
-#                'niche': niche,
-#                'source': 'google_trends'
-#            })
-        
-#        for item in top[:5]:
-#            trending.append({
-#                'keyword': item.get('query', ''),
-#                'type': 'top',
-#                'value': item.get('value', 0),
-#                'niche': niche,
-#                'source': 'google_trends'
-#            })
-        
-#        print(f"  Found {len(trending)} trending keywords")
-#        time.sleep(3)
-#        return trending
-        
-#    except Exception as e:
-#        print(f"  ⚠️  SerpAPI error: {e}")
-#        return []
-
-#
-
 # ─── LAYER 2: REDDIT VIA RSS (NO API NEEDED) ──────────────────
 def get_reddit_via_rss(subreddit_name, limit=25):
     """Get Reddit posts via RSS - zero credentials needed"""
@@ -383,7 +318,7 @@ def analyze_opportunities(trends_data, reddit_data):
     
     # Check competition for top trend keywords
     print("  🔍 Checking keyword competition...")
-    for item in trends_data[:10]:  # Only check top 10 to save API credits
+    for item in trends_data[:20]:  # Increased from 10 to 20
         keyword = item.get('keyword', '')
         if keyword:
             competition = check_keyword_competition(keyword)
@@ -392,14 +327,17 @@ def analyze_opportunities(trends_data, reddit_data):
     
     client = anthropic.Anthropic(api_key=anthropic_key)
     
-    # Prepare summaries
-    trends_summary = json.dumps(trends_data[:20], indent=2) if trends_data else "No trends data available"
+    # Pass full trends data up to 30 items
+    trends_summary = json.dumps(trends_data[:30], indent=2) if trends_data else "No trends data available"
     
+    # Pass richer Reddit data including score and pain point signals
     reddit_summary = json.dumps([{
         'title': p['title'],
         'subreddit': p['subreddit'],
-        'relevance': p['relevance']
-    } for p in reddit_data[:30]], indent=2)
+        'relevance': p['relevance'],
+        'score': p.get('score', 0),
+        'pain_points': p.get('pain_points', [])
+    } for p in sorted(reddit_data, key=lambda x: x.get('relevance', 0), reverse=True)[:40]], indent=2)
     
     prompt = f"""You are an expert SaaS affiliate content strategist for Equinoxen Media,
 an independent SaaS review and comparison website targeting business owners,
@@ -412,10 +350,16 @@ ALL article titles MUST use {current_year} — never use 2024, 2023 or any past 
 Analyze these trending topics and Reddit pain points to identify the TOP 10
 content opportunities for affiliate review articles.
 
-GOOGLE TRENDS DATA:
+SCORING GUIDANCE:
+- Prefer keywords with low or medium competition over high competition
+- Weight Reddit posts with higher relevance scores more heavily
+- Prioritize topics appearing in BOTH keyword data AND Reddit discussions
+- High commercial intent signals: best, review, alternative, vs, top, comparison
+
+GOOGLE TRENDS AND KEYWORD DATA (includes competition level):
 {trends_summary}
 
-REDDIT PAIN POINTS (from r/entrepreneur, r/smallbusiness, r/SaaS etc):
+REDDIT PAIN POINTS (sorted by relevance score, from r/entrepreneur, r/smallbusiness, r/SaaS etc):
 {reddit_summary}
 
 For each opportunity identify:
@@ -431,9 +375,11 @@ For each opportunity identify:
 
 Rules for good opportunities:
 - High commercial intent keywords (best, review, alternative, vs, comparison)
+- Prefer low/medium competition keywords over high competition
 - Products with affiliate programs paying 20%+ commission
-- Topics with clear buyer intent from Reddit discussions
+- Topics appearing in both keyword trends AND Reddit discussions get priority
 - Avoid overly broad topics — be specific
+- Mix of review, comparison and buying_guide types
 
 Return ONLY a valid JSON array. No markdown. No explanation:
 [{{"title":"...{current_year}...","keyword":"...","type":"review","programs":["HubSpot"],"why":"...","urgency":8}}]"""
@@ -441,7 +387,7 @@ Return ONLY a valid JSON array. No markdown. No explanation:
     try:
         message = client.messages.create(
             model="claude-sonnet-4-5",
-            max_tokens=2000,
+            max_tokens=3000,  # Increased from 2000
             messages=[{"role": "user", "content": prompt}]
         )
         
@@ -519,17 +465,6 @@ def run_intelligence():
             print("\n⚠️  Skipping keyword research — no SERPAPI_KEY")
         time.sleep(3)
     print(f"\n  ✅ Total keywords: {len(all_trends)}")
-
-#    # Phase 1 — Google Trends via SerpAPI
-#    if os.getenv("SERPAPI_KEY"):
-#        print("\n📊 PHASE 1: Google Trends via SerpAPI")
-#        print("-" * 40)
-#        for niche in NICHES[:4]:
-#            trends = get_trending_topics_serpapi(niche)
-#            all_trends.extend(trends)
-#            time.sleep(3)
-#    else:
-#        print("\n⚠️  Skipping Google Trends — no SERPAPI_KEY in .env")
     
     # Phase 2 — Reddit via RSS
     print("\n💬 PHASE 2: Reddit RSS Analysis")
