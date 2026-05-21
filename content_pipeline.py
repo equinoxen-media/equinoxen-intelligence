@@ -516,6 +516,11 @@ CRITICAL FORMATTING RULES:
 - Return ONLY raw HTML — no markdown
 - Do NOT wrap in ```html or ``` tags
 - No preamble or explanation before the HTML
+- Never use hyphens or dashes (- or —) in sentences to connect clauses or add parenthetical thoughts
+- Instead of a dash, rewrite as a separate sentence or use a comma
+- Example WRONG: "HubSpot is a CRM — and a powerful one at that"
+- Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
+- Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -578,6 +583,11 @@ CRITICAL FORMATTING RULES:
 - Return ONLY raw HTML — no markdown
 - Do NOT wrap in ```html or ``` tags
 - No preamble or explanation
+- Never use hyphens or dashes (- or —) in sentences to connect clauses or add parenthetical thoughts
+- Instead of a dash, rewrite as a separate sentence or use a comma
+- Example WRONG: "HubSpot is a CRM — and a powerful one at that"
+- Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
+- Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -635,6 +645,11 @@ CRITICAL FORMATTING RULES:
 - Return ONLY raw HTML — no markdown
 - Do NOT wrap in ```html or ``` tags
 - No preamble or explanation
+- Never use hyphens or dashes (- or —) in sentences to connect clauses or add parenthetical thoughts
+- Instead of a dash, rewrite as a separate sentence or use a comma
+- Example WRONG: "HubSpot is a CRM — and a powerful one at that"
+- Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
+- Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -907,7 +922,7 @@ def generate_branded_image(title, keyword, programs=None, orientation="landscape
                     if key in program.lower() and color not in accent_colors:
                         accent_colors.append(color)
         
-        color_instruction = f"Subtle {', '.join(accent_colors[:2])} incorporated into the design" if accent_colors else "Eclipse Gold accents"
+        color_instruction = f"Subtle {', '.join(accent_colors)} incorporated into the design" if accent_colors else "Eclipse Gold accents"
         
         # Size and composition based on orientation
         if orientation == "portrait":
@@ -927,8 +942,9 @@ Style requirements:
 - Suitable for a SaaS software review publication
 - No text or typography in the image
 - Visual metaphor representing the topic: {keyword}
-- Dark sophisticated base with gold accents
-- {color_instruction} as subtle design elements
+- Dark sophisticated base with gold as primary accents
+- Use ALL of these colors as subtle accent elements throughout the design: {color_instruction}
+- Each accent color should appear as a separate visible design element
 - High contrast, visually striking"""
 
         response = client.images.generate(
