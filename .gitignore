@@ -8,7 +8,7 @@
 *.html
 intelligence_report_*.json
 article_*.html
-
+google-service-account.json
 
 # Python
 __pycache__/

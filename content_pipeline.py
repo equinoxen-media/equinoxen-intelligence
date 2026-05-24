@@ -95,8 +95,8 @@ def get_pinterest_board(category_id):
     return category_board_map.get(category_id, PINTEREST_BOARDS.get("general"))
 
 # ─── SOCIAL POSTING ───────────────────────────────────────────
-def post_to_linkedin(title, excerpt, post_url):
-    """Post article to LinkedIn company page"""
+def post_to_linkedin(title, excerpt, post_url, image_url=None):
+    """Post article to LinkedIn company page with optional image"""
     if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN_ORGANIZATION_ID:
         print("   ⚠️  LinkedIn credentials missing — skipping")
         return False
@@ -109,28 +109,110 @@ def post_to_linkedin(title, excerpt, post_url):
         "X-Restli-Protocol-Version": "2.0.0"
     }
 
-    post_body = {
-        "author": f"urn:li:organization:{LINKEDIN_ORGANIZATION_ID}",
-        "lifecycleState": "PUBLISHED",
-        "specificContent": {
-            "com.linkedin.ugc.ShareContent": {
-                "shareCommentary": {
-                    "text": f"{title}\n\n{excerpt}\n\nRead the full article 👇\n{post_url}"
-                },
-                "shareMediaCategory": "ARTICLE",
-                "media": [
-                    {
-                        "status": "READY",
-                        "originalUrl": post_url,
-                        "title": {"text": title}
-                    }
-                ]
+    # Try to upload image to LinkedIn
+    image_asset = None
+    if image_url:
+        try:
+            print("   🖼️  Uploading image to LinkedIn...")
+
+            # Step 1 — Register upload
+            register_body = {
+                "registerUploadRequest": {
+                    "owner": f"urn:li:organization:{LINKEDIN_ORGANIZATION_ID}",
+                    "recipes": ["urn:li:digitalmediaRecipe:feedshare-image"],
+                    "serviceRelationships": [
+                        {
+                            "identifier": "urn:li:userGeneratedContent",
+                            "relationshipType": "OWNER"
+                        }
+                    ]
+                }
             }
-        },
-        "visibility": {
-            "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+
+            register_response = requests.post(
+                "https://api.linkedin.com/v2/assets?action=registerUpload",
+                headers=headers,
+                json=register_body
+            )
+
+            if register_response.status_code == 200:
+                register_data = register_response.json()
+                upload_url = register_data["value"]["uploadMechanism"][
+                    "com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"
+                ]["uploadUrl"]
+                image_asset = register_data["value"]["asset"]
+
+                # Step 2 — Download image and upload to LinkedIn
+                img_response = requests.get(image_url, timeout=30)
+                if img_response.status_code == 200:
+                    content_type = img_response.headers.get("Content-Type", "image/webp")
+                    upload_response = requests.put(
+                        upload_url,
+                        data=img_response.content,
+                        headers={"Content-Type": content_type}
+                    )
+                    if upload_response.status_code in [200, 201]:
+                        print("   ✅ Image uploaded to LinkedIn")
+                    else:
+                        print(f"   ⚠️  Image upload failed: {upload_response.status_code}")
+                        image_asset = None
+            else:
+                print(f"   ⚠️  Image registration failed: {register_response.status_code}")
+
+        except Exception as e:
+            print(f"   ⚠️  LinkedIn image upload error: {e}")
+            image_asset = None
+
+    post_text = f"{title}\n\n{excerpt}\n\nRead the full article 👇\n{post_url}"
+
+    if image_asset:
+        # Post with uploaded image
+        post_body = {
+            "author": f"urn:li:organization:{LINKEDIN_ORGANIZATION_ID}",
+            "lifecycleState": "PUBLISHED",
+            "specificContent": {
+                "com.linkedin.ugc.ShareContent": {
+                    "shareCommentary": {
+                        "text": post_text
+                    },
+                    "shareMediaCategory": "IMAGE",
+                    "media": [
+                        {
+                            "status": "READY",
+                            "media": image_asset,
+                            "title": {"text": title}
+                        }
+                    ]
+                }
+            },
+            "visibility": {
+                "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+            }
         }
-    }
+    else:
+        # Fall back to article link without image
+        post_body = {
+            "author": f"urn:li:organization:{LINKEDIN_ORGANIZATION_ID}",
+            "lifecycleState": "PUBLISHED",
+            "specificContent": {
+                "com.linkedin.ugc.ShareContent": {
+                    "shareCommentary": {
+                        "text": post_text
+                    },
+                    "shareMediaCategory": "ARTICLE",
+                    "media": [
+                        {
+                            "status": "READY",
+                            "originalUrl": post_url,
+                            "title": {"text": title}
+                        }
+                    ]
+                }
+            },
+            "visibility": {
+                "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+            }
+        }
 
     try:
         response = requests.post(
@@ -147,7 +229,6 @@ def post_to_linkedin(title, excerpt, post_url):
     except Exception as e:
         print(f"   ❌ LinkedIn error: {e}")
         return False
-
 
 def post_to_x(title, post_url):
     """Post article to X (Twitter)"""
@@ -286,7 +367,7 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None, pint
     time.sleep(2)
 
     if article_position == 0:
-        post_to_linkedin(title, excerpt, post_url)
+        post_to_linkedin(title, excerpt, post_url, image_url=image_url)
         time.sleep(2)
 
     post_to_x(title, post_url)
@@ -404,6 +485,28 @@ def clean_html_response(text):
     
     return text.strip()
     
+# ─── SUBMIT POST TO INDEXNOW  ────────────────────────
+def submit_to_indexnow(post_url):
+    """Submit URL to IndexNow for Bing/DuckDuckGo indexing"""
+    try:
+        payload = {
+            "host": "equinoxen.com",
+            "key": os.getenv("INDEXNOW_KEY"),
+            "keyLocation": f"https://equinoxen.com/{os.getenv('INDEXNOW_KEY')}.txt",
+            "urlList": [post_url]
+        }
+        response = requests.post(
+            "https://api.indexnow.org/indexnow",
+            json=payload,
+            headers={"Content-Type": "application/json"}
+        )
+        if response.status_code in [200, 202]:
+            print(f"   ✅ IndexNow submitted: {post_url}")
+        else:
+            print(f"   ⚠️  IndexNow failed: {response.status_code}")
+    except Exception as e:
+        print(f"   ⚠️  IndexNow error: {e}")
+
 # ─── STEP 1: LOAD INTELLIGENCE REPORT ────────────────────────
 def load_latest_intelligence():
     """Load the most recent intelligence report"""
@@ -521,6 +624,10 @@ CRITICAL FORMATTING RULES:
 - Example WRONG: "HubSpot is a CRM — and a powerful one at that"
 - Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
 - Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
+- Use powerful, dramatic word choices in the article title and headings
+- Use action-driven, benefit-focused language that creates urgency
+- Examples of strong title words: Ultimate, Definitive, Proven, Powerful, Essential, Complete, Brutal, Honest, Exposed, Dominate, Crushing, Game-Changing
+- Headings should create curiosity or promise a specific outcome
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -588,6 +695,10 @@ CRITICAL FORMATTING RULES:
 - Example WRONG: "HubSpot is a CRM — and a powerful one at that"
 - Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
 - Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
+- Use powerful, dramatic word choices in the article title and headings
+- Use action-driven, benefit-focused language that creates urgency
+- Examples of strong title words: Ultimate, Definitive, Proven, Powerful, Essential,>
+- Headings should create curiosity or promise a specific outcome
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -650,6 +761,10 @@ CRITICAL FORMATTING RULES:
 - Example WRONG: "HubSpot is a CRM — and a powerful one at that"
 - Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
 - Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
+- Use powerful, dramatic word choices in the article title and headings
+- Use action-driven, benefit-focused language that creates urgency
+- Examples of strong title words: Ultimate, Definitive, Proven, Powerful, Essential,>
+- Headings should create curiosity or promise a specific outcome
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -835,7 +950,7 @@ def get_featured_image_unsplash(keyword):
         return None
 
 
-def upload_image_to_wordpress(image_url, title):
+def upload_image_to_wordpress(image_url, title, alt_text=""):
     """Download image and upload to WordPress media library"""
     try:
         print(f"   📤 Uploading featured image...")
@@ -868,6 +983,14 @@ def upload_image_to_wordpress(image_url, title):
         if media_response.status_code in [200, 201]:
             media = media_response.json()
             media_id = media.get("id")
+           
+            if alt_text and media_id:
+                requests.post(
+                    f"{media_url}/{media_id}",
+                    json={"alt_text": alt_text},
+                    auth=(WP_USER, WP_PASS)
+                )
+            
             print(f"   ✅ Image uploaded — Media ID: {media_id}")
             return media_id
         else:
@@ -940,7 +1063,7 @@ Style requirements:
 - All critical design elements centered in the frame
 - Clean, modern, professional business/tech aesthetic
 - Suitable for a SaaS software review publication
-- No text or typography in the image
+- No text, typography, logos, brand marks, or recognizable company symbols in the image
 - Visual metaphor representing the topic: {keyword}
 - Dark sophisticated base with gold as primary accents
 - Use ALL of these colors as subtle accent elements throughout the design: {color_instruction}
@@ -990,7 +1113,8 @@ def upload_branded_image_to_wordpress(title, keyword, programs=None):
             landscape_id, wordpress_image_url = upload_single_image(
                 landscape_data,
                 f"{base_filename}-featured.webp",
-                "image/webp"
+                "image/webp",
+                alt_text=keyword
             )
         
         # ── PINTEREST IMAGE DISABLED — API pending approval ────────────
@@ -1002,7 +1126,8 @@ def upload_branded_image_to_wordpress(title, keyword, programs=None):
 #            _, pinterest_image_url = upload_single_image(
 #                portrait_data,
 #                f"{base_filename}-pinterest.webp",
-#                "image/webp"
+#                "image/webp",
+#                alt_text=keyword
 #            )
         pinterest_image_url = None  # ← set to None while pinterest disabled 
         
@@ -1012,7 +1137,7 @@ def upload_branded_image_to_wordpress(title, keyword, programs=None):
         print(f"   ⚠️  Error: {e}")
         return None, None, None
 
-def upload_single_image(img_data, filename, content_type):
+def upload_single_image(img_data, filename, content_type, alt_text=""):
     """Upload a single image to WordPress media library"""
     try:
         media_url = f"{WP_URL}/wp-json/wp/v2/media"
@@ -1028,7 +1153,17 @@ def upload_single_image(img_data, filename, content_type):
         )
         if response.status_code in [200, 201]:
             media = response.json()
-            return media.get("id"), media.get("source_url")
+            media_id = media.get("id")
+            
+            # Update alt text
+            if alt_text and media_id:
+                requests.post(
+                    f"{media_url}/{media_id}",
+                    json={"alt_text": alt_text},
+                    auth=(WP_USER, WP_PASS)
+                )
+            
+            return media_id, media.get("source_url")
         return None, None
     except Exception as e:
         print(f"   ⚠️  Upload error: {e}")
@@ -1187,7 +1322,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
             if not featured_image_id:
                 unsplash_url = get_featured_image_unsplash(keyword)
                 if unsplash_url:
-                    featured_image_id = upload_image_to_wordpress(unsplash_url, title)
+                    featured_image_id = upload_image_to_wordpress(unsplash_url, title, alt_text=keyword)
                     image_url = unsplash_url
                     pinterest_image_url = unsplash_url
         
@@ -1240,6 +1375,12 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
         if published_count < num_articles:
             print(f"\n⏳ Waiting 5 seconds before next article...")
             time.sleep(5)
+    
+        # ── SUBMIT TO INDEXNOW  ─────────────────────────────────
+        if post_id and post_url:
+            submit_to_indexnow(post_url)
+    
+        # ── SUBMIT TO GOOGLE INDEXING ─────────────────────────────────
     
     # Final summary
     print("\n" + "=" * 60)

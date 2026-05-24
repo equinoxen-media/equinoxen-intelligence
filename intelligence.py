@@ -305,8 +305,18 @@ def check_keyword_competition(keyword):
     except:
         return "unknown"
 
+# ─── LAYER 3.5: TRACK KEYWORKS PUBLISHED ─────────────────────────────────
+def load_published_keywords():
+    """Load already published keywords to avoid repetition"""
+    tracker_path = os.path.join(os.path.dirname(__file__), 'published_posts.json')
+    if os.path.exists(tracker_path):
+        with open(tracker_path, 'r') as f:
+            tracker = json.load(f)
+            return tracker.get('keywords', [])
+    return []
+
 # ─── LAYER 4: CLAUDE ANALYSIS ─────────────────────────────────
-def analyze_opportunities(trends_data, reddit_data):
+def analyze_opportunities(trends_data, reddit_data, published_keywords=None):
     current_year = datetime.now().year
     """Use Claude to identify best content opportunities"""
     print("\n🤖 Analyzing opportunities with Claude...")
@@ -318,7 +328,7 @@ def analyze_opportunities(trends_data, reddit_data):
     
     # Check competition for top trend keywords
     print("  🔍 Checking keyword competition...")
-    for item in trends_data[:20]:  # Increased from 10 to 20
+    for item in trends_data[:20]:
         keyword = item.get('keyword', '')
         if keyword:
             competition = check_keyword_competition(keyword)
@@ -327,10 +337,8 @@ def analyze_opportunities(trends_data, reddit_data):
     
     client = anthropic.Anthropic(api_key=anthropic_key)
     
-    # Pass full trends data up to 30 items
     trends_summary = json.dumps(trends_data[:30], indent=2) if trends_data else "No trends data available"
     
-    # Pass richer Reddit data including score and pain point signals
     reddit_summary = json.dumps([{
         'title': p['title'],
         'subreddit': p['subreddit'],
@@ -338,6 +346,8 @@ def analyze_opportunities(trends_data, reddit_data):
         'score': p.get('score', 0),
         'pain_points': p.get('pain_points', [])
     } for p in sorted(reddit_data, key=lambda x: x.get('relevance', 0), reverse=True)[:40]], indent=2)
+    
+    published_str = json.dumps(published_keywords[-30:]) if published_keywords else "[]"
     
     prompt = f"""You are an expert SaaS affiliate content strategist for Equinoxen Media,
 an independent SaaS review and comparison website targeting business owners,
@@ -347,19 +357,32 @@ CRITICAL: Today is {datetime.now().strftime('%B %d, %Y')}.
 The current year is {current_year}.
 ALL article titles MUST use {current_year} — never use 2024, 2023 or any past year.
 
-Analyze these trending topics and Reddit pain points to identify the TOP 10
-content opportunities for affiliate review articles.
+DIVERSITY REQUIREMENTS — MANDATORY:
+- Return exactly 10 opportunities spread across ALL these categories
+- Maximum 2 opportunities per category:
+  CRM, Email Marketing, SEO Tools, Project Management,
+  Business Automation, AI Tools, Finance, Website Builders
+- Do not recommend the same software twice across the 10 opportunities
+- Vary the software featured — do not default to the biggest names only
+- Include at least 2 comparison articles (Product A vs Product B format)
+- Include at least 2 buying guides
+- Include at least 3 individual product reviews
+- Feature lesser known alternatives alongside market leaders
+
+ALREADY PUBLISHED — DO NOT REPEAT THESE KEYWORDS:
+{published_str}
 
 SCORING GUIDANCE:
 - Prefer keywords with low or medium competition over high competition
 - Weight Reddit posts with higher relevance scores more heavily
 - Prioritize topics appearing in BOTH keyword data AND Reddit discussions
 - High commercial intent signals: best, review, alternative, vs, top, comparison
+- Favor lesser known software alternatives that have affiliate programs
 
 GOOGLE TRENDS AND KEYWORD DATA (includes competition level):
 {trends_summary}
 
-REDDIT PAIN POINTS (sorted by relevance score, from r/entrepreneur, r/smallbusiness, r/SaaS etc):
+REDDIT PAIN POINTS (sorted by relevance score):
 {reddit_summary}
 
 For each opportunity identify:
@@ -452,7 +475,11 @@ def run_intelligence():
     # Phase 1 — Keyword Research
     print("\n📊 PHASE 1: Keyword Research")
     print("-" * 40)
-    for niche in NICHES[:4]:
+    
+    day = datetime.now().weekday()
+    start = (day * 2) % len(NICHES)
+    todays_niches = NICHES[start:start+4] if start + 4 <= len(NICHES) else NICHES[start:] + NICHES[:4-(len(NICHES)-start)]
+    for niche in todays_niches:
         # Always use free autocomplete
         autocomplete = get_google_autocomplete(niche)
         all_trends.extend(autocomplete)
@@ -475,11 +502,12 @@ def run_intelligence():
         time.sleep(3)
     
     print(f"\n  ✅ Total Reddit posts: {len(all_reddit)}")
-
+    
     # Phase 3 — Claude Analysis
     print("\n🧠 PHASE 3: AI Opportunity Analysis")
     print("-" * 40)
-    opportunities = analyze_opportunities(all_trends, all_reddit)
+    published_keywords = load_published_keywords()
+    opportunities = analyze_opportunities(all_trends, all_reddit, published_keywords)
     
     # Display results
     if opportunities:
