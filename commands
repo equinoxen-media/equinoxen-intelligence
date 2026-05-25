@@ -8,6 +8,13 @@ git push origin main
 #pull from github
 git pull origin main
 
+#Step Back 
+git reset --soft HEAD~1
+git restore --staged <file-path>
+git commit
+
+
+
 #cron updates
 crontab -e
 crontab -l

@@ -64,7 +64,8 @@ def get_keyword_opportunities(niche):
         f"{niche} alternative",
     ]
     
-    for search_query in searches[:2]:  # Limit to 2 per niche to save credits
+#    for search_query in searches[:2]:  # Limit to 2 per niche to save credits
+    for search_query in searches[:1]:  # Limit to 1 per niche to save credits
         try:
             params = {
                 "engine": "google",
@@ -328,7 +329,8 @@ def analyze_opportunities(trends_data, reddit_data, published_keywords=None):
     
     # Check competition for top trend keywords
     print("  🔍 Checking keyword competition...")
-    for item in trends_data[:20]:
+#    for item in trends_data[:20]: 
+    for item in trends_data[:5]: #limit to 5 for SERPAPI Limit
         keyword = item.get('keyword', '')
         if keyword:
             competition = check_keyword_competition(keyword)

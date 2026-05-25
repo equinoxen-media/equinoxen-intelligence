@@ -1247,6 +1247,25 @@ def save_article_locally(title, content, metadata):
     print(f"   💾 Saved locally: {filename}")
     return filename
 
+# ─── STEP 7: CLEANUP OLD FILES ────────────────────────────────────────────
+def cleanup_old_files():
+    """Keep last 7 intelligence reports and last 9 article files, delete the rest"""
+    import glob
+    
+    # Keep last 7 intelligence reports
+    reports = sorted(glob.glob("intelligence_report_*.json"))
+    for old_report in reports[:-7]:
+        os.remove(old_report)
+        print(f"   🧹 Removed old report: {old_report}")
+    
+    # Keep last 9 article HTML files
+    articles = sorted(glob.glob("article_*.html"))
+    for old_article in articles[:-9]:
+        os.remove(old_article)
+        print(f"   🧹 Removed old article: {old_article}")
+    
+    print("   ✅ Cleanup complete")
+
 # ─── MAIN PIPELINE ────────────────────────────────────────────
 def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print("=" * 60)
@@ -1401,6 +1420,9 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print("\n💡 Next steps:")
     print("   1. Review articles in WordPress")
     print("   2. Verify affiliate links are working")
+    
+#    cleanup_old_files()
+#    return results
     
     return results
     
