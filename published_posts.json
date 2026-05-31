@@ -32,7 +32,16 @@
     "best-accounting-software-freelancers-2026-freshbooks-vs-quickbooks",
     "best-landing-page-builder-shopify-2026",
     "best-time-tracking-invoicing-software-freelancers-2026",
-    "zoho-crm-software-reviews-2026-salesforce-alternative-smbs"
+    "zoho-crm-software-reviews-2026-salesforce-alternative-smbs",
+    "crm-vs-erp-key-differences-2026",
+    "best-landing-page-builder-ai-tools-2026",
+    "monday-com-review-2026-project-management-software",
+    "best-accounting-software-small-business-2026",
+    "freshbooks-review-2026-accounting-software-freelancers",
+    "quickbooks-alternatives-2026-better-accounting-software",
+    "wave-vs-quickbooks-accounting-software-comparison-2026",
+    "best-accounting-software-nonprofits-2026-guide",
+    "pandadoc-docusign-alternative-review-2026"
   ],
   "titles": [
     "11 best crm software for small business in 2026 (tested & compared)",
@@ -67,7 +76,16 @@
     "best accounting software for freelancers 2026: freshbooks vs quickbooks",
     "best landing page builder for shopify in 2026: 7 tools compared",
     "best time tracking and invoicing software for freelancers 2026",
-    "zoho crm review 2026: best alternative to salesforce for smbs?"
+    "zoho crm review 2026: best alternative to salesforce for smbs?",
+    "crm software vs erp systems 2026: key differences explained",
+    "best ai landing page builders in 2026: 8 tools that design for you",
+    "monday.com review 2026: is this project management tool worth it?",
+    "best accounting software for small business 2026: quickbooks vs freshbooks vs zoho books",
+    "freshbooks review 2026: is this accounting software worth it for freelancers?",
+    "quickbooks alternatives 2026: 7 better accounting software options",
+    "wave vs quickbooks: which accounting software is better for small business in 2026?",
+    "best accounting software for nonprofits in 2026: complete buyer's guide",
+    "pandadoc review 2026: is this docusign alternative worth it?"
   ],
   "keywords": [
     "best crm small business",
@@ -102,7 +120,16 @@
     "accounting software freelancers",
     "landing page builder shopify",
     "time tracking invoicing",
-    "crm software reviews"
+    "crm software reviews",
+    "crm vs erp",
+    "landing page builder ai",
+    "project management software",
+    "accounting software small business",
+    "freshbooks review",
+    "quickbooks alternatives",
+    "accounting software vs quickbooks",
+    "accounting software nonprofits",
+    "docusign alternative review"
   ],
   "posts": [
     {
@@ -368,6 +395,78 @@
       "post_id": 413,
       "post_url": "https://equinoxen.com/zoho-crm-software-reviews-2026-salesforce-alternative-smbs/",
       "created_at": "2026-05-28T15:09:11.673236"
+    },
+    {
+      "title": "CRM Software vs ERP Systems 2026: Key Differences Explained",
+      "slug": "crm-vs-erp-key-differences-2026",
+      "keyword": "crm vs erp",
+      "post_id": 417,
+      "post_url": "https://equinoxen.com/crm-vs-erp-key-differences-2026/",
+      "created_at": "2026-05-29T15:03:34.381657"
+    },
+    {
+      "title": "Best AI Landing Page Builders in 2026: 8 Tools That Design For You",
+      "slug": "best-landing-page-builder-ai-tools-2026",
+      "keyword": "landing page builder ai",
+      "post_id": 419,
+      "post_url": "https://equinoxen.com/best-landing-page-builder-ai-tools-2026/",
+      "created_at": "2026-05-29T15:06:33.727972"
+    },
+    {
+      "title": "Monday.com Review 2026: Is This Project Management Tool Worth It?",
+      "slug": "monday-com-review-2026-project-management-software",
+      "keyword": "project management software",
+      "post_id": 421,
+      "post_url": "https://equinoxen.com/monday-com-review-2026-project-management-software/",
+      "created_at": "2026-05-29T15:09:30.290475"
+    },
+    {
+      "title": "Best Accounting Software for Small Business 2026: QuickBooks vs FreshBooks vs Zoho Books",
+      "slug": "best-accounting-software-small-business-2026",
+      "keyword": "accounting software small business",
+      "post_id": 436,
+      "post_url": "https://equinoxen.com/best-accounting-software-small-business-2026/",
+      "created_at": "2026-05-31T01:34:49.648706"
+    },
+    {
+      "title": "FreshBooks Review 2026: Is This Accounting Software Worth It for Freelancers?",
+      "slug": "freshbooks-review-2026-accounting-software-freelancers",
+      "keyword": "freshbooks review",
+      "post_id": 438,
+      "post_url": "https://equinoxen.com/freshbooks-review-2026-accounting-software-freelancers/",
+      "created_at": "2026-05-31T01:37:37.796542"
+    },
+    {
+      "title": "QuickBooks Alternatives 2026: 7 Better Accounting Software Options",
+      "slug": "quickbooks-alternatives-2026-better-accounting-software",
+      "keyword": "quickbooks alternatives",
+      "post_id": 440,
+      "post_url": "https://equinoxen.com/quickbooks-alternatives-2026-better-accounting-software/",
+      "created_at": "2026-05-31T01:40:42.493333"
+    },
+    {
+      "title": "Wave vs QuickBooks: Which Accounting Software is Better for Small Business in 2026?",
+      "slug": "wave-vs-quickbooks-accounting-software-comparison-2026",
+      "keyword": "accounting software vs quickbooks",
+      "post_id": 456,
+      "post_url": "https://equinoxen.com/wave-vs-quickbooks-accounting-software-comparison-2026/",
+      "created_at": "2026-05-31T15:03:16.645823"
+    },
+    {
+      "title": "Best Accounting Software for Nonprofits in 2026: Complete Buyer's Guide",
+      "slug": "best-accounting-software-nonprofits-2026-guide",
+      "keyword": "accounting software nonprofits",
+      "post_id": 458,
+      "post_url": "https://equinoxen.com/best-accounting-software-nonprofits-2026-guide/",
+      "created_at": "2026-05-31T15:05:47.846386"
+    },
+    {
+      "title": "PandaDoc Review 2026: Is This DocuSign Alternative Worth It?",
+      "slug": "pandadoc-docusign-alternative-review-2026",
+      "keyword": "docusign alternative review",
+      "post_id": 460,
+      "post_url": "https://equinoxen.com/pandadoc-docusign-alternative-review-2026/",
+      "created_at": "2026-05-31T15:08:46.216300"
     }
   ]
 }

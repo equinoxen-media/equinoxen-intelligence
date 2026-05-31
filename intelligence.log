@@ -244,3 +244,122 @@
   Opportunities: 10 identified
   Report: intelligence_report_20260525_060409.json
 ============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-05-31 06:00:45
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  ⚠️  SerpAPI error: 522
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  ⚠️  SerpAPI error: 522
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 44
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 7 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 1 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 6 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 2 relevant posts
+
+  ✅ Total Reddit posts: 28
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Wave vs QuickBooks: Which Accounting Software is Better for Small Business in 2026?
+   Keyword: accounting software vs quickbooks
+   Type: comparison
+   Programs: QuickBooks, FreshBooks
+   Urgency: 9/10
+   Why: High commercial intent comparison keyword with 90 value. QuickBooks alternatives are heavily searched but not yet covered. Wave is a lesser-known free alternative with growing popularity among budget-conscious small businesses.
+
+2. Best Accounting Software for Nonprofits in 2026: Complete Buyer's Guide
+   Keyword: accounting software nonprofits
+   Type: buying_guide
+   Programs: QuickBooks, FreshBooks, Zoho
+   Urgency: 8/10
+   Why: Specific niche with 90 keyword value and low competition. Nonprofits have unique accounting needs (fund tracking, donor management) making this a high-intent audience willing to invest in proper tools.
+
+3. PandaDoc Review 2026: Is This DocuSign Alternative Worth It?
+   Keyword: docusign alternative review
+   Type: review
+   Programs: Jotform
+   Urgency: 9/10
+   Why: Reddit pain point identified: 'Alternative to DocuSign' in SaaS subreddit. PandaDoc offers document automation with affiliate potential through Jotform's form integration, addressing business automation software trends.
+
+4. Best Business Process Automation Software for Salesforce Users in 2026
+   Keyword: automation software salesforce
+   Type: buying_guide
+   Programs: Zapier, HubSpot
+   Urgency: 7/10
+   Why: Specific autocomplete keyword with 90 value targeting Salesforce ecosystem users. Salesforce integrations are high-value B2B opportunities. Zapier and HubSpot both offer strong Salesforce automation capabilities.
+
+5. Harvest vs FreshBooks: Best Time Tracking and Invoicing Software for Freelancers 2026
+   Keyword: time tracking invoicing
+   Type: comparison
+   Programs: FreshBooks
+   Urgency: 9/10
+   Why: Direct Reddit pain point from freelance subreddit asking for time tracking/invoicing app recommendations. High commercial intent from freelancers ready to purchase. Harvest is a lesser-known alternative to market leaders.
+
+✅ Report saved: intelligence_report_20260531_060638.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 44 keywords
+  Reddit: 28 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260531_060638.json
+============================================================

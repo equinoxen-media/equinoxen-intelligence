@@ -406,6 +406,9 @@ Rules for good opportunities:
 - Avoid overly broad topics — be specific
 - Mix of review, comparison and buying_guide types
 
+Formatting Rules
+- If suggesting a buying guide or listicle, cap the number in the title at 5 (e.g. "5 Best..." not "10 Best...") as content will only cover 5 options
+
 Return ONLY a valid JSON array. No markdown. No explanation:
 [{{"title":"...{current_year}...","keyword":"...","type":"review","programs":["HubSpot"],"why":"...","urgency":8}}]"""
     
