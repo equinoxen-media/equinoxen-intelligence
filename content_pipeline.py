@@ -1174,7 +1174,6 @@ def upload_single_image(img_data, filename, content_type, alt_text=""):
 # ─── STEP 5: PUBLISH TO WORDPRESS ─────────────────────────────
 def publish_to_wordpress(title, content, metadata, category_id, draft=True, featured_image_id=None):
     """Publish article to WordPress via REST API"""
-    print(f"   🔍 DEBUG — draft parameter received: {draft}")  # ← add this
     
     status = "draft" if draft else "publish"
     print(f"\n📤 Publishing to WordPress as {status}...")
@@ -1229,23 +1228,23 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
             except Exception as e:
                 print(f"   ⚠️  Hook trigger failed: {e}")
     
-# Push Rank Math focus keyword directly via post meta endpoint
-                if post_id and focus_keyword:
-                    try:
-                        requests.post(
-                            f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
-                            json={
-                                "meta": {
-                                    "rank_math_focus_keyword": focus_keyword
-                                }
-                            },
-                            auth=(WP_USER, WP_PASS),
-                            headers={"Content-Type": "application/json"}
-                        )
-                        print(f"   🎯 Rank Math focus keyword set: {focus_keyword}")
-                    except Exception as e:
-                        print(f"   ⚠️  Focus keyword error: {e}")
-                return post_id, post_link
+            # Push Rank Math focus keyword directly via post meta endpoint
+            if post_id and focus_keyword:
+                try:
+                    requests.post(
+                        f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
+                        json={
+                            "meta": {
+                                "rank_math_focus_keyword": focus_keyword
+                            }
+                        },
+                        auth=(WP_USER, WP_PASS),
+                        headers={"Content-Type": "application/json"}
+                    )
+                    print(f"   🎯 Rank Math focus keyword set: {focus_keyword}")
+                except Exception as e:
+                    print(f"   ⚠️  Focus keyword error: {e}")
+            return post_id, post_link
         else:
             print(f"   ❌ Publishing failed: {response.status_code}")
             print(f"   Response: {response.text[:200]}")
@@ -1456,8 +1455,6 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print("   2. Verify affiliate links are working")
     
     cleanup_old_files()
-    return results
-    
     return results
     
 # ─── RUN ──────────────────────────────────────────────────────

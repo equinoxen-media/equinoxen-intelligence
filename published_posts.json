@@ -53,7 +53,10 @@
     "accounting-software-vs-excel-2026",
     "best-landing-page-builder-small-business-2026",
     "notion-vs-clickup-2026-comparison",
-    "webflow-review-2026-website-builder-agencies-freelancers"
+    "webflow-review-2026-website-builder-agencies-freelancers",
+    "activecampaign-vs-klaviyo-email-marketing-comparison-2026",
+    "clickup-review-2026-replace-project-stack",
+    "asana-vs-monday-project-management-2026"
   ],
   "titles": [
     "11 best crm software for small business in 2026 (tested & compared)",
@@ -109,7 +112,10 @@
     "accounting software vs excel: which should your business use in 2026",
     "best landing page builder for small business 2026",
     "notion vs clickup 2026: which project management tool wins",
-    "webflow review 2026: website builder for agencies and freelancers"
+    "webflow review 2026: website builder for agencies and freelancers",
+    "activecampaign vs klaviyo: which email platform wins in 2026",
+    "clickup review 2026: can it replace your project stack",
+    "asana vs monday.com: project management face-off 2026"
   ],
   "keywords": [
     "best crm small business",
@@ -165,7 +171,10 @@
     "accounting software vs excel",
     "best landing page builder",
     "notion vs clickup",
-    "webflow review"
+    "webflow review",
+    "email marketing comparison",
+    "clickup review",
+    "asana vs monday"
   ],
   "posts": [
     {
@@ -599,6 +608,30 @@
       "post_id": 500,
       "post_url": "https://equinoxen.com/webflow-review-2026-website-builder-agencies-freelancers/",
       "created_at": "2026-06-04T15:07:46.763944"
+    },
+    {
+      "title": "ActiveCampaign vs Klaviyo: Which Email Platform Wins in 2026",
+      "slug": "activecampaign-vs-klaviyo-email-marketing-comparison-2026",
+      "keyword": "email marketing comparison",
+      "post_id": 507,
+      "post_url": "https://equinoxen.com/activecampaign-vs-klaviyo-email-marketing-comparison-2026-2/",
+      "created_at": "2026-06-05T15:33:43.881482"
+    },
+    {
+      "title": "ClickUp Review 2026: Can It Replace Your Project Stack",
+      "slug": "clickup-review-2026-replace-project-stack",
+      "keyword": "clickup review",
+      "post_id": 510,
+      "post_url": "https://equinoxen.com/clickup-review-2026-replace-project-stack/",
+      "created_at": "2026-06-05T15:36:11.978540"
+    },
+    {
+      "title": "Asana vs Monday.com: Project Management Face-Off 2026",
+      "slug": "asana-vs-monday-project-management-2026",
+      "keyword": "asana vs monday",
+      "post_id": 513,
+      "post_url": "https://equinoxen.com/asana-vs-monday-project-management-2026/",
+      "created_at": "2026-06-05T15:38:49.938144"
     }
   ]
 }
