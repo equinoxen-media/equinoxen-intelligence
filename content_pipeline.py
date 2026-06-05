@@ -1,3 +1,5 @@
+
+
 import os
 import json
 import time
@@ -588,29 +590,29 @@ Year: {CURRENT_YEAR}
 Affiliate links to include: {affiliate_links}
 
 ARTICLE REQUIREMENTS:
-- Length: 2,000-2,500 words
+- Length: 1,200-1,500 words
 - Tone: Expert, honest, helpful — never salesy
 - Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
 
 REQUIRED STRUCTURE:
-1. Introduction — what problem does this solve (150 words)
-2. What is [Product] — overview (200 words)
-   - Include CTA button here: Try [Product] Free →
-3. Key Features — 5-7 features with H3 subheadings (600 words)
-4. Pricing — all tiers clearly explained (200 words)
-5. Pros and Cons — honest bullet points (150 words)
-   - Include CTA button here: Try [Product] Free →
-6. Who is it best for — specific use cases (150 words)
-7. [Product] Alternatives — 2-3 competitors briefly (200 words)
-8. Our Verdict — final recommendation with star rating out of 5 (150 words)
-9. CTA — Try [Product] with affiliate link (50 words)
+1. Introduction — what problem does this solve (100 words)
+2. What is [Product] — overview (125 words)
+   - Include CTA button here: Try [Product] →
+3. Key Features — 3-5 features with H3 subheadings (400 words)
+4. Pricing — all tiers clearly explained (150 words)
+5. Pros and Cons — honest bullet points (100 words)
+   - Include CTA button here: Try [Product] →
+6. Who is it best for — specific use cases (100 words)
+7. [Product] Alternatives — 2-3 competitors briefly (120 words)
+8. Our Verdict — final recommendation with star rating out of 5 (100 words)
+9. CTA — Try [Product] with affiliate link
    - Include CTA button here
 
 FORMAT REQUIREMENTS:
 - Use HTML formatting (h2, h3, p, ul, li, strong tags)
 - Include a star rating like: ⭐⭐⭐⭐⭐ (X/5)
-- Make the CTA button: <a href="AFFILIATE_LINK" rel="nofollow sponsored" target="_blank" class="button">Try [Product] Free →</a>
+- Make the CTA button: <a href="AFFILIATE_LINK" rel="nofollow sponsored" target="_blank" class="button">Try [Product] →</a>
 
 CRITICAL FORMATTING RULES:
 - Do NOT use H1 tags anywhere in the article — the page title is already H1
@@ -660,23 +662,23 @@ Year: {CURRENT_YEAR}
 Affiliate links: {affiliate_links}
 
 ARTICLE REQUIREMENTS:
-- Length: 2,000-2,500 words
+- Length: 1,500-2,000 words
 - Tone: Expert, honest, helpful — never salesy
 - Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
 
 REQUIRED STRUCTURE:
-1. Introduction — why this comparison matters (150 words)
+1. Introduction — why this comparison matters (100 words)
 2. Quick Verdict — summary table showing winner in each category (HTML table)
-   - Include CTA button here for both products: Try [Product] Free →
-3. {product1} Overview — key features and pricing (300 words)
-4. {product2} Overview — key features and pricing (300 words)
+   - Include CTA button here for both products: Try [Product] →
+3. {product1} Overview — key features and pricing (250 words)
+4. {product2} Overview — key features and pricing (250 words)
 5. Head-to-Head Comparison — 5 categories with winner declared each time (500 words)
-   - Include CTA button here: Try [Product] Free →
-6. Pricing Comparison — clear breakdown (200 words)
-7. Who Should Choose {product1} — specific use cases (150 words)
-8. Who Should Choose {product2} — specific use cases (150 words)
-9. Final Verdict — clear recommendation (150 words)
+   - Include CTA button here: Try [Product] →
+6. Pricing Comparison — clear breakdown (150 words)
+7. Who Should Choose {product1} — specific use cases (100 words)
+8. Who Should Choose {product2} — specific use cases (100 words)
+9. Final Verdict — clear recommendation (100 words)
 10. CTAs for both products with affiliate links
 
 FORMAT: Use HTML with h2, h3, p, ul, li, table tags.
@@ -728,14 +730,14 @@ Year: {CURRENT_YEAR}
 Affiliate links: {affiliate_links}
 
 ARTICLE REQUIREMENTS:
-- Length: 2,000-2,500 words
+- Length: 1,500-2,000 words
 - Tone: Expert, honest, helpful — never salesy
 - Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
 
 REQUIRED STRUCTURE:
-1. Introduction — why this category matters (150 words)
-2. What to look for — buying criteria with H3 subheadings (300 words)
+1. Introduction — why this category matters (100 words)
+2. What to look for — buying criteria with H3 subheadings (200 words)
 3. Top picks — 3-5 products each ending with an affiliate CTA button (800 words total section):
    - Brief overview
    - Key features
@@ -1179,6 +1181,7 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
     
     api_url = f"{WP_URL}/wp-json/wp/v2/posts"
     
+    focus_keyword = metadata.get("focus_keyword", "")
     post_data = {
         "title": metadata.get("seo_title", title),
         "content": content,
@@ -1189,7 +1192,7 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
         "meta": {
             "rank_math_title": metadata.get("seo_title", ""),
             "rank_math_description": metadata.get("meta_description", ""),
-            "rank_math_focus_keyword": metadata.get("focus_keyword", ""),
+            "rank_math_focus_keyword": focus_keyword,
         }
     }
     
@@ -1211,7 +1214,38 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
             post_link = post.get('link')
             print(f"   ✅ Published! ID: {post_id}")
             print(f"   🔗 URL: {post_link}")
-            return post_id, post_link
+            
+            # Trigger WordPress hooks by immediately updating the post
+            # This fires save_post/transition_post_status so it appears on blog index
+            time.sleep(2)
+            try:
+                requests.post(
+                    f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
+                    json={"status": "publish"},
+                    auth=(WP_USER, WP_PASS),
+                    headers={"Content-Type": "application/json"}
+                )
+                print(f"   🔄 WordPress hooks triggered")
+            except Exception as e:
+                print(f"   ⚠️  Hook trigger failed: {e}")
+    
+# Push Rank Math focus keyword directly via post meta endpoint
+                if post_id and focus_keyword:
+                    try:
+                        requests.post(
+                            f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
+                            json={
+                                "meta": {
+                                    "rank_math_focus_keyword": focus_keyword
+                                }
+                            },
+                            auth=(WP_USER, WP_PASS),
+                            headers={"Content-Type": "application/json"}
+                        )
+                        print(f"   🎯 Rank Math focus keyword set: {focus_keyword}")
+                    except Exception as e:
+                        print(f"   ⚠️  Focus keyword error: {e}")
+                return post_id, post_link
         else:
             print(f"   ❌ Publishing failed: {response.status_code}")
             print(f"   Response: {response.text[:200]}")
@@ -1421,8 +1455,8 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print("   1. Review articles in WordPress")
     print("   2. Verify affiliate links are working")
     
-#    cleanup_old_files()
-#    return results
+    cleanup_old_files()
+    return results
     
     return results
     

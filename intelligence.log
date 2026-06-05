@@ -363,3 +363,598 @@
   Opportunities: 10 identified
   Report: intelligence_report_20260531_060638.json
 ============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-06-01 06:00:33
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 14 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: email marketing software
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 58
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 1 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 7 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 2 relevant posts
+
+  ✅ Total Reddit posts: 30
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Small Business in 2026: 5 Affordable Solutions
+   Keyword: crm small business
+   Type: buying_guide
+   Programs: HubSpot, Zoho
+   Urgency: 9/10
+   Why: High search volume autocomplete keyword with strong commercial intent. Small business CRM is evergreen with massive market. HubSpot and Zoho both offer generous affiliate programs for this category.
+
+2. Best CRM Software for Construction Companies in 2026
+   Keyword: crm construction companies
+   Type: buying_guide
+   Programs: HubSpot, Zoho
+   Urgency: 7/10
+   Why: Niche-specific CRM keyword with less competition than generic CRM searches. Construction vertical has specific needs making this valuable buying guide content with lower competition.
+
+3. Best Email Marketing Software for Real Estate Agents 2026
+   Keyword: email marketing real estate
+   Type: buying_guide
+   Programs: Klaviyo, HubSpot
+   Urgency: 8/10
+   Why: Autocomplete keyword showing strong demand. Real estate is high-ticket vertical with budget for email tools. Klaviyo has excellent affiliate terms and works well for real estate.
+
+4. Best Email Marketing Software for Creators in 2026: 5 Platforms Compared
+   Keyword: email marketing creators
+   Type: buying_guide
+   Programs: Klaviyo, HubSpot
+   Urgency: 8/10
+   Why: Growing creator economy keyword from autocomplete data. Creators are underserved market with high engagement needs. Less competitive than generic email marketing keywords.
+
+5. Ahrefs Review 2026: Is It Worth the Investment for SEO
+   Keyword: ahrefs review
+   Type: review
+   Programs: Ahrefs
+   Urgency: 9/10
+   Why: Ahrefs has premium affiliate program with high payouts. SEO tools have strong commercial intent and Ahrefs is market leader with active searchers ready to buy.
+
+✅ Report saved: intelligence_report_20260601_060247.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 58 keywords
+  Reddit: 30 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260601_060247.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-06-02 06:00:34
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 65
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 1 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 2 relevant posts
+
+  ✅ Total Reddit posts: 21
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Project Management Software for Small Teams in 2026
+   Keyword: project management small teams
+   Type: buying_guide
+   Programs: Monday.com, ClickUp, Asana, Notion
+   Urgency: 8/10
+   Why: High volume autocomplete keyword with unknown competition, specific niche targeting small teams which have lower software budgets and need simple solutions. Strong commercial intent with 'best' modifier.
+
+2. Monday.com vs Basecamp: Which Project Management Tool Wins in 2026
+   Keyword: monday vs basecamp
+   Type: comparison
+   Programs: Monday.com
+   Urgency: 7/10
+   Why: Comparison format featuring Monday.com affiliate program against lesser-known Basecamp. Fills gap in published comparison content and targets users evaluating specific alternatives.
+
+3. Ahrefs Review 2026: Is This SEO Tool Worth the Premium Price
+   Keyword: ahrefs review
+   Type: review
+   Programs: Ahrefs
+   Urgency: 9/10
+   Why: SEO tools category with high commercial intent. Ahrefs has strong affiliate program and review format converts well. Keyword data shows demand for SEO tool reviews.
+
+4. Best SEO Tools for Small Businesses in 2026
+   Keyword: seo tools small business
+   Type: buying_guide
+   Programs: Semrush, Ahrefs
+   Urgency: 8/10
+   Why: Direct match to high-value autocomplete keyword, targets budget-conscious small business segment. Strong commercial intent and multiple affiliate opportunities.
+
+5. Klaviyo Review 2026: Email Marketing Platform for Ecommerce Brands
+   Keyword: klaviyo review
+   Type: review
+   Programs: Klaviyo
+   Urgency: 7/10
+   Why: Klaviyo is underrepresented in published content but has excellent affiliate program. Email platform switching discussion in Reddit shows active market evaluation.
+
+✅ Report saved: intelligence_report_20260602_060243.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 65 keywords
+  Reddit: 21 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260602_060243.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-06-03 06:00:29
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 44
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 6 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 7 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 2 relevant posts
+
+  ✅ Total Reddit posts: 33
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best AI Productivity Tools for Work in 2026
+   Keyword: ai productivity tools
+   Type: buying_guide
+   Programs: Notion, ClickUp, Grammarly
+   Urgency: 9/10
+   Why: High search volume with specific 2026 modifier in keyword data, appears in autocomplete with 'for work' qualifier showing strong commercial intent. Reddit shows active discussions about productivity tool alternatives. Growing AI tool market with multiple affiliate programs available.
+
+2. Best Accounting Software for Multiple Small Business in 2026
+   Keyword: accounting software multiple business
+   Type: buying_guide
+   Programs: QuickBooks, FreshBooks, Zoho
+   Urgency: 8/10
+   Why: Specific niche keyword from autocomplete data targeting business owners managing multiple entities. Lower competition than general accounting software keywords. Strong commercial intent with established affiliate programs paying 20%+ commissions.
+
+3. Accounting Software vs Excel: Which Should Your Business Use in 2026
+   Keyword: accounting software vs excel
+   Type: comparison
+   Programs: QuickBooks, FreshBooks
+   Urgency: 7/10
+   Why: Direct comparison keyword from autocomplete with high commercial intent. Targets businesses still using spreadsheets and ready to upgrade. Pain point validated by keyword data showing people actively searching this comparison.
+
+4. Best Business Automation Software for Documents in 2026
+   Keyword: business automation software documents
+   Type: buying_guide
+   Programs: Zapier, Jotform, Monday.com
+   Urgency: 8/10
+   Why: Specific automation niche from autocomplete data with lower competition than general automation keywords. Document workflow automation is high-value use case. Multiple relevant affiliate programs available.
+
+5. Superhuman Alternative Review: Best Email Management Tools in 2026
+   Keyword: superhuman alternative
+   Type: review
+   Programs: HubSpot, Klaviyo
+   Urgency: 8/10
+   Why: Direct Reddit pain point from productivity subreddit asking for Superhuman alternatives. High-intent keyword targeting users ready to switch. Email management is evergreen need with strong affiliate programs.
+
+✅ Report saved: intelligence_report_20260603_060250.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 44 keywords
+  Reddit: 33 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260603_060250.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-06-04 06:00:30
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: CRM software
+  Found 14 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: email marketing software
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 42
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 1 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 7 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 2 relevant posts
+
+  ✅ Total Reddit posts: 29
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Landing Page Builder for Small Business 2026
+   Keyword: best landing page builder
+   Type: buying_guide
+   Programs: Unbounce, Webflow
+   Urgency: 8/10
+   Why: High search volume in keyword data with unknown competition, strong commercial intent. Landing page builders have high-value affiliate programs and this buying guide angle avoids already-covered AI and Shopify angles.
+
+2. Klaviyo Review 2026: Email Marketing for Ecommerce Tested
+   Keyword: klaviyo review
+   Type: review
+   Programs: Klaviyo
+   Urgency: 7/10
+   Why: Email marketing software is in already-published list but Klaviyo specifically has not been covered. Strong affiliate program, high commercial intent keyword, fills gap in email marketing coverage.
+
+3. Best CRM Software for Construction Companies 2026
+   Keyword: crm construction companies
+   Type: buying_guide
+   Programs: HubSpot, Zoho
+   Urgency: 8/10
+   Why: Specific CRM keyword from autocomplete data targeting niche vertical. Avoids broad CRM topics already covered. Construction is high-value B2B niche with strong buying intent.
+
+4. Notion vs ClickUp 2026: Which Project Management Tool Wins
+   Keyword: notion vs clickup
+   Type: comparison
+   Programs: Notion, ClickUp
+   Urgency: 9/10
+   Why: Both tools have strong affiliate programs. Project management software interest shown in keyword data, but this specific comparison not yet covered. High commercial intent comparison format.
+
+5. Webflow Review 2026: Website Builder for Agencies and Freelancers
+   Keyword: webflow review
+   Type: review
+   Programs: Webflow
+   Urgency: 7/10
+   Why: Website builder category underrepresented in published content. Webflow has premium affiliate program and strong brand search. Targets agency/freelancer angle seen in Reddit discussions.
+
+✅ Report saved: intelligence_report_20260604_060233.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 42 keywords
+  Reddit: 29 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260604_060233.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-06-05 06:00:43
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 14 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: email marketing software
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 63
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 2 relevant posts
+
+  ✅ Total Reddit posts: 23
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Construction Companies in 2026
+   Keyword: crm construction companies
+   Type: buying_guide
+   Programs: HubSpot, Zoho
+   Urgency: 8/10
+   Why: Specific niche CRM keyword with strong commercial intent and low competition. Construction is an underserved vertical with high software spending budgets.
+
+2. Best CRM Software for Photographers in 2026
+   Keyword: crm for photographers
+   Type: buying_guide
+   Programs: HubSpot, Zoho
+   Urgency: 7/10
+   Why: Highly specific niche with passionate audience actively searching for specialized solutions. Low competition vertical with strong affiliate potential.
+
+3. Klaviyo Review 2026: Email Marketing for Ecommerce Brands
+   Keyword: klaviyo review
+   Type: review
+   Programs: Klaviyo
+   Urgency: 9/10
+   Why: Klaviyo has strong affiliate program and is popular in ecommerce circles. Email marketing software demand is high with multiple autocomplete variations.
+
+4. ActiveCampaign vs Klaviyo: Which Email Platform Wins in 2026
+   Keyword: email marketing comparison
+   Type: comparison
+   Programs: Klaviyo
+   Urgency: 8/10
+   Why: Comparison format has high commercial intent. Features two established platforms with strong affiliate programs competing in the same space.
+
+5. Ahrefs vs Semrush: SEO Tool Showdown for 2026
+   Keyword: ahrefs vs semrush
+   Type: comparison
+   Programs: Semrush, Ahrefs
+   Urgency: 9/10
+   Why: Both tools have excellent affiliate programs with 20%+ recurring commissions. High-value keyword with strong buyer intent from established market leaders.
+
+✅ Report saved: intelligence_report_20260605_060244.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 63 keywords
+  Reddit: 23 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260605_060244.json
+============================================================
