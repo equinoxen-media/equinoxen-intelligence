@@ -958,3 +958,122 @@
   Opportunities: 10 identified
   Report: intelligence_report_20260605_060244.json
 ============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-06-06 06:00:40
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 65
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 3 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 2 relevant posts
+
+  ✅ Total Reddit posts: 20
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Project Management Software for Construction in 2026
+   Keyword: best project management software construction
+   Type: buying_guide
+   Programs: Monday.com, Asana, ClickUp
+   Urgency: 8/10
+   Why: Highly specific vertical with strong commercial intent appearing in Google autocomplete data. Construction project management is underserved compared to general PM content, and has high willingness to pay for specialized solutions.
+
+2. Project Management Software vs Excel: Which to Choose in 2026
+   Keyword: project management software vs excel
+   Type: comparison
+   Programs: Monday.com, ClickUp, Asana
+   Urgency: 7/10
+   Why: Direct comparison keyword from autocomplete data targeting businesses still using spreadsheets. Large audience of Excel users considering upgrade to dedicated PM tools, high conversion potential.
+
+3. Semrush Review 2026: Is This SEO Tool Worth the Investment
+   Keyword: semrush review
+   Type: review
+   Programs: Semrush
+   Urgency: 9/10
+   Why: Semrush offers strong affiliate commissions and is a market leader alternative to Ahrefs which was already covered. High commercial intent with users ready to purchase premium SEO tools.
+
+4. Best SEO Tools for Small Businesses in 2026
+   Keyword: best seo tools small business
+   Type: buying_guide
+   Programs: Semrush, Ahrefs
+   Urgency: 8/10
+   Why: Specific autocomplete keyword targeting budget-conscious small business segment. Can feature affordable alternatives alongside premium tools, strong commercial intent from growing businesses.
+
+5. HubSpot CRM Review 2026: Features, Pricing and Alternatives
+   Keyword: hubspot crm review
+   Type: review
+   Programs: HubSpot, Zoho
+   Urgency: 9/10
+   Why: HubSpot has excellent affiliate program with recurring commissions. Market leader review that hasn't been covered yet, high search volume and strong buyer intent.
+
+✅ Report saved: intelligence_report_20260606_060246.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 65 keywords
+  Reddit: 20 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260606_060246.json
+============================================================

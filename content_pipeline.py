@@ -584,9 +584,9 @@ software review publication. Write a comprehensive, SEO-optimized review article
 
 ARTICLE DETAILS:
 Title: {title}
+Note: Include {CURRENT_YEAR} in the article title only — not in headings, slug, or keyword references throughout the body.
 Primary keyword: {keyword}
 Product being reviewed: {product}
-Year: {CURRENT_YEAR}
 Affiliate links to include: {affiliate_links}
 
 ARTICLE REQUIREMENTS:
@@ -594,6 +594,8 @@ ARTICLE REQUIREMENTS:
 - Tone: Expert, honest, helpful — never salesy
 - Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
+- Use the exact phrase "{keyword}" at least 3 times naturally in the article
+- Include it in the first paragraph, one H2 heading, and the conclusion
 
 REQUIRED STRUCTURE:
 1. Introduction — what problem does this solve (100 words)
@@ -656,9 +658,9 @@ software review publication. Write a comprehensive, SEO-optimized comparison art
 
 ARTICLE DETAILS:
 Title: {title}
+Note: Include {CURRENT_YEAR} in the article title only — not in headings, slug, or keyword references throughout the body.
 Primary keyword: {keyword}
 Products compared: {product1} vs {product2}
-Year: {CURRENT_YEAR}
 Affiliate links: {affiliate_links}
 
 ARTICLE REQUIREMENTS:
@@ -666,6 +668,8 @@ ARTICLE REQUIREMENTS:
 - Tone: Expert, honest, helpful — never salesy
 - Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
+- Use the exact phrase "{keyword}" at least 3 times naturally in the article
+- Include it in the first paragraph, one H2 heading, and the conclusion
 
 REQUIRED STRUCTURE:
 1. Introduction — why this comparison matters (100 words)
@@ -724,9 +728,9 @@ software review publication. Write a comprehensive, SEO-optimized buying guidear
 
 ARTICLE DETAILS:
 Title: {title}
+Note: Include {CURRENT_YEAR} in the article title only — not in headings, slug, or keyword references throughout the body.
 Primary keyword: {keyword}
 Products to feature: {', '.join(programs)}
-Year: {CURRENT_YEAR}
 Affiliate links: {affiliate_links}
 
 ARTICLE REQUIREMENTS:
@@ -734,6 +738,8 @@ ARTICLE REQUIREMENTS:
 - Tone: Expert, honest, helpful — never salesy
 - Structure: Use H2 and H3 headings
 - Natural keyword usage — not stuffed
+- Use the exact phrase "{keyword}" at least 3 times naturally in the article
+- Include it in the first paragraph, one H2 heading, and the conclusion
 
 REQUIRED STRUCTURE:
 1. Introduction — why this category matters (100 words)
@@ -796,8 +802,11 @@ Article title: {title}
 Primary keyword: {keyword}
 Article excerpt (first 200 chars): {article_content[:200]}
 
+- slug must not contain the year
+- focus_keyword must not contain the year
+
 Return this exact JSON structure:
-{{"seo_title": "max 60 chars with keyword", "meta_description": "max 155 chars with keyword and CTA", "excerpt": "2 sentence article summary", "slug": "url-friendly-slug-with-keyword", "focus_keyword": "{keyword}"}}"""
+{{"seo_title": "max 60 chars with keyword", "meta_description": "max 155 chars with keyword and CTA", "excerpt": "2 sentence article summary", "slug": "url-friendly-slug-with-keyword-no-year", "focus_keyword": "{keyword}"}}"""
     
     try:
         message = client.messages.create(
@@ -808,7 +817,15 @@ Return this exact JSON structure:
         
         response = message.content[0].text.strip()
         response = response.replace('```json', '').replace('```', '').strip()
-        return json.loads(response)
+        data = json.loads(response)
+
+        # Trim slug to 75 chars, cut at last hyphen to avoid breaking a word
+        slug = data.get("slug", "")
+        if len(slug) > 75:
+            slug = slug[:75].rsplit('-', 1)[0]
+            data["slug"] = slug
+
+        return data
         
     except Exception as e:
         print(f"   ⚠️  Metadata error: {e}")
@@ -1231,17 +1248,26 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
             # Push Rank Math focus keyword directly via post meta endpoint
             if post_id and focus_keyword:
                 try:
+#                    requests.post(
+#                        f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
+#                        json={
+#                            "meta": {
+#                                "rank_math_focus_keyword": focus_keyword
+#                            }
+#                        },
+#                        auth=(WP_USER, WP_PASS),
+#                        headers={"Content-Type": "application/json"}
+#                    )
                     requests.post(
                         f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
                         json={
-                            "meta": {
-                                "rank_math_focus_keyword": focus_keyword
-                            }
+                            "rank_math_focus_keyword": focus_keyword
                         },
                         auth=(WP_USER, WP_PASS),
                         headers={"Content-Type": "application/json"}
                     )
                     print(f"   🎯 Rank Math focus keyword set: {focus_keyword}")
+
                 except Exception as e:
                     print(f"   ⚠️  Focus keyword error: {e}")
             return post_id, post_link
@@ -1467,7 +1493,7 @@ if __name__ == "__main__":
     else:
         # Run pipeline normally    
         run_pipeline(
-            num_articles=3,        # How many articles to generate
+            num_articles=1,        # How many articles to generate
             publish_as_draft=False, # True = draft, False = live
             publish_to_wp=True     # True = send to WordPress
         )

@@ -389,7 +389,9 @@ REDDIT PAIN POINTS (sorted by relevance score):
 
 For each opportunity identify:
 1. A compelling SEO optimized article title using {current_year} where relevant
-2. Primary target keyword (2-4 words, high commercial intent)
+2. Primary target keyword — exact phrase a buyer would search, 3-6 words,
+   no year in the keyword, examples: "hubspot crm review", 
+   "best crm for small business", "monday vs asana"
 3. Content type: review, comparison, or buying_guide
 4. Affiliate programs to target from this list:
    HubSpot, Monday.com, Semrush, Notion, Webflow, Jotform, 
@@ -405,6 +407,7 @@ Rules for good opportunities:
 - Topics appearing in both keyword trends AND Reddit discussions get priority
 - Avoid overly broad topics — be specific
 - Mix of review, comparison and buying_guide types
+- The keyword must appear verbatim in the article title
 
 Formatting Rules
 - If suggesting a buying guide or listicle, cap the number in the title at 5 (e.g. "5 Best..." not "10 Best...") as content will only cover 5 options
