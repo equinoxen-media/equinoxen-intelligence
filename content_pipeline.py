@@ -497,8 +497,9 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
     print("\n📱 Posting to social media...")
     time.sleep(2)
 
-    if article_position == 0:
+    if article_position == 0 and _is_linkedin_window():
         post_to_linkedin(title, excerpt, post_url, image_url=image_url)
+        _mark_linkedin_posted()
         time.sleep(2)
 
     post_to_x(title, post_url)
@@ -1369,6 +1370,22 @@ def cleanup_old_files():
     
     print("   ✅ Cleanup complete")
 
+# ─── STEP 8: LINKEDIN POSTED TODAY ────────────────────────────────
+def _linkedin_posted_today() -> bool:
+    flag_file = ".linkedin_posted_date"
+    today = datetime.now().strftime("%Y-%m-%d")
+    if os.path.exists(flag_file):
+        return open(flag_file).read().strip() == today
+    return False
+
+def _mark_linkedin_posted():
+    with open(".linkedin_posted_date", "w") as f:
+        f.write(datetime.now().strftime("%Y-%m-%d"))
+
+def _is_linkedin_window() -> bool:
+    hour = datetime.now().hour
+    return 10 <= hour <= 12  # catches the 11am run with buffer
+
 # ─── MAIN PIPELINE ────────────────────────────────────────────
 def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print("=" * 60)
@@ -1390,7 +1407,9 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     
     results = []
     published_count = 0
-    linkedin_posted = False
+#OLD    linkedin_posted = False
+# NEW
+    linkedin_posted = _linkedin_posted_today()
     opp_index = 0
     
     while published_count < num_articles and opp_index < len(opportunities):
@@ -1485,7 +1504,6 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                 article_html=article_content,   # ← passed for Dev.to
                 keyword=keyword,                 # ← passed for Dev.to
             )
-            linkedin_posted = True
     
         results.append({
             "title": title,

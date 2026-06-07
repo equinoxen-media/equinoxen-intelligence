@@ -1077,3 +1077,122 @@
   Opportunities: 10 identified
   Report: intelligence_report_20260606_060246.json
 ============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-06-07 06:00:26
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 44
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 7 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 1 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 2 relevant posts
+
+  ✅ Total Reddit posts: 25
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Business Automation Software for 2026: 5 Top Tools Compared
+   Keyword: best business automation software
+   Type: buying_guide
+   Programs: Zapier, Monday.com, HubSpot
+   Urgency: 9/10
+   Why: High search volume across multiple autocomplete variations with unknown competition. Business automation is a growing category with strong commercial intent. Reddit shows demand for automation and workflow tools. Zapier offers 30% recurring commission.
+
+2. Wave vs FreshBooks 2026: Which Accounting Software Wins for Freelancers
+   Keyword: wave vs freshbooks
+   Type: comparison
+   Programs: FreshBooks
+   Urgency: 8/10
+   Why: Reddit shows specific demand for time tracking and invoicing apps for freelancers. Wave is a popular free alternative to FreshBooks. Strong comparison angle with high commercial intent. FreshBooks pays 30% recurring commission.
+
+3. Zoho CRM Review 2026: Is This Budget CRM Worth It for Small Business
+   Keyword: zoho crm review
+   Type: review
+   Programs: Zoho
+   Urgency: 7/10
+   Why: Zoho is a lesser-known but powerful CRM alternative to HubSpot and Salesforce. High commercial intent keyword. Zoho offers affiliate program with competitive commissions. Fills gap for budget CRM reviews.
+
+4. Best Accounting Software for Personal Use in 2026: 5 Options Reviewed
+   Keyword: best accounting software personal use
+   Type: buying_guide
+   Programs: QuickBooks, FreshBooks
+   Urgency: 8/10
+   Why: Specific autocomplete keyword with value 90. Personal use is underserved niche compared to business accounting. Reddit shows demand for personal finance tracking. QuickBooks and FreshBooks both have strong affiliate programs.
+
+5. Klaviyo Review 2026: Email Marketing Platform for Ecommerce Brands
+   Keyword: klaviyo review
+   Type: review
+   Programs: Klaviyo
+   Urgency: 8/10
+   Why: Klaviyo is market leader for ecommerce email marketing with strong affiliate program. Reddit data shows active ecommerce entrepreneurs needing marketing tools. High commercial intent and growing platform.
+
+✅ Report saved: intelligence_report_20260607_060243.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 44 keywords
+  Reddit: 25 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260607_060243.json
+============================================================
