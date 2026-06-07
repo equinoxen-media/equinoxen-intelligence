@@ -497,7 +497,7 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
     print("\n📱 Posting to social media...")
     time.sleep(2)
 
-    if article_position == 0 and _is_linkedin_window():
+    if article_position == 0 and _is_linkedin_window() and not _linkedin_posted_today():
         post_to_linkedin(title, excerpt, post_url, image_url=image_url)
         _mark_linkedin_posted()
         time.sleep(2)
@@ -1504,6 +1504,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                 article_html=article_content,   # ← passed for Dev.to
                 keyword=keyword,                 # ← passed for Dev.to
             )
+            linkedin_posted = True
     
         results.append({
             "title": title,
