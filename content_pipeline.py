@@ -4,6 +4,7 @@ import time
 import requests
 import anthropic
 from datetime import datetime
+import zoneinfo
 from dotenv import load_dotenv
 import re
 import glob
@@ -366,10 +367,13 @@ def generate_devto_summary(title, keyword, article_html, canonical_url):
 
     client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
-    # Strip HTML tags for context — just pass a clean excerpt to Claude
-    clean_text = re.sub(r'<[^>]+>', ' ', article_html)
-    clean_text = re.sub(r'\s+', ' ', clean_text).strip()
-    excerpt_for_prompt = clean_text[:1500]
+    if excerpt:
+        excerpt_for_prompt = excerpt
+    else:
+        # Strip HTML tags for context — just pass a clean excerpt to Claude
+        clean_text = re.sub(r'<[^>]+>', ' ', article_html)
+        clean_text = re.sub(r'\s+', ' ', clean_text).strip()
+        excerpt_for_prompt = clean_text[:1500]
 
     prompt = f"""Write a Dev.to post that teases this article without reproducing it fully.
 
@@ -421,7 +425,7 @@ Return only the Markdown — no preamble, no explanation."""
         return fallback
 
 
-def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=None):
+def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=None, excerpt=None):
     """
     Publish a teaser article to Dev.to with canonical_url pointing back to Equinoxen.
     Requires DEVTO_API_KEY in .env — get it from dev.to/settings/extensions.
@@ -433,7 +437,7 @@ def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=N
     print("   📤 Posting to Dev.to...")
 
     # Generate Markdown body + extract tags
-    markdown_body = generate_devto_summary(title, keyword, article_html, canonical_url)
+    markdown_body = generate_devto_summary(title, keyword, article_html, canonical_url, excerpt=excerpt)
 
     # Parse tags out of the last line if Claude included them
     tags = ["saas", "software", "productivity", "reviews"]  # safe default
@@ -492,12 +496,12 @@ def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=N
 
 # ─── SOCIAL ORCHESTRATOR ──────────────────────────────────────
 def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
-                   pinterest_image_url=None, article_position=0,
+                   pinterest_image_url=None,
                    article_html=None, keyword=None):
     print("\n📱 Posting to social media...")
     time.sleep(2)
 
-    if article_position == 0 and _is_linkedin_window() and not _linkedin_posted_today():
+    if _is_linkedin_window() and not _linkedin_posted_today():
         post_to_linkedin(title, excerpt, post_url, image_url=image_url)
         _mark_linkedin_posted()
         time.sleep(2)
@@ -512,7 +516,8 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
             keyword=keyword,
             article_html=article_html,
             canonical_url=post_url,
-            cover_image_url=image_url
+            cover_image_url=image_url,
+            excerpt=excerpt,
         )
         time.sleep(2)
 
@@ -1383,8 +1388,9 @@ def _mark_linkedin_posted():
         f.write(datetime.now().strftime("%Y-%m-%d"))
 
 def _is_linkedin_window() -> bool:
-    hour = datetime.now().hour
-    return 10 <= hour <= 12  # catches the 11am run with buffer
+    """Post to LinkedIn during the 11am Pacific run"""
+    pacific = datetime.now(zoneinfo.ZoneInfo("America/Los_Angeles"))
+    return 10 <= pacific.hour <= 12
 
 # ─── MAIN PIPELINE ────────────────────────────────────────────
 def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
@@ -1407,9 +1413,6 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     
     results = []
     published_count = 0
-#OLD    linkedin_posted = False
-# NEW
-    linkedin_posted = _linkedin_posted_today()
     opp_index = 0
     
     while published_count < num_articles and opp_index < len(opportunities):
@@ -1500,11 +1503,9 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                 category_id=category_id,
                 image_url=image_url,
                 pinterest_image_url=pinterest_image_url,
-                article_position=0 if not linkedin_posted else 1,
                 article_html=article_content,   # ← passed for Dev.to
                 keyword=keyword,                 # ← passed for Dev.to
             )
-            linkedin_posted = True
     
         results.append({
             "title": title,

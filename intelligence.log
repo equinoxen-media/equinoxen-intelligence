@@ -1196,3 +1196,122 @@
   Opportunities: 10 identified
   Report: intelligence_report_20260607_060243.json
 ============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-06-08 17:00:31
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 14 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: email marketing software
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 63
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 5 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  Found 4 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  Found 1 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  Found 3 relevant posts
+
+  ✅ Total Reddit posts: 23
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Construction Companies in 2026
+   Keyword: best crm for construction companies
+   Type: buying_guide
+   Programs: HubSpot, Zoho
+   Urgency: 8/10
+   Why: High commercial intent keyword with vertical-specific search volume. Construction industry has specific CRM needs around project tracking and vendor management. Low competition niche compared to general CRM searches.
+
+2. Best CRM Software for Photographers in 2026
+   Keyword: best crm for photographers
+   Type: buying_guide
+   Programs: HubSpot, Zoho
+   Urgency: 7/10
+   Why: Niche vertical with strong buyer intent. Photographers need specialized features for booking, contracts, and client galleries. Underserved market with growing search volume.
+
+3. Klaviyo Review 2026: Is This Email Platform Worth It for E-commerce
+   Keyword: klaviyo review
+   Type: review
+   Programs: Klaviyo
+   Urgency: 9/10
+   Why: Klaviyo offers 20% recurring commission and dominates e-commerce email marketing. High commercial intent review keyword with strong affiliate potential. Rising search volume as Shopify stores scale.
+
+4. Best Email Marketing Software for Nonprofits in 2026
+   Keyword: best email marketing for nonprofits
+   Type: buying_guide
+   Programs: Klaviyo, HubSpot
+   Urgency: 7/10
+   Why: Nonprofits have specific needs around donation tracking and volunteer communication. Niche search with lower competition. Strong commercial intent from decision-makers with budget authority.
+
+5. Semrush Review 2026: Is This SEO Tool Worth the Investment
+   Keyword: semrush review
+   Type: review
+   Programs: Semrush
+   Urgency: 9/10
+   Why: Semrush has excellent affiliate program with 40% recurring commission. High-ticket product with strong buyer intent. SEO tools are evergreen necessity for agencies and marketers.
+
+✅ Report saved: intelligence_report_20260608_170236.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 63 keywords
+  Reddit: 23 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260608_170236.json
+============================================================
