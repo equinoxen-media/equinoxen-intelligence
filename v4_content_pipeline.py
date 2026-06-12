@@ -53,7 +53,7 @@ CATEGORIES = {
     "website_builders": 11,
 }
 
-# Pinterest Board IDs
+#Pinterest Board IDs
 PINTEREST_BOARDS = {
     "crm": os.getenv("PINTEREST_BOARD_CRM"),
     "email_marketing": os.getenv("PINTEREST_BOARD_EMAIL_MARKETING"),
@@ -66,7 +66,7 @@ PINTEREST_BOARDS = {
     "general": os.getenv("PINTEREST_BOARD_GENERAL"),
 }
 
-# ─── API CREDENTIALS ─────────────────────────────────
+# ─── SOCIAL MEDIA CREDENTIALS ─────────────────────────────────
 LINKEDIN_ACCESS_TOKEN = os.getenv("LINKEDIN_ACCESS_TOKEN")
 LINKEDIN_ORGANIZATION_ID = os.getenv("LINKEDIN_ORGANIZATION_ID")
 
@@ -77,16 +77,11 @@ X_CONSUMER_KEY_SECRET = os.getenv("X_CONSUMER_KEY_SECRET")
 X_ACCESS_TOKEN = os.getenv("X_ACCESS_TOKEN")
 X_ACCESS_TOKEN_SECRET = os.getenv("X_ACCESS_TOKEN_SECRET")
 
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
 
 DEVTO_API_KEY = os.getenv("DEVTO_API_KEY")
-INDEXNOW_KEY = os.getenv("INDEXNOW_KEY")
-GOOGLE_SERVICE_ACCOUNT_FILE = os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE", "google-service-account.json")
 
-
-# ─── PINTEREST BOARD CATEGORIES ───────────────────────────────
+#----PINTEREST BOARD CATEGORIES---------------------------------
 def get_pinterest_board(category_id):
     """Match WordPress category ID to Pinterest board ID"""
     category_board_map = {
@@ -101,23 +96,6 @@ def get_pinterest_board(category_id):
         1: PINTEREST_BOARDS.get("general"),
     }
     return category_board_map.get(category_id, PINTEREST_BOARDS.get("general"))
-
-# ─── LINKEDIN DAILY GATE ──────────────────────────────────────
-def _linkedin_posted_today() -> bool:
-    flag_file = ".linkedin_posted_date"
-    today = datetime.now().strftime("%Y-%m-%d")
-    if os.path.exists(flag_file):
-        return open(flag_file).read().strip() == today
-    return False
-
-def _mark_linkedin_posted():
-    with open(".linkedin_posted_date", "w") as f:
-        f.write(datetime.now().strftime("%Y-%m-%d"))
-
-def _is_linkedin_window() -> bool:
-    """Post to LinkedIn during the 10am-12pm Pacific window"""
-    pacific = datetime.now(zoneinfo.ZoneInfo("America/Los_Angeles"))
-    return 10 <= pacific.hour <= 12
 
 # ─── SOCIAL POSTING ───────────────────────────────────────────
 def post_to_linkedin(title, excerpt, post_url, image_url=None):
@@ -134,6 +112,7 @@ def post_to_linkedin(title, excerpt, post_url, image_url=None):
         "X-Restli-Protocol-Version": "2.0.0"
     }
 
+    # Try to upload image to LinkedIn
     image_asset = None
     if image_url:
         try:
@@ -246,7 +225,6 @@ def post_to_linkedin(title, excerpt, post_url, image_url=None):
         print(f"   ❌ LinkedIn error: {e}")
         return False
 
-
 def post_to_x(title, post_url):
     """Post article to X (Twitter)"""
     if not all([X_CONSUMER_KEY, X_CONSUMER_KEY_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET]):
@@ -278,9 +256,12 @@ def post_to_x(title, post_url):
             "oauth_version": "1.0"
         }
 
+        post_params = {"text": tweet}
+        all_params = {**oauth_params}
+
         sorted_params = "&".join(
             f"{urllib.parse.quote(k, safe='')}={urllib.parse.quote(v, safe='')}"
-            for k, v in sorted(oauth_params.items())
+            for k, v in sorted(all_params.items())
         )
 
         base_url = "https://api.twitter.com/2/tweets"
@@ -318,7 +299,7 @@ def post_to_x(title, post_url):
                 "Authorization": auth_header,
                 "Content-Type": "application/json"
             },
-            json={"text": tweet}
+            json=post_params
         )
 
         if response.status_code in [200, 201]:
@@ -351,10 +332,9 @@ def post_to_pinterest(title, excerpt, post_url, board_id, image_url=None):
         "title": title,
         "description": excerpt,
         "link": post_url,
-        "is_ai_generated": True,
         "media_source": {
             "source_type": "image_url",
-            "url": image_url if image_url else "https://equinoxen.com/wp-content/uploads/equinoxen-default.jpg"
+            "url": image_url if image_url else f"https://equinoxen.com/wp-content/uploads/equinoxen-default.jpg"
         }
     }
 
@@ -377,19 +357,20 @@ def post_to_pinterest(title, excerpt, post_url, board_id, image_url=None):
 
 # ─── DEV.TO ───────────────────────────────────────────────────
 
-def generate_devto_summary(title, keyword, article_html, canonical_url, excerpt=None):
+def generate_devto_summary(title, keyword, article_html, canonical_url):
     """
     Generate a Dev.to-friendly Markdown summary of the article.
-    Uses excerpt if available, otherwise strips HTML for context.
-    canonical_url prevents duplicate-content penalty.
+    Strips HTML, builds a short teaser, then appends a canonical CTA.
+    Dev.to supports Markdown; the canonical_url prevents duplicate-content penalty.
     """
     print("   ✍️  Generating Dev.to summary...")
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
     if excerpt:
         excerpt_for_prompt = excerpt
     else:
+        # Strip HTML tags for context — just pass a clean excerpt to Claude
         clean_text = re.sub(r'<[^>]+>', ' ', article_html)
         clean_text = re.sub(r'\s+', ' ', clean_text).strip()
         excerpt_for_prompt = clean_text[:1500]
@@ -434,12 +415,14 @@ Return only the Markdown — no preamble, no explanation."""
         return body
     except Exception as e:
         print(f"   ⚠️  Dev.to summary error: {e}")
-        return (
+        # Fallback: simple teaser
+        fallback = (
             f"## {title}\n\n"
             f"Looking for the best {keyword}? We broke it all down in our latest independent review.\n\n"
             f"**👉 Read the full breakdown: [{title}]({canonical_url})**\n\n"
             f"---\nTAGS: saas, software, productivity, reviews"
         )
+        return fallback
 
 
 def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=None, excerpt=None):
@@ -451,22 +434,13 @@ def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=N
         print("   ⚠️  DEVTO_API_KEY missing — skipping Dev.to")
         return False
 
-    if not canonical_url:
-        print("   ⚠️  Dev.to skipped — no canonical URL")
-        return False
-
     print("   📤 Posting to Dev.to...")
 
-    markdown_body = generate_devto_summary(
-        title, keyword, article_html, canonical_url, excerpt=excerpt
-    )
+    # Generate Markdown body + extract tags
+    markdown_body = generate_devto_summary(title, keyword, article_html, canonical_url, excerpt=excerpt)
 
-    if not markdown_body or len(markdown_body) < 50:
-        print(f"   ⚠️  Dev.to skipped — markdown body too short")
-        return False
-
-    # Parse tags from last line; fall back to safe defaults
-    tags = ["saas", "software", "productivity", "reviews"]
+    # Parse tags out of the last line if Claude included them
+    tags = ["saas", "software", "productivity", "reviews"]  # safe default
     lines = markdown_body.strip().splitlines()
     for i, line in enumerate(lines):
         if line.strip().upper().startswith("TAGS:"):
@@ -475,7 +449,7 @@ def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=N
             parsed = [t for t in parsed if t][:4]  # Dev.to max 4 tags
             if parsed:
                 tags = parsed
-            # Remove TAGS line and any immediately preceding separator
+            # Remove the TAGS line and any trailing separator from the body
             markdown_body = "\n".join(
                 l for l in lines[:i] if l.strip() != "---"
             ).strip()
@@ -522,25 +496,20 @@ def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=N
 
 # ─── SOCIAL ORCHESTRATOR ──────────────────────────────────────
 def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
-                   pinterest_image_url=None, article_html=None, keyword=None):
+                   pinterest_image_url=None,
+                   article_html=None, keyword=None):
     print("\n📱 Posting to social media...")
     time.sleep(2)
 
-    # ── LINKEDIN — once per day, 10am-12pm Pacific only ──────
     if _is_linkedin_window() and not _linkedin_posted_today():
         post_to_linkedin(title, excerpt, post_url, image_url=image_url)
         _mark_linkedin_posted()
-    elif _linkedin_posted_today():
-        print("   ⏭️  LinkedIn — already posted today")
-    else:
-        print("   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)")
-    time.sleep(2)
+        time.sleep(2)
 
-    # ── X ────────────────────────────────────────────────────
     post_to_x(title, post_url)
     time.sleep(2)
 
-    # ── DEV.TO ───────────────────────────────────────────────
+    # ── DEV.TO ──────────────────────────────────────────────────
     if article_html and keyword and post_url:
         post_to_devto(
             title=title,
@@ -551,15 +520,12 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
             excerpt=excerpt,
         )
         time.sleep(2)
-    else:
-        print("   ⏭️  Dev.to — missing article_html or keyword, skipping")
 
-    # ── PINTEREST DISABLED — API pending approval ─────────────
+    # ── PINTEREST DISABLED — API pending approval ────────────────
     # board_id = get_pinterest_board(category_id)
     # post_to_pinterest(title, excerpt, post_url, board_id, pinterest_image_url or image_url)
 
     print("   📱 Social posting complete")
-
 
 # ─── PUBLISHED POSTS TRACKER ──────────────────────────────────
 PUBLISHED_TRACKER = "published_posts.json"
@@ -574,7 +540,7 @@ def load_published_posts():
 def save_published_post(title, slug, keyword, post_id, post_url):
     """Save a published post to the tracker"""
     tracker = load_published_posts()
-
+    
     tracker["slugs"].append(slug)
     tracker["titles"].append(title.lower())
     tracker["keywords"].append(keyword.lower())
@@ -587,34 +553,34 @@ def save_published_post(title, slug, keyword, post_id, post_url):
         "post_url": post_url,
         "created_at": datetime.now().isoformat()
     })
-
+    
     with open(PUBLISHED_TRACKER, 'w') as f:
         json.dump(tracker, f, indent=2)
-
+    
     print(f"   📝 Tracked: {title}")
 
 def is_already_published(title, keyword, slug):
     """Check if a post has already been published"""
     tracker = load_published_posts()
-
+    
     if slug in tracker.get("slugs", []):
         return True, "slug"
     if keyword.lower() in tracker.get("keywords", []):
         return True, "keyword"
     if title.lower() in tracker.get("titles", []):
         return True, "title"
-
+    
     return False, None
 
 def list_published_posts():
     """Display all published posts"""
     tracker = load_published_posts()
     posts = tracker.get("posts", [])
-
+    
     if not posts:
         print("No posts tracked yet")
         return
-
+    
     print(f"\n📚 PUBLISHED POSTS ({len(posts)} total):")
     print("=" * 60)
     for post in posts:
@@ -655,14 +621,14 @@ def clean_html_response(text):
         text = text[:-3]
     return text.strip()
 
-# ─── SUBMIT TO INDEXNOW ───────────────────────────────────────
+# ─── SUBMIT POST TO INDEXNOW ──────────────────────────────────
 def submit_to_indexnow(post_url):
     """Submit URL to IndexNow for Bing/DuckDuckGo indexing"""
     try:
         payload = {
             "host": "equinoxen.com",
-            "key": INDEXNOW_KEY,
-            "keyLocation": f"https://equinoxen.com/{INDEXNOW_KEY}.txt",
+            "key": os.getenv("INDEXNOW_KEY"),
+            "keyLocation": f"https://equinoxen.com/{os.getenv('INDEXNOW_KEY')}.txt",
             "urlList": [post_url]
         }
         response = requests.post(
@@ -677,32 +643,6 @@ def submit_to_indexnow(post_url):
     except Exception as e:
         print(f"   ⚠️  IndexNow error: {e}")
 
-# ─── SUBMIT TO GOOGLE INDEXING API ───────────────────────────
-def submit_to_google(post_url):
-    """Submit URL to Google Indexing API via service account"""
-    try:
-        from googleapiclient.discovery import build
-        from google.oauth2 import service_account
-
-        service_account_file = GOOGLE_SERVICE_ACCOUNT_FILE
-
-        credentials = service_account.Credentials.from_service_account_file(
-            service_account_file,
-            scopes=["https://www.googleapis.com/auth/indexing"]
-        )
-
-        service = build("indexing", "v3", credentials=credentials)
-        service.urlNotifications().publish(
-            body={"url": post_url, "type": "URL_UPDATED"}
-        ).execute()
-
-        print(f"   ✅ Google Indexing API submitted: {post_url}")
-
-    except FileNotFoundError:
-        print(f"   ⚠️  Service account file not found: {GOOGLE_SERVICE_ACCOUNT_FILE} — skipping Google indexing")
-    except Exception as e:
-        print(f"   ⚠️  Google Indexing API error: {e}")
-
 # ─── STEP 1: LOAD INTELLIGENCE REPORT ────────────────────────
 def load_latest_intelligence():
     """Load the most recent intelligence report"""
@@ -710,44 +650,44 @@ def load_latest_intelligence():
     if not reports:
         print("❌ No intelligence reports found. Run intelligence.py first.")
         return None
-
+    
     latest = sorted(reports)[-1]
     print(f"📂 Loading intelligence report: {latest}")
-
+    
     with open(latest, 'r') as f:
         return json.load(f)
 
 # ─── STEP 2: GENERATE ARTICLE WITH CLAUDE ─────────────────────
 def generate_article(opportunity):
     """Generate a full SEO-optimized review article using Claude"""
-
+    
     title = opportunity.get('title', '')
     keyword = opportunity.get('keyword', '')
     content_type = opportunity.get('type', 'review')
     programs = opportunity.get('programs', [])
-
+    
     print(f"\n✍️  Generating article: {title}")
     print(f"   Keyword: {keyword}")
     print(f"   Type: {content_type}")
-
+    
     affiliate_info = []
     for program in programs:
         program_lower = program.lower()
         for key, link in AFFILIATE_LINKS.items():
             if key in program_lower and link:
                 affiliate_info.append(f"{program}: {link}")
-
+    
     affiliate_str = "\n".join(affiliate_info) if affiliate_info else "Use placeholder [AFFILIATE_LINK] where needed"
-
+    
     if content_type == "review":
         prompt = build_review_prompt(title, keyword, programs, affiliate_str)
     elif content_type == "comparison":
         prompt = build_comparison_prompt(title, keyword, programs, affiliate_str)
     else:
         prompt = build_buying_guide_prompt(title, keyword, programs, affiliate_str)
-
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
+    
+    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    
     try:
         message = client.messages.create(
             model="claude-sonnet-4-5",
@@ -765,7 +705,7 @@ def generate_article(opportunity):
 # ─── REVIEW ARTICLE PROMPT ────────────────────────────────────
 def build_review_prompt(title, keyword, programs, affiliate_links):
     product = programs[0] if programs else keyword
-
+    
     return f"""You are an expert SaaS reviewer writing for {SITE_NAME}, an independent 
 software review publication. Write a comprehensive, SEO-optimized review article.
 
@@ -839,8 +779,8 @@ Write the complete article now in HTML format:"""
 def build_comparison_prompt(title, keyword, programs, affiliate_links):
     product1 = programs[0] if len(programs) > 0 else "Product A"
     product2 = programs[1] if len(programs) > 1 else "Product B"
-
-    return f"""You are an expert SaaS reviewer writing for {SITE_NAME}, an independent
+    
+    return f"""You are an expert SaaS reviewer writing for {SITE_NAME},  an independent
 software review publication. Write a comprehensive, SEO-optimized comparison article.
 
 ARTICLE DETAILS:
@@ -980,9 +920,9 @@ Write the complete article now in HTML:"""
 def generate_seo_metadata(title, keyword, article_content):
     """Generate SEO title, meta description and excerpt"""
     print("   🔍 Generating SEO metadata...")
-
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
+    
+    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    
     prompt = f"""Generate SEO metadata for this article. Return ONLY JSON, no markdown.
 
 Article title: {title}
@@ -994,7 +934,7 @@ Article excerpt (first 200 chars): {article_content[:200]}
 
 Return this exact JSON structure:
 {{"seo_title": "max 60 chars with keyword", "meta_description": "max 155 chars with keyword and CTA", "excerpt": "2 sentence article summary", "slug": "url-friendly-slug-with-keyword-no-year", "focus_keyword": "{keyword}"}}"""
-
+    
     try:
         message = client.messages.create(
             model="claude-sonnet-4-5",
@@ -1011,7 +951,7 @@ Return this exact JSON structure:
             data["slug"] = slug
 
         return data
-
+        
     except Exception as e:
         print(f"   ⚠️  Metadata error: {e}")
         return {
@@ -1026,7 +966,7 @@ Return this exact JSON structure:
 def assign_category(keyword, programs):
     """Assign WordPress category based on keyword"""
     keyword_lower = keyword.lower()
-
+    
     category_map = {
         "crm": CATEGORIES.get("crm", 1),
         "salesforce": CATEGORIES.get("crm", 1),
@@ -1078,27 +1018,27 @@ def assign_category(keyword, programs):
         "website builder": CATEGORIES.get("website_builders", 1),
         "wix": CATEGORIES.get("website_builders", 1),
     }
-
+    
     for key, cat_id in category_map.items():
         if key in keyword_lower:
             return cat_id
-
+    
     for program in programs:
         program_lower = program.lower()
         for key, cat_id in category_map.items():
             if key in program_lower:
                 return cat_id
-
+    
     return CATEGORIES.get("general", 1)
 
 # ─── STEP 4.1: CREATE IMAGE ───────────────────────────────────
 def get_featured_image_unsplash(keyword):
     """Fetch relevant image from Unsplash API"""
-    access_key = UNSPLASH_ACCESS_KEY
+    access_key = os.getenv("UNSPLASH_ACCESS_KEY")
     if not access_key:
         print("   ⚠️  No UNSPLASH_ACCESS_KEY — skipping featured image")
         return None
-
+    
     try:
         search_term = keyword.replace('-', ' ')
         response = requests.get(
@@ -1134,11 +1074,11 @@ def upload_image_to_wordpress(image_url, title, alt_text=""):
         img_response = requests.get(image_url, timeout=30)
         if img_response.status_code != 200:
             return None
-
+        
         filename = title.lower()
         filename = ''.join(c if c.isalnum() or c == '-' else '-' for c in filename)
         filename = f"{filename[:50]}.jpg"
-
+        
         media_url = f"{WP_URL}/wp-json/wp/v2/media"
         headers = {
             "Content-Disposition": f'attachment; filename="{filename}"',
@@ -1175,15 +1115,15 @@ def generate_branded_image(title, keyword, programs=None, orientation="landscape
         import openai
         import io
         from PIL import Image
-
-        openai_key = OPENAI_API_KEY
+        
+        openai_key = os.getenv("OPENAI_API_KEY")
         if not openai_key:
             print("   ⚠️  No OPENAI_API_KEY — skipping AI image generation")
             return None, None
-
+        
         client = openai.OpenAI(api_key=openai_key)
         print(f"   🎨 Generating {orientation} AI image for: {title}")
-
+        
         color_hints = {
             "hubspot": "orange accents",
             "monday": "vibrant red and yellow accents",
@@ -1203,23 +1143,23 @@ def generate_branded_image(title, keyword, programs=None, orientation="landscape
             "jotform": "orange and purple accents",
             "canva": "purple and turquoise accents",
         }
-
+        
         accent_colors = []
         if programs:
             for program in programs:
                 for key, color in color_hints.items():
                     if key in program.lower() and color not in accent_colors:
                         accent_colors.append(color)
-
+        
         color_instruction = f"Subtle {', '.join(accent_colors)} incorporated into the design" if accent_colors else "Eclipse Gold accents"
-
+        
         if orientation == "portrait":
             size = "1024x1536"
             composition = "vertical Pinterest-style composition with strong visual flow from top to bottom"
         else:
             size = "1536x1024"
             composition = "horizontal landscape composition optimized for blog featured image display"
-
+        
         prompt = f"""Create a professional featured image for a blog post titled: '{title}'
 
 Style requirements:
@@ -1242,19 +1182,19 @@ Style requirements:
             quality="medium",
             n=1,
         )
-
+        
         import base64
         image_data = base64.b64decode(response.data[0].b64_json)
-
+        
         img = Image.open(io.BytesIO(image_data))
         webp_bytes = io.BytesIO()
         img.save(webp_bytes, format='WEBP', quality=70, method=6, optimize=True)
         webp_bytes.seek(0)
         image_data = webp_bytes.getvalue()
-
+        
         print(f"   ✅ {orientation.capitalize()} image generated ({len(image_data) // 1024}KB)")
         return image_data, None
-
+        
     except ImportError:
         print("   ⚠️  openai or Pillow not installed")
         return None, None
@@ -1263,11 +1203,11 @@ Style requirements:
         return None, None
 
 def upload_branded_image_to_wordpress(title, keyword, programs=None):
-    """Generate and upload landscape for WordPress"""
+    """Generate and upload landscape for WordPress and portrait for Pinterest"""
     try:
         print(f"   🎨 Generating AI featured images...")
         base_filename = keyword.lower().replace(' ', '-')[:50]
-
+        
         landscape_data, _ = generate_branded_image(title, keyword, programs, orientation="landscape")
         landscape_id = None
         wordpress_image_url = None
@@ -1278,12 +1218,12 @@ def upload_branded_image_to_wordpress(title, keyword, programs=None):
                 "image/webp",
                 alt_text=keyword
             )
-
+        
         # ── PINTEREST IMAGE DISABLED — API pending approval ────────────
         pinterest_image_url = None
-
+        
         return landscape_id, wordpress_image_url, pinterest_image_url
-
+        
     except Exception as e:
         print(f"   ⚠️  Error: {e}")
         return None, None, None
@@ -1303,7 +1243,7 @@ def upload_single_image(img_data, filename, content_type, alt_text=""):
             auth=(WP_USER, WP_PASS)
         )
         if response.status_code in [200, 201]:
-            media = response.json()
+            media = media_response.json() if False else response.json()
             media_id = media.get("id")
             if alt_text and media_id:
                 time.sleep(1)
@@ -1321,12 +1261,12 @@ def upload_single_image(img_data, filename, content_type, alt_text=""):
 # ─── STEP 5: PUBLISH TO WORDPRESS ─────────────────────────────
 def publish_to_wordpress(title, content, metadata, category_id, draft=True, featured_image_id=None):
     """Publish article to WordPress via REST API"""
-
+    
     status = "draft" if draft else "publish"
     print(f"\n📤 Publishing to WordPress as {status}...")
-
+    
     api_url = f"{WP_URL}/wp-json/wp/v2/posts"
-
+    
     focus_keyword = metadata.get("focus_keyword", "")
     post_data = {
         "title": metadata.get("seo_title", title),
@@ -1341,10 +1281,10 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
             "rank_math_focus_keyword": focus_keyword,
         }
     }
-
+    
     if featured_image_id:
         post_data["featured_media"] = featured_image_id
-
+    
     try:
         response = requests.post(
             api_url,
@@ -1352,14 +1292,14 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
             auth=(WP_USER, WP_PASS),
             headers={"Content-Type": "application/json"}
         )
-
+        
         if response.status_code in [200, 201]:
             post = response.json()
             post_id = post.get('id')
             post_link = post.get('link')
             print(f"   ✅ Published! ID: {post_id}")
             print(f"   🔗 URL: {post_link}")
-
+            
             time.sleep(2)
             try:
                 requests.post(
@@ -1371,7 +1311,7 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
                 print(f"   🔄 WordPress hooks triggered")
             except Exception as e:
                 print(f"   ⚠️  Hook trigger failed: {e}")
-
+    
             if post_id and focus_keyword:
                 try:
                     requests.post(
@@ -1389,7 +1329,7 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
             print(f"   ❌ Publishing failed: {response.status_code}")
             print(f"   Response: {response.text[:200]}")
             return None, None
-
+            
     except Exception as e:
         print(f"   ❌ WordPress error: {e}")
         return None, None
@@ -1400,7 +1340,7 @@ def save_article_locally(title, content, metadata):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     slug = metadata.get("slug", "article").replace("/", "-")
     filename = f"article_{slug}_{timestamp}.html"
-
+    
     html_template = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1413,10 +1353,10 @@ def save_article_locally(title, content, metadata):
 {content}
 </body>
 </html>"""
-
+    
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(html_template)
-
+    
     print(f"   💾 Saved locally: {filename}")
     return filename
 
@@ -1427,13 +1367,30 @@ def cleanup_old_files():
     for old_report in reports[:-7]:
         os.remove(old_report)
         print(f"   🧹 Removed old report: {old_report}")
-
+    
     articles = sorted(glob.glob("article_*.html"))
     for old_article in articles[:-9]:
         os.remove(old_article)
         print(f"   🧹 Removed old article: {old_article}")
-
+    
     print("   ✅ Cleanup complete")
+
+# ─── STEP 8: LINKEDIN POSTED TODAY ────────────────────────────────
+def _linkedin_posted_today() -> bool:
+    flag_file = ".linkedin_posted_date"
+    today = datetime.now().strftime("%Y-%m-%d")
+    if os.path.exists(flag_file):
+        return open(flag_file).read().strip() == today
+    return False
+
+def _mark_linkedin_posted():
+    with open(".linkedin_posted_date", "w") as f:
+        f.write(datetime.now().strftime("%Y-%m-%d"))
+
+def _is_linkedin_window() -> bool:
+    """Post to LinkedIn during the 11am Pacific run"""
+    pacific = datetime.now(zoneinfo.ZoneInfo("America/Los_Angeles"))
+    return 10 <= pacific.hour <= 12
 
 # ─── MAIN PIPELINE ────────────────────────────────────────────
 def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
@@ -1442,60 +1399,60 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print(f"  Running at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"  Target: {num_articles} articles")
     print("=" * 60)
-
+    
     intelligence = load_latest_intelligence()
     if not intelligence:
         return
-
+    
     opportunities = intelligence.get('top_opportunities', [])
     if not opportunities:
         print("❌ No opportunities found in intelligence report")
         return
-
+    
     print(f"\n📋 Found {len(opportunities)} opportunities")
-
+    
     results = []
     published_count = 0
     opp_index = 0
-
+    
     while published_count < num_articles and opp_index < len(opportunities):
         opp = opportunities[opp_index]
         opp_index += 1
-
+        
         print(f"\n{'='*60}")
         print(f"  ARTICLE {published_count + 1} of {num_articles} (opportunity {opp_index} of {len(opportunities)})")
         print(f"{'='*60}")
-
+       
         title = opp.get('title', '')
         keyword = opp.get('keyword', '')
         test_slug = keyword.lower().replace(' ', '-')
-
+       
         # ── CHECK IF ALREADY PUBLISHED ──────────────────────────
         already_done, reason = is_already_published(title, keyword, test_slug)
         if already_done:
             print(f"⏭️  Skipping — already published ({reason} match):")
             print(f"   {title}")
             continue
-
+        
         if check_wordpress_for_duplicate(test_slug):
             print(f"⏭️  Skipping — already exists in WordPress")
             print(f"   {title}")
             continue
-
+        
         # Generate article
         article_content = generate_article(opp)
         if not article_content:
             continue
-
+        
         # Generate metadata
         metadata = generate_seo_metadata(title, keyword, article_content)
-
+        
         # Assign category
         category_id = assign_category(keyword, opp.get('programs', []))
-
+       
         # Save locally
         local_file = save_article_locally(title, article_content, metadata)
-
+       
         # Get featured image
         featured_image_id = None
         image_url = None
@@ -1512,7 +1469,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                     featured_image_id = upload_image_to_wordpress(unsplash_url, title, alt_text=keyword)
                     image_url = unsplash_url
                     pinterest_image_url = unsplash_url
-
+        
         # Publish to WordPress
         post_id = None
         post_url = None
@@ -1525,7 +1482,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                 draft=publish_as_draft,
                 featured_image_id=featured_image_id
             )
-
+        
         # ── TRACK IF PUBLISHED SUCCESSFULLY ─────────────────────
         if post_id:
             save_published_post(
@@ -1536,7 +1493,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                 post_url
             )
             published_count += 1
-
+    
         # ── POST TO SOCIAL MEDIA ─────────────────────────────────
         if post_id and not publish_as_draft:
             post_to_social(
@@ -1546,10 +1503,10 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                 category_id=category_id,
                 image_url=image_url,
                 pinterest_image_url=pinterest_image_url,
-                article_html=article_content,
-                keyword=keyword,
+                article_html=article_content,   # ← passed for Dev.to
+                keyword=keyword,                 # ← passed for Dev.to
             )
-
+    
         results.append({
             "title": title,
             "keyword": keyword,
@@ -1558,16 +1515,15 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
             "post_url": post_url,
             "status": "draft" if publish_as_draft else "published"
         })
-
+    
         if published_count < num_articles:
             print(f"\n⏳ Waiting 5 seconds before next article...")
             time.sleep(5)
-
-        # ── SUBMIT TO INDEXNOW & GOOGLE ───────────────────────────────────
+    
+        # ── SUBMIT TO INDEXNOW ───────────────────────────────────
         if post_id and post_url:
             submit_to_indexnow(post_url)
-            submit_to_google(post_url)
-
+    
     # Final summary
     print("\n" + "=" * 60)
     print("  PIPELINE COMPLETE")
@@ -1580,21 +1536,21 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
         if r['post_url']:
             print(f"     WordPress: {r['post_url']}")
         print(f"     Status: {r['status']}")
-
+    
     if published_count < num_articles:
         print(f"\n⚠️  Only published {published_count} of {num_articles} — run intelligence.py for fresh opportunities")
-
+    
     print("\n💡 Next steps:")
     print("   1. Review articles in WordPress")
     print("   2. Verify affiliate links are working")
-
+    
     cleanup_old_files()
     return results
 
 # ─── RUN ──────────────────────────────────────────────────────
 if __name__ == "__main__":
     import sys
-
+    
     if len(sys.argv) > 1 and sys.argv[1] == "list":
         show_published()
     else:

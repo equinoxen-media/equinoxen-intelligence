@@ -70,7 +70,15 @@
     "best-accounting-software-personal-use",
     "best-crm-for-construction-companies",
     "best-crm-software-for-photographers",
-    "best-email-marketing-software-for-nonprofits"
+    "best-email-marketing-software-for-nonprofits",
+    "best-free-project-management-software",
+    "monday-vs-clickup-project-management-comparison",
+    "best-project-management-software-for-small-business",
+    "project-management-software-vs-crm",
+    "best-seo-tools-for-etsy-sellers",
+    "best-business-process-automation-software",
+    "zoho-books-vs-quickbooks",
+    "notion-vs-asana-productivity-tool-comparison"
   ],
   "titles": [
     "11 best crm software for small business in 2026 (tested & compared)",
@@ -143,7 +151,15 @@
     "best accounting software for personal use in 2026: 5 options reviewed",
     "best crm software for construction companies in 2026",
     "best crm software for photographers in 2026",
-    "best email marketing software for nonprofits in 2026"
+    "best email marketing software for nonprofits in 2026",
+    "best free project management software in 2026",
+    "monday.com vs clickup 2026: which project management tool wins",
+    "best project management software for small business in 2026",
+    "project management software vs crm: which does your business need in 2026",
+    "best seo tools for etsy sellers in 2026",
+    "best business process automation software for 2026",
+    "zoho books vs quickbooks: which accounting software wins in 2026",
+    "notion vs asana: which productivity tool is better in 2026"
   ],
   "keywords": [
     "best crm small business",
@@ -216,7 +232,15 @@
     "best accounting software personal use",
     "best crm for construction companies",
     "best crm for photographers",
-    "best email marketing for nonprofits"
+    "best email marketing for nonprofits",
+    "best free project management software",
+    "monday vs clickup",
+    "best project management software for small business",
+    "project management software vs crm",
+    "best seo tools for etsy",
+    "best business process automation software",
+    "zoho books vs quickbooks",
+    "notion vs asana"
   ],
   "posts": [
     {
@@ -786,6 +810,70 @@
       "post_id": 562,
       "post_url": "https://equinoxen.com/best-email-marketing-software-for-nonprofits/",
       "created_at": "2026-06-09T15:03:08.461403"
+    },
+    {
+      "title": "Best Free Project Management Software in 2026",
+      "slug": "best-free-project-management-software",
+      "keyword": "best free project management software",
+      "post_id": 565,
+      "post_url": "https://equinoxen.com/best-free-project-management-software/",
+      "created_at": "2026-06-09T16:13:41.448185"
+    },
+    {
+      "title": "Monday.com vs ClickUp 2026: Which Project Management Tool Wins",
+      "slug": "monday-vs-clickup-project-management-comparison",
+      "keyword": "monday vs clickup",
+      "post_id": 568,
+      "post_url": "https://equinoxen.com/monday-vs-clickup-project-management-comparison/",
+      "created_at": "2026-06-09T16:35:53.518156"
+    },
+    {
+      "title": "Best Project Management Software for Small Business in 2026",
+      "slug": "best-project-management-software-for-small-business",
+      "keyword": "best project management software for small business",
+      "post_id": 571,
+      "post_url": "https://equinoxen.com/best-project-management-software-for-small-business/",
+      "created_at": "2026-06-09T18:03:03.303998"
+    },
+    {
+      "title": "Project Management Software vs CRM: Which Does Your Business Need in 2026",
+      "slug": "project-management-software-vs-crm",
+      "keyword": "project management software vs crm",
+      "post_id": 574,
+      "post_url": "https://equinoxen.com/project-management-software-vs-crm/",
+      "created_at": "2026-06-09T21:03:07.733415"
+    },
+    {
+      "title": "Best SEO Tools for Etsy Sellers in 2026",
+      "slug": "best-seo-tools-for-etsy-sellers",
+      "keyword": "best seo tools for etsy",
+      "post_id": 577,
+      "post_url": "https://equinoxen.com/best-seo-tools-for-etsy-sellers/",
+      "created_at": "2026-06-10T15:03:29.083722"
+    },
+    {
+      "title": "Best Business Process Automation Software for 2026",
+      "slug": "best-business-process-automation-software",
+      "keyword": "best business process automation software",
+      "post_id": 580,
+      "post_url": "https://equinoxen.com/best-business-process-automation-software/",
+      "created_at": "2026-06-10T18:03:16.856120"
+    },
+    {
+      "title": "Zoho Books vs QuickBooks: Which Accounting Software Wins in 2026",
+      "slug": "zoho-books-vs-quickbooks",
+      "keyword": "zoho books vs quickbooks",
+      "post_id": 583,
+      "post_url": "https://equinoxen.com/zoho-books-vs-quickbooks/",
+      "created_at": "2026-06-10T21:02:51.386849"
+    },
+    {
+      "title": "Notion vs Asana: Which Productivity Tool is Better in 2026",
+      "slug": "notion-vs-asana-productivity-tool-comparison",
+      "keyword": "notion vs asana",
+      "post_id": 586,
+      "post_url": "https://equinoxen.com/notion-vs-asana-productivity-tool-comparison/",
+      "created_at": "2026-06-12T00:07:29.983855"
     }
   ]
 }

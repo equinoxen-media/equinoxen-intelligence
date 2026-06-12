@@ -385,7 +385,7 @@ def generate_devto_summary(title, keyword, article_html, canonical_url, excerpt=
     """
     print("   ✍️  Generating Dev.to summary...")
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
     if excerpt:
         excerpt_for_prompt = excerpt
@@ -661,8 +661,8 @@ def submit_to_indexnow(post_url):
     try:
         payload = {
             "host": "equinoxen.com",
-            "key": INDEXNOW_KEY,
-            "keyLocation": f"https://equinoxen.com/{INDEXNOW_KEY}.txt",
+            "key": os.getenv("INDEXNOW_KEY"),
+            "keyLocation": f"https://equinoxen.com/{os.getenv('INDEXNOW_KEY')}.txt",
             "urlList": [post_url]
         }
         response = requests.post(
@@ -684,7 +684,7 @@ def submit_to_google(post_url):
         from googleapiclient.discovery import build
         from google.oauth2 import service_account
 
-        service_account_file = GOOGLE_SERVICE_ACCOUNT_FILE
+        service_account_file = os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE", "google-service-account.json")
 
         credentials = service_account.Credentials.from_service_account_file(
             service_account_file,
@@ -699,7 +699,7 @@ def submit_to_google(post_url):
         print(f"   ✅ Google Indexing API submitted: {post_url}")
 
     except FileNotFoundError:
-        print(f"   ⚠️  Service account file not found: {GOOGLE_SERVICE_ACCOUNT_FILE} — skipping Google indexing")
+        print(f"   ⚠️  Service account file not found: {os.getenv('GOOGLE_SERVICE_ACCOUNT_FILE', 'google-service-account.json')} — skipping Google indexing")
     except Exception as e:
         print(f"   ⚠️  Google Indexing API error: {e}")
 
@@ -746,7 +746,7 @@ def generate_article(opportunity):
     else:
         prompt = build_buying_guide_prompt(title, keyword, programs, affiliate_str)
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
     try:
         message = client.messages.create(
@@ -981,7 +981,7 @@ def generate_seo_metadata(title, keyword, article_content):
     """Generate SEO title, meta description and excerpt"""
     print("   🔍 Generating SEO metadata...")
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
     prompt = f"""Generate SEO metadata for this article. Return ONLY JSON, no markdown.
 
@@ -1094,7 +1094,7 @@ def assign_category(keyword, programs):
 # ─── STEP 4.1: CREATE IMAGE ───────────────────────────────────
 def get_featured_image_unsplash(keyword):
     """Fetch relevant image from Unsplash API"""
-    access_key = UNSPLASH_ACCESS_KEY
+    access_key = os.getenv("UNSPLASH_ACCESS_KEY")
     if not access_key:
         print("   ⚠️  No UNSPLASH_ACCESS_KEY — skipping featured image")
         return None
@@ -1176,7 +1176,7 @@ def generate_branded_image(title, keyword, programs=None, orientation="landscape
         import io
         from PIL import Image
 
-        openai_key = OPENAI_API_KEY
+        openai_key = os.getenv("OPENAI_API_KEY")
         if not openai_key:
             print("   ⚠️  No OPENAI_API_KEY — skipping AI image generation")
             return None, None

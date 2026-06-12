@@ -1989,3 +1989,363 @@ Traceback (most recent call last):
     markdown_body = generate_devto_summary(title, keyword, article_html, canonical_url, excerpt=excerpt)
                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: generate_devto_summary() got an unexpected keyword argument 'excerpt'
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-06-09 18:00:25
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260609_170332.json
+
+📋 Found 10 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 10)
+============================================================
+
+✍️  Generating article: Best Project Management Software for Small Business in 2026
+   Keyword: best project management software for small business
+   Type: buying_guide
+   ✅ Article generated (13818 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_best-project-management-software-for-small-business_20260609_180149.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Best Project Management Software for Small Business in 2026
+   ✅ Landscape image generated (80KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 571
+   🔗 URL: https://equinoxen.com/best-project-management-software-for-small-business/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: best project management software for small business
+   📝 Tracked: Best Project Management Software for Small Business in 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ✅ Image uploaded to LinkedIn
+   ✅ LinkedIn posted successfully
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1427 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/best-project-management-software-for-small-business-in-2026-32p8
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/best-project-management-software-for-small-business/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Best Project Management Software for Small Business in 2026
+     Keyword: best project management software for small business
+     Local: article_best-project-management-software-for-small-business_20260609_180149.html
+     WordPress: https://equinoxen.com/best-project-management-software-for-small-business/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260603_060250.json
+   🧹 Removed old article: article_best-project-management-software-for-small-business_20260609_180149.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-06-09 21:00:20
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260609_170332.json
+
+📋 Found 10 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 10)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best Project Management Software for Small Business in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 10)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Semrush Review 2026: Is This SEO Tool Worth the Investment
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 10)
+============================================================
+
+✍️  Generating article: Project Management Software vs CRM: Which Does Your Business Need in 2026
+   Keyword: project management software vs crm
+   Type: comparison
+   ✅ Article generated (16630 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_project-management-software-vs-crm_20260609_210151.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Project Management Software vs CRM: Which Does Your Business Need in 2026
+   ✅ Landscape image generated (101KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 574
+   🔗 URL: https://equinoxen.com/project-management-software-vs-crm/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: project management software vs crm
+   📝 Tracked: Project Management Software vs CRM: Which Does Your Business Need in 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1322 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/project-management-software-vs-crm-which-does-your-business-need-in-2026-2j12
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/project-management-software-vs-crm/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Project Management Software vs CRM: Which Does Your Business Need in 2026
+     Keyword: project management software vs crm
+     Local: article_project-management-software-vs-crm_20260609_210151.html
+     WordPress: https://equinoxen.com/project-management-software-vs-crm/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_project-management-software-vs-crm_20260609_210151.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-06-10 15:00:23
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260609_170332.json
+
+📋 Found 10 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 10)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best Project Management Software for Small Business in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 10)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Semrush Review 2026: Is This SEO Tool Worth the Investment
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 10)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Project Management Software vs CRM: Which Does Your Business Need in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 10)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Unbounce Review 2026: Landing Page Builder for High-Converting Campaigns
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 5 of 10)
+============================================================
+
+✍️  Generating article: Best SEO Tools for Etsy Sellers in 2026
+   Keyword: best seo tools for etsy
+   Type: buying_guide
+   ✅ Article generated (18129 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_best-seo-tools-for-etsy-sellers_20260610_150210.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Best SEO Tools for Etsy Sellers in 2026
+   ✅ Landscape image generated (91KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 577
+   🔗 URL: https://equinoxen.com/best-seo-tools-for-etsy-sellers/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: best seo tools for etsy
+   📝 Tracked: Best SEO Tools for Etsy Sellers in 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1480 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/best-seo-tools-for-etsy-sellers-in-2026-1df8
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/best-seo-tools-for-etsy-sellers/
+   ✅ Google Indexing API submitted: https://equinoxen.com/best-seo-tools-for-etsy-sellers/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Best SEO Tools for Etsy Sellers in 2026
+     Keyword: best seo tools for etsy
+     Local: article_best-seo-tools-for-etsy-sellers_20260610_150210.html
+     WordPress: https://equinoxen.com/best-seo-tools-for-etsy-sellers/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_best-seo-tools-for-etsy-sellers_20260610_150210.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-06-10 18:00:24
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260610_170310.json
+
+📋 Found 10 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 10)
+============================================================
+
+✍️  Generating article: Best Business Process Automation Software for 2026
+   Keyword: best business process automation software
+   Type: buying_guide
+   ✅ Article generated (17907 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_best-business-process-automation-software_20260610_180201.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Best Business Process Automation Software for 2026
+   ✅ Landscape image generated (85KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 580
+   🔗 URL: https://equinoxen.com/best-business-process-automation-software/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: best business process automation software
+   📝 Tracked: Best Business Process Automation Software for 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ✅ Image uploaded to LinkedIn
+   ✅ LinkedIn posted successfully
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1470 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/best-business-process-automation-software-for-2026-e7e
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/best-business-process-automation-software/
+   ✅ Google Indexing API submitted: https://equinoxen.com/best-business-process-automation-software/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Best Business Process Automation Software for 2026
+     Keyword: best business process automation software
+     Local: article_best-business-process-automation-software_20260610_180201.html
+     WordPress: https://equinoxen.com/best-business-process-automation-software/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260604_060233.json
+   🧹 Removed old article: article_best-business-process-automation-software_20260610_180201.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-06-10 21:00:21
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260610_170310.json
+
+📋 Found 10 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 10)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best Business Process Automation Software for 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 10)
+============================================================
+
+✍️  Generating article: Zoho Books vs QuickBooks: Which Accounting Software Wins in 2026
+   Keyword: zoho books vs quickbooks
+   Type: comparison
+   ✅ Article generated (14465 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_zoho-books-vs-quickbooks_20260610_210139.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Zoho Books vs QuickBooks: Which Accounting Software Wins in 2026
+   ✅ Landscape image generated (78KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 583
+   🔗 URL: https://equinoxen.com/zoho-books-vs-quickbooks/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: zoho books vs quickbooks
+   📝 Tracked: Zoho Books vs QuickBooks: Which Accounting Software Wins in 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1416 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/zoho-books-vs-quickbooks-which-accounting-software-wins-in-2026-2ca7
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/zoho-books-vs-quickbooks/
+   ✅ Google Indexing API submitted: https://equinoxen.com/zoho-books-vs-quickbooks/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Zoho Books vs QuickBooks: Which Accounting Software Wins in 2026
+     Keyword: zoho books vs quickbooks
+     Local: article_zoho-books-vs-quickbooks_20260610_210139.html
+     WordPress: https://equinoxen.com/zoho-books-vs-quickbooks/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_wave-vs-freshbooks-accounting-software-freelancers_20260607_180147.html
+   ✅ Cleanup complete
+  File "/home/master/equinoxen-intelligence/content_pipeline.py", line 749
+    client = anthropic.Anthropic(api_key=os.getenv(ANTHROPIC_API_KEY)
+                                ^
+SyntaxError: '(' was never closed
+  File "/home/master/equinoxen-intelligence/content_pipeline.py", line 749
+    client = anthropic.Anthropic(api_key=os.getenv(ANTHROPIC_API_KEY)
+                                ^
+SyntaxError: '(' was never closed
+  File "/home/master/equinoxen-intelligence/content_pipeline.py", line 749
+    client = anthropic.Anthropic(api_key=os.getenv(ANTHROPIC_API_KEY)
+                                ^
+SyntaxError: '(' was never closed
