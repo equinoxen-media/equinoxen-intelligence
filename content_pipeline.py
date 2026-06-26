@@ -571,7 +571,7 @@ def load_published_posts():
             return json.load(f)
     return {"slugs": [], "titles": [], "keywords": []}
 
-def save_published_post(title, slug, keyword, post_id, post_url):
+def save_published_post(title, slug, keyword, post_id, post_url, comparison_key=None):
     """Save a published post to the tracker"""
     tracker = load_published_posts()
 
@@ -587,6 +587,10 @@ def save_published_post(title, slug, keyword, post_id, post_url):
         "post_url": post_url,
         "created_at": datetime.now().isoformat()
     })
+
+    if comparison_key:
+        tracker["comparison_keys"] = tracker.get("comparison_keys", [])
+        tracker["comparison_keys"].append(comparison_key)
 
     with open(PUBLISHED_TRACKER, 'w') as f:
         json.dump(tracker, f, indent=2)
@@ -655,6 +659,24 @@ def clean_html_response(text):
         text = text[:-3]
     return text.strip()
 
+def get_published_urls():
+    """Build a summary of published posts for internal linking"""
+    tracker = load_published_posts()
+    posts = tracker.get("posts", [])
+    return [{"title": p["title"], "url": p["post_url"], "keyword": p["keyword"]} for p in posts if p.get("post_url")]
+
+def normalize_comparison_key(keyword, programs):
+    """
+    Build an order-independent key for comparison articles so
+    'Unbounce vs Webflow' and 'Webflow vs Unbounce' are recognized as the same.
+    Falls back to normalized keyword for non-comparison content.
+    """
+    if programs and len(programs) >= 2:
+        normalized = sorted(p.lower().strip() for p in programs[:2])
+        return "+".join(normalized)
+    # Single-product review — normalize on product/keyword alone
+    return re.sub(r'\b(20\d{2}|review|comparison|vs)\b', '', keyword.lower()).strip()
+
 # ─── SUBMIT TO INDEXNOW ───────────────────────────────────────
 def submit_to_indexnow(post_url):
     """Submit URL to IndexNow for Bing/DuckDuckGo indexing"""
@@ -684,22 +706,21 @@ def submit_to_google(post_url):
         from googleapiclient.discovery import build
         from google.oauth2 import service_account
 
-        service_account_file = GOOGLE_SERVICE_ACCOUNT_FILE
-
         credentials = service_account.Credentials.from_service_account_file(
-            service_account_file,
+            GOOGLE_SERVICE_ACCOUNT_FILE,
             scopes=["https://www.googleapis.com/auth/indexing"]
         )
 
         service = build("indexing", "v3", credentials=credentials)
-        service.urlNotifications().publish(
+        response = service.urlNotifications().publish(
             body={"url": post_url, "type": "URL_UPDATED"}
         ).execute()
 
-        print(f"   ✅ Google Indexing API submitted: {post_url}")
+        submitted_url = response.get("urlNotificationMetadata", {}).get("url", "unknown")
+        print(f"   ✅ Google Indexing API submitted: {submitted_url}")
 
     except FileNotFoundError:
-        print(f"   ⚠️  Service account file not found: {GOOGLE_SERVICE_ACCOUNT_FILE} — skipping Google indexing")
+        print(f"   ⚠️  Service account file not found: {GOOGLE_SERVICE_ACCOUNT_FILE}")
     except Exception as e:
         print(f"   ⚠️  Google Indexing API error: {e}")
 
@@ -739,12 +760,18 @@ def generate_article(opportunity):
 
     affiliate_str = "\n".join(affiliate_info) if affiliate_info else "Use placeholder [AFFILIATE_LINK] where needed"
 
+    # ── INTERNAL LINKING ─────────────────────────────────────
+    published_posts = get_published_urls()
+    internal_links_str = "\n".join(
+        f"- {p['title']}: {p['url']}" for p in published_posts
+    ) if published_posts else "None yet"
+
     if content_type == "review":
-        prompt = build_review_prompt(title, keyword, programs, affiliate_str)
+        prompt = build_review_prompt(title, keyword, programs, affiliate_str, internal_links_str)
     elif content_type == "comparison":
-        prompt = build_comparison_prompt(title, keyword, programs, affiliate_str)
+        prompt = build_comparison_prompt(title, keyword, programs, affiliate_str, internal_links_str)
     else:
-        prompt = build_buying_guide_prompt(title, keyword, programs, affiliate_str)
+        prompt = build_buying_guide_prompt(title, keyword, programs, affiliate_str, internal_links_str)
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -763,7 +790,7 @@ def generate_article(opportunity):
         return None
 
 # ─── REVIEW ARTICLE PROMPT ────────────────────────────────────
-def build_review_prompt(title, keyword, programs, affiliate_links):
+def build_review_prompt(title, keyword, programs, affiliate_links, internal_links_str):
     product = programs[0] if programs else keyword
 
     return f"""You are an expert SaaS reviewer writing for {SITE_NAME}, an independent 
@@ -833,10 +860,16 @@ CRITICAL STYLING RULES:
 - Let the website CSS handle all other visual styling
 - No style="..." on any element except table, th, and td
 
+INTERNAL LINKING:
+Where naturally relevant, link to these existing articles on the site:
+{internal_links_str}
+Use descriptive anchor text matching the linked article's topic.
+Add 2-3 internal links maximum — only where genuinely relevant, never forced.
+
 Write the complete article now in HTML format:"""
 
 # ─── COMPARISON ARTICLE PROMPT ────────────────────────────────
-def build_comparison_prompt(title, keyword, programs, affiliate_links):
+def build_comparison_prompt(title, keyword, programs, affiliate_links, internal_links_str):
     product1 = programs[0] if len(programs) > 0 else "Product A"
     product2 = programs[1] if len(programs) > 1 else "Product B"
 
@@ -906,10 +939,16 @@ CRITICAL STYLING RULES:
 - Let the website CSS handle all other visual styling
 - No style="..." on any element except table, th, and td
 
+INTERNAL LINKING:
+Where naturally relevant, link to these existing articles on the site:
+{internal_links_str}
+Use descriptive anchor text matching the linked article's topic.
+Add 2-3 internal links maximum — only where genuinely relevant, never forced.
+
 Write the complete article now in HTML:"""
 
 # ─── BUYING GUIDE PROMPT ──────────────────────────────────────
-def build_buying_guide_prompt(title, keyword, programs, affiliate_links):
+def build_buying_guide_prompt(title, keyword, programs, affiliate_links, internal_links_str):
     return f"""You are an expert SaaS reviewer writing for {SITE_NAME}, an independent
 software review publication. Write a comprehensive, SEO-optimized buying guide article.
 
@@ -973,6 +1012,12 @@ CRITICAL STYLING RULES:
 - CTA buttons must use: class="button" — this is the only allowed class attribute
 - Let the website CSS handle all other visual styling
 - No style="..." on any element except table, th, and td
+
+INTERNAL LINKING:
+Where naturally relevant, link to these existing articles on the site:
+{internal_links_str}
+Use descriptive anchor text matching the linked article's topic.
+Add 2-3 internal links maximum — only where genuinely relevant, never forced.
 
 Write the complete article now in HTML:"""
 
@@ -1470,6 +1515,13 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
         keyword = opp.get('keyword', '')
         test_slug = keyword.lower().replace(' ', '-')
 
+        # ── CHECK FOR DUPLICATE COMPARISON (order-independent) ───
+        comparison_key = normalize_comparison_key(keyword, opp.get('programs', []))
+        tracker = load_published_posts()
+        if comparison_key in tracker.get("comparison_keys", []):
+            print(f"⏭️  Skipping — comparison already covered: {comparison_key}")
+            continue
+
         # ── CHECK IF ALREADY PUBLISHED ──────────────────────────
         already_done, reason = is_already_published(title, keyword, test_slug)
         if already_done:
@@ -1534,6 +1586,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                 keyword,
                 post_id,
                 post_url
+                comparison_key=comparison_key
             )
             published_count += 1
 
