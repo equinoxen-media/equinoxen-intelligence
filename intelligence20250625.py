@@ -1,7 +1,6 @@
 import os
 import json
 import time
-import re
 import requests
 import feedparser
 import pandas as pd
@@ -44,18 +43,6 @@ PAIN_POINT_KEYWORDS = [
     'best crm', 'best email', 'best project', 'help choosing',
     'which tool', 'recommendation', 'suggestions', 'advice',
 ]
-
-# ─── SHARED HELPER: NORMALIZE COMPARISON KEY ──────────────────
-def normalize_comparison_key(keyword, programs=None):
-    """
-    Build an order-independent key for comparison articles so
-    'Unbounce vs Webflow' and 'Webflow vs Unbounce' are recognized as the same.
-    Mirrors the logic in content_pipeline.py.
-    """
-    if programs and len(programs) >= 2:
-        normalized = sorted(p.lower().strip() for p in programs[:2])
-        return "+".join(normalized)
-    return re.sub(r'\b(20\d{2}|review|comparison|vs)\b', '', keyword.lower()).strip()
 
 # ─── LAYER 1: GOOGLE KEYWORDS VIA SERPAPI ───────────────────────
 def get_keyword_opportunities(niche):
@@ -319,18 +306,18 @@ def check_keyword_competition(keyword):
     except:
         return "unknown"
 
-# ─── LAYER 3.5: TRACK KEYWORDS & COMPARISONS PUBLISHED ────────
+# ─── LAYER 3.5: TRACK KEYWORKS PUBLISHED ─────────────────────────────────
 def load_published_keywords():
-    """Load already published keywords and comparison keys to avoid repetition"""
+    """Load already published keywords to avoid repetition"""
     tracker_path = os.path.join(os.path.dirname(__file__), 'published_posts.json')
     if os.path.exists(tracker_path):
         with open(tracker_path, 'r') as f:
             tracker = json.load(f)
-            return tracker.get('keywords', []), tracker.get('comparison_keys', [])
-    return [], []
+            return tracker.get('keywords', [])
+    return []
 
 # ─── LAYER 4: CLAUDE ANALYSIS ─────────────────────────────────
-def analyze_opportunities(trends_data, reddit_data, published_keywords=None, published_comparison_keys=None):
+def analyze_opportunities(trends_data, reddit_data, published_keywords=None):
     current_year = datetime.now().year
     """Use Claude to identify best content opportunities"""
     print("\n🤖 Analyzing opportunities with Claude...")
@@ -363,7 +350,6 @@ def analyze_opportunities(trends_data, reddit_data, published_keywords=None, pub
     } for p in sorted(reddit_data, key=lambda x: x.get('relevance', 0), reverse=True)[:40]], indent=2)
     
     published_str = json.dumps(published_keywords[-30:]) if published_keywords else "[]"
-    published_comparisons_str = json.dumps(published_comparison_keys) if published_comparison_keys else "[]"
     
     prompt = f"""You are an expert SaaS affiliate content strategist for Equinoxen Media,
 an independent SaaS review and comparison website targeting business owners,
@@ -387,11 +373,6 @@ DIVERSITY REQUIREMENTS — MANDATORY:
 
 ALREADY PUBLISHED — DO NOT REPEAT THESE KEYWORDS:
 {published_str}
-
-ALREADY PUBLISHED COMPARISONS — DO NOT SUGGEST THESE PRODUCT PAIRS AGAIN
-IN EITHER ORDER (e.g. if "unbounce+webflow" is listed, do not suggest
-"Unbounce vs Webflow" OR "Webflow vs Unbounce" again, in any year or angle):
-{published_comparisons_str}
 
 SCORING GUIDANCE:
 - Prefer keywords with low or medium competition over high competition
@@ -427,8 +408,6 @@ Rules for good opportunities:
 - Avoid overly broad topics — be specific
 - Mix of review, comparison and buying_guide types
 - The keyword must appear verbatim in the article title
-- NEVER suggest a comparison between two products already listed in
-  ALREADY PUBLISHED COMPARISONS above, regardless of word order or year
 
 Formatting Rules
 - If suggesting a buying guide or listicle, cap the number in the title at 5 (e.g. "5 Best..." not "10 Best...") as content will only cover 5 options
@@ -460,18 +439,6 @@ Return ONLY a valid JSON array. No markdown. No explanation:
             response_text = response_text[start:end]
         
         opportunities = json.loads(response_text)
-
-        # ── HARD FILTER: catch any duplicate comparison Claude suggested anyway ──
-        if published_comparison_keys:
-            filtered = []
-            for opp in opportunities:
-                key = normalize_comparison_key(opp.get('keyword', ''), opp.get('programs', []))
-                if key in published_comparison_keys:
-                    print(f"  🚫 Filtered duplicate comparison from Claude's suggestions: {opp.get('title', '')}")
-                    continue
-                filtered.append(opp)
-            opportunities = filtered
-
         print(f"  ✅ Found {len(opportunities)} opportunities")
         return opportunities
         
@@ -549,8 +516,8 @@ def run_intelligence():
     # Phase 3 — Claude Analysis
     print("\n🧠 PHASE 3: AI Opportunity Analysis")
     print("-" * 40)
-    published_keywords, published_comparison_keys = load_published_keywords()
-    opportunities = analyze_opportunities(all_trends, all_reddit, published_keywords, published_comparison_keys)
+    published_keywords = load_published_keywords()
+    opportunities = analyze_opportunities(all_trends, all_reddit, published_keywords)
     
     # Display results
     if opportunities:
