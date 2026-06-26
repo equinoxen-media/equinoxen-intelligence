@@ -1585,7 +1585,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
                 metadata.get("slug", test_slug),
                 keyword,
                 post_id,
-                post_url
+                post_url,
                 comparison_key=comparison_key
             )
             published_count += 1
