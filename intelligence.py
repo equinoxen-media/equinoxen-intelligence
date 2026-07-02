@@ -413,9 +413,17 @@ For each opportunity identify:
    "best crm for small business", "monday vs asana"
 3. Content type: review, comparison, or buying_guide
 4. Affiliate programs to target from this list:
-   HubSpot, Monday.com, Semrush, Notion, Webflow, Jotform, 
-   Zoho, Unbounce, Klaviyo, Asana, ClickUp, Ahrefs,
-   QuickBooks, FreshBooks, Zapier, Canva, Grammarly
+   HubSpot, Monday.com, Semrush, Notion, Webflow, Jotform, Zoho, Unbounce,
+   Klaviyo, Asana, ClickUp, Ahrefs, QuickBooks, FreshBooks, Zapier, Canva,
+   Grammarly, Pipedrive, Salesforce, Copper, Keap, Nimble, Close CRM,
+   ActiveCampaign, GetResponse, Brevo, Constant Contact, Drip, MailerLite,
+   Wrike, Smartsheet, Teamwork, Basecamp, Hive, Todoist,
+   Moz, Mangools, Serpstat, SE Ranking, SpyFu, Ubersuggest,
+   Make, n8n, Pabbly Connect, Integrately,
+   Jasper, Copy.ai, Writesonic, Surfer SEO, Frase, Descript,
+   Xero, Wave, Sage, Bench, Melio, Patriot,
+   Instapage, Swipe Pages, Elementor, Divi, Squarespace, Carrd,
+   Typeform, Paperform, Cognito Forms, 123FormBuilder
 5. Why this opportunity is strong right now
 6. Urgency score 1-10
 

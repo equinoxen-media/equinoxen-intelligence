@@ -17,23 +17,90 @@ WP_USER = os.getenv("WORDPRESS_USERNAME")
 WP_PASS = os.getenv("WORDPRESS_APP_PASSWORD")
 
 AFFILIATE_LINKS = {
+    # ── CRM & Sales ──────────────────────────────────────────
     "hubspot": os.getenv("AFFILIATE_HUBSPOT"),
-    "monday": os.getenv("AFFILIATE_MONDAY"),
-    "semrush": os.getenv("AFFILIATE_SEMRUSH"),
-    "notion": os.getenv("AFFILIATE_NOTION"),
-    "webflow": os.getenv("AFFILIATE_WEBFLOW"),
-    "jotform": os.getenv("AFFILIATE_JOTFORM"),
     "zoho": os.getenv("AFFILIATE_ZOHO"),
-    "unbounce": os.getenv("AFFILIATE_UNBOUNCE"),
+    "pipedrive": os.getenv("AFFILIATE_PIPEDRIVE"),
+    "salesforce": os.getenv("AFFILIATE_SALESFORCE"),
+    "copper": os.getenv("AFFILIATE_COPPER"),
+    "keap": os.getenv("AFFILIATE_KEAP"),
+    "nimble": os.getenv("AFFILIATE_NIMBLE"),
+    "close": os.getenv("AFFILIATE_CLOSE"),
+
+    # ── Email Marketing ───────────────────────────────────────
     "klaviyo": os.getenv("AFFILIATE_KLAVIYO"),
+    "activecampaign": os.getenv("AFFILIATE_ACTIVECAMPAIGN"),
+    "getresponse": os.getenv("AFFILIATE_GETRESPONSE"),
+    "brevo": os.getenv("AFFILIATE_BREVO"),
+    "constantcontact": os.getenv("AFFILIATE_CONSTANTCONTACT"),
+    "drip": os.getenv("AFFILIATE_DRIP"),
+    "mailerlite": os.getenv("AFFILIATE_MAILERLITE"),
+
+    # ── Project Management ────────────────────────────────────
+    "monday": os.getenv("AFFILIATE_MONDAY"),
+    "notion": os.getenv("AFFILIATE_NOTION"),
     "asana": os.getenv("AFFILIATE_ASANA"),
+    "clickup": os.getenv("AFFILIATE_CLICKUP"),
+    "wrike": os.getenv("AFFILIATE_WRIKE"),
+    "smartsheet": os.getenv("AFFILIATE_SMARTSHEET"),
+    "teamwork": os.getenv("AFFILIATE_TEAMWORK"),
+    "basecamp": os.getenv("AFFILIATE_BASECAMP"),
+    "hive": os.getenv("AFFILIATE_HIVE"),
+    "todoist": os.getenv("AFFILIATE_TODOIST"),
+
+    # ── SEO Tools ─────────────────────────────────────────────
+    "semrush": os.getenv("AFFILIATE_SEMRUSH"),
+    "ahrefs": os.getenv("AFFILIATE_AHREFS"),
+    "moz": os.getenv("AFFILIATE_MOZ"),
+    "mangools": os.getenv("AFFILIATE_MANGOOLS"),
+    "serpstat": os.getenv("AFFILIATE_SERPSTAT"),
+    "seranking": os.getenv("AFFILIATE_SERANKING"),
+    "spyfu": os.getenv("AFFILIATE_SPYFU"),
+    "ubersuggest": os.getenv("AFFILIATE_UBERSUGGEST"),
+
+    # ── Business Automation ───────────────────────────────────
+    "zapier": os.getenv("AFFILIATE_ZAPIER"),
+    "make": os.getenv("AFFILIATE_MAKE"),
+    "n8n": os.getenv("AFFILIATE_N8N"),
+    "pabbly": os.getenv("AFFILIATE_PABBLY"),
+    "integrately": os.getenv("AFFILIATE_INTEGRATELY"),
+
+    # ── AI Tools ─────────────────────────────────────────────
+    "grammarly": os.getenv("AFFILIATE_GRAMMARLY"),
+    "jasper": os.getenv("AFFILIATE_JASPER"),
+    "copyai": os.getenv("AFFILIATE_COPYAI"),
+    "writesonic": os.getenv("AFFILIATE_WRITESONIC"),
+    "surferseo": os.getenv("AFFILIATE_SURFERSEO"),
+    "frase": os.getenv("AFFILIATE_FRASE"),
+    "descript": os.getenv("AFFILIATE_DESCRIPT"),
+    "canva": os.getenv("AFFILIATE_CANVA"),
+
+    # ── Finance ───────────────────────────────────────────────
     "quickbooks": os.getenv("AFFILIATE_QUICKBOOKS"),
     "freshbooks": os.getenv("AFFILIATE_FRESHBOOKS"),
-    "zapier": os.getenv("AFFILIATE_ZAPIER"),
-    "ahrefs": os.getenv("AFFILIATE_AHREFS"),
-    "clickup": os.getenv("AFFILIATE_CLICKUP"),
-    "grammarly": os.getenv("AFFILIATE_GRAMMARLY"),
-    "canva": os.getenv("AFFILIATE_CANVA"),
+    "xero": os.getenv("AFFILIATE_XERO"),
+    "wave": os.getenv("AFFILIATE_WAVE"),
+    "sage": os.getenv("AFFILIATE_SAGE"),
+    "bench": os.getenv("AFFILIATE_BENCH"),
+    "melio": os.getenv("AFFILIATE_MELIO"),
+    "patriot": os.getenv("AFFILIATE_PATRIOT"),
+
+    # ── Website Builders & Landing Pages ─────────────────────
+    "webflow": os.getenv("AFFILIATE_WEBFLOW"),
+    "unbounce": os.getenv("AFFILIATE_UNBOUNCE"),
+    "instapage": os.getenv("AFFILIATE_INSTAPAGE"),
+    "swipepages": os.getenv("AFFILIATE_SWIPEPAGES"),
+    "elementor": os.getenv("AFFILIATE_ELEMENTOR"),
+    "divi": os.getenv("AFFILIATE_DIVI"),
+    "squarespace": os.getenv("AFFILIATE_SQUARESPACE"),
+    "carrd": os.getenv("AFFILIATE_CARRD"),
+
+    # ── Form Builders ─────────────────────────────────────────
+    "jotform": os.getenv("AFFILIATE_JOTFORM"),
+    "typeform": os.getenv("AFFILIATE_TYPEFORM"),
+    "paperform": os.getenv("AFFILIATE_PAPERFORM"),
+    "cognitoforms": os.getenv("AFFILIATE_COGNITOFORMS"),
+    "123formbuilder": os.getenv("AFFILIATE_123FORMBUILDER"),
 }
 
 SITE_NAME = "Equinoxen Media"
@@ -66,7 +133,7 @@ PINTEREST_BOARDS = {
     "general": os.getenv("PINTEREST_BOARD_GENERAL"),
 }
 
-# ─── API CREDENTIALS ─────────────────────────────────
+# ─── API CREDENTIALS ──────────────────────────────────────────
 LINKEDIN_ACCESS_TOKEN = os.getenv("LINKEDIN_ACCESS_TOKEN")
 LINKEDIN_ORGANIZATION_ID = os.getenv("LINKEDIN_ORGANIZATION_ID")
 
@@ -84,7 +151,6 @@ UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
 DEVTO_API_KEY = os.getenv("DEVTO_API_KEY")
 INDEXNOW_KEY = os.getenv("INDEXNOW_KEY")
 GOOGLE_SERVICE_ACCOUNT_FILE = os.getenv("GOOGLE_SERVICE_ACCOUNT_FILE", "google-service-account.json")
-
 
 # ─── PINTEREST BOARD CATEGORIES ───────────────────────────────
 def get_pinterest_board(category_id):
@@ -138,7 +204,6 @@ def post_to_linkedin(title, excerpt, post_url, image_url=None):
     if image_url:
         try:
             print("   🖼️  Uploading image to LinkedIn...")
-
             register_body = {
                 "registerUploadRequest": {
                     "owner": f"urn:li:organization:{LINKEDIN_ORGANIZATION_ID}",
@@ -151,20 +216,17 @@ def post_to_linkedin(title, excerpt, post_url, image_url=None):
                     ]
                 }
             }
-
             register_response = requests.post(
                 "https://api.linkedin.com/v2/assets?action=registerUpload",
                 headers=headers,
                 json=register_body
             )
-
             if register_response.status_code == 200:
                 register_data = register_response.json()
                 upload_url = register_data["value"]["uploadMechanism"][
                     "com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"
                 ]["uploadUrl"]
                 image_asset = register_data["value"]["asset"]
-
                 img_response = requests.get(image_url, timeout=30)
                 if img_response.status_code == 200:
                     content_type = img_response.headers.get("Content-Type", "image/webp")
@@ -180,7 +242,6 @@ def post_to_linkedin(title, excerpt, post_url, image_url=None):
                         image_asset = None
             else:
                 print(f"   ⚠️  Image registration failed: {register_response.status_code}")
-
         except Exception as e:
             print(f"   ⚠️  LinkedIn image upload error: {e}")
             image_asset = None
@@ -195,18 +256,10 @@ def post_to_linkedin(title, excerpt, post_url, image_url=None):
                 "com.linkedin.ugc.ShareContent": {
                     "shareCommentary": {"text": post_text},
                     "shareMediaCategory": "IMAGE",
-                    "media": [
-                        {
-                            "status": "READY",
-                            "media": image_asset,
-                            "title": {"text": title}
-                        }
-                    ]
+                    "media": [{"status": "READY", "media": image_asset, "title": {"text": title}}]
                 }
             },
-            "visibility": {
-                "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
-            }
+            "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
         }
     else:
         post_body = {
@@ -216,18 +269,10 @@ def post_to_linkedin(title, excerpt, post_url, image_url=None):
                 "com.linkedin.ugc.ShareContent": {
                     "shareCommentary": {"text": post_text},
                     "shareMediaCategory": "ARTICLE",
-                    "media": [
-                        {
-                            "status": "READY",
-                            "originalUrl": post_url,
-                            "title": {"text": title}
-                        }
-                    ]
+                    "media": [{"status": "READY", "originalUrl": post_url, "title": {"text": title}}]
                 }
             },
-            "visibility": {
-                "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
-            }
+            "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
         }
 
     try:
@@ -314,10 +359,7 @@ def post_to_x(title, post_url):
 
         response = requests.post(
             base_url,
-            headers={
-                "Authorization": auth_header,
-                "Content-Type": "application/json"
-            },
+            headers={"Authorization": auth_header, "Content-Type": "application/json"},
             json={"text": tweet}
         )
 
@@ -376,13 +418,8 @@ def post_to_pinterest(title, excerpt, post_url, board_id, image_url=None):
 
 
 # ─── DEV.TO ───────────────────────────────────────────────────
-
 def generate_devto_summary(title, keyword, article_html, canonical_url, excerpt=None):
-    """
-    Generate a Dev.to-friendly Markdown summary of the article.
-    Uses excerpt if available, otherwise strips HTML for context.
-    canonical_url prevents duplicate-content penalty.
-    """
+    """Generate a Dev.to-friendly Markdown summary of the article."""
     print("   ✍️  Generating Dev.to summary...")
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -443,10 +480,7 @@ Return only the Markdown — no preamble, no explanation."""
 
 
 def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=None, excerpt=None):
-    """
-    Publish a teaser article to Dev.to with canonical_url pointing back to Equinoxen.
-    Requires DEVTO_API_KEY in .env — get it from dev.to/settings/extensions.
-    """
+    """Publish a teaser article to Dev.to with canonical_url pointing back to Equinoxen."""
     if not DEVTO_API_KEY:
         print("   ⚠️  DEVTO_API_KEY missing — skipping Dev.to")
         return False
@@ -465,17 +499,15 @@ def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=N
         print(f"   ⚠️  Dev.to skipped — markdown body too short")
         return False
 
-    # Parse tags from last line; fall back to safe defaults
     tags = ["saas", "software", "productivity", "reviews"]
     lines = markdown_body.strip().splitlines()
     for i, line in enumerate(lines):
         if line.strip().upper().startswith("TAGS:"):
             raw_tags = line.split(":", 1)[1]
             parsed = [t.strip().lower().replace(" ", "") for t in raw_tags.split(",")]
-            parsed = [t for t in parsed if t][:4]  # Dev.to max 4 tags
+            parsed = [t for t in parsed if t][:4]
             if parsed:
                 tags = parsed
-            # Remove TAGS line and any immediately preceding separator
             markdown_body = "\n".join(
                 l for l in lines[:i] if l.strip() != "---"
             ).strip()
@@ -497,10 +529,7 @@ def post_to_devto(title, keyword, article_html, canonical_url, cover_image_url=N
     try:
         response = requests.post(
             "https://dev.to/api/articles",
-            headers={
-                "api-key": DEVTO_API_KEY,
-                "Content-Type": "application/json"
-            },
+            headers={"api-key": DEVTO_API_KEY, "Content-Type": "application/json"},
             json=article_payload,
             timeout=30
         )
@@ -526,7 +555,6 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
     print("\n📱 Posting to social media...")
     time.sleep(2)
 
-    # ── LINKEDIN — once per day, 10am-12pm Pacific only ──────
     if _is_linkedin_window() and not _linkedin_posted_today():
         post_to_linkedin(title, excerpt, post_url, image_url=image_url)
         _mark_linkedin_posted()
@@ -536,11 +564,9 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
         print("   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)")
     time.sleep(2)
 
-    # ── X ────────────────────────────────────────────────────
     post_to_x(title, post_url)
     time.sleep(2)
 
-    # ── DEV.TO ───────────────────────────────────────────────
     if article_html and keyword and post_url:
         post_to_devto(
             title=title,
@@ -565,16 +591,13 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
 PUBLISHED_TRACKER = "published_posts.json"
 
 def load_published_posts():
-    """Load list of already published post slugs"""
     if os.path.exists(PUBLISHED_TRACKER):
         with open(PUBLISHED_TRACKER, 'r') as f:
             return json.load(f)
     return {"slugs": [], "titles": [], "keywords": []}
 
 def save_published_post(title, slug, keyword, post_id, post_url, comparison_key=None):
-    """Save a published post to the tracker"""
     tracker = load_published_posts()
-
     tracker["slugs"].append(slug)
     tracker["titles"].append(title.lower())
     tracker["keywords"].append(keyword.lower())
@@ -587,38 +610,29 @@ def save_published_post(title, slug, keyword, post_id, post_url, comparison_key=
         "post_url": post_url,
         "created_at": datetime.now().isoformat()
     })
-
     if comparison_key:
         tracker["comparison_keys"] = tracker.get("comparison_keys", [])
         tracker["comparison_keys"].append(comparison_key)
-
     with open(PUBLISHED_TRACKER, 'w') as f:
         json.dump(tracker, f, indent=2)
-
     print(f"   📝 Tracked: {title}")
 
 def is_already_published(title, keyword, slug):
-    """Check if a post has already been published"""
     tracker = load_published_posts()
-
     if slug in tracker.get("slugs", []):
         return True, "slug"
     if keyword.lower() in tracker.get("keywords", []):
         return True, "keyword"
     if title.lower() in tracker.get("titles", []):
         return True, "title"
-
     return False, None
 
 def list_published_posts():
-    """Display all published posts"""
     tracker = load_published_posts()
     posts = tracker.get("posts", [])
-
     if not posts:
         print("No posts tracked yet")
         return
-
     print(f"\n📚 PUBLISHED POSTS ({len(posts)} total):")
     print("=" * 60)
     for post in posts:
@@ -628,7 +642,6 @@ def list_published_posts():
         print(f"     Created: {post['created_at'][:10]}")
 
 def check_wordpress_for_duplicate(slug):
-    """Check if a post with this slug already exists in WordPress"""
     try:
         response = requests.get(
             f"{WP_URL}/wp-json/wp/v2/posts",
@@ -645,11 +658,9 @@ def check_wordpress_for_duplicate(slug):
         return False
 
 def show_published():
-    """Show all tracked published posts"""
     list_published_posts()
 
 def clean_html_response(text):
-    """Remove markdown code fences from Claude response"""
     text = text.strip()
     if text.startswith('```html'):
         text = text[7:]
@@ -660,26 +671,18 @@ def clean_html_response(text):
     return text.strip()
 
 def get_published_urls():
-    """Build a summary of published posts for internal linking"""
     tracker = load_published_posts()
     posts = tracker.get("posts", [])
     return [{"title": p["title"], "url": p["post_url"], "keyword": p["keyword"]} for p in posts if p.get("post_url")]
 
 def normalize_comparison_key(keyword, programs):
-    """
-    Build an order-independent key for comparison articles so
-    'Unbounce vs Webflow' and 'Webflow vs Unbounce' are recognized as the same.
-    Falls back to normalized keyword for non-comparison content.
-    """
     if programs and len(programs) >= 2:
         normalized = sorted(p.lower().strip() for p in programs[:2])
         return "+".join(normalized)
-    # Single-product review — normalize on product/keyword alone
     return re.sub(r'\b(20\d{2}|review|comparison|vs)\b', '', keyword.lower()).strip()
 
 # ─── SUBMIT TO INDEXNOW ───────────────────────────────────────
 def submit_to_indexnow(post_url):
-    """Submit URL to IndexNow for Bing/DuckDuckGo indexing"""
     try:
         payload = {
             "host": "equinoxen.com",
@@ -701,7 +704,6 @@ def submit_to_indexnow(post_url):
 
 # ─── SUBMIT TO GOOGLE INDEXING API ───────────────────────────
 def submit_to_google(post_url):
-    """Submit URL to Google Indexing API via service account"""
     try:
         from googleapiclient.discovery import build
         from google.oauth2 import service_account
@@ -710,15 +712,12 @@ def submit_to_google(post_url):
             GOOGLE_SERVICE_ACCOUNT_FILE,
             scopes=["https://www.googleapis.com/auth/indexing"]
         )
-
         service = build("indexing", "v3", credentials=credentials)
         response = service.urlNotifications().publish(
             body={"url": post_url, "type": "URL_UPDATED"}
         ).execute()
-
         submitted_url = response.get("urlNotificationMetadata", {}).get("url", "unknown")
         print(f"   ✅ Google Indexing API submitted: {submitted_url}")
-
     except FileNotFoundError:
         print(f"   ⚠️  Service account file not found: {GOOGLE_SERVICE_ACCOUNT_FILE}")
     except Exception as e:
@@ -726,22 +725,17 @@ def submit_to_google(post_url):
 
 # ─── STEP 1: LOAD INTELLIGENCE REPORT ────────────────────────
 def load_latest_intelligence():
-    """Load the most recent intelligence report"""
     reports = glob.glob("intelligence_report_*.json")
     if not reports:
         print("❌ No intelligence reports found. Run intelligence.py first.")
         return None
-
     latest = sorted(reports)[-1]
     print(f"📂 Loading intelligence report: {latest}")
-
     with open(latest, 'r') as f:
         return json.load(f)
 
 # ─── STEP 2: GENERATE ARTICLE WITH CLAUDE ─────────────────────
 def generate_article(opportunity):
-    """Generate a full SEO-optimized review article using Claude"""
-
     title = opportunity.get('title', '')
     keyword = opportunity.get('keyword', '')
     content_type = opportunity.get('type', 'review')
@@ -753,14 +747,14 @@ def generate_article(opportunity):
 
     affiliate_info = []
     for program in programs:
-        program_lower = program.lower()
+        program_lower = program.lower().replace(" ", "").replace(".", "").replace("-", "")
         for key, link in AFFILIATE_LINKS.items():
-            if key in program_lower and link:
+            key_clean = key.replace(" ", "").replace(".", "").replace("-", "")
+            if key_clean in program_lower and link:
                 affiliate_info.append(f"{program}: {link}")
 
     affiliate_str = "\n".join(affiliate_info) if affiliate_info else "Use placeholder [AFFILIATE_LINK] where needed"
 
-    # ── INTERNAL LINKING ─────────────────────────────────────
     published_posts = get_published_urls()
     internal_links_str = "\n".join(
         f"- {p['title']}: {p['url']}" for p in published_posts
@@ -1023,7 +1017,6 @@ Write the complete article now in HTML:"""
 
 # ─── STEP 3: GENERATE SEO METADATA ───────────────────────────
 def generate_seo_metadata(title, keyword, article_content):
-    """Generate SEO title, meta description and excerpt"""
     print("   🔍 Generating SEO metadata...")
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -1069,27 +1062,52 @@ Return this exact JSON structure:
 
 # ─── STEP 4: ASSIGN CATEGORY ──────────────────────────────────
 def assign_category(keyword, programs):
-    """Assign WordPress category based on keyword"""
     keyword_lower = keyword.lower()
 
     category_map = {
+        # ── CRM ──────────────────────────────────────────────
         "crm": CATEGORIES.get("crm", 1),
         "salesforce": CATEGORIES.get("crm", 1),
         "hubspot": CATEGORIES.get("crm", 1),
         "zoho": CATEGORIES.get("crm", 1),
         "pipedrive": CATEGORIES.get("crm", 1),
+        "copper": CATEGORIES.get("crm", 1),
+        "keap": CATEGORIES.get("crm", 1),
+        "nimble": CATEGORIES.get("crm", 1),
+        "close crm": CATEGORIES.get("crm", 1),
+
+        # ── Email Marketing ───────────────────────────────────
         "email": CATEGORIES.get("email_marketing", 1),
         "mailchimp": CATEGORIES.get("email_marketing", 1),
         "klaviyo": CATEGORIES.get("email_marketing", 1),
         "omnisend": CATEGORIES.get("email_marketing", 1),
         "convertkit": CATEGORIES.get("email_marketing", 1),
         "newsletter": CATEGORIES.get("email_marketing", 1),
+        "activecampaign": CATEGORIES.get("email_marketing", 1),
+        "getresponse": CATEGORIES.get("email_marketing", 1),
+        "brevo": CATEGORIES.get("email_marketing", 1),
+        "sendinblue": CATEGORIES.get("email_marketing", 1),
+        "constant contact": CATEGORIES.get("email_marketing", 1),
+        "drip": CATEGORIES.get("email_marketing", 1),
+        "mailerlite": CATEGORIES.get("email_marketing", 1),
+
+        # ── SEO Tools ─────────────────────────────────────────
         "seo": CATEGORIES.get("seo_tools", 1),
         "semrush": CATEGORIES.get("seo_tools", 1),
         "ahrefs": CATEGORIES.get("seo_tools", 1),
         "keyword": CATEGORIES.get("seo_tools", 1),
         "backlink": CATEGORIES.get("seo_tools", 1),
         "rank": CATEGORIES.get("seo_tools", 1),
+        "moz": CATEGORIES.get("seo_tools", 1),
+        "mangools": CATEGORIES.get("seo_tools", 1),
+        "serpstat": CATEGORIES.get("seo_tools", 1),
+        "se ranking": CATEGORIES.get("seo_tools", 1),
+        "spyfu": CATEGORIES.get("seo_tools", 1),
+        "ubersuggest": CATEGORIES.get("seo_tools", 1),
+        "surfer": CATEGORIES.get("seo_tools", 1),
+        "frase": CATEGORIES.get("seo_tools", 1),
+
+        # ── Project Management ────────────────────────────────
         "project": CATEGORIES.get("project_management", 1),
         "monday": CATEGORIES.get("project_management", 1),
         "notion": CATEGORIES.get("project_management", 1),
@@ -1097,17 +1115,41 @@ def assign_category(keyword, programs):
         "clickup": CATEGORIES.get("project_management", 1),
         "trello": CATEGORIES.get("project_management", 1),
         "task": CATEGORIES.get("project_management", 1),
+        "wrike": CATEGORIES.get("project_management", 1),
+        "smartsheet": CATEGORIES.get("project_management", 1),
+        "teamwork": CATEGORIES.get("project_management", 1),
+        "basecamp": CATEGORIES.get("project_management", 1),
+        "hive": CATEGORIES.get("project_management", 1),
+        "todoist": CATEGORIES.get("project_management", 1),
+
+        # ── Business Automation ───────────────────────────────
         "automation": CATEGORIES.get("business_automation", 1),
         "zapier": CATEGORIES.get("business_automation", 1),
         "make": CATEGORIES.get("business_automation", 1),
         "workflow": CATEGORIES.get("business_automation", 1),
         "integrate": CATEGORIES.get("business_automation", 1),
+        "n8n": CATEGORIES.get("business_automation", 1),
+        "pabbly": CATEGORIES.get("business_automation", 1),
+        "integrately": CATEGORIES.get("business_automation", 1),
+        "jotform": CATEGORIES.get("business_automation", 1),
+        "typeform": CATEGORIES.get("business_automation", 1),
+        "paperform": CATEGORIES.get("business_automation", 1),
+        "form builder": CATEGORIES.get("business_automation", 1),
+        "online form": CATEGORIES.get("business_automation", 1),
+
+        # ── AI Tools ─────────────────────────────────────────
         "ai": CATEGORIES.get("ai_tools", 1),
         "artificial intelligence": CATEGORIES.get("ai_tools", 1),
         "chatgpt": CATEGORIES.get("ai_tools", 1),
         "jasper": CATEGORIES.get("ai_tools", 1),
         "grammarly": CATEGORIES.get("ai_tools", 1),
         "copy.ai": CATEGORIES.get("ai_tools", 1),
+        "copyai": CATEGORIES.get("ai_tools", 1),
+        "writesonic": CATEGORIES.get("ai_tools", 1),
+        "descript": CATEGORIES.get("ai_tools", 1),
+        "canva": CATEGORIES.get("ai_tools", 1),
+
+        # ── Finance ───────────────────────────────────────────
         "accounting": CATEGORIES.get("finance", 1),
         "quickbooks": CATEGORIES.get("finance", 1),
         "freshbooks": CATEGORIES.get("finance", 1),
@@ -1116,12 +1158,25 @@ def assign_category(keyword, programs):
         "bookkeeping": CATEGORIES.get("finance", 1),
         "payroll": CATEGORIES.get("finance", 1),
         "finance": CATEGORIES.get("finance", 1),
+        "wave": CATEGORIES.get("finance", 1),
+        "sage": CATEGORIES.get("finance", 1),
+        "bench": CATEGORIES.get("finance", 1),
+        "melio": CATEGORIES.get("finance", 1),
+        "patriot": CATEGORIES.get("finance", 1),
+
+        # ── Website Builders ──────────────────────────────────
         "landing page": CATEGORIES.get("website_builders", 1),
         "webflow": CATEGORIES.get("website_builders", 1),
         "unbounce": CATEGORIES.get("website_builders", 1),
         "leadpages": CATEGORIES.get("website_builders", 1),
         "website builder": CATEGORIES.get("website_builders", 1),
         "wix": CATEGORIES.get("website_builders", 1),
+        "instapage": CATEGORIES.get("website_builders", 1),
+        "swipe pages": CATEGORIES.get("website_builders", 1),
+        "elementor": CATEGORIES.get("website_builders", 1),
+        "divi": CATEGORIES.get("website_builders", 1),
+        "squarespace": CATEGORIES.get("website_builders", 1),
+        "carrd": CATEGORIES.get("website_builders", 1),
     }
 
     for key, cat_id in category_map.items():
@@ -1138,7 +1193,6 @@ def assign_category(keyword, programs):
 
 # ─── STEP 4.1: CREATE IMAGE ───────────────────────────────────
 def get_featured_image_unsplash(keyword):
-    """Fetch relevant image from Unsplash API"""
     access_key = UNSPLASH_ACCESS_KEY
     if not access_key:
         print("   ⚠️  No UNSPLASH_ACCESS_KEY — skipping featured image")
@@ -1173,7 +1227,6 @@ def get_featured_image_unsplash(keyword):
 
 
 def upload_image_to_wordpress(image_url, title, alt_text=""):
-    """Download image and upload to WordPress media library"""
     try:
         print(f"   📤 Uploading featured image...")
         img_response = requests.get(image_url, timeout=30)
@@ -1215,7 +1268,6 @@ def upload_image_to_wordpress(image_url, title, alt_text=""):
         return None
 
 def generate_branded_image(title, keyword, programs=None, orientation="landscape"):
-    """Generate featured image using gpt-image-2 via OpenAI API"""
     try:
         import openai
         import io
@@ -1230,23 +1282,90 @@ def generate_branded_image(title, keyword, programs=None, orientation="landscape
         print(f"   🎨 Generating {orientation} AI image for: {title}")
 
         color_hints = {
+            # ── CRM & Sales ──────────────────────────────────────────
             "hubspot": "orange accents",
-            "monday": "vibrant red and yellow accents",
-            "semrush": "orange and blue accents",
-            "notion": "black and white minimal accents",
-            "webflow": "blue accents",
             "zoho": "red accents",
-            "asana": "coral pink accents",
+            "pipedrive": "green accents",
+            "salesforce": "blue accents",
+            "copper": "copper and bronze accents",
+            "keap": "green accents",
+            "nimble": "blue accents",
+            "close": "black and white accents",
+
+            # ── Email Marketing ───────────────────────────────────────
             "klaviyo": "green accents",
+            "activecampaign": "blue accents",
+            "getresponse": "blue and green accents",
+            "brevo": "blue accents",
+            "constantcontact": "blue and yellow accents",
+            "drip": "black and orange accents",
+            "mailerlite": "green and yellow accents",
+
+            # ── Project Management ────────────────────────────────────
+            "monday": "vibrant red and yellow accents",
+            "notion": "black and white minimal accents",
+            "asana": "coral pink accents",
+            "clickup": "purple accents",
+            "wrike": "green accents",
+            "smartsheet": "blue and orange accents",
+            "teamwork": "pink accents",
+            "basecamp": "green accents",
+            "hive": "orange accents",
+            "todoist": "red accents",
+
+            # ── SEO Tools ─────────────────────────────────────────────
+            "semrush": "orange and blue accents",
+            "ahrefs": "blue and orange accents",
+            "moz": "blue accents",
+            "mangools": "purple accents",
+            "serpstat": "blue and green accents",
+            "seranking": "green accents",
+            "spyfu": "green accents",
+            "ubersuggest": "orange accents",
+            "surferseo": "blue and teal accents",
+            "frase": "purple and blue accents",
+
+            # ── Business Automation ───────────────────────────────────
+            "zapier": "orange accents",
+            "make": "purple accents",
+            "n8n": "red accents",
+            "pabbly": "blue accents",
+            "integrately": "orange and blue accents",
+
+            # ── AI Tools ─────────────────────────────────────────────
+            "grammarly": "green accents",
+            "jasper": "purple and pink accents",
+            "copyai": "blue and purple accents",
+            "writesonic": "blue and purple accents",
+            "descript": "green and teal accents",
+            "canva": "purple and turquoise accents",
+
+            # ── Finance ───────────────────────────────────────────────
             "quickbooks": "green accents",
             "freshbooks": "teal accents",
-            "zapier": "orange accents",
-            "ahrefs": "blue and orange accents",
-            "clickup": "purple accents",
-            "grammarly": "green accents",
+            "xero": "blue accents",
+            "wave": "blue and teal accents",
+            "sage": "green accents",
+            "bench": "green and navy accents",
+            "melio": "blue accents",
+            "patriot": "red and blue accents",
+
+            # ── Website Builders & Landing Pages ─────────────────────
+            "webflow": "blue accents",
             "unbounce": "purple and teal accents",
+            "instapage": "orange accents",
+            "swipepages": "blue and orange accents",
+            "elementor": "red accents",
+            "divi": "purple accents",
+            "squarespace": "black and white accents",
+            "carrd": "blue accents",
+
+            # ── Form Builders ─────────────────────────────────────────
             "jotform": "orange and purple accents",
-            "canva": "purple and turquoise accents",
+            "typeform": "pink and purple accents",
+            "paperform": "teal and purple accents",
+            "cognitoforms": "blue accents",
+            "123formbuilder": "orange accents",
         }
 
         accent_colors = []
@@ -1308,7 +1427,6 @@ Style requirements:
         return None, None
 
 def upload_branded_image_to_wordpress(title, keyword, programs=None):
-    """Generate and upload landscape for WordPress"""
     try:
         print(f"   🎨 Generating AI featured images...")
         base_filename = keyword.lower().replace(' ', '-')[:50]
@@ -1334,7 +1452,6 @@ def upload_branded_image_to_wordpress(title, keyword, programs=None):
         return None, None, None
 
 def upload_single_image(img_data, filename, content_type, alt_text=""):
-    """Upload a single image to WordPress media library"""
     try:
         media_url = f"{WP_URL}/wp-json/wp/v2/media"
         headers = {
@@ -1365,14 +1482,12 @@ def upload_single_image(img_data, filename, content_type, alt_text=""):
 
 # ─── STEP 5: PUBLISH TO WORDPRESS ─────────────────────────────
 def publish_to_wordpress(title, content, metadata, category_id, draft=True, featured_image_id=None):
-    """Publish article to WordPress via REST API"""
-
     status = "draft" if draft else "publish"
     print(f"\n📤 Publishing to WordPress as {status}...")
 
     api_url = f"{WP_URL}/wp-json/wp/v2/posts"
-
     focus_keyword = metadata.get("focus_keyword", "")
+
     post_data = {
         "title": metadata.get("seo_title", title),
         "content": content,
@@ -1441,7 +1556,6 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
 
 # ─── STEP 6: SAVE ARTICLE LOCALLY ─────────────────────────────
 def save_article_locally(title, content, metadata):
-    """Save generated article as HTML file for review"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     slug = metadata.get("slug", "article").replace("/", "-")
     filename = f"article_{slug}_{timestamp}.html"
@@ -1467,7 +1581,6 @@ def save_article_locally(title, content, metadata):
 
 # ─── STEP 7: CLEANUP OLD FILES ────────────────────────────────
 def cleanup_old_files():
-    """Keep last 7 intelligence reports and last 9 article files, delete the rest"""
     reports = sorted(glob.glob("intelligence_report_*.json"))
     for old_report in reports[:-7]:
         os.remove(old_report)
@@ -1616,7 +1729,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
             print(f"\n⏳ Waiting 5 seconds before next article...")
             time.sleep(5)
 
-        # ── SUBMIT TO INDEXNOW & GOOGLE ───────────────────────────────────
+        # ── SUBMIT TO INDEXNOW & GOOGLE ───────────────────────────
         if post_id and post_url:
             submit_to_indexnow(post_url)
             submit_to_google(post_url)
