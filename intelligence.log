@@ -2411,3 +2411,4745 @@
   Opportunities: 7 identified
   Report: intelligence_report_20260701_170252.json
 ============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-02 17:00:10
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 6 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+🔍 Google Autocomplete for: CRM software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+  ✅ Total keywords: 78
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best SEO Tools for Agencies in 2026
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best AI Productivity Tools for Work in 2026
+   Keyword: best ai productivity tools for work
+   Type: buying_guide
+   Programs: Notion, Jasper, Copy.ai, Grammarly, Surfer SEO
+   Urgency: 9/10
+   Why: High search volume with low commercial competition. AI productivity is trending heavily in 2026 with businesses seeking specific work-focused tools. Multiple affiliate programs available with strong commission rates.
+
+2. Notion AI Review 2026: Features, Pricing and Real User Testing
+   Keyword: notion ai review
+   Type: review
+   Programs: Notion
+   Urgency: 8/10
+   Why: Notion has expanded AI features significantly. Users searching for specific AI productivity tools per keyword data. Notion affiliate program offers recurring commission on a widely adopted platform.
+
+3. Best Landing Page Builder for Shopify in 2026
+   Keyword: best landing page builder for shopify
+   Type: buying_guide
+   Programs: Unbounce, Instapage, Shogun, Replo, Zipify
+   Urgency: 8/10
+   Why: Specific niche query with high commercial intent. Shopify merchants actively seek landing page solutions. Low competition keyword with multiple high-paying affiliate programs available.
+
+4. Instapage vs Leadpages 2026: Which Landing Page Builder Wins
+   Keyword: instapage vs leadpages
+   Type: comparison
+   Programs: Instapage
+   Urgency: 7/10
+   Why: Two major landing page builders not yet compared on site. High commercial intent comparison keyword. Both have strong affiliate programs with 30-day cookie windows.
+
+5. Pipedrive Review 2026: CRM Testing Results for Sales Teams
+   Keyword: pipedrive review
+   Type: review
+   Programs: Pipedrive
+   Urgency: 8/10
+   Why: Pipedrive is a leading CRM alternative not yet reviewed. Strong affiliate program with 30% recurring commission. Targets sales-focused teams looking beyond HubSpot and Zoho already covered.
+
+✅ Report saved: intelligence_report_20260702_170246.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 78 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260702_170246.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-03 17:00:09
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  ⚠️  Error for 'best email marketing software 2026': HTTPSConnectionPool(host='serpapi.com', port=443): Read timed out. (read timeout=30)
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  ⚠️  Error for 'best project management software 2026': HTTPSConnectionPool(host='serpapi.com', port=443): Read timed out. (read timeout=30)
+
+🔍 Google Autocomplete for: SEO tools
+  Found 19 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 82
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: 5 Best Accounting Software for Small Business Owners 2026
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Construction Companies in 2026
+   Keyword: best crm for construction companies
+   Type: buying_guide
+   Programs: Salesforce, Copper, Nimble, Close CRM, Pipedrive
+   Urgency: 9/10
+   Why: Appears in Google autocomplete with unknown competition, indicating an underserved niche with high commercial intent. Construction is a lucrative vertical with specific CRM needs around project tracking and field management. No existing content targets this vertical.
+
+2. Best CRM Software for Real Estate Agents 2026
+   Keyword: best crm for real estate
+   Type: buying_guide
+   Programs: HubSpot, Keap, Copper, Close CRM, Nimble
+   Urgency: 8/10
+   Why: Medium commercial intent keyword with high search volume. Real estate is a high-value niche with agents actively seeking CRM solutions. Strong affiliate potential with recurring commissions.
+
+3. Salesforce vs Pipedrive: Which CRM is Right for Your Business in 2026
+   Keyword: salesforce vs pipedrive
+   Type: comparison
+   Programs: Salesforce, Pipedrive
+   Urgency: 7/10
+   Why: Compares market leader with popular mid-market alternative. Both have strong affiliate programs. Fills gap between enterprise and SMB CRM comparisons. High buyer intent from users evaluating specific platforms.
+
+4. GetResponse Review 2026: Email Marketing Platform for Small Business
+   Keyword: getresponse review
+   Type: review
+   Programs: GetResponse
+   Urgency: 7/10
+   Why: GetResponse is an established email marketing platform often overlooked in favor of Mailchimp/ConvertKit. Strong 33% recurring affiliate program. Low competition opportunity to capture users seeking alternatives to mainstream options.
+
+5. ActiveCampaign vs Brevo: Email Marketing Comparison 2026
+   Keyword: activecampaign vs brevo
+   Type: comparison
+   Programs: ActiveCampaign, Brevo
+   Urgency: 8/10
+   Why: Compares premium automation platform with affordable Brevo alternative. Both have affiliate programs. Targets budget-conscious businesses evaluating automation features. Brevo rebranded from Sendinblue, creating fresh content opportunity.
+
+✅ Report saved: intelligence_report_20260703_170444.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 82 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260703_170444.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-04 17:00:10
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 94
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Project Management Software for Small Teams in 2026
+   Keyword: best project management software for small teams
+   Type: buying_guide
+   Programs: ClickUp, Basecamp, Teamwork, Notion, Hive
+   Urgency: 9/10
+   Why: Low competition keyword with high commercial intent. Strong autocomplete signal and related search volume. Reddit discussions show active pain points around managing client work and team collaboration. Underserved niche compared to broader small business queries.
+
+2. Best Project Management Software for Construction in 2026
+   Keyword: best project management software for construction
+   Type: buying_guide
+   Programs: Monday.com, Wrike, Smartsheet, Asana, Teamwork
+   Urgency: 8/10
+   Why: Medium competition with vertical-specific search intent. Construction industry has unique project management needs often overlooked. High buyer intent from businesses willing to invest in specialized solutions.
+
+3. Notion vs ClickUp for Project Management in 2026
+   Keyword: notion vs clickup
+   Type: comparison
+   Programs: Notion, ClickUp
+   Urgency: 9/10
+   Why: Two popular all-in-one workspace tools with strong affiliate programs. Both have passionate user bases and very different approaches. High commercial intent with users actively choosing between platforms.
+
+4. Best SEO Tools for Small Businesses in 2026
+   Keyword: best seo tools for small businesses
+   Type: buying_guide
+   Programs: Mangools, SE Ranking, Ubersuggest, Serpstat, SpyFu
+   Urgency: 8/10
+   Why: Strong autocomplete signal with focus on budget-conscious SMBs. Featured lesser-known Semrush/Ahrefs alternatives with competitive affiliate rates. High purchase intent from businesses looking for affordable SEO solutions.
+
+5. Mangools vs Ubersuggest: Which Budget SEO Tool Wins in 2026
+   Keyword: mangools vs ubersuggest
+   Type: comparison
+   Programs: Mangools, Ubersuggest
+   Urgency: 7/10
+   Why: Two leading affordable SEO tool alternatives to Semrush/Ahrefs. Both have strong affiliate programs and target price-sensitive small businesses. Fills gap in comparison content for mid-tier SEO tools.
+
+✅ Report saved: intelligence_report_20260704_170215.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 94 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260704_170215.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-05 17:00:10
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 6 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 10 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 76
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Accounting Software for Small Business 2026: Top 5 Compared
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Xero Review 2026: Features, Pricing and Performance for Growing Businesses
+   Keyword: xero review
+   Type: review
+   Programs: Xero
+   Urgency: 8/10
+   Why: Leading QuickBooks alternative with strong affiliate program. High commercial intent and fills gap in accounting software coverage beyond FreshBooks/QuickBooks comparison already published.
+
+2. Best Accounting Software for Nonprofits 2026: 5 Solutions Reviewed
+   Keyword: best accounting software for nonprofits
+   Type: buying_guide
+   Programs: QuickBooks, Xero, Wave, Sage, FreshBooks
+   Urgency: 7/10
+   Why: Specific niche with high commercial intent. Nonprofits actively search for specialized solutions. Low competition keyword with strong conversion potential.
+
+3. Wave vs QuickBooks 2026: Which Free Accounting Software Wins
+   Keyword: wave vs quickbooks
+   Type: comparison
+   Programs: Wave, QuickBooks
+   Urgency: 8/10
+   Why: Wave is a popular free alternative to QuickBooks. High search intent from cost-conscious small business owners. Neither product pair appears in already published comparisons.
+
+4. ClickUp Review 2026: Project Management Features and Pricing Breakdown
+   Keyword: clickup review
+   Type: review
+   Programs: ClickUp
+   Urgency: 8/10
+   Why: Fast-growing project management tool with strong affiliate program. High commercial intent keyword. Complements existing Monday and Asana coverage without duplication.
+
+5. Wrike vs Monday.com 2026: Best Project Management for Teams
+   Keyword: wrike vs monday
+   Type: comparison
+   Programs: Wrike, Monday.com
+   Urgency: 7/10
+   Why: Two enterprise-focused PM tools often compared by mid-size teams. Both have affiliate programs. Wrike not yet covered in existing content.
+
+✅ Report saved: intelligence_report_20260705_170313.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 76 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260705_170313.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-06 17:00:13
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 11 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 101
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Small Business in 2026
+   Keyword: best crm software for small business
+   Type: buying_guide
+   Programs: HubSpot, Copper, Nimble, Keap, Close CRM
+   Urgency: 9/10
+   Why: Medium commercial competition with high search volume. Strong keyword data showing consistent interest. Opportunity to feature lesser-known alternatives like Copper and Nimble alongside HubSpot.
+
+2. Best CRM Software for Cleaning Business in 2026
+   Keyword: best crm software for cleaning business
+   Type: buying_guide
+   Programs: Keap, Nimble, Zoho, Close CRM, HubSpot
+   Urgency: 8/10
+   Why: Medium commercial competition with highly specific niche targeting. Service businesses have unique CRM needs around scheduling and recurring revenue. Underserved market segment.
+
+3. Best Email Marketing Software for Creators in 2026
+   Keyword: best email marketing software for creators
+   Type: buying_guide
+   Programs: Klaviyo, Drip, MailerLite, GetResponse, ActiveCampaign
+   Urgency: 8/10
+   Why: Growing creator economy segment with specific needs. High commercial intent keyword appearing in autocomplete data. Different requirements than traditional businesses.
+
+4. Constant Contact Review 2026: Is It Still Worth Using
+   Keyword: constant contact review
+   Type: review
+   Programs: Constant Contact, MailerLite, Brevo
+   Urgency: 7/10
+   Why: Legacy email platform facing modern competition. High commercial intent from users evaluating alternatives. Strong affiliate commission structure.
+
+5. Ahrefs vs Moz: Which SEO Tool Is Better in 2026
+   Keyword: ahrefs vs moz
+   Type: comparison
+   Programs: Ahrefs, Moz
+   Urgency: 8/10
+   Why: Two established SEO tools with loyal followings. Not yet covered in published list. Both offer strong affiliate programs. High purchase intent comparison.
+
+✅ Report saved: intelligence_report_20260706_170231.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 101 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260706_170231.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-07 17:00:13
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 60
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Project Management Software for Small Teams in 2026
+   Keyword: best project management software for small teams
+   Type: buying_guide
+   Programs: ClickUp, Asana, Basecamp, Teamwork, Hive
+   Urgency: 9/10
+   Why: High-value keyword with strong commercial intent appearing in autocomplete data. Small teams segment is underserved and has lower competition than general project management queries. Multiple affiliate programs available with good commission rates.
+
+2. Best Project Management Software for Construction in 2026
+   Keyword: best project management software for construction
+   Type: buying_guide
+   Programs: Monday.com, Smartsheet, Wrike, Teamwork, ClickUp
+   Urgency: 8/10
+   Why: Niche vertical keyword with high commercial intent and lower competition. Construction industry actively seeks specialized solutions. Strong affiliate potential with enterprise-focused tools.
+
+3. ActiveCampaign vs Drip: Which Email Marketing Platform Wins in 2026
+   Keyword: activecampaign vs drip
+   Type: comparison
+   Programs: ActiveCampaign, Drip
+   Urgency: 8/10
+   Why: Two powerful email marketing platforms not yet compared on the site. Both offer strong automation features and high affiliate commissions. Targets advanced marketers looking beyond basic email tools.
+
+4. Copper CRM vs Salesforce: 2026 Comparison for Small Business
+   Keyword: copper vs salesforce
+   Type: comparison
+   Programs: Copper, Salesforce
+   Urgency: 7/10
+   Why: High-value comparison between Google Workspace-native CRM and enterprise leader. Different price points appeal to businesses evaluating scalability. Both have established affiliate programs.
+
+5. Best SEO Tools for Small Businesses in 2026
+   Keyword: best seo tools for small businesses
+   Type: buying_guide
+   Programs: SE Ranking, Mangools, Ubersuggest, Serpstat, SpyFu
+   Urgency: 9/10
+   Why: Strong autocomplete keyword with commercial intent. Small business angle targets budget-conscious buyers. Focus on affordable alternatives to Ahrefs/Semrush already covered.
+
+✅ Report saved: intelligence_report_20260707_170140.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 60 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260707_170140.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-08 17:00:11
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 44
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Accounting Software for Small Business in 2026
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. FreshBooks vs Xero: Which Accounting Software Is Better in 2026
+   Keyword: freshbooks vs xero
+   Type: comparison
+   Programs: FreshBooks, Xero
+   Urgency: 8/10
+   Why: Two major accounting platforms not yet compared on the site. Both offer strong affiliate programs with 30%+ commissions. Targets small business owners actively comparing solutions before purchase decision.
+
+2. Best AI Productivity Tools for Work in 2026
+   Keyword: best ai productivity tools for work
+   Type: buying_guide
+   Programs: Jasper, Notion, Copy.ai, Grammarly, Surfer SEO
+   Urgency: 9/10
+   Why: Trending keyword with 2026-specific searches in the data. High commercial intent with Reddit discussions showing interest. AI tools category growing rapidly with strong affiliate payouts from multiple programs.
+
+3. Jasper AI Review: Is It Worth It in 2026
+   Keyword: jasper ai review
+   Type: review
+   Programs: Jasper
+   Urgency: 8/10
+   Why: Leading AI writing tool with 30% recurring commission. High buyer intent keyword. Jasper not yet reviewed individually on site despite being market leader in AI content space.
+
+4. Asana vs ClickUp: Best Project Management Tool for 2026
+   Keyword: asana vs clickup
+   Type: comparison
+   Programs: Asana, ClickUp
+   Urgency: 7/10
+   Why: Two top project management platforms not yet compared. Both have affiliate programs with strong payouts. High commercial intent from businesses choosing between these popular alternatives.
+
+5. Copper CRM Review: Features, Pricing and Alternatives in 2026
+   Keyword: copper crm review
+   Type: review
+   Programs: Copper, HubSpot, Pipedrive
+   Urgency: 6/10
+   Why: Copper already mentioned in published comparisons but never individually reviewed. Google Workspace-native CRM with growing market share. Strong affiliate program targeting SMBs.
+
+✅ Report saved: intelligence_report_20260708_170140.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 44 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260708_170140.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-09 17:00:10
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 7 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+🔍 Google Autocomplete for: CRM software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+  ✅ Total keywords: 78
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Unbounce Review 2026: Pricing, Features and Best Use Cases
+   Keyword: unbounce review
+   Type: review
+   Programs: Unbounce
+   Urgency: 8/10
+   Why: Landing page builder niche has low competition signals in keyword data. Unbounce appears in related searches and has strong affiliate program. No existing Unbounce individual review published.
+
+2. Swipe Pages vs Unbounce 2026: Which Landing Page Builder Wins
+   Keyword: swipe pages vs unbounce
+   Type: comparison
+   Programs: Swipe Pages, Unbounce
+   Urgency: 7/10
+   Why: Landing page builder comparison demand evident from keyword data. Swipe Pages is lesser-known alternative to market leader. Neither pair nor individual products reviewed yet.
+
+3. 5 Best AI Productivity Tools for Work in 2026
+   Keyword: best ai productivity tools for work
+   Type: buying_guide
+   Programs: Notion, Jasper, Grammarly, Asana, Copy.ai
+   Urgency: 9/10
+   Why: Exact keyword match from autocomplete data with low commercial competition. AI productivity is trending topic with multiple search variations showing demand.
+
+4. Copy.ai Review 2026: Is This AI Writing Tool Worth the Hype
+   Keyword: copy.ai review
+   Type: review
+   Programs: Copy.ai
+   Urgency: 8/10
+   Why: AI tools category underrepresented in published content. Copy.ai is popular Jasper alternative with strong affiliate program, filling AI Tools category requirement.
+
+5. Smartsheet vs Wrike 2026: Project Management Showdown
+   Keyword: smartsheet vs wrike
+   Type: comparison
+   Programs: Smartsheet, Wrike
+   Urgency: 6/10
+   Why: Fresh comparison pair in project management space. Both have affiliate programs and represent alternative to already-covered Monday/Wrike pair.
+
+✅ Report saved: intelligence_report_20260709_170229.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 78 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260709_170229.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-10 17:00:12
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 7 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 95
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best CRM Software for Nonprofits in 2026
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Construction Companies in 2026
+   Keyword: best crm for construction companies
+   Type: buying_guide
+   Programs: Salesforce, Zoho, Close CRM, Copper, Keap
+   Urgency: 8/10
+   Why: Low competition vertical-specific keyword. Construction industry has unique project management and client tracking needs. High buyer intent with businesses willing to invest in specialized tools.
+
+2. Best Email Marketing Software for Creators in 2026
+   Keyword: best email marketing software for creators
+   Type: buying_guide
+   Programs: Klaviyo, ActiveCampaign, Drip, MailerLite, GetResponse
+   Urgency: 9/10
+   Why: Growing creator economy niche with specific needs around audience building and monetization. Keyword appears in autocomplete data with strong commercial intent. Less saturated than general email marketing keywords.
+
+3. Smartsheet vs Wrike 2026: Which Project Management Tool Wins
+   Keyword: smartsheet vs wrike
+   Type: comparison
+   Programs: Smartsheet, Wrike
+   Urgency: 7/10
+   Why: Both enterprise-focused project management tools with strong affiliate programs. Comparison fills gap between market leaders already covered. High-value B2B audience with longer contract values.
+
+4. Teamwork vs Basecamp 2026: Best for Agency Project Management
+   Keyword: teamwork vs basecamp
+   Type: comparison
+   Programs: Teamwork, Basecamp
+   Urgency: 7/10
+   Why: Two popular agency-focused PM tools not yet compared. Basecamp has loyal following while Teamwork offers more features. Clear differentiation appeals to specific agency workflow needs.
+
+5. Serpstat Review 2026: Is This SEO Tool Worth Your Money
+   Keyword: serpstat review
+   Type: review
+   Programs: Serpstat
+   Urgency: 8/10
+   Why: Lesser-known Ahrefs/Semrush alternative with competitive pricing. SEO tools category has high affiliate payouts. Serpstat offers all-in-one platform at lower price point than market leaders.
+
+✅ Report saved: intelligence_report_20260710_170223.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 95 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260710_170223.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-11 17:00:14
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 7 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 96
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Project Management Software for Small Teams in 2026
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Project Management Software for Construction in 2026
+   Keyword: best project management software for construction
+   Type: buying_guide
+   Programs: Monday.com, Smartsheet, Wrike, Asana, Basecamp
+   Urgency: 8/10
+   Why: Highly specific vertical with low competition. Construction industry has unique PM needs and high willingness to pay. Appears in autocomplete data indicating consistent search demand.
+
+2. Hive vs Asana: Which Project Management Tool Wins in 2026
+   Keyword: hive vs asana
+   Type: comparison
+   Programs: Hive, Asana
+   Urgency: 7/10
+   Why: Hive is a lesser-known alternative gaining traction against market leader Asana. Both offer strong affiliate programs. Targets users comparing established vs emerging PM tools.
+
+3. Teamwork Review 2026: Is This PM Software Worth It for Agencies
+   Keyword: teamwork review
+   Type: review
+   Programs: Teamwork
+   Urgency: 7/10
+   Why: Teamwork is underrepresented in content despite strong agency focus and affiliate program. Fills gap for agency-specific PM software reviews not covered in published list.
+
+4. SpyFu Review 2026: Can This SEO Tool Compete with Industry Leaders
+   Keyword: spyfu review
+   Type: review
+   Programs: SpyFu
+   Urgency: 8/10
+   Why: SpyFu is a solid alternative to Ahrefs/Semrush but lacks review coverage. Strong affiliate program and competitive pricing make it attractive to budget-conscious users searching for SEO tools.
+
+5. Best SEO Tools for Small Businesses in 2026
+   Keyword: best seo tools for small businesses
+   Type: buying_guide
+   Programs: SE Ranking, Mangools, Ubersuggest, SpyFu, Moz
+   Urgency: 9/10
+   Why: Appears in autocomplete data with strong commercial intent. Small business angle allows focus on affordable alternatives vs enterprise tools. Low competition compared to general SEO tool keywords.
+
+✅ Report saved: intelligence_report_20260711_170225.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 96 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260711_170225.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-12 17:00:09
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 7 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 7 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 76
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Business Automation Software for Small Business in 2026
+   Keyword: best business automation software
+   Type: buying_guide
+   Programs: Zapier, Make, n8n, Pabbly Connect, Integrately
+   Urgency: 9/10
+   Why: Low competition keyword with high commercial intent. Multiple related searches show strong demand for 2026 specifically. Automation tools have excellent affiliate commissions and recurring revenue potential.
+
+2. Make vs n8n: Which Automation Platform is Better in 2026
+   Keyword: make vs n8n
+   Type: comparison
+   Programs: Make, n8n
+   Urgency: 8/10
+   Why: Growing interest in Zapier alternatives. Both platforms offer affiliate programs and cater to cost-conscious businesses seeking open-source or cheaper automation solutions.
+
+3. Zoho CRM Review 2026: Features, Pricing and Performance
+   Keyword: zoho crm review
+   Type: review
+   Programs: Zoho
+   Urgency: 7/10
+   Why: Zoho is a major CRM player not yet covered individually. Strong affiliate program with competitive commission structure. High search volume for reviews.
+
+4. HubSpot vs Keap: CRM Comparison for Small Business in 2026
+   Keyword: hubspot vs keap
+   Type: comparison
+   Programs: HubSpot, Keap
+   Urgency: 8/10
+   Why: Both platforms target small businesses but at different price points. Strong commercial intent and neither product pair has been covered yet.
+
+5. Drip Review 2026: Is This Email Marketing Platform Worth It
+   Keyword: drip review
+   Type: review
+   Programs: Drip
+   Urgency: 7/10
+   Why: Drip is a premium email marketing tool focused on ecommerce. High-value affiliate program and underserved in current content portfolio.
+
+✅ Report saved: intelligence_report_20260712_170217.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 76 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260712_170217.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-13 17:00:19
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 98
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Nonprofits in 2026
+   Keyword: best crm for nonprofits
+   Type: buying_guide
+   Programs: Salesforce, HubSpot, Zoho, Keap, Nimble
+   Urgency: 8/10
+   Why: Medium competition keyword with high commercial intent. Nonprofits have specific CRM needs around donor management and fundraising. Multiple affiliate programs available targeting this vertical niche.
+
+2. Zoho CRM Review 2026: Features, Pricing and Alternatives
+   Keyword: zoho crm review
+   Type: review
+   Programs: Zoho, Pipedrive, HubSpot
+   Urgency: 7/10
+   Why: Zoho CRM appears in related searches for top CRM keywords. High commercial intent review keyword. Zoho offers competitive affiliate commissions and is frequently compared to market leaders.
+
+3. Best Email Marketing Software for Creators in 2026
+   Keyword: best email marketing for creators
+   Type: buying_guide
+   Programs: Klaviyo, ActiveCampaign, Brevo, MailerLite, GetResponse
+   Urgency: 8/10
+   Why: Growing creator economy niche with medium competition. Appears in Google autocomplete data. Creators need specialized features like product launches and audience segmentation.
+
+4. Basecamp vs Monday.com: Which Project Management Tool Wins in 2026
+   Keyword: basecamp vs monday
+   Type: comparison
+   Programs: Basecamp, Monday.com
+   Urgency: 7/10
+   Why: Two distinct project management philosophies. Both have strong affiliate programs. Basecamp appeals to simplicity seekers while Monday.com targets feature-rich workflows.
+
+5. Writesonic Review 2026: AI Writing Tool Performance and Value
+   Keyword: writesonic review
+   Type: review
+   Programs: Writesonic, Jasper, Copy.ai
+   Urgency: 9/10
+   Why: Lesser-known Jasper alternative with growing market share. High commercial intent review keyword. AI writing tools remain hot category with strong affiliate commissions.
+
+✅ Report saved: intelligence_report_20260713_170235.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 98 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260713_170235.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-14 17:00:19
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 15 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 94
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 4 relevant posts
+
+  ✅ Total Reddit posts: 5
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Notion vs Trello: Which Project Management Tool Is Better in 2026?
+   Keyword: notion vs trello
+   Type: comparison
+   Programs: Notion, ClickUp
+   Urgency: 9/10
+   Why: Strong commercial intent with low competition. Project management software shows high search volume with 'low_commercial' competition signals. Notion and Trello are frequently discussed alternatives that haven't been covered yet. Both have strong affiliate programs.
+
+2. Best Project Management Software for Construction in 2026
+   Keyword: best project management software for construction
+   Type: buying_guide
+   Programs: Monday.com, Smartsheet, ClickUp, Asana, Teamwork
+   Urgency: 8/10
+   Why: Highly specific niche keyword with low competition from autocomplete data. Construction is an underserved vertical with strong buying intent. Multiple affiliate programs available for this vertical comparison.
+
+3. Smartsheet vs Asana: Project Management Software Compared for 2026
+   Keyword: smartsheet vs asana
+   Type: comparison
+   Programs: Smartsheet, Asana
+   Urgency: 7/10
+   Why: Both are enterprise-focused project management tools with strong affiliate commissions. This comparison hasn't been covered yet and targets mid-market buyers comparing spreadsheet-style vs board-style PM tools.
+
+4. GetResponse Review 2026: Is This Email Marketing Platform Worth It?
+   Keyword: getresponse review
+   Type: review
+   Programs: GetResponse, ActiveCampaign, Brevo
+   Urgency: 8/10
+   Why: GetResponse has a strong 33% recurring affiliate program. Email marketing reviews have high commercial intent and this specific tool review hasn't been covered yet. Lower competition than MailChimp or ConvertKit reviews.
+
+5. Ubersuggest vs SpyFu: Which SEO Tool Is Better in 2026?
+   Keyword: ubersuggest vs spyfu
+   Type: comparison
+   Programs: Ubersuggest, SpyFu
+   Urgency: 7/10
+   Why: Both are affordable SEO tool alternatives to Ahrefs/Semrush. High commercial intent comparison between two budget-friendly options. SpyFu review was published but this specific comparison was not.
+
+✅ Report saved: intelligence_report_20260714_170320.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 94 keywords
+  Reddit: 5 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260714_170320.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-15 17:00:12
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 7 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 7 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 73
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Accounting Software for Personal Use in 2026
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Business Automation Software for Small Business in 2026
+   Keyword: best business automation software
+   Type: buying_guide
+   Programs: Zapier, Make, Pabbly Connect, Integrately, HubSpot
+   Urgency: 9/10
+   Why: Low competition keyword with high commercial intent appearing multiple times in keyword data. Business automation is a growing category with strong affiliate commissions from workflow tools. No existing coverage of this specific angle.
+
+2. Best Accounting Software for Nonprofits in 2026
+   Keyword: best accounting software for nonprofits
+   Type: buying_guide
+   Programs: QuickBooks, Xero, Sage, Wave, FreshBooks
+   Urgency: 8/10
+   Why: Specific niche with high purchase intent and low competition. Nonprofits have unique accounting needs creating differentiated content opportunity. Strong keyword volume from autocomplete data.
+
+3. Zoho CRM Review 2026: Features, Pricing and Alternatives
+   Keyword: zoho crm review
+   Type: review
+   Programs: Zoho, Pipedrive, HubSpot
+   Urgency: 8/10
+   Why: Major CRM platform without existing review coverage. Zoho offers competitive affiliate rates and serves SMB market well. Strong alternative to Salesforce for cost-conscious buyers.
+
+4. Brevo Review 2026: Is This Email Platform Worth It
+   Keyword: brevo review
+   Type: review
+   Programs: Brevo, GetResponse, MailerLite
+   Urgency: 7/10
+   Why: Formerly Sendinblue, Brevo is gaining market share as affordable Mailchimp alternative. No existing standalone review despite being featured in one comparison. Growing brand awareness creates search opportunity.
+
+5. Mangools vs SE Ranking 2026: Which SEO Tool is Better
+   Keyword: mangools vs se ranking
+   Type: comparison
+   Programs: Mangools, SE Ranking, Semrush
+   Urgency: 8/10
+   Why: Both affordable SEO tools targeting same buyer persona. SE Ranking has existing review but no head-to-head with Mangools. Budget-conscious SEO tool buyers actively compare these two options.
+
+✅ Report saved: intelligence_report_20260715_170230.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 73 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260715_170230.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-16 17:00:11
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 8 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+  ✅ Total keywords: 77
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best AI Productivity Tools for Students in 2026
+   Keyword: best ai productivity tools for students
+   Type: buying_guide
+   Programs: Notion, Grammarly, Descript, Todoist, Jasper
+   Urgency: 9/10
+   Why: Low competition keyword with 90 value score from Google autocomplete. Student segment is underserved and has high purchase intent during back-to-school season. Multiple affiliate programs available with strong commission rates.
+
+2. Typeform vs Jotform: Which Form Builder Is Better in 2026
+   Keyword: typeform vs jotform
+   Type: comparison
+   Programs: Typeform, Jotform
+   Urgency: 8/10
+   Why: Both tools have strong affiliate programs. Jotform and Typeform are market leaders with distinct positioning. High commercial intent keyword and both products not compared before in published list.
+
+3. Carrd Review 2026: Best Landing Page Builder for Simple Sites
+   Keyword: carrd review
+   Type: review
+   Programs: Carrd, Webflow, Squarespace
+   Urgency: 7/10
+   Why: Carrd is a lesser-known alternative gaining traction on Reddit as an affordable Linktree and simple landing page alternative. Landing page builder niche shows strong keyword data with 90+ value scores.
+
+4. Integrately vs Zapier: Best Automation Tool for Small Business 2026
+   Keyword: integrately vs zapier
+   Type: comparison
+   Programs: Integrately, Zapier
+   Urgency: 8/10
+   Why: Integrately is emerging as a Zapier alternative at lower price points. High commercial intent comparison not yet covered. Both have affiliate programs with recurring commissions.
+
+5. Best Landing Page Builder AI Tools in 2026
+   Keyword: best landing page builder ai
+   Type: buying_guide
+   Programs: Unbounce, Instapage, Elementor, Divi, Webflow
+   Urgency: 9/10
+   Why: Keyword appears in Google autocomplete with 90 value score. AI-powered landing page builders are trending topic combining two hot niches. Low competition keyword with clear buyer intent.
+
+✅ Report saved: intelligence_report_20260716_170311.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 77 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260716_170311.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-17 17:00:17
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 101
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best CRM Software for Nonprofits in 2026: 5 Affordable Solutions
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Constant Contact vs GetResponse 2026: Which Email Platform Wins for Small Business
+   Keyword: constant contact vs getresponse
+   Type: comparison
+   Programs: Constant Contact, GetResponse
+   Urgency: 8/10
+   Why: Both platforms have strong affiliate programs and target similar small business audience. Neither comparison has been covered yet. Email marketing remains critical for small business growth with high purchase intent.
+
+2. Semrush Review 2026: Is This SEO Tool Worth the Premium Price
+   Keyword: semrush review
+   Type: review
+   Programs: Semrush
+   Urgency: 9/10
+   Why: Semrush has one of the highest-paying affiliate programs in SEO tools at 40% recurring commission. High commercial intent keyword with business owners actively comparing premium SEO solutions. Market leader review not yet covered.
+
+3. Hive vs Monday.com 2026: Best Project Management Software for Remote Teams
+   Keyword: hive vs monday
+   Type: comparison
+   Programs: Hive, Monday.com
+   Urgency: 7/10
+   Why: Different pairing from already published Hive vs Asana. Both tools have strong affiliate programs and target growing remote team market. Monday.com is market leader while Hive offers competitive alternative at lower price point.
+
+4. Best CRM Software for Startups in 2026: 5 Scalable Options Under $50/Month
+   Keyword: best crm software for startups
+   Type: buying_guide
+   Programs: Pipedrive, Copper, Close CRM, Nimble, Zoho
+   Urgency: 8/10
+   Why: Low competition keyword targeting high-growth startup segment. Startups have immediate CRM needs and budget sensitivity. Multiple strong affiliate programs available with 20-30% commissions. Highly specific buyer intent.
+
+5. Integrately Review 2026: The Zapier Alternative That Saves You Money
+   Keyword: integrately review
+   Type: review
+   Programs: Integrately
+   Urgency: 7/10
+   Why: Growing Zapier alternative with competitive affiliate program. Automation tools have exploded in demand. Integrately offers unlimited workflows at lower price point than Zapier, appealing to cost-conscious businesses. Lesser-known alternative gaining traction.
+
+✅ Report saved: intelligence_report_20260717_170227.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 101 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260717_170227.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-18 17:00:13
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 11 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 9 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 103
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: 5 Best Free Project Management Tools for Small Teams in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Moz Pro Review 2026: Can This SEO Tool Still Compete With Ahrefs
+  ✅ Found 8 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Todoist Review 2026: Best Simple Project Management for Solopreneurs
+   Keyword: todoist review
+   Type: review
+   Programs: Todoist
+   Urgency: 7/10
+   Why: Low competition individual product review filling gap in published content. Todoist offers 30% recurring commission and targets underserved solopreneur market distinct from team-focused tools already covered.
+
+2. Hive vs ClickUp 2026: Which Visual Project Manager Wins for Creative Teams
+   Keyword: hive vs clickup
+   Type: comparison
+   Programs: Hive, ClickUp
+   Urgency: 8/10
+   Why: High commercial intent comparison between two visual-first tools not yet compared. Both have strong affiliate programs and appeal to creative agencies seeking alternatives to covered options.
+
+3. Copper CRM Review 2026: Is This Google Workspace CRM Worth It
+   Keyword: copper crm review
+   Type: review
+   Programs: Copper
+   Urgency: 7/10
+   Why: Copper appears in published comparisons but lacks standalone review. Strong affiliate program and clear niche for Google Workspace users creates focused buying intent.
+
+4. ActiveCampaign vs Klaviyo 2026: Email Automation Showdown for Ecommerce
+   Keyword: activecampaign vs klaviyo
+   Type: comparison
+   Programs: ActiveCampaign, Klaviyo
+   Urgency: 9/10
+   Why: Two premium email platforms not yet directly compared. High-value ecommerce niche with strong buyer intent and both offer 20%+ recurring commissions.
+
+5. Integrately vs Zapier 2026: Which Automation Tool Offers Better Value
+   Keyword: integrately vs zapier
+   Type: comparison
+   Programs: Integrately, Zapier
+   Urgency: 8/10
+   Why: Integrately is emerging Zapier alternative with aggressive pricing and 30% commission. Comparison fills gap as Zapier alternatives keyword already covered but not this specific matchup.
+
+✅ Report saved: intelligence_report_20260718_170216.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 103 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 8 identified
+  Report: intelligence_report_20260718_170216.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-19 17:00:11
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 8 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 75
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Nimble CRM Review 2026: Features, Pricing and Alternatives
+  🚫 Filtered duplicate comparison from Claude's suggestions: Wrike vs Smartsheet: Project Management Showdown 2026
+  ✅ Found 8 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. 5 Best Business Process Automation Software for 2026
+   Keyword: best business process automation software
+   Type: buying_guide
+   Programs: Zapier, Make, Pabbly Connect, Integrately, n8n
+   Urgency: 9/10
+   Why: Low commercial competition keyword with high autocomplete value. Business automation is trending heavily in keyword data with multiple related searches. No existing coverage of process automation buying guides in published list.
+
+2. Integrately vs Make: Which Automation Tool is Better in 2026
+   Keyword: integrately vs make
+   Type: comparison
+   Programs: Integrately, Make
+   Urgency: 8/10
+   Why: Both are lesser-known Zapier alternatives with growing market share. No existing comparison between these tools. Fills gap in automation software coverage beyond Make vs n8n and Pabbly vs Zapier already published.
+
+3. MailerLite vs ActiveCampaign: Best Email Marketing Tool 2026
+   Keyword: mailerlite vs activecampaign
+   Type: comparison
+   Programs: MailerLite, ActiveCampaign
+   Urgency: 8/10
+   Why: MailerLite is budget-friendly alternative to ActiveCampaign. Existing comparisons cover ActiveCampaign vs Brevo and Drip, but not MailerLite pairing. Strong commercial intent with distinct price point audiences.
+
+4. Patriot Accounting Software Review 2026: Is It Worth It
+   Keyword: patriot accounting software review
+   Type: review
+   Programs: Patriot, QuickBooks, Xero
+   Urgency: 7/10
+   Why: Accounting software reviews trending in keyword data. Patriot is lesser-known QuickBooks alternative popular with small businesses. No existing review coverage. Strong affiliate potential in finance category.
+
+5. 5 Best Accounting Software for Nonprofits in 2026
+   Keyword: best accounting software for nonprofits
+   Type: buying_guide
+   Programs: QuickBooks, Xero, Sage, Wave, FreshBooks
+   Urgency: 8/10
+   Why: High autocomplete value keyword with specific niche targeting. Nonprofit accounting has unique requirements. No existing nonprofit-focused finance content. Strong commercial intent from decision-makers.
+
+✅ Report saved: intelligence_report_20260719_170233.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 75 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 8 identified
+  Report: intelligence_report_20260719_170233.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-20 17:00:13
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 8 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 11 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 101
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  ✅ Found 10 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Nonprofits in 2026: Top 5 Platforms Compared
+   Keyword: best crm software for nonprofits
+   Type: buying_guide
+   Programs: Salesforce, HubSpot, Zoho, Keap, Nimble
+   Urgency: 9/10
+   Why: Low competition keyword with high commercial intent and underserved niche. Nonprofits have unique CRM needs and multiple affiliate programs target this segment with specialized pricing.
+
+2. Mailchimp vs Klaviyo for Ecommerce in 2026: Which Email Platform Wins
+   Keyword: mailchimp vs klaviyo
+   Type: comparison
+   Programs: Klaviyo
+   Urgency: 8/10
+   Why: Two dominant ecommerce email platforms frequently compared by online retailers. Klaviyo offers strong affiliate commissions and this comparison fills gap in published content.
+
+3. SE Ranking vs Ahrefs 2026: Complete SEO Tool Comparison
+   Keyword: se ranking vs ahrefs
+   Type: comparison
+   Programs: SE Ranking, Ahrefs
+   Urgency: 8/10
+   Why: SE Ranking is emerging as cost-effective Ahrefs alternative. Both have strong affiliate programs and small businesses actively search for this comparison when budget shopping.
+
+4. Wrike Review 2026: Project Management Features, Pricing and Alternatives
+   Keyword: wrike review
+   Type: review
+   Programs: Wrike
+   Urgency: 7/10
+   Why: Wrike is established PM tool but underrepresented in current content portfolio. Strong affiliate program and enterprise market interest creates monetization opportunity.
+
+5. Best CRM Software for Construction Companies in 2026
+   Keyword: best crm software for construction companies
+   Type: buying_guide
+   Programs: Salesforce, Zoho, Pipedrive, HubSpot, Copper
+   Urgency: 9/10
+   Why: Low competition vertical-specific keyword. Construction industry has specialized CRM needs for project tracking and contractor management that few guides address.
+
+✅ Report saved: intelligence_report_20260720_170220.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 101 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 10 identified
+  Report: intelligence_report_20260720_170220.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-21 17:00:10
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 7 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 98
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Close CRM Review 2026: Is This Sales CRM Worth the Investment
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Free Project Management Software in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Serpstat Review 2026: All-in-One SEO Platform Tested and Rated
+  ✅ Found 7 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Project Management Software for Small Teams in 2026
+   Keyword: best project management software for small teams
+   Type: buying_guide
+   Programs: ClickUp, Basecamp, Notion, Teamwork, Hive
+   Urgency: 9/10
+   Why: Low competition keyword with high commercial intent appearing multiple times in Google autocomplete and related searches. Small teams are a lucrative, underserved segment willing to pay for the right solution. Strong affiliate commissions from multiple programs.
+
+2. Notion vs Asana: Which Project Management Tool Is Right for You in 2026
+   Keyword: notion vs asana
+   Type: comparison
+   Programs: Notion, Asana
+   Urgency: 8/10
+   Why: Both products have strong affiliate programs with 20%+ commissions. Notion has expanded project management features in 2026, making this a fresh comparison. High purchase intent from users ready to commit to one platform.
+
+3. Smartsheet Review 2026: Features, Pricing and Performance Tested
+   Keyword: smartsheet review
+   Type: review
+   Programs: Smartsheet
+   Urgency: 7/10
+   Why: Smartsheet is a lesser-covered alternative to Monday and Asana with enterprise-level features. Targets business owners seeking spreadsheet-style project management. Strong affiliate commissions on higher-tier plans.
+
+4. Klaviyo vs ActiveCampaign: Email Marketing Showdown 2026
+   Keyword: klaviyo vs activecampaign
+   Type: comparison
+   Programs: Klaviyo, ActiveCampaign
+   Urgency: 9/10
+   Why: Both platforms offer premium affiliate payouts. E-commerce brands are actively choosing between these two in 2026. High-value customers with strong LTV make this lucrative for recurring commissions.
+
+5. Pabbly Connect vs Integrately: Which Automation Tool Wins in 2026
+   Keyword: pabbly connect vs integrately
+   Type: comparison
+   Programs: Pabbly Connect, Integrately
+   Urgency: 8/10
+   Why: Both are affordable Zapier alternatives gaining traction in 2026. Budget-conscious businesses are actively comparing these two. Less competitive than mainstream automation comparisons.
+
+✅ Report saved: intelligence_report_20260721_170204.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 98 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 7 identified
+  Report: intelligence_report_20260721_170204.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-22 17:00:12
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 7 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 11 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 77
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Zoho CRM Review 2026: Is It the Right Choice for Your Business
+  🚫 Filtered duplicate comparison from Claude's suggestions: Nimble CRM Review 2026: Social-Powered CRM for Relationship Building
+  ✅ Found 8 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. 5 Best Business Automation Software for Small Business in 2026
+   Keyword: best business automation software for small business
+   Type: buying_guide
+   Programs: Zapier, Make, Pabbly Connect, n8n, Integrately
+   Urgency: 9/10
+   Why: Low commercial competition keyword with high value score (100) and multiple related searches indicating strong buyer intent. Perfect timing as businesses seek automation solutions post-pandemic efficiency push.
+
+2. Sage Accounting Software Review 2026: Features, Pricing and Alternatives
+   Keyword: sage accounting software review
+   Type: review
+   Programs: Sage, QuickBooks, Xero
+   Urgency: 7/10
+   Why: Accounting software reviews showing strong autocomplete signals (90 value). Sage is established player with solid affiliate program, less saturated than QuickBooks-only content.
+
+3. ActiveCampaign vs Klaviyo 2026: Which Email Platform Wins for Ecommerce
+   Keyword: activecampaign vs klaviyo
+   Type: comparison
+   Programs: ActiveCampaign, Klaviyo
+   Urgency: 9/10
+   Why: Two powerful email platforms not yet compared in published content. High commercial intent comparison keyword with strong ecommerce angle. Both offer premium affiliate payouts.
+
+4. Serpstat Review 2026: Can This SEO Tool Compete with Industry Leaders
+   Keyword: serpstat review
+   Type: review
+   Programs: Serpstat, Semrush, Ahrefs
+   Urgency: 7/10
+   Why: Serpstat is lesser-known SEO tool alternative with affiliate program. SEO tools have high ticket prices and strong recurring commissions. Gap in current review coverage.
+
+5. Basecamp vs Asana 2026: Project Management Showdown for Growing Teams
+   Keyword: basecamp vs asana
+   Type: comparison
+   Programs: Basecamp, Asana
+   Urgency: 8/10
+   Why: Two established PM tools with different philosophies not yet compared. High search volume comparison with clear buyer intent. Both have strong affiliate programs.
+
+✅ Report saved: intelligence_report_20260722_170223.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 77 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 8 identified
+  Report: intelligence_report_20260722_170223.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-23 17:00:16
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 8 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 10 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+  ✅ Total keywords: 76
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 0
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: 5 Best SEO Tools for Small Business in 2026
+  ✅ Found 9 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Motion vs Reclaim AI: Best AI Calendar Tool in 2026
+   Keyword: motion vs reclaim ai
+   Type: comparison
+   Programs: Motion, Reclaim
+   Urgency: 9/10
+   Why: AI productivity tools showing 90 value score with low commercial competition. Motion and Reclaim are emerging AI calendar tools with strong affiliate programs, neither featured in existing content. Growing demand for AI-powered scheduling automation among entrepreneurs.
+
+2. Beehiiv Review 2026: Is This Email Platform Worth It for Creators
+   Keyword: beehiiv review
+   Type: review
+   Programs: Beehiiv
+   Urgency: 8/10
+   Why: Rising newsletter platform targeting creators and entrepreneurs, strong affiliate program at 50% recurring. Gap in current email marketing coverage which focuses on traditional ESPs. High commercial intent review keyword with medium competition.
+
+3. 5 Best Landing Page Builders for Small Business in 2026
+   Keyword: best landing page builder
+   Type: buying_guide
+   Programs: Unbounce, Instapage, Elementor, Squarespace
+   Urgency: 9/10
+   Why: Keyword shows 90 value score across autocomplete and related searches. High commercial intent with multiple affiliate opportunities. Current coverage lacks dedicated landing page builder buying guide.
+
+4. Streak CRM Review 2026: Gmail CRM for Small Teams
+   Keyword: streak crm review
+   Type: review
+   Programs: Streak
+   Urgency: 7/10
+   Why: Underserved CRM niche for Gmail users, no current Streak coverage. Fills gap in startup CRM content with lighter alternative to HubSpot and Salesforce. Strong affiliate program for growing SaaS.
+
+5. Scalenut vs Jasper: Best AI Content Tool for SEO in 2026
+   Keyword: scalenut vs jasper
+   Type: comparison
+   Programs: Scalenut, Jasper
+   Urgency: 8/10
+   Why: AI tools niche showing strong demand with low competition keywords. Scalenut is SEO-focused AI writer not yet covered, pairs well against established Jasper. Both offer 30%+ recurring commissions.
+
+✅ Report saved: intelligence_report_20260723_170228.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 76 keywords
+  Reddit: 0 posts analyzed
+  Opportunities: 9 identified
+  Report: intelligence_report_20260723_170228.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-24 17:00:17
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 8 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 101
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best CRM Software for Nonprofits in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best CRM Software for Construction Companies in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Keap vs HubSpot CRM: Which Platform Is Better in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Close CRM Review 2026: Features, Pricing and Performance
+  🚫 Filtered duplicate comparison from Claude's suggestions: Serpstat Review 2026: SEO Tool Features and Value Analysis
+  ✅ Found 5 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Email Marketing Software for Nonprofits in 2026
+   Keyword: best email marketing software for nonprofits
+   Type: buying_guide
+   Programs: Brevo, MailerLite, Constant Contact, GetResponse, ActiveCampaign
+   Urgency: 9/10
+   Why: Specific vertical targeting with clear keyword data signal. Nonprofits need affordable solutions with donation integration and volunteer management features, creating strong differentiation from generic email marketing guides.
+
+2. Constant Contact vs Brevo: Email Marketing Showdown 2026
+   Keyword: constant contact vs brevo
+   Type: comparison
+   Programs: Constant Contact, Brevo
+   Urgency: 7/10
+   Why: Compares established player Constant Contact with rising alternative Brevo. Both have strong affiliate programs and serve small business segment with different pricing models, creating natural buyer comparison.
+
+3. Basecamp vs Asana: Project Management Face-Off for 2026
+   Keyword: basecamp vs asana
+   Type: comparison
+   Programs: Basecamp, Asana
+   Urgency: 7/10
+   Why: Two distinct project management philosophies: Basecamp's flat-fee simplicity versus Asana's feature-rich scalability. Strong search intent from teams evaluating collaboration tools with different pricing and feature models.
+
+4. Melio Review 2026: Bill Pay Platform for Small Businesses
+   Keyword: melio review
+   Type: review
+   Programs: Melio
+   Urgency: 8/10
+   Why: Melio is a rising fintech platform for accounts payable that integrates with QuickBooks and other accounting software. Underserved in review content with strong affiliate potential in the finance software vertical.
+
+5. Elementor vs Divi: Best WordPress Builder for 2026
+   Keyword: elementor vs divi
+   Type: comparison
+   Programs: Elementor, Divi
+   Urgency: 7/10
+   Why: Two dominant WordPress page builders with different pricing models and user bases. High commercial intent from web designers and business owners building sites. Both offer recurring affiliate commissions.
+
+✅ Report saved: intelligence_report_20260724_170224.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 101 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 5 identified
+  Report: intelligence_report_20260724_170224.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-25 17:00:18
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 102
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Project Management Software for Small Teams in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Moz Pro Review 2026: Is This SEO Tool Worth It
+  🚫 Filtered duplicate comparison from Claude's suggestions: Make vs Zapier 2026: Automation Platform Comparison
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best SEO Tools for Small Business in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Keap vs HubSpot 2026: CRM for Small Business Owners
+  🚫 Filtered duplicate comparison from Claude's suggestions: Surfer SEO Review 2026: Content Optimization Tool Breakdown
+  ✅ Found 4 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Notion vs Asana 2026: Which Is Better for Small Teams
+   Keyword: notion vs asana
+   Type: comparison
+   Programs: Notion, Asana
+   Urgency: 9/10
+   Why: Both tools are rising in popularity for small team project management. Notion competes directly with PM tools now, and this comparison has low competition while featuring high-commission affiliate programs (Notion 50%, Asana 30%+). Not previously covered.
+
+2. Constant Contact vs Mailchimp 2026: Email Marketing Showdown
+   Keyword: constant contact vs mailchimp
+   Type: comparison
+   Programs: Constant Contact, Canva
+   Urgency: 8/10
+   Why: High commercial intent comparison not yet covered. Both have strong affiliate programs and compete directly in the SMB email marketing space. Mailchimp's recent pricing changes create urgency.
+
+3. Bench Accounting Review 2026: Bookkeeping Service Analysis
+   Keyword: bench accounting review
+   Type: review
+   Programs: Bench, QuickBooks, FreshBooks
+   Urgency: 7/10
+   Why: Bench is a unique bookkeeping service not yet covered. Growing demand for outsourced accounting among entrepreneurs. Low competition keyword with strong affiliate potential.
+
+4. Paperform Review 2026: Advanced Form Builder Tested
+   Keyword: paperform review
+   Type: review
+   Programs: Paperform, Typeform, Jotform
+   Urgency: 6/10
+   Why: Paperform is a growing Typeform alternative with strong features and affiliate program. Not yet covered. Appeals to users wanting more customization than standard form builders.
+
+✅ Report saved: intelligence_report_20260725_170240.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 102 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 4 identified
+  Report: intelligence_report_20260725_170240.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-26 17:00:16
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 3 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 8 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 73
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Business Process Automation Software for 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Notion vs ClickUp 2026: Which Project Management Tool Wins
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Business Automation Tools for 2026
+  ✅ Found 7 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Zoho Books Review 2026: Is This Accounting Software Worth It
+   Keyword: zoho books review
+   Type: review
+   Programs: Zoho, QuickBooks, FreshBooks
+   Urgency: 8/10
+   Why: Zoho Books is a lesser-known QuickBooks alternative with a strong affiliate program. Accounting software reviews show high search volume, and Zoho Books specifically hasn't been covered yet. Strong commercial intent.
+
+2. FreshBooks vs Wave 2026: Which Accounting Software is Better
+   Keyword: freshbooks vs wave
+   Type: comparison
+   Programs: FreshBooks, Wave
+   Urgency: 8/10
+   Why: Popular comparison between a paid and freemium accounting software. Both have affiliate programs, and this specific pairing hasn't been published. High buyer intent for small businesses comparing options.
+
+3. Close CRM Review 2026: Features, Pricing and Alternatives
+   Keyword: close crm review
+   Type: review
+   Programs: Close CRM, Pipedrive, HubSpot
+   Urgency: 7/10
+   Why: Close CRM is a high-commission sales CRM targeting SMBs. While Close CRM was mentioned in published list, individual review hasn't been done. Strong commercial intent keyword for sales teams.
+
+4. Serpstat vs SpyFu 2026: Best SEO Tool for Competitor Research
+   Keyword: serpstat vs spyfu
+   Type: comparison
+   Programs: Serpstat, SpyFu, Semrush
+   Urgency: 7/10
+   Why: Both are lesser-known SEO tools with affiliate programs. This comparison targets users looking for affordable Ahrefs/Semrush alternatives. Neither pairing has been covered, and both focus on competitor analysis.
+
+5. Best Accounting Software for Nonprofits in 2026
+   Keyword: best accounting software for nonprofits
+   Type: buying_guide
+   Programs: QuickBooks, Xero, Sage, Wave, FreshBooks
+   Urgency: 8/10
+   Why: High-value autocomplete keyword with specific niche focus. Nonprofits have unique accounting needs (fund accounting, donor management). High commercial intent with no previous coverage of this vertical.
+
+✅ Report saved: intelligence_report_20260726_170237.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 73 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 7 identified
+  Report: intelligence_report_20260726_170237.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-27 17:00:11
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 7 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 11 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 103
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best CRM Software for Small Business in 2026: 5 Platforms Compared
+  🚫 Filtered duplicate comparison from Claude's suggestions: Nimble CRM Review 2026: Features, Pricing and Real User Experience
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Email Marketing Software for Nonprofits in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: n8n Review 2026: Open Source Automation Platform Analysis
+  ✅ Found 6 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Nonprofits in 2026: 5 Top Solutions
+   Keyword: best crm software for nonprofits
+   Type: buying_guide
+   Programs: Salesforce, HubSpot, Zoho, Keap, Nimble
+   Urgency: 7/10
+   Why: Low commercial competition niche with specific pain points. Nonprofits have unique CRM needs and budget constraints. Strong affiliate opportunities with Salesforce Nonprofit Cloud and HubSpot's nonprofit offerings.
+
+2. Brevo vs MailerLite 2026: Which Email Platform Is Better Value?
+   Keyword: brevo vs mailerlite
+   Type: comparison
+   Programs: Brevo, MailerLite
+   Urgency: 8/10
+   Why: Both are budget-friendly email platforms growing rapidly in 2026. Not yet compared head-to-head. Strong appeal to cost-conscious small businesses. Both offer generous affiliate commissions.
+
+3. Ubersuggest Review 2026: Is Neil Patel's SEO Tool Worth It?
+   Keyword: ubersuggest review
+   Type: review
+   Programs: Ubersuggest, Ahrefs, Semrush
+   Urgency: 9/10
+   Why: Ubersuggest is a major budget alternative to Ahrefs and Semrush but hasn't been individually reviewed. Lifetime deal options make it compelling. Strong affiliate program with high conversion rates among beginners.
+
+4. Moz vs Mangools 2026: SEO Toolset Comparison for Small Teams
+   Keyword: moz vs mangools
+   Type: comparison
+   Programs: Moz, Mangools
+   Urgency: 7/10
+   Why: Both are mid-tier SEO tools targeting similar audiences but not yet compared. Mangools is gaining traction as affordable Moz alternative. Strong commercial intent with users ready to buy.
+
+5. Asana vs Notion 2026: Project Management vs All-in-One Workspace
+   Keyword: asana vs notion
+   Type: comparison
+   Programs: Asana, Notion
+   Urgency: 8/10
+   Why: These tools serve overlapping but distinct use cases. Not previously compared despite both being popular. High search volume as teams evaluate workspace consolidation in 2026.
+
+✅ Report saved: intelligence_report_20260727_170251.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 103 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 6 identified
+  Report: intelligence_report_20260727_170251.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-28 17:00:11
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 102
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Project Management Software for Small Teams in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Free Project Management Software in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Teamwork Review 2026: Is This Project Management Tool Worth It
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Email Marketing Software for Small Business in 2026
+  ✅ Found 6 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Monday.com Review 2026: Features, Pricing and User Experience
+   Keyword: monday.com review
+   Type: review
+   Programs: Monday.com
+   Urgency: 9/10
+   Why: High search volume keyword appearing in autocomplete data with low commercial competition. Monday.com is a market leader with strong affiliate program and appears in related searches for best project management software.
+
+2. Notion vs Asana 2026: Which Tool Is Better for Project Management
+   Keyword: notion vs asana
+   Type: comparison
+   Programs: Notion, Asana
+   Urgency: 8/10
+   Why: Two popular tools with different approaches not yet compared in existing content. Both have strong affiliate programs and high user interest.
+
+3. Trello vs Monday.com 2026: Comparing Features and Pricing
+   Keyword: trello vs monday.com
+   Type: comparison
+   Programs: Monday.com
+   Urgency: 7/10
+   Why: Market leader comparison not in published list. Trello users actively seeking alternatives, high commercial intent for upgrades.
+
+4. Zoho Projects Review 2026: Features, Pros and Cons
+   Keyword: zoho projects review
+   Type: review
+   Programs: Zoho
+   Urgency: 6/10
+   Why: Zoho suite alternative under-covered in existing content. Strong affiliate program and appeals to small business budget-conscious buyers.
+
+5. GetResponse vs Drip 2026: Email Marketing Platform Comparison
+   Keyword: getresponse vs drip
+   Type: comparison
+   Programs: GetResponse, Drip
+   Urgency: 7/10
+   Why: Two platforms with different strengths not yet compared. GetResponse for general marketing, Drip for ecommerce specialization.
+
+✅ Report saved: intelligence_report_20260728_170212.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 102 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 6 identified
+  Report: intelligence_report_20260728_170212.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-29 17:00:09
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 8 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 7 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 75
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 3 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 3
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Business Process Automation Software for 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: FreshBooks vs Xero 2026: Which Accounting Software Wins for Small Business
+  🚫 Filtered duplicate comparison from Claude's suggestions: 5 Best Accounting Software Alternatives to QuickBooks in 2026
+  ✅ Found 7 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Hive Review 2026: Is This Project Management Tool Worth It
+   Keyword: hive review
+   Type: review
+   Programs: Hive
+   Urgency: 7/10
+   Why: Hive appears in already published comparisons but never as standalone review. Lesser-known PM alternative with affiliate program. Fills gap in project management coverage beyond Wrike, Smartsheet, Zoho Projects already published.
+
+2. Keap Review 2026: CRM and Marketing Automation Analysis
+   Keyword: keap review
+   Type: review
+   Programs: Keap
+   Urgency: 7/10
+   Why: Keap appears in comparisons but lacks standalone review. Strong CRM option for small business with robust affiliate program. Bridges CRM and marketing automation categories not heavily covered.
+
+3. Best Accounting Software for Nonprofits in 2026
+   Keyword: best accounting software for nonprofits
+   Type: buying_guide
+   Programs: QuickBooks, Xero, Sage, Wave, FreshBooks
+   Urgency: 8/10
+   Why: High value autocomplete keyword (90) targeting specific nonprofit niche. No published content covers nonprofit accounting angle. Strong commercial intent with underserved audience segment.
+
+4. Writesonic Review 2026: AI Writing Tool Performance Test
+   Keyword: writesonic review
+   Type: review
+   Programs: Writesonic
+   Urgency: 8/10
+   Why: Writesonic only appears in one comparison (jasper vs writesonic). AI tools category needs more individual reviews. Growing demand for AI writing alternatives with high-paying affiliate programs.
+
+5. Elementor vs Divi 2026: Best WordPress Page Builder Comparison
+   Keyword: elementor vs divi
+   Type: comparison
+   Programs: Elementor, Divi
+   Urgency: 7/10
+   Why: Major WordPress builder comparison not yet covered. Both have strong affiliate programs. Website builders category underrepresented with only comparison content published so far.
+
+✅ Report saved: intelligence_report_20260729_170232.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 75 keywords
+  Reddit: 3 posts analyzed
+  Opportunities: 7 identified
+  Report: intelligence_report_20260729_170232.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-30 17:00:10
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 7 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 10 keywords for 'best landing page builder 2026'
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 7 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+  ✅ Total keywords: 78
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best AI Productivity Tools for Work in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Free Landing Page Builder Options in 2026
+  ✅ Found 8 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Notion vs Asana: Which Project Management Tool is Better in 2026
+   Keyword: notion vs asana
+   Type: comparison
+   Programs: Notion, Asana
+   Urgency: 8/10
+   Why: Two major players with strong affiliate programs not yet compared on the site. Both tools have expanded AI features in 2026, creating fresh comparison angles. High commercial intent with users actively choosing between platforms.
+
+2. GetResponse vs ActiveCampaign: Email Marketing Comparison 2026
+   Keyword: getresponse vs activecampaign
+   Type: comparison
+   Programs: GetResponse, ActiveCampaign
+   Urgency: 7/10
+   Why: Both platforms offer 30%+ recurring commissions. These are mid-market email tools frequently compared by businesses upgrading from basic platforms. Not covered in existing comparisons despite strong commercial demand.
+
+3. Unbounce Review 2026: Is This Landing Page Builder Worth It
+   Keyword: unbounce review
+   Type: review
+   Programs: Unbounce
+   Urgency: 8/10
+   Why: Landing page builder searches trending with high commercial intent. Unbounce offers strong affiliate commissions and keyword data shows demand for landing page builder reviews. Fills gap in website builder category.
+
+4. Instapage Review 2026: Features, Pricing and Performance Tested
+   Keyword: instapage review
+   Type: review
+   Programs: Instapage
+   Urgency: 7/10
+   Why: Premium landing page builder with enterprise-level affiliate payouts. Keyword data shows strong search volume for landing page builder reviews and comparisons. Complements Unbounce coverage for conversion optimization category.
+
+5. Best Landing Page Builder for Shopify in 2026
+   Keyword: best landing page builder for shopify
+   Type: buying_guide
+   Programs: Unbounce, Instapage, Shogun, PageFly, GemPages
+   Urgency: 8/10
+   Why: Specific autocomplete keyword with low competition targeting ecommerce owners. Shopify ecosystem continues growing, creating sustained demand for conversion-focused tools. Multiple affiliate opportunities in one guide.
+
+✅ Report saved: intelligence_report_20260730_170217.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 78 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 8 identified
+  Report: intelligence_report_20260730_170217.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-07-31 17:00:11
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 7 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 7 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 99
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best CRM Software for Nonprofits in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: ClickUp vs Asana 2026: Project Management Showdown
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Email Marketing Software for Nonprofits in 2026
+  ✅ Found 7 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Insurance Agents in 2026
+   Keyword: best crm for insurance agents
+   Type: buying_guide
+   Programs: Pipedrive, Close CRM, Copper, Keap, HubSpot
+   Urgency: 8/10
+   Why: Low competition vertical-specific keyword. Insurance agents need specialized CRM features for policy tracking and client retention. High buyer intent with agents actively seeking software solutions.
+
+2. ActiveCampaign vs Constant Contact 2026: Which Email Platform Wins for Small Business?
+   Keyword: activecampaign vs constant contact
+   Type: comparison
+   Programs: ActiveCampaign, Constant Contact
+   Urgency: 7/10
+   Why: Popular email marketing comparison not yet covered. ActiveCampaign offers 30% recurring commission while Constant Contact has strong brand recognition. Both have distinct user bases creating natural comparison demand.
+
+3. Ahrefs vs Mangools 2026: SEO Tool Comparison for Budget-Conscious Marketers
+   Keyword: ahrefs vs mangools
+   Type: comparison
+   Programs: Ahrefs, Mangools
+   Urgency: 8/10
+   Why: Price-conscious comparison between premium and budget SEO tools. Mangools is gaining traction as affordable Ahrefs alternative. Both offer affiliate programs with strong recurring commissions.
+
+4. Notion Review 2026: Is This All-in-One Workspace Worth the Hype?
+   Keyword: notion review
+   Type: review
+   Programs: Notion
+   Urgency: 9/10
+   Why: Notion continues explosive growth in project management and productivity space. High search volume with strong affiliate program. Product has evolved significantly requiring updated 2026 review.
+
+5. Surfer SEO Review 2026: Content Optimization Tool Tested
+   Keyword: surfer seo review
+   Type: review
+   Programs: Surfer SEO
+   Urgency: 8/10
+   Why: Surfer SEO is becoming essential for content marketers and SEO professionals. Strong affiliate program with 25% recurring commission. Growing demand for AI-powered content optimization tools in 2026.
+
+✅ Report saved: intelligence_report_20260731_170214.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 99 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 7 identified
+  Report: intelligence_report_20260731_170214.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-08-01 17:00:15
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 11 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 8 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 102
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Teamwork Review 2026: Is This Project Management Tool Worth It
+  🚫 Filtered duplicate comparison from Claude's suggestions: Make vs Integrately: Which Automation Tool Should You Choose in 2026
+  ✅ Found 8 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Project Management Software for Small Teams in 2026
+   Keyword: best project management software for small teams
+   Type: buying_guide
+   Programs: ClickUp, Teamwork, Basecamp, Notion, Todoist
+   Urgency: 9/10
+   Why: Low competition keyword with high commercial intent appearing in Google autocomplete data. Targets underserved small team segment with specific pain points around collaboration and affordability.
+
+2. Best Project Management Software for Construction in 2026
+   Keyword: best project management software for construction
+   Type: buying_guide
+   Programs: Monday.com, Smartsheet, Wrike, ClickUp, Asana
+   Urgency: 8/10
+   Why: Low competition vertical-specific keyword from autocomplete data. Construction businesses have unique needs for resource planning and field collaboration, creating high buying intent.
+
+3. ClickUp vs Smartsheet: Which Project Management Tool Wins in 2026
+   Keyword: clickup vs smartsheet
+   Type: comparison
+   Programs: ClickUp, Smartsheet
+   Urgency: 7/10
+   Why: New comparison pair not in published list. Both tools offer robust affiliate programs and serve different user bases - technical teams vs enterprise spreadsheet users.
+
+4. Mailchimp vs GetResponse: Best Email Marketing Platform for 2026
+   Keyword: mailchimp vs getresponse
+   Type: comparison
+   Programs: GetResponse
+   Urgency: 8/10
+   Why: Popular comparison not yet covered. Both platforms serve SMB market with strong affiliate programs and distinct positioning around automation vs simplicity.
+
+5. Semrush vs Ubersuggest: SEO Tool Comparison for 2026
+   Keyword: semrush vs ubersuggest
+   Type: comparison
+   Programs: Semrush, Ubersuggest
+   Urgency: 8/10
+   Why: High-value comparison between premium and budget SEO tools. Semrush offers excellent affiliate commissions and Ubersuggest captures budget-conscious searchers.
+
+✅ Report saved: intelligence_report_20260801_170212.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 102 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 8 identified
+  Report: intelligence_report_20260801_170212.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-08-02 17:00:09
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 8 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 10 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 81
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 2
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Business Process Automation Software for 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Automation Software for Small Business in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Accounting Software Alternatives to QuickBooks in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Surfer SEO Review 2026: Features, Pricing and ROI Analysis
+  ✅ Found 6 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Cognito Forms Review 2026: Features, Pricing and Alternatives
+   Keyword: cognito forms review
+   Type: review
+   Programs: Cognito Forms, Typeform, Jotform
+   Urgency: 7/10
+   Why: Lesser-known form builder with affiliate program. Fills gap in form builder coverage alongside Typeform and Jotform. Low competition individual review opportunity with strong conversion potential.
+
+2. 123FormBuilder Review 2026: Is It Worth It for Your Business
+   Keyword: 123formbuilder review
+   Type: review
+   Programs: 123FormBuilder, Jotform, Typeform
+   Urgency: 6/10
+   Why: Underrepresented form builder with affiliate program. Opportunity to rank for branded searches with commercial intent. Complements existing form builder content with new software option.
+
+3. Squarespace Review 2026: Pricing, Features and Performance
+   Keyword: squarespace review
+   Type: review
+   Programs: Squarespace, Webflow, Elementor
+   Urgency: 8/10
+   Why: Major website builder with strong affiliate program not yet covered. High search volume branded keyword with excellent conversion rates. Website builder category needs individual platform reviews.
+
+4. Nimble CRM vs HubSpot CRM 2026: Which Is Better
+   Keyword: nimble crm vs hubspot crm
+   Type: comparison
+   Programs: Nimble, HubSpot
+   Urgency: 7/10
+   Why: Strategic comparison between affordable CRM and enterprise option. Nimble appears in published list but not in this specific comparison with HubSpot. Targets businesses comparing price tiers.
+
+5. Todoist vs ClickUp 2026: Best Task Management Software
+   Keyword: todoist vs clickup
+   Type: comparison
+   Programs: Todoist, ClickUp
+   Urgency: 8/10
+   Why: Popular comparison between simple task manager and full project management tool. Both have strong affiliate programs. Todoist appears in archived list but not in this specific pairing with ClickUp.
+
+✅ Report saved: intelligence_report_20260802_170222.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 81 keywords
+  Reddit: 2 posts analyzed
+  Opportunities: 6 identified
+  Report: intelligence_report_20260802_170222.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-08-03 17:00:15
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  Found 11 keywords for 'best CRM software 2026'
+
+🔍 Google Autocomplete for: email marketing software
+  Found 7 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  Found 11 keywords for 'best email marketing software 2026'
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+  ✅ Total keywords: 100
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 4 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 4
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best CRM Software for Nonprofits in 2026: 5 Top Solutions Compared
+  🚫 Filtered duplicate comparison from Claude's suggestions: SE Ranking Review 2026: Is This Affordable SEO Tool Worth It
+  ✅ Found 8 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Brevo vs Klaviyo 2026: Which Email Platform Wins for Ecommerce
+   Keyword: brevo vs klaviyo
+   Type: comparison
+   Programs: Brevo, Klaviyo
+   Urgency: 8/10
+   Why: High-value comparison between a budget-friendly option and premium ecommerce platform. Klaviyo has excellent affiliate rates and Brevo is gaining market share. Ecommerce email marketing is trending in autocomplete data with strong commercial intent.
+
+2. Wrike vs Asana 2026: Best Project Management Software Compared
+   Keyword: wrike vs asana
+   Type: comparison
+   Programs: Wrike, Asana
+   Urgency: 8/10
+   Why: Two major project management platforms not yet compared on the site. Both have strong affiliate programs with 20%+ commissions. High commercial intent for B2B teams evaluating PM tools.
+
+3. Make Review 2026: Can This Zapier Alternative Save You Money
+   Keyword: make review
+   Type: review
+   Programs: Make
+   Urgency: 9/10
+   Why: Make (formerly Integromat) is a powerful automation tool with growing market share. Strong affiliate program and appeals to users seeking Zapier alternatives at lower price points. Business automation category is underrepresented in published content.
+
+4. Nimble CRM Review 2026: Social Media CRM for Small Teams
+   Keyword: nimble crm review
+   Type: review
+   Programs: Nimble
+   Urgency: 7/10
+   Why: Unique CRM focusing on social selling and relationship management. Fills gap for small business CRM reviews beyond major players. Strong affiliate program with monthly recurring commissions.
+
+5. Best Email Marketing Software for Ecommerce in 2026: 5 Platforms
+   Keyword: best email marketing software for ecommerce
+   Type: buying_guide
+   Programs: Klaviyo, Drip, ActiveCampaign, GetResponse, Brevo
+   Urgency: 9/10
+   Why: High-value keyword appearing in autocomplete with strong commercial intent. Ecommerce is a lucrative niche with high LTV customers. Multiple affiliate programs with excellent commission rates for email platforms.
+
+✅ Report saved: intelligence_report_20260803_170250.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 100 keywords
+  Reddit: 4 posts analyzed
+  Opportunities: 8 identified
+  Report: intelligence_report_20260803_170250.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-08-04 17:00:19
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 8 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 102
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 4 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 6
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Project Management Software for Construction in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Teamwork Review: Is This Project Management Software Worth It in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Accounting Software for Freelancers in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Close CRM Review: Is It the Right Sales Tool for Your Team in 2026
+  ✅ Found 6 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best Project Management Software for Small Business in 2026
+   Keyword: best project management software for small business
+   Type: buying_guide
+   Programs: ClickUp, Teamwork, Basecamp, Notion, Asana
+   Urgency: 9/10
+   Why: Low competition keyword with high commercial intent. Multiple autocomplete and related search signals. Small business angle is highly specific and addresses a clear buyer segment with strong purchase intent.
+
+2. Notion vs Basecamp: Which Project Management Tool is Better in 2026
+   Keyword: notion vs basecamp
+   Type: comparison
+   Programs: Notion, Basecamp
+   Urgency: 7/10
+   Why: Fresh comparison not yet covered. Both tools have strong affiliate programs and represent different approaches to project management. High search intent from teams evaluating collaborative workspaces.
+
+3. Airtable vs Notion: Best Database Tool for Teams in 2026
+   Keyword: airtable vs notion
+   Type: comparison
+   Programs: Notion
+   Urgency: 8/10
+   Why: Popular comparison among productivity-focused teams. Airtable represents database-first approach while Notion is all-in-one. High commercial intent as businesses choose their core collaboration platform.
+
+4. Best Email Marketing Software for Ecommerce in 2026
+   Keyword: best email marketing software for ecommerce
+   Type: buying_guide
+   Programs: Klaviyo, Drip, ActiveCampaign, GetResponse, Brevo
+   Urgency: 9/10
+   Why: Ecommerce-specific angle offers high-value affiliate conversions. Klaviyo dominates this niche with 15-20% commissions. Strong buyer intent from growing online stores.
+
+5. Klaviyo vs Drip: Which Email Platform is Best for Online Stores in 2026
+   Keyword: klaviyo vs drip
+   Type: comparison
+   Programs: Klaviyo, Drip
+   Urgency: 8/10
+   Why: Two top ecommerce email platforms not yet compared in portfolio. Both offer strong affiliate payouts. Businesses switching platforms have high LTV making this valuable conversion content.
+
+✅ Report saved: intelligence_report_20260804_170259.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 102 keywords
+  Reddit: 6 posts analyzed
+  Opportunities: 6 identified
+  Report: intelligence_report_20260804_170259.json
+============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-08-05 17:00:19
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 5 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  Found 8 keywords for 'best AI productivity tools 2026'
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  Found 10 keywords for 'best landing page builder 2026'
+
+  ✅ Total keywords: 78
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 5 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 5
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Mailchimp vs Klaviyo 2026: Which Email Platform for Ecommerce Stores
+  🚫 Filtered duplicate comparison from Claude's suggestions: Surfer SEO Review 2026: Content Optimization Tool for SEO Writers
+  🚫 Filtered duplicate comparison from Claude's suggestions: 5 Best Accounting Software for Personal Use in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Webflow vs Squarespace 2026: Which Website Builder for Creative Businesses
+  🚫 Filtered duplicate comparison from Claude's suggestions: 5 Best Business Automation Tools for Small Business in 2026
+  ✅ Found 5 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Integrately Review 2026: Affordable Zapier Alternative for Small Business
+   Keyword: integrately review
+   Type: review
+   Programs: Integrately, Zapier
+   Urgency: 9/10
+   Why: Business automation tools showing strong search demand with low commercial competition. Integrately offers competitive affiliate commissions and hasn't been reviewed standalone yet. Fills gap between expensive automation tools and budget-conscious entrepreneurs.
+
+2. Pabbly Connect Review 2026: Lifetime Deal Worth It for Business Automation
+   Keyword: pabbly connect review
+   Type: review
+   Programs: Pabbly Connect, Make
+   Urgency: 8/10
+   Why: High interest in business process automation software with medium competition. Pabbly's lifetime deal appeals to cost-conscious small business owners. Strong affiliate program with recurring commissions on non-lifetime plans.
+
+3. 5 Best Accounting Software for Nonprofits in 2026
+   Keyword: best accounting software for nonprofits
+   Type: buying_guide
+   Programs: QuickBooks, Xero, Wave, Sage, FreshBooks
+   Urgency: 9/10
+   Why: High search volume autocomplete keyword with specific niche targeting. Nonprofits have unique accounting needs rarely covered. Multiple high-commission affiliate programs available in finance category.
+
+4. Streak CRM Review 2026: Gmail CRM for Small Business Teams
+   Keyword: streak crm review
+   Type: review
+   Programs: Streak CRM, Copper, HubSpot
+   Urgency: 7/10
+   Why: Underserved Gmail-native CRM with strong affiliate program. Targets entrepreneurs already using Google Workspace. Low competition for individual review compared to major CRM players.
+
+5. Notion vs Asana 2026: Project Management for Remote Teams
+   Keyword: notion vs asana
+   Type: comparison
+   Programs: Notion, Asana
+   Urgency: 9/10
+   Why: Two popular tools with different approaches not yet compared. Both have strong affiliate programs. High search intent from teams choosing between flexible workspace vs structured project management.
+
+✅ Report saved: intelligence_report_20260805_170237.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 78 keywords
+  Reddit: 5 posts analyzed
+  Opportunities: 5 identified
+  Report: intelligence_report_20260805_170237.json
+============================================================

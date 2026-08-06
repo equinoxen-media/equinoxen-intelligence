@@ -8,6 +8,8 @@ import zoneinfo
 from dotenv import load_dotenv
 import re
 import glob
+from urllib.parse import urlencode
+import base64
 
 load_dotenv()
 
@@ -186,6 +188,15 @@ def _is_linkedin_window() -> bool:
     return 10 <= pacific.hour <= 12
 
 # ─── SOCIAL POSTING ───────────────────────────────────────────
+def add_utm(url, source, medium="social", campaign="content_pipeline"):
+    params = {
+        "utm_source": source,
+        "utm_medium": medium,
+        "utm_campaign": campaign
+    }
+    separator = "&" if "?" in url else "?"
+    return f"{url}{separator}{urlencode(params)}"
+
 def post_to_linkedin(title, excerpt, post_url, image_url=None):
     """Post article to LinkedIn company page with optional image"""
     if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN_ORGANIZATION_ID:
@@ -416,6 +427,60 @@ def post_to_pinterest(title, excerpt, post_url, board_id, image_url=None):
         print(f"   ❌ Pinterest error: {e}")
         return False
 
+def refresh_pinterest_token():
+    """Refresh Pinterest access token and persist new tokens to .env."""
+    refresh_token = os.getenv("PINTEREST_REFRESH_TOKEN")
+    client_id = os.getenv("PINTEREST_CLIENT_ID")
+    client_secret = os.getenv("PINTEREST_CLIENT_SECRET")
+
+    if not all([refresh_token, client_id, client_secret]):
+        print("   ⚠️  Pinterest refresh credentials missing")
+        return None
+
+    credentials = f"{client_id}:{client_secret}"
+    encoded_creds = base64.b64encode(credentials.encode()).decode()
+
+    resp = requests.post(
+        "https://api.pinterest.com/v5/oauth/token",
+        headers={
+            "Authorization": f"Basic {encoded_creds}",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        data={"grant_type": "refresh_token", "refresh_token": refresh_token},
+    )
+
+    if resp.status_code != 200:
+        print(f"   ❌ Pinterest token refresh failed: {resp.status_code} — {resp.text[:200]}")
+        return None
+
+    data = resp.json()
+    new_access = data.get("access_token")
+    new_refresh = data.get("refresh_token")  # present only if Pinterest rotates it
+
+    _update_env_file("PINTEREST_ACCESS_TOKEN", new_access)
+    if new_refresh:
+        _update_env_file("PINTEREST_REFRESH_TOKEN", new_refresh)
+
+    print("   ✅ Pinterest token refreshed")
+    return new_access
+
+
+def _update_env_file(key, value, path=".env"):
+    """Update a single key in the .env file, preserving everything else."""
+    with open(path, "r") as f:
+        lines = f.readlines()
+
+    found = False
+    for i, line in enumerate(lines):
+        if line.startswith(f"{key}="):
+            lines[i] = f"{key}={value}\n"
+            found = True
+            break
+    if not found:
+        lines.append(f"{key}={value}\n")
+
+    with open(path, "w") as f:
+        f.writelines(lines)
 
 # ─── DEV.TO ───────────────────────────────────────────────────
 def generate_devto_summary(title, keyword, article_html, canonical_url, excerpt=None):
@@ -556,7 +621,8 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
     time.sleep(2)
 
     if _is_linkedin_window() and not _linkedin_posted_today():
-        post_to_linkedin(title, excerpt, post_url, image_url=image_url)
+        linkedin_url = add_utm(post_url, "linkedin")
+        post_to_linkedin(title, excerpt, linkedin_url, image_url=image_url)
         _mark_linkedin_posted()
     elif _linkedin_posted_today():
         print("   ⏭️  LinkedIn — already posted today")
@@ -564,7 +630,8 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
         print("   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)")
     time.sleep(2)
 
-    post_to_x(title, post_url)
+    twitter_url = add_utm(post_url, "twitter")
+    post_to_x(title, twitter_url)
     time.sleep(2)
 
     if article_html and keyword and post_url:
@@ -580,7 +647,16 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
     else:
         print("   ⏭️  Dev.to — missing article_html or keyword, skipping")
 
+
+
     # ── PINTEREST DISABLED — API pending approval ─────────────
+
+    # Before posting to Pinterest, refresh the token
+    fresh_token = refresh_pinterest_token()
+    if fresh_token:
+        global PINTEREST_ACCESS_TOKEN
+        PINTEREST_ACCESS_TOKEN = fresh_token
+
     # board_id = get_pinterest_board(category_id)
     # post_to_pinterest(title, excerpt, post_url, board_id, pinterest_image_url or image_url)
 

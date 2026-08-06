@@ -43,23 +43,90 @@ CATEGORY_BOARD_MAP = {
 }
 
 COLOR_HINTS = {
-    "hubspot":    "orange accents",
-    "monday":     "vibrant red and yellow accents",
-    "semrush":    "orange and blue accents",
-    "notion":     "black and white minimal accents",
-    "webflow":    "blue accents",
-    "zoho":       "red accents",
-    "asana":      "coral pink accents",
-    "klaviyo":    "green accents",
+    # ── CRM & Sales ──────────────────────────────────────────
+    "hubspot": "orange accents",
+    "zoho": "red accents",
+    "pipedrive": "green accents",
+    "salesforce": "blue accents",
+    "copper": "copper and bronze accents",
+    "keap": "green accents",
+    "nimble": "blue accents",
+    "close": "black and white accents",
+
+    # ── Email Marketing ───────────────────────────────────────
+    "klaviyo": "green accents",
+    "activecampaign": "blue accents",
+    "getresponse": "blue and green accents",
+    "brevo": "blue accents",
+    "constantcontact": "blue and yellow accents",
+    "drip": "black and orange accents",
+    "mailerlite": "green and yellow accents",
+
+    # ── Project Management ────────────────────────────────────
+    "monday": "vibrant red and yellow accents",
+    "notion": "black and white minimal accents",
+    "asana": "coral pink accents",
+    "clickup": "purple accents",
+    "wrike": "green accents",
+    "smartsheet": "blue and orange accents",
+    "teamwork": "pink accents",
+    "basecamp": "green accents",
+    "hive": "orange accents",
+    "todoist": "red accents",
+
+    # ── SEO Tools ─────────────────────────────────────────────
+    "semrush": "orange and blue accents",
+    "ahrefs": "blue and orange accents",
+    "moz": "blue accents",
+    "mangools": "purple accents",
+    "serpstat": "blue and green accents",
+    "seranking": "green accents",
+    "spyfu": "green accents",
+    "ubersuggest": "orange accents",
+    "surferseo": "blue and teal accents",
+    "frase": "purple and blue accents",
+
+    # ── Business Automation ───────────────────────────────────
+    "zapier": "orange accents",
+    "make": "purple accents",
+    "n8n": "red accents",
+    "pabbly": "blue accents",
+    "integrately": "orange and blue accents",
+
+    # ── AI Tools ─────────────────────────────────────────────
+    "grammarly": "green accents",
+    "jasper": "purple and pink accents",
+    "copyai": "blue and purple accents",
+    "writesonic": "blue and purple accents",
+    "descript": "green and teal accents",
+    "canva": "purple and turquoise accents",
+
+    # ── Finance ───────────────────────────────────────────────
     "quickbooks": "green accents",
     "freshbooks": "teal accents",
-    "zapier":     "orange accents",
-    "ahrefs":     "blue and orange accents",
-    "clickup":    "purple accents",
-    "grammarly":  "green accents",
-    "unbounce":   "purple and teal accents",
-    "jotform":    "orange and purple accents",
-    "canva":      "purple and turquoise accents",
+    "xero": "blue accents",
+    "wave": "blue and teal accents",
+    "sage": "green accents",
+    "bench": "green and navy accents",
+    "melio": "blue accents",
+    "patriot": "red and blue accents",
+
+    # ── Website Builders & Landing Pages ─────────────────────
+    "webflow": "blue accents",
+    "unbounce": "purple and teal accents",
+    "instapage": "orange accents",
+    "swipepages": "blue and orange accents",
+    "elementor": "red accents",
+    "divi": "purple accents",
+    "squarespace": "black and white accents",
+    "carrd": "blue accents",
+
+    # ── Form Builders ─────────────────────────────────────────
+    "jotform": "orange and purple accents",
+    "typeform": "pink and purple accents",
+    "paperform": "teal and purple accents",
+    "cognitoforms": "blue accents",
+    "123formbuilder": "orange accents",
 }
 
 
@@ -270,6 +337,60 @@ def post_to_pinterest(title, excerpt, post_url, board_id, image_url):
         print(f"   ❌ Pinterest error: {e}")
         return False
 
+def refresh_pinterest_token():
+    """Refresh Pinterest access token and persist new tokens to .env."""
+    refresh_token = os.getenv("PINTEREST_REFRESH_TOKEN")
+    client_id = os.getenv("PINTEREST_CLIENT_ID")
+    client_secret = os.getenv("PINTEREST_CLIENT_SECRET")
+
+    if not all([refresh_token, client_id, client_secret]):
+        print("   ⚠️  Pinterest refresh credentials missing")
+        return None
+
+    credentials = f"{client_id}:{client_secret}"
+    encoded_creds = base64.b64encode(credentials.encode()).decode()
+
+    resp = requests.post(
+        "https://api.pinterest.com/v5/oauth/token",
+        headers={
+            "Authorization": f"Basic {encoded_creds}",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        data={"grant_type": "refresh_token", "refresh_token": refresh_token},
+    )
+
+    if resp.status_code != 200:
+        print(f"   ❌ Pinterest token refresh failed: {resp.status_code} — {resp.text[:200]}")
+        return None
+
+    data = resp.json()
+    new_access = data.get("access_token")
+    new_refresh = data.get("refresh_token")  # present only if Pinterest rotates it
+
+    _update_env_file("PINTEREST_ACCESS_TOKEN", new_access)
+    if new_refresh:
+        _update_env_file("PINTEREST_REFRESH_TOKEN", new_refresh)
+
+    print("   ✅ Pinterest token refreshed")
+    return new_access
+
+
+def _update_env_file(key, value, path=".env"):
+    """Update a single key in the .env file, preserving everything else."""
+    with open(path, "r") as f:
+        lines = f.readlines()
+
+    found = False
+    for i, line in enumerate(lines):
+        if line.startswith(f"{key}="):
+            lines[i] = f"{key}={value}\n"
+            found = True
+            break
+    if not found:
+        lines.append(f"{key}={value}\n")
+
+    with open(path, "w") as f:
+        f.writelines(lines)
 
 # ─── MAIN ─────────────────────────────────────────────────────
 def run(identifier, programs=None):
@@ -319,7 +440,14 @@ def run(identifier, programs=None):
         print("\n❌ Image upload failed — exiting")
         return False
 
-    # 6. Post to Pinterest
+
+    # 6. Before posting to Pinterest, refresh the token
+    fresh_token = refresh_pinterest_token()
+    if fresh_token:
+        global PINTEREST_ACCESS_TOKEN
+        PINTEREST_ACCESS_TOKEN = fresh_token
+
+    # 7. Post to Pinterest
     success = post_to_pinterest(title, excerpt, link, board_id, image_url)
 
     print("\n" + "=" * 60)
