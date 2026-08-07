@@ -7153,3 +7153,129 @@
   Opportunities: 5 identified
   Report: intelligence_report_20260805_170237.json
 ============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-08-06 17:00:19
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: AI productivity tools
+  Found 10 autocomplete suggestions
+
+📈 Finding keywords for: AI productivity tools
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: landing page builder
+  Found 9 autocomplete suggestions
+
+📈 Finding keywords for: landing page builder
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: CRM software
+  Found 13 autocomplete suggestions
+
+📈 Finding keywords for: CRM software
+  ⚠️  SerpAPI error: 429
+
+🔍 Google Autocomplete for: email marketing software
+  Found 7 autocomplete suggestions
+
+📈 Finding keywords for: email marketing software
+  ⚠️  SerpAPI error: 429
+
+  ✅ Total keywords: 39
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 5 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 2 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 7
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best AI Productivity Tools for Work in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best Landing Page Builder for Shopify in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Best CRM Software for Nonprofits in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: ClickUp vs Asana: Best Project Management Tool for Teams in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Typeform Review: Is It Worth It in 2026?
+  🚫 Filtered duplicate comparison from Claude's suggestions: Surfer SEO Review: Can It Really Boost Your Rankings in 2026?
+  🚫 Filtered duplicate comparison from Claude's suggestions: Bench Accounting Review: Hands-Off Bookkeeping for Small Business in 2026
+  ✅ Found 3 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Best CRM Software for Construction Companies in 2026
+   Keyword: best crm for construction companies
+   Type: buying_guide
+   Programs: Pipedrive, HubSpot, Zoho, Salesforce, Copper
+   Urgency: 8/10
+   Why: Vertical-specific keyword with clear commercial intent from keyword data. Construction businesses need project-based CRM with bid tracking, representing high-value customers with long contract cycles.
+
+2. Unbounce vs Webflow: Which Landing Page Builder Wins in 2026?
+   Keyword: unbounce vs webflow
+   Type: comparison
+   Programs: Unbounce, Webflow
+   Urgency: 8/10
+   Why: Both tools have strong affiliate programs, different use cases (conversion focus vs design flexibility) create natural comparison. Landing page builder searches trending with multiple autocomplete variations showing demand.
+
+3. n8n vs Zapier: Which Automation Tool Should You Choose in 2026?
+   Keyword: n8n vs zapier
+   Type: comparison
+   Programs: Zapier, n8n, Make, Pabbly Connect
+   Urgency: 8/10
+   Why: Open-source vs SaaS automation comparison appeals to technical users and cost-conscious businesses. Self-hosted options trending as businesses seek data control and cost savings at scale. Strong commercial intent with clear decision-making angle.
+
+✅ Report saved: intelligence_report_20260806_170153.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 39 keywords
+  Reddit: 7 posts analyzed
+  Opportunities: 3 identified
+  Report: intelligence_report_20260806_170153.json
+============================================================

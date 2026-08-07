@@ -7724,3 +7724,167 @@
    2. Verify affiliate links are working
    🧹 Removed old article: article_pabbly-connect-review-lifetime-deal-business-automation_20260805_210129.html
    ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-06 15:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260805_170237.json
+
+📋 Found 5 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: integrately+zapier
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: make+pabbly connect
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 5)
+============================================================
+⏭️  Skipping — already published (slug match):
+   5 Best Accounting Software for Nonprofits in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 5)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Streak CRM Review 2026: Gmail CRM for Small Business Teams
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 5 of 5)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Notion vs Asana 2026: Project Management for Remote Teams
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 0 of 1 target articles:
+
+⚠️  Only published 0 of 1 — run intelligence.py for fresh opportunities
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-06 18:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260806_170153.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best CRM Software for Construction Companies in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Unbounce vs Webflow: Which Landing Page Builder Wins in 2026?
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+
+✍️  Generating article: n8n vs Zapier: Which Automation Tool Should You Choose in 2026?
+   Keyword: n8n vs zapier
+   Type: comparison
+   ✅ Article generated (18436 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_n8n-vs-zapier-automation-tool-comparison_20260806_180200.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: n8n vs Zapier: Which Automation Tool Should You Choose in 2026?
+   ✅ Landscape image generated (78KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1132
+   🔗 URL: https://equinoxen.com/n8n-vs-zapier-automation-tool-comparison/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: n8n vs zapier
+   📝 Tracked: n8n vs Zapier: Which Automation Tool Should You Choose in 2026?
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1318 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/n8n-vs-zapier-which-automation-tool-should-you-choose-in-2026-50la
+   ✅ Pinterest token refreshed
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/n8n-vs-zapier-automation-tool-comparison/
+   ✅ Google Indexing API submitted: https://equinoxen.com/n8n-vs-zapier-automation-tool-comparison/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 n8n vs Zapier: Which Automation Tool Should You Choose in 2026?
+     Keyword: n8n vs zapier
+     Local: article_n8n-vs-zapier-automation-tool-comparison_20260806_180200.html
+     WordPress: https://equinoxen.com/n8n-vs-zapier-automation-tool-comparison/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260730_170217.json
+   🧹 Removed old article: article_n8n-vs-zapier-automation-tool-comparison_20260806_180200.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-06 21:00:13
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260806_170153.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best CRM Software for Construction Companies in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Unbounce vs Webflow: Which Landing Page Builder Wins in 2026?
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: n8n+zapier
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 0 of 1 target articles:
+
+⚠️  Only published 0 of 1 — run intelligence.py for fresh opportunities
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   ✅ Cleanup complete
