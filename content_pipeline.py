@@ -3,6 +3,7 @@ import json
 import time
 import requests
 import anthropic
+import io
 from datetime import datetime
 import zoneinfo
 from dotenv import load_dotenv
@@ -652,10 +653,10 @@ def post_to_social(title, excerpt, post_url, category_id=1, image_url=None,
     # ── PINTEREST DISABLED — API pending approval ─────────────
 
     # Before posting to Pinterest, refresh the token
-    fresh_token = refresh_pinterest_token()
-    if fresh_token:
-        global PINTEREST_ACCESS_TOKEN
-        PINTEREST_ACCESS_TOKEN = fresh_token
+    #fresh_token = refresh_pinterest_token()
+    #if fresh_token:
+    #    global PINTEREST_ACCESS_TOKEN
+    #    PINTEREST_ACCESS_TOKEN = fresh_token
 
     # board_id = get_pinterest_board(category_id)
     # post_to_pinterest(title, excerpt, post_url, board_id, pinterest_image_url or image_url)
@@ -1356,7 +1357,6 @@ def upload_image_to_wordpress(image_url, title, alt_text=""):
 def generate_branded_image(title, keyword, programs=None, orientation="landscape"):
     try:
         import openai
-        import io
         from PIL import Image
 
         openai_key = OPENAI_API_KEY
@@ -1634,14 +1634,14 @@ def upload_branded_image_to_wordpress(title, keyword, programs=None, pin_title=N
         pinterest_image_url = None
         
 #        portrait_data, _ = generate_branded_image(title, keyword, programs, orientation="portrait")
-        if portrait_data:
-            portrait_data = add_pinterest_title_overlay(portrait_data, pin_title or title)
-            _, pinterest_image_url = upload_single_image(
-                portrait_data,
-                f"{base_filename}-pinterest.webp",
-                "image/webp",
-                alt_text=pin_title or title
-            )
+#        if portrait_data:
+#            portrait_data = add_pinterest_title_overlay(portrait_data, pin_title or title)
+#            _, pinterest_image_url = upload_single_image(
+#                portrait_data,
+#                f"{base_filename}-pinterest.webp",
+#                "image/webp",
+#                alt_text=pin_title or title
+#            )
         return landscape_id, wordpress_image_url, pinterest_image_url
 
     except Exception as e:
