@@ -1105,9 +1105,15 @@ Article excerpt (first 200 chars): {article_content[:200]}
 
 - slug must not contain the year
 - focus_keyword must not contain the year
+- pin_title must not contain the year
+- pin_title should be short and scannable, not a rephrased SEO headline. Strip filler
+  words like "Ultimate", "Complete", "Honest Review", "In-Depth". Prefer a direct
+  comparison or the plain product/keyword phrasing (e.g. "HubSpot vs Salesforce" or
+  "Best CRM for Small Teams"), max 45 characters, no punctuation at the end
+
 
 Return this exact JSON structure:
-{{"seo_title": "max 60 chars with keyword", "meta_description": "max 155 chars with keyword and CTA", "excerpt": "2 sentence article summary", "slug": "url-friendly-slug-with-keyword-no-year", "focus_keyword": "{keyword}"}}"""
+{{"seo_title": "max 60 chars with keyword", "meta_description": "max 155 chars with keyword and CTA", "excerpt": "2 sentence article summary", "slug": "url-friendly-slug-with-keyword-no-year", "focus_keyword": "{keyword}", "pin_title": "short scannable title, max 45 chars"}}"""
 
     try:
         message = client.messages.create(
@@ -1128,12 +1134,16 @@ Return this exact JSON structure:
 
     except Exception as e:
         print(f"   ⚠️  Metadata error: {e}")
+        pin_fallback = keyword.title()
+        if len(pin_fallback) > 45:
+            pin_fallback = pin_fallback[:45].rsplit(' ', 1)[0]
         return {
             "seo_title": title[:60],
             "meta_description": f"Read our independent {keyword} review and comparison. Find the best tools for your business.",
             "excerpt": f"Our independent review of {keyword}.",
             "slug": keyword.lower().replace(' ', '-'),
-            "focus_keyword": keyword
+            "focus_keyword": keyword,
+            "pin_title": pin_fallback
         }
 
 # ─── STEP 4: ASSIGN CATEGORY ──────────────────────────────────
@@ -1455,7 +1465,11 @@ def generate_branded_image(title, keyword, programs=None, orientation="landscape
 
         if orientation == "portrait":
             size = "1024x1536"
-            composition = "vertical Pinterest-style composition with strong visual flow from top to bottom"
+            composition = (
+                "vertical Pinterest-style composition with strong visual flow from top to bottom. "
+                "Leave approximately the upper 25% of the image relatively clean and uncluttered "
+                "with darker tones suitable for placing a large text headline afterward."
+            )
         else:
             size = "1536x1024"
             composition = "horizontal landscape composition optimized for blog featured image display"
@@ -1502,7 +1516,105 @@ Style requirements:
         print(f"   ⚠️  Image generation error: {e}")
         return None, None
 
-def upload_branded_image_to_wordpress(title, keyword, programs=None):
+
+# ─── OVERLAY PIN TITLE ON IMAGE ────────────────────
+def _load_font(size, bold=True):
+    from PIL import ImageFont
+    candidates = (
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    ) if bold else (
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+    )
+    for path in candidates:
+        try:
+            return ImageFont.truetype(path, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+ 
+ 
+def _wrap_text(draw, text, font, max_width):
+    """Greedy word-wrap that fits within max_width using actual glyph measurements."""
+    words = text.split()
+    lines = []
+    current = ""
+    for word in words:
+        trial = f"{current} {word}".strip()
+        bbox = draw.textbbox((0, 0), trial, font=font)
+        if bbox[2] - bbox[0] <= max_width or not current:
+            current = trial
+        else:
+            lines.append(current)
+            current = word
+    if current:
+        lines.append(current)
+    return lines
+ 
+ 
+def add_pinterest_title_overlay(image_bytes, pin_title, max_lines=4):
+    """
+    Overlay the short pin title as crisp, legible text in a gradient
+    banner at the top of the generated background. Returns webp bytes.
+    """
+    from PIL import Image, ImageDraw
+ 
+    img = Image.open(io.BytesIO(image_bytes)).convert("RGBA")
+    W, H = img.size
+ 
+    side_margin = int(W * 0.08)
+    max_text_width = W - (side_margin * 2)
+ 
+    font_size = int(W * 0.09)
+    font = _load_font(font_size)
+    draw_tmp = ImageDraw.Draw(img)
+    display_title = pin_title.strip()
+ 
+    lines = _wrap_text(draw_tmp, display_title, font, max_text_width)
+    while len(lines) > max_lines and font_size > int(W * 0.045):
+        font_size -= 4
+        font = _load_font(font_size)
+        lines = _wrap_text(draw_tmp, display_title, font, max_text_width)
+ 
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        lines[-1] = lines[-1].rstrip(".,;: ") + "…"
+ 
+    line_bbox = draw_tmp.textbbox((0, 0), "Ag", font=font)
+    line_height = int((line_bbox[3] - line_bbox[1]) * 1.35)
+    top_pad = int(H * 0.06)
+    bottom_pad = int(H * 0.05)
+    banner_h = top_pad + (line_height * len(lines)) + bottom_pad
+ 
+    banner = Image.new("RGBA", (W, banner_h), (0, 0, 0, 0))
+    for y in range(banner_h):
+        t = 1 - (y / max(1, banner_h - 1))
+        alpha = int(200 * (t ** 0.6))
+        banner.paste((8, 8, 8, alpha), (0, y, W, y + 1))
+ 
+    draw = ImageDraw.Draw(banner)
+    y_cursor = top_pad
+    for line in lines:
+        bbox = draw.textbbox((0, 0), line, font=font)
+        line_w = bbox[2] - bbox[0]
+        x = (W - line_w) // 2
+        draw.text((x + 2, y_cursor + 2), line, font=font, fill=(0, 0, 0, 160))
+        draw.text((x, y_cursor), line, font=font, fill=(255, 255, 255, 255))
+        y_cursor += line_height
+ 
+    draw.rectangle([(side_margin, banner_h - int(H * 0.015)),
+                     (W - side_margin, banner_h - int(H * 0.015) + 3)],
+                    fill=(212, 175, 55, 255))
+ 
+    img.alpha_composite(banner, (0, 0))
+ 
+    out = io.BytesIO()
+    img.convert("RGB").save(out, format="WEBP", quality=85, method=6)
+    return out.getvalue()
+ 
+
+def upload_branded_image_to_wordpress(title, keyword, programs=None, pin_title=None):
     try:
         print(f"   🎨 Generating AI featured images...")
         base_filename = keyword.lower().replace(' ', '-')[:50]
@@ -1520,7 +1632,16 @@ def upload_branded_image_to_wordpress(title, keyword, programs=None):
 
         # ── PINTEREST IMAGE DISABLED — API pending approval ────────────
         pinterest_image_url = None
-
+        
+#        portrait_data, _ = generate_branded_image(title, keyword, programs, orientation="portrait")
+        if portrait_data:
+            portrait_data = add_pinterest_title_overlay(portrait_data, pin_title or title)
+            _, pinterest_image_url = upload_single_image(
+                portrait_data,
+                f"{base_filename}-pinterest.webp",
+                "image/webp",
+                alt_text=pin_title or title
+            )
         return landscape_id, wordpress_image_url, pinterest_image_url
 
     except Exception as e:
@@ -1745,7 +1866,8 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
             featured_image_id, image_url, pinterest_image_url = upload_branded_image_to_wordpress(
                 title,
                 keyword,
-                programs=opp.get('programs', [])
+                programs=opp.get('programs', []),
+                pin_title=metadata.get("pin_title")
             )
             if not featured_image_id:
                 unsplash_url = get_featured_image_unsplash(keyword)

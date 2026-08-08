@@ -7888,3 +7888,172 @@
    1. Review articles in WordPress
    2. Verify affiliate links are working
    ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-07 15:00:14
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260806_170153.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best CRM Software for Construction Companies in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Unbounce vs Webflow: Which Landing Page Builder Wins in 2026?
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: n8n+zapier
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 0 of 1 target articles:
+
+⚠️  Only published 0 of 1 — run intelligence.py for fresh opportunities
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-07 18:00:19
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260807_170147.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+
+✍️  Generating article: Paperform vs Jotform 2026: Which Form Builder Is Better for Your Business
+   Keyword: paperform vs jotform
+   Type: comparison
+   ✅ Article generated (18990 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_paperform-vs-jotform_20260807_180201.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Paperform vs Jotform 2026: Which Form Builder Is Better for Your Business
+   ✅ Landscape image generated (66KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1137
+   🔗 URL: https://equinoxen.com/paperform-vs-jotform/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: paperform vs jotform
+   📝 Tracked: Paperform vs Jotform 2026: Which Form Builder Is Better for Your Business
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1559 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/paperform-vs-jotform-2026-which-form-builder-is-better-for-your-business-3mop
+   ✅ Pinterest token refreshed
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/paperform-vs-jotform/
+   ✅ Google Indexing API submitted: https://equinoxen.com/paperform-vs-jotform/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Paperform vs Jotform 2026: Which Form Builder Is Better for Your Business
+     Keyword: paperform vs jotform
+     Local: article_paperform-vs-jotform_20260807_180201.html
+     WordPress: https://equinoxen.com/paperform-vs-jotform/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260731_170214.json
+   🧹 Removed old article: article_paperform-vs-jotform_20260807_180201.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-07 21:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260807_170147.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: jotform+paperform
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+
+✍️  Generating article: Sage vs Xero 2026: Accounting Software Showdown for Small Business
+   Keyword: sage vs xero
+   Type: comparison
+   ✅ Article generated (18385 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_sage-vs-xero-accounting-software-small-business_20260807_210149.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Sage vs Xero 2026: Accounting Software Showdown for Small Business
+   ✅ Landscape image generated (101KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1140
+   🔗 URL: https://equinoxen.com/sage-vs-xero-accounting-software-small-business/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: sage vs xero
+   📝 Tracked: Sage vs Xero 2026: Accounting Software Showdown for Small Business
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1616 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/sage-vs-xero-2026-accounting-software-showdown-for-small-business-12am
+   ✅ Pinterest token refreshed
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/sage-vs-xero-accounting-software-small-business/
+   ✅ Google Indexing API submitted: https://equinoxen.com/sage-vs-xero-accounting-software-small-business/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Sage vs Xero 2026: Accounting Software Showdown for Small Business
+     Keyword: sage vs xero
+     Local: article_sage-vs-xero-accounting-software-small-business_20260807_210149.html
+     WordPress: https://equinoxen.com/sage-vs-xero-accounting-software-small-business/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_sage-vs-xero-accounting-software-small-business_20260807_210149.html
+   ✅ Cleanup complete
