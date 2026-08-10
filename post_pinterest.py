@@ -4,6 +4,7 @@ import sys
 import json
 import base64
 import requests
+import anthropic
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -16,6 +17,7 @@ WP_PASS = os.getenv("WORDPRESS_APP_PASSWORD")
 
 PINTEREST_ACCESS_TOKEN = os.getenv("PINTEREST_ACCESS_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 PINTEREST_BOARDS = {
     "crm":                  os.getenv("PINTEREST_BOARD_CRM"),
@@ -190,9 +192,55 @@ def _strip_html(html):
     return re.sub(r"<[^>]+>", "", html).strip()
 
 
+# ─── STEP 1.5: GENERATE SHORT PIN TITLE ──────────────────────
+def generate_pin_title(title, keyword):
+    """
+    Distill the full (often dramatic/long) article title into a short,
+    scannable pin title for the image overlay. Backfill-only equivalent
+    of the pin_title field content_pipeline.py now generates for new posts.
+    """
+    print("   ✍️  Generating pin title...")
+
+    fallback = keyword.title()
+    if len(fallback) > 45:
+        fallback = fallback[:45].rsplit(' ', 1)[0]
+
+    if not ANTHROPIC_API_KEY:
+        print("   ⚠️  No ANTHROPIC_API_KEY — using keyword fallback for pin title")
+        return fallback
+
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+
+    prompt = f"""Article title: {title}
+Primary keyword: {keyword}
+
+Distill this into a short, scannable Pinterest pin title. Strip filler words
+like "Ultimate", "Complete", "Honest Review", "In-Depth", and the year.
+Prefer a direct comparison or plain product/keyword phrasing
+(e.g. "HubSpot vs Salesforce" or "Best CRM for Small Teams").
+Max 45 characters. No punctuation at the end. No quotes around it.
+
+Return ONLY the short title text, nothing else."""
+
+    try:
+        message = client.messages.create(
+            model="claude-sonnet-4-5",
+            max_tokens=50,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        pin_title = message.content[0].text.strip().strip('"').strip("'")
+        if not pin_title or len(pin_title) > 60:
+            return fallback
+        print(f"   ✅ Pin title: {pin_title}")
+        return pin_title
+    except Exception as e:
+        print(f"   ⚠️  Pin title generation error: {e} — using keyword fallback")
+        return fallback
+
+
 # ─── STEP 2: GENERATE PINTEREST IMAGE ────────────────────────
 def generate_pinterest_image(title, keyword, programs=None):
-    """Generate a 1024×1536 portrait WebP image via gpt-image-2, resized to ~1000×1500."""
+    """Generate a 1024×1536 portrait WebP background image via gpt-image-2."""
     try:
         import openai
         from PIL import Image
@@ -229,7 +277,9 @@ Style requirements:
 - Visual metaphor representing the topic: {keyword}
 - Dark sophisticated base with gold as primary accents
 - Accent colors as subtle design elements: {color_instruction}
-- High contrast, visually striking, scroll-stopping on Pinterest"""
+- High contrast, visually striking, scroll-stopping on Pinterest
+- Keep the top 25% of the composition visually calm and low-detail (soft gradient
+  or open space) — a title banner will be added there afterward"""
 
         response = client.images.generate(
             model="gpt-image-2",
@@ -241,14 +291,13 @@ Style requirements:
 
         image_data = base64.b64decode(response.data[0].b64_json)
 
-        # Resize to ~1000×1500 and save as WebP
         img = Image.open(io.BytesIO(image_data))
         webp_buffer = io.BytesIO()
         img.save(webp_buffer, format="WEBP", quality=85, method=6)
         webp_buffer.seek(0)
         final_bytes = webp_buffer.getvalue()
 
-        print(f"   ✅ Image generated ({len(final_bytes) // 1024} KB, 1000×1500 WebP)")
+        print(f"   ✅ Background generated ({len(final_bytes) // 1024} KB)")
         return final_bytes
 
     except ImportError as e:
@@ -257,6 +306,103 @@ Style requirements:
     except Exception as e:
         print(f"   ❌ Image generation error: {e}")
         return None
+
+
+# ─── STEP 2.5: OVERLAY PIN TITLE ON IMAGE ────────────────────
+def _load_font(size, bold=True):
+    from PIL import ImageFont
+    candidates = (
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    ) if bold else (
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+    )
+    for path in candidates:
+        try:
+            return ImageFont.truetype(path, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
+def _wrap_text(draw, text, font, max_width):
+    """Greedy word-wrap that fits within max_width using actual glyph measurements."""
+    words = text.split()
+    lines = []
+    current = ""
+    for word in words:
+        trial = f"{current} {word}".strip()
+        bbox = draw.textbbox((0, 0), trial, font=font)
+        if bbox[2] - bbox[0] <= max_width or not current:
+            current = trial
+        else:
+            lines.append(current)
+            current = word
+    if current:
+        lines.append(current)
+    return lines
+
+
+def add_pinterest_title_overlay(image_bytes, pin_title, max_lines=4):
+    """
+    Overlay the short pin title as crisp, legible text in a gradient
+    banner at the top of the generated background. Returns webp bytes.
+    """
+    from PIL import Image, ImageDraw
+
+    img = Image.open(io.BytesIO(image_bytes)).convert("RGBA")
+    W, H = img.size
+
+    side_margin = int(W * 0.08)
+    max_text_width = W - (side_margin * 2)
+
+    font_size = int(W * 0.09)
+    font = _load_font(font_size)
+    draw_tmp = ImageDraw.Draw(img)
+    display_title = pin_title.strip()
+
+    lines = _wrap_text(draw_tmp, display_title, font, max_text_width)
+    while len(lines) > max_lines and font_size > int(W * 0.045):
+        font_size -= 4
+        font = _load_font(font_size)
+        lines = _wrap_text(draw_tmp, display_title, font, max_text_width)
+
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        lines[-1] = lines[-1].rstrip(".,;: ") + "…"
+
+    line_bbox = draw_tmp.textbbox((0, 0), "Ag", font=font)
+    line_height = int((line_bbox[3] - line_bbox[1]) * 1.35)
+    top_pad = int(H * 0.06)
+    bottom_pad = int(H * 0.05)
+    banner_h = top_pad + (line_height * len(lines)) + bottom_pad
+
+    banner = Image.new("RGBA", (W, banner_h), (0, 0, 0, 0))
+    for y in range(banner_h):
+        t = 1 - (y / max(1, banner_h - 1))
+        alpha = int(200 * (t ** 0.6))
+        banner.paste((8, 8, 8, alpha), (0, y, W, y + 1))
+
+    draw = ImageDraw.Draw(banner)
+    y_cursor = top_pad
+    for line in lines:
+        bbox = draw.textbbox((0, 0), line, font=font)
+        line_w = bbox[2] - bbox[0]
+        x = (W - line_w) // 2
+        draw.text((x + 2, y_cursor + 2), line, font=font, fill=(0, 0, 0, 160))
+        draw.text((x, y_cursor), line, font=font, fill=(255, 255, 255, 255))
+        y_cursor += line_height
+
+    draw.rectangle([(side_margin, banner_h - int(H * 0.015)),
+                     (W - side_margin, banner_h - int(H * 0.015) + 3)],
+                    fill=(212, 175, 55, 255))
+
+    img.alpha_composite(banner, (0, 0))
+
+    out = io.BytesIO()
+    img.convert("RGB").save(out, format="WEBP", quality=85, method=6)
+    return out.getvalue()
 
 
 # ─── STEP 3: UPLOAD IMAGE TO WORDPRESS ───────────────────────
@@ -395,7 +541,7 @@ def _update_env_file(key, value, path=".env"):
 # ─── MAIN ─────────────────────────────────────────────────────
 def run(identifier, programs=None):
     """
-    Full flow: fetch post → generate image → upload → pin.
+    Full flow: fetch post → generate image → overlay title → upload → pin.
 
     Args:
         identifier: WordPress post ID (int) or full post URL (str)
@@ -418,6 +564,7 @@ def run(identifier, programs=None):
     link = post["link"]
     slug = post["slug"]
     category_id = post["category_id"]
+    keyword = slug.replace("-", " ")
 
     # 2. Resolve Pinterest board
     board_key = CATEGORY_BOARD_MAP.get(category_id, "general")
@@ -428,26 +575,31 @@ def run(identifier, programs=None):
     if not programs:
         programs = _infer_programs_from_title(title)
 
-    # 4. Generate image
-    image_bytes = generate_pinterest_image(title, slug.replace("-", " "), programs)
+    # 4. Generate short pin title for the overlay (old posts don't have one stored)
+    pin_title = generate_pin_title(title, keyword)
+
+    # 5. Generate background image
+    image_bytes = generate_pinterest_image(title, keyword, programs)
     if not image_bytes:
         print("\n❌ Image generation failed — exiting")
         return False
 
-    # 5. Upload image to WordPress (serves as CDN)
+    # 6. Overlay the pin title onto the background
+    image_bytes = add_pinterest_title_overlay(image_bytes, pin_title)
+
+    # 7. Upload image to WordPress (serves as CDN)
     image_url = upload_image_to_wordpress(image_bytes, slug)
     if not image_url:
         print("\n❌ Image upload failed — exiting")
         return False
 
-
-    # 6. Before posting to Pinterest, refresh the token
+    # 8. Before posting to Pinterest, refresh the token
     fresh_token = refresh_pinterest_token()
     if fresh_token:
         global PINTEREST_ACCESS_TOKEN
         PINTEREST_ACCESS_TOKEN = fresh_token
 
-    # 7. Post to Pinterest
+    # 9. Post to Pinterest
     success = post_to_pinterest(title, excerpt, link, board_id, image_url)
 
     print("\n" + "=" * 60)

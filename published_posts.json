@@ -239,7 +239,12 @@
     "pabbly-connect-review-lifetime-deal-business-automation",
     "n8n-vs-zapier-automation-tool-comparison",
     "paperform-vs-jotform",
-    "sage-vs-xero-accounting-software-small-business"
+    "sage-vs-xero-accounting-software-small-business",
+    "se-ranking-vs-serpstat",
+    "mailerlite-vs-drip",
+    "bench-vs-wave",
+    "nimble-crm-review",
+    "surfer-seo-review"
   ],
   "titles": [
     "11 best crm software for small business in 2026 (tested & compared)",
@@ -481,7 +486,12 @@
     "pabbly connect review 2026: lifetime deal worth it for business automation",
     "n8n vs zapier: which automation tool should you choose in 2026?",
     "paperform vs jotform 2026: which form builder is better for your business",
-    "sage vs xero 2026: accounting software showdown for small business"
+    "sage vs xero 2026: accounting software showdown for small business",
+    "se ranking vs serpstat 2026: which seo tool is better",
+    "mailerlite vs drip 2026: email marketing comparison",
+    "bench vs wave 2026: which bookkeeping software is better",
+    "nimble crm review 2026: perfect for small teams or overhyped",
+    "surfer seo review 2026: does this content optimization tool deliver roi"
   ],
   "keywords": [
     "best crm small business",
@@ -723,7 +733,12 @@
     "pabbly connect review",
     "n8n vs zapier",
     "paperform vs jotform",
-    "sage vs xero"
+    "sage vs xero",
+    "se ranking vs serpstat",
+    "mailerlite vs drip",
+    "bench vs wave",
+    "nimble crm review",
+    "surfer seo review"
   ],
   "posts": [
     {
@@ -2645,6 +2660,46 @@
       "post_id": 1140,
       "post_url": "https://equinoxen.com/sage-vs-xero-accounting-software-small-business/",
       "created_at": "2026-08-07T21:02:48.878582"
+    },
+    {
+      "title": "SE Ranking vs Serpstat 2026: Which SEO Tool Is Better",
+      "slug": "se-ranking-vs-serpstat",
+      "keyword": "se ranking vs serpstat",
+      "post_id": 1144,
+      "post_url": "https://equinoxen.com/se-ranking-vs-serpstat/",
+      "created_at": "2026-08-08T18:02:54.947969"
+    },
+    {
+      "title": "MailerLite vs Drip 2026: Email Marketing Comparison",
+      "slug": "mailerlite-vs-drip",
+      "keyword": "mailerlite vs drip",
+      "post_id": 1147,
+      "post_url": "https://equinoxen.com/mailerlite-vs-drip/",
+      "created_at": "2026-08-08T21:02:46.604541"
+    },
+    {
+      "title": "Bench vs Wave 2026: Which Bookkeeping Software Is Better",
+      "slug": "bench-vs-wave",
+      "keyword": "bench vs wave",
+      "post_id": 1150,
+      "post_url": "https://equinoxen.com/bench-vs-wave/",
+      "created_at": "2026-08-09T15:03:17.448492"
+    },
+    {
+      "title": "Nimble CRM Review 2026: Perfect for Small Teams or Overhyped",
+      "slug": "nimble-crm-review",
+      "keyword": "nimble crm review",
+      "post_id": 1153,
+      "post_url": "https://equinoxen.com/nimble-crm-review/",
+      "created_at": "2026-08-09T18:02:21.497372"
+    },
+    {
+      "title": "Surfer SEO Review 2026: Does This Content Optimization Tool Deliver ROI",
+      "slug": "surfer-seo-review",
+      "keyword": "surfer seo review",
+      "post_id": 1156,
+      "post_url": "https://equinoxen.com/surfer-seo-review/",
+      "created_at": "2026-08-09T21:02:18.129450"
     }
   ],
   "comparison_keys": [
@@ -2767,6 +2822,11 @@
     "make+pabbly connect",
     "n8n+zapier",
     "jotform+paperform",
-    "sage+xero"
+    "sage+xero",
+    "se ranking+serpstat",
+    "drip+mailerlite",
+    "bench+wave",
+    "nimble crm",
+    "surfer seo"
   ]
 }

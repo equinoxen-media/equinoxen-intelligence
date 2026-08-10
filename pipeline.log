@@ -8057,3 +8057,428 @@
    2. Verify affiliate links are working
    🧹 Removed old article: article_sage-vs-xero-accounting-software-small-business_20260807_210149.html
    ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-08 15:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260807_170147.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: jotform+paperform
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: sage+xero
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+⏭️  Skipping — already published (title match):
+   Best CRM Software for Construction Companies in 2026
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 0 of 1 target articles:
+
+⚠️  Only published 0 of 1 — run intelligence.py for fresh opportunities
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-08 18:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260808_170149.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — already published (title match):
+   Best Project Management Software for Construction in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best SEO Tools for Small Businesses in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+
+✍️  Generating article: SE Ranking vs Serpstat 2026: Which SEO Tool Is Better
+   Keyword: se ranking vs serpstat
+   Type: comparison
+   ✅ Article generated (18069 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_se-ranking-vs-serpstat_20260808_180154.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: SE Ranking vs Serpstat 2026: Which SEO Tool Is Better
+   ✅ Landscape image generated (93KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1144
+   🔗 URL: https://equinoxen.com/se-ranking-vs-serpstat/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: se ranking vs serpstat
+   📝 Tracked: SE Ranking vs Serpstat 2026: Which SEO Tool Is Better
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1372 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/se-ranking-vs-serpstat-2026-which-seo-tool-is-better-4f3b
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/se-ranking-vs-serpstat/
+   ✅ Google Indexing API submitted: https://equinoxen.com/se-ranking-vs-serpstat/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 SE Ranking vs Serpstat 2026: Which SEO Tool Is Better
+     Keyword: se ranking vs serpstat
+     Local: article_se-ranking-vs-serpstat_20260808_180154.html
+     WordPress: https://equinoxen.com/se-ranking-vs-serpstat/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260801_170212.json
+   🧹 Removed old article: article_se-ranking-vs-serpstat_20260808_180154.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-08 21:00:13
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260808_170149.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — already published (title match):
+   Best Project Management Software for Construction in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best SEO Tools for Small Businesses in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: se ranking+serpstat
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 7)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Constant Contact Review 2026: Email Marketing for Small Business
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 5 of 7)
+============================================================
+
+✍️  Generating article: MailerLite vs Drip 2026: Email Marketing Comparison
+   Keyword: mailerlite vs drip
+   Type: comparison
+   ✅ Article generated (19651 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_mailerlite-vs-drip_20260808_210152.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: MailerLite vs Drip 2026: Email Marketing Comparison
+   ✅ Landscape image generated (72KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1147
+   🔗 URL: https://equinoxen.com/mailerlite-vs-drip/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: mailerlite vs drip
+   📝 Tracked: MailerLite vs Drip 2026: Email Marketing Comparison
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1421 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/mailerlite-vs-drip-2026-email-marketing-comparison-3p2h
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/mailerlite-vs-drip/
+   ✅ Google Indexing API submitted: https://equinoxen.com/mailerlite-vs-drip/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 MailerLite vs Drip 2026: Email Marketing Comparison
+     Keyword: mailerlite vs drip
+     Local: article_mailerlite-vs-drip_20260808_210152.html
+     WordPress: https://equinoxen.com/mailerlite-vs-drip/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_mailerlite-vs-drip_20260808_210152.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-09 15:00:17
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260808_170149.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — already published (title match):
+   Best Project Management Software for Construction in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best SEO Tools for Small Businesses in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: se ranking+serpstat
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 7)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Constant Contact Review 2026: Email Marketing for Small Business
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 5 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: drip+mailerlite
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 6 of 7)
+============================================================
+
+✍️  Generating article: Bench vs Wave 2026: Which Bookkeeping Software Is Better
+   Keyword: bench vs wave
+   Type: comparison
+   ✅ Article generated (16344 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_bench-vs-wave_20260809_150156.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Bench vs Wave 2026: Which Bookkeeping Software Is Better
+   ✅ Landscape image generated (104KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1150
+   🔗 URL: https://equinoxen.com/bench-vs-wave/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: bench vs wave
+   📝 Tracked: Bench vs Wave 2026: Which Bookkeeping Software Is Better
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1573 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/bench-vs-wave-2026-which-bookkeeping-software-is-better-2a9j
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/bench-vs-wave/
+   ✅ Google Indexing API submitted: https://equinoxen.com/bench-vs-wave/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Bench vs Wave 2026: Which Bookkeeping Software Is Better
+     Keyword: bench vs wave
+     Local: article_bench-vs-wave_20260809_150156.html
+     WordPress: https://equinoxen.com/bench-vs-wave/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_bench-vs-wave_20260809_150156.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-09 18:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260809_170233.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   FreshBooks Review 2026: Is This Accounting Software Worth It for Small Businesses
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+
+✍️  Generating article: Nimble CRM Review 2026: Perfect for Small Teams or Overhyped
+   Keyword: nimble crm review
+   Type: review
+   ✅ Article generated (11756 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_nimble-crm-review_20260809_180126.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Nimble CRM Review 2026: Perfect for Small Teams or Overhyped
+   ✅ Landscape image generated (68KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1153
+   🔗 URL: https://equinoxen.com/nimble-crm-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: nimble crm review
+   📝 Tracked: Nimble CRM Review 2026: Perfect for Small Teams or Overhyped
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1359 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/nimble-crm-review-2026-perfect-for-small-teams-or-overhyped-1p39
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/nimble-crm-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/nimble-crm-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Nimble CRM Review 2026: Perfect for Small Teams or Overhyped
+     Keyword: nimble crm review
+     Local: article_nimble-crm-review_20260809_180126.html
+     WordPress: https://equinoxen.com/nimble-crm-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260802_170222.json
+   🧹 Removed old article: article_nimble-crm-review_20260809_180126.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-09 21:00:13
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260809_170233.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   FreshBooks Review 2026: Is This Accounting Software Worth It for Small Businesses
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: nimble crm
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+
+✍️  Generating article: Surfer SEO Review 2026: Does This Content Optimization Tool Deliver ROI
+   Keyword: surfer seo review
+   Type: review
+   ✅ Article generated (10639 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_surfer-seo-review_20260809_210119.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Surfer SEO Review 2026: Does This Content Optimization Tool Deliver ROI
+   ✅ Landscape image generated (62KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1156
+   🔗 URL: https://equinoxen.com/surfer-seo-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: surfer seo review
+   📝 Tracked: Surfer SEO Review 2026: Does This Content Optimization Tool Deliver ROI
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1494 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/surfer-seo-review-2026-does-this-content-optimization-tool-deliver-roi-4137
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/surfer-seo-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/surfer-seo-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Surfer SEO Review 2026: Does This Content Optimization Tool Deliver ROI
+     Keyword: surfer seo review
+     Local: article_surfer-seo-review_20260809_210119.html
+     WordPress: https://equinoxen.com/surfer-seo-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_surfer-seo-review_20260809_210119.html
+   ✅ Cleanup complete
