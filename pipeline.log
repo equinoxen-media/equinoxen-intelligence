@@ -8482,3 +8482,2218 @@
    2. Verify affiliate links are working
    🧹 Removed old article: article_surfer-seo-review_20260809_210119.html
    ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-10 15:00:15
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260809_170233.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   FreshBooks Review 2026: Is This Accounting Software Worth It for Small Businesses
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: nimble crm
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: surfer seo
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 0 of 1 target articles:
+
+⚠️  Only published 0 of 1 — run intelligence.py for fresh opportunities
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-10 18:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260810_170253.json
+
+📋 Found 6 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 6)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best CRM Software for Construction Companies in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 6)
+============================================================
+
+✍️  Generating article: Close CRM vs Copper: Best CRM for Sales Teams 2026
+   Keyword: close crm vs copper
+   Type: comparison
+   ✅ Article generated (18053 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_close-crm-vs-copper_20260810_180153.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Close CRM vs Copper: Best CRM for Sales Teams 2026
+   ✅ Landscape image generated (138KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1159
+   🔗 URL: https://equinoxen.com/close-crm-vs-copper/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: close crm vs copper
+   📝 Tracked: Close CRM vs Copper: Best CRM for Sales Teams 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1467 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/close-crm-vs-copper-best-crm-for-sales-teams-2026-5hc9
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/close-crm-vs-copper/
+   ✅ Google Indexing API submitted: https://equinoxen.com/close-crm-vs-copper/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Close CRM vs Copper: Best CRM for Sales Teams 2026
+     Keyword: close crm vs copper
+     Local: article_close-crm-vs-copper_20260810_180153.html
+     WordPress: https://equinoxen.com/close-crm-vs-copper/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260803_170250.json
+   🧹 Removed old article: article_close-crm-vs-copper_20260810_180153.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-10 21:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260810_170253.json
+
+📋 Found 6 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 6)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best CRM Software for Construction Companies in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 6)
+============================================================
+⏭️  Skipping — comparison already covered: close crm+copper
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 6)
+============================================================
+
+✍️  Generating article: Frase Review 2026: AI Content Optimization Worth the Price
+   Keyword: frase review
+   Type: review
+   ✅ Article generated (10532 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_frase-review_20260810_210119.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Frase Review 2026: AI Content Optimization Worth the Price
+   ✅ Landscape image generated (70KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1162
+   🔗 URL: https://equinoxen.com/frase-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: frase review
+   📝 Tracked: Frase Review 2026: AI Content Optimization Worth the Price
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1296 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/frase-review-2026-ai-content-optimization-worth-the-price-pk
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/frase-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/frase-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Frase Review 2026: AI Content Optimization Worth the Price
+     Keyword: frase review
+     Local: article_frase-review_20260810_210119.html
+     WordPress: https://equinoxen.com/frase-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_frase-review_20260810_210119.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-11 15:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260810_170253.json
+
+📋 Found 6 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 6)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Best CRM Software for Construction Companies in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 6)
+============================================================
+⏭️  Skipping — comparison already covered: close crm+copper
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 6)
+============================================================
+⏭️  Skipping — comparison already covered: frase
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 6)
+============================================================
+
+✍️  Generating article: Patriot Accounting Review 2026: Small Business Payroll Solution
+   Keyword: patriot accounting review
+   Type: review
+   ✅ Article generated (8979 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_patriot-accounting-review_20260811_150107.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Patriot Accounting Review 2026: Small Business Payroll Solution
+   ✅ Landscape image generated (137KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1170
+   🔗 URL: https://equinoxen.com/patriot-accounting-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: patriot accounting review
+   📝 Tracked: Patriot Accounting Review 2026: Small Business Payroll Solution
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1538 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/patriot-accounting-review-2026-small-business-payroll-solution-2d73
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/patriot-accounting-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/patriot-accounting-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Patriot Accounting Review 2026: Small Business Payroll Solution
+     Keyword: patriot accounting review
+     Local: article_patriot-accounting-review_20260811_150107.html
+     WordPress: https://equinoxen.com/patriot-accounting-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_patriot-accounting-review_20260811_150107.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-11 18:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260811_170314.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+
+✍️  Generating article: Teamwork vs Notion for Project Management in 2026
+   Keyword: teamwork vs notion
+   Type: comparison
+   ✅ Article generated (17244 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_teamwork-vs-notion-project-management_20260811_180149.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Teamwork vs Notion for Project Management in 2026
+   ✅ Landscape image generated (70KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1173
+   🔗 URL: https://equinoxen.com/teamwork-vs-notion-project-management/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: teamwork vs notion
+   📝 Tracked: Teamwork vs Notion for Project Management in 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1584 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/teamwork-vs-notion-for-project-management-in-2026-1beb
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/teamwork-vs-notion-project-management/
+   ✅ Google Indexing API submitted: https://equinoxen.com/teamwork-vs-notion-project-management/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Teamwork vs Notion for Project Management in 2026
+     Keyword: teamwork vs notion
+     Local: article_teamwork-vs-notion-project-management_20260811_180149.html
+     WordPress: https://equinoxen.com/teamwork-vs-notion-project-management/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260804_170259.json
+   🧹 Removed old article: article_teamwork-vs-notion-project-management_20260811_180149.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-11 21:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260811_170314.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: notion+teamwork
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+
+✍️  Generating article: Basecamp vs ClickUp: Which Project Management Tool is Better in 2026
+   Keyword: basecamp vs clickup
+   Type: comparison
+   ✅ Article generated (22686 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_basecamp-vs-clickup_20260811_210223.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Basecamp vs ClickUp: Which Project Management Tool is Better in 2026
+   ✅ Landscape image generated (101KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1176
+   🔗 URL: https://equinoxen.com/basecamp-vs-clickup/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: basecamp vs clickup
+   📝 Tracked: Basecamp vs ClickUp: Which Project Management Tool is Better in 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1637 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/basecamp-vs-clickup-which-project-management-tool-is-better-in-2026-1eaj
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/basecamp-vs-clickup/
+   ✅ Google Indexing API submitted: https://equinoxen.com/basecamp-vs-clickup/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Basecamp vs ClickUp: Which Project Management Tool is Better in 2026
+     Keyword: basecamp vs clickup
+     Local: article_basecamp-vs-clickup_20260811_210223.html
+     WordPress: https://equinoxen.com/basecamp-vs-clickup/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_basecamp-vs-clickup_20260811_210223.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-12 15:00:13
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260811_170314.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: notion+teamwork
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: basecamp+clickup
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+
+✍️  Generating article: ActiveCampaign vs HubSpot for Email Marketing in 2026
+   Keyword: activecampaign vs hubspot
+   Type: comparison
+   ✅ Article generated (17859 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_activecampaign-vs-hubspot-email-marketing_20260812_150156.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: ActiveCampaign vs HubSpot for Email Marketing in 2026
+   ✅ Landscape image generated (74KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1179
+   🔗 URL: https://equinoxen.com/activecampaign-vs-hubspot-email-marketing/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: activecampaign vs hubspot
+   📝 Tracked: ActiveCampaign vs HubSpot for Email Marketing in 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1619 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/activecampaign-vs-hubspot-for-email-marketing-in-2026-40na
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/activecampaign-vs-hubspot-email-marketing/
+   ✅ Google Indexing API submitted: https://equinoxen.com/activecampaign-vs-hubspot-email-marketing/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 ActiveCampaign vs HubSpot for Email Marketing in 2026
+     Keyword: activecampaign vs hubspot
+     Local: article_activecampaign-vs-hubspot-email-marketing_20260812_150156.html
+     WordPress: https://equinoxen.com/activecampaign-vs-hubspot-email-marketing/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_activecampaign-vs-hubspot-email-marketing_20260812_150156.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-12 18:00:15
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260812_170253.json
+
+📋 Found 6 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 6)
+============================================================
+
+✍️  Generating article: Moz vs Serpstat: Which SEO Tool is Better in 2026
+   Keyword: moz vs serpstat
+   Type: comparison
+   ✅ Article generated (18176 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_moz-vs-serpstat_20260812_180155.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Moz vs Serpstat: Which SEO Tool is Better in 2026
+   ✅ Landscape image generated (87KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1182
+   🔗 URL: https://equinoxen.com/moz-vs-serpstat/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: moz vs serpstat
+   📝 Tracked: Moz vs Serpstat: Which SEO Tool is Better in 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1474 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/moz-vs-serpstat-which-seo-tool-is-better-in-2026-3dh5
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/moz-vs-serpstat/
+   ✅ Google Indexing API submitted: https://equinoxen.com/moz-vs-serpstat/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Moz vs Serpstat: Which SEO Tool is Better in 2026
+     Keyword: moz vs serpstat
+     Local: article_moz-vs-serpstat_20260812_180155.html
+     WordPress: https://equinoxen.com/moz-vs-serpstat/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260805_170237.json
+   🧹 Removed old article: article_moz-vs-serpstat_20260812_180155.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-12 21:00:23
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260812_170253.json
+
+📋 Found 6 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 6)
+============================================================
+⏭️  Skipping — comparison already covered: moz+serpstat
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 6)
+============================================================
+
+✍️  Generating article: Hive vs Teamwork: Project Management Showdown 2026
+   Keyword: hive vs teamwork
+   Type: comparison
+   ✅ Article generated (17814 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_hive-vs-teamwork-project-management_20260812_210201.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Hive vs Teamwork: Project Management Showdown 2026
+   ✅ Landscape image generated (83KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1185
+   🔗 URL: https://equinoxen.com/hive-vs-teamwork-project-management/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: hive vs teamwork
+   📝 Tracked: Hive vs Teamwork: Project Management Showdown 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1388 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/hive-vs-teamwork-project-management-showdown-2026-2a0c
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/hive-vs-teamwork-project-management/
+   ✅ Google Indexing API submitted: https://equinoxen.com/hive-vs-teamwork-project-management/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Hive vs Teamwork: Project Management Showdown 2026
+     Keyword: hive vs teamwork
+     Local: article_hive-vs-teamwork-project-management_20260812_210201.html
+     WordPress: https://equinoxen.com/hive-vs-teamwork-project-management/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_hive-vs-teamwork-project-management_20260812_210201.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-13 15:00:10
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260812_170253.json
+
+📋 Found 6 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 6)
+============================================================
+⏭️  Skipping — comparison already covered: moz+serpstat
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 6)
+============================================================
+⏭️  Skipping — comparison already covered: hive+teamwork
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 6)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Writesonic Review 2026: AI Writing Tool Testing and Results
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 6)
+============================================================
+
+✍️  Generating article: Keap vs Close CRM: Which CRM is Right for You in 2026
+   Keyword: keap vs close crm
+   Type: comparison
+   ✅ Article generated (18774 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_keap-vs-close-crm_20260813_150158.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Keap vs Close CRM: Which CRM is Right for You in 2026
+   ✅ Landscape image generated (83KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1189
+   🔗 URL: https://equinoxen.com/keap-vs-close-crm/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: keap vs close crm
+   📝 Tracked: Keap vs Close CRM: Which CRM is Right for You in 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1286 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/keap-vs-close-crm-which-crm-is-right-for-you-in-2026-1pal
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/keap-vs-close-crm/
+   ✅ Google Indexing API submitted: https://equinoxen.com/keap-vs-close-crm/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Keap vs Close CRM: Which CRM is Right for You in 2026
+     Keyword: keap vs close crm
+     Local: article_keap-vs-close-crm_20260813_150158.html
+     WordPress: https://equinoxen.com/keap-vs-close-crm/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_keap-vs-close-crm_20260813_150158.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-13 18:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260813_170231.json
+
+📋 Found 5 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 5)
+============================================================
+
+✍️  Generating article: Unbounce vs Instapage: Which Landing Page Builder Wins in 2026
+   Keyword: unbounce vs instapage
+   Type: comparison
+   ✅ Article generated (16529 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_unbounce-vs-instapage_20260813_180141.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Unbounce vs Instapage: Which Landing Page Builder Wins in 2026
+   ✅ Landscape image generated (101KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1192
+   🔗 URL: https://equinoxen.com/unbounce-vs-instapage/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: unbounce vs instapage
+   📝 Tracked: Unbounce vs Instapage: Which Landing Page Builder Wins in 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1578 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/unbounce-vs-instapage-which-landing-page-builder-wins-in-2026-2kmi
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/unbounce-vs-instapage/
+   ✅ Google Indexing API submitted: https://equinoxen.com/unbounce-vs-instapage/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Unbounce vs Instapage: Which Landing Page Builder Wins in 2026
+     Keyword: unbounce vs instapage
+     Local: article_unbounce-vs-instapage_20260813_180141.html
+     WordPress: https://equinoxen.com/unbounce-vs-instapage/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260806_170153.json
+   🧹 Removed old article: article_unbounce-vs-instapage_20260813_180141.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-13 21:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260813_170231.json
+
+📋 Found 5 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: instapage+unbounce
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 5)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Writesonic Review: AI Writing Tool Testing and Pricing 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: instapage+unbounce
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 5)
+============================================================
+
+✍️  Generating article: Zoho CRM vs Salesforce: Pricing and Features Compared 2026
+   Keyword: zoho crm vs salesforce
+   Type: comparison
+   ✅ Article generated (17621 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_zoho-crm-vs-salesforce_20260813_210149.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Zoho CRM vs Salesforce: Pricing and Features Compared 2026
+   ✅ Landscape image generated (80KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1195
+   🔗 URL: https://equinoxen.com/zoho-crm-vs-salesforce/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: zoho crm vs salesforce
+   📝 Tracked: Zoho CRM vs Salesforce: Pricing and Features Compared 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1478 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/zoho-crm-vs-salesforce-pricing-and-features-compared-2026-43a8
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/zoho-crm-vs-salesforce/
+   ✅ Google Indexing API submitted: https://equinoxen.com/zoho-crm-vs-salesforce/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Zoho CRM vs Salesforce: Pricing and Features Compared 2026
+     Keyword: zoho crm vs salesforce
+     Local: article_zoho-crm-vs-salesforce_20260813_210149.html
+     WordPress: https://equinoxen.com/zoho-crm-vs-salesforce/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_zapier-vs-ifttt-best-automation-tool-business-2026_20260527_150218.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-14 15:00:14
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260813_170231.json
+
+📋 Found 5 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: instapage+unbounce
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 5)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Writesonic Review: AI Writing Tool Testing and Pricing 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: instapage+unbounce
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: salesforce+zoho
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 5 of 5)
+============================================================
+
+✍️  Generating article: SpyFu vs Ahrefs: Best SEO Competitive Analysis Tool 2026
+   Keyword: spyfu vs ahrefs
+   Type: comparison
+   ✅ Article generated (16959 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_spyfu-vs-ahrefs-seo-competitive-analysis-tool_20260814_150201.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: SpyFu vs Ahrefs: Best SEO Competitive Analysis Tool 2026
+   ✅ Landscape image generated (100KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1198
+   🔗 URL: https://equinoxen.com/spyfu-vs-ahrefs-seo-competitive-analysis-tool/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: spyfu vs ahrefs
+   📝 Tracked: SpyFu vs Ahrefs: Best SEO Competitive Analysis Tool 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1391 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/spyfu-vs-ahrefs-best-seo-competitive-analysis-tool-2026-22d2
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/spyfu-vs-ahrefs-seo-competitive-analysis-tool/
+   ✅ Google Indexing API submitted: https://equinoxen.com/spyfu-vs-ahrefs-seo-competitive-analysis-tool/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 SpyFu vs Ahrefs: Best SEO Competitive Analysis Tool 2026
+     Keyword: spyfu vs ahrefs
+     Local: article_spyfu-vs-ahrefs-seo-competitive-analysis-tool_20260814_150201.html
+     WordPress: https://equinoxen.com/spyfu-vs-ahrefs-seo-competitive-analysis-tool/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_spyfu-vs-ahrefs-seo-competitive-analysis-tool_20260814_150201.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-14 18:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260814_170305.json
+
+📋 Found 4 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 4)
+============================================================
+
+✍️  Generating article: Constant Contact vs Drip 2026: Which Email Platform Wins for Small Business
+   Keyword: constant contact vs drip
+   Type: comparison
+   ✅ Article generated (18470 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_constant-contact-vs-drip_20260814_180146.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Constant Contact vs Drip 2026: Which Email Platform Wins for Small Business
+   ✅ Landscape image generated (103KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1201
+   🔗 URL: https://equinoxen.com/constant-contact-vs-drip/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: constant contact vs drip
+   📝 Tracked: Constant Contact vs Drip 2026: Which Email Platform Wins for Small Business
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1472 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/constant-contact-vs-drip-2026-which-email-platform-wins-for-small-business-2mla
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/constant-contact-vs-drip/
+   ✅ Google Indexing API submitted: https://equinoxen.com/constant-contact-vs-drip/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Constant Contact vs Drip 2026: Which Email Platform Wins for Small Business
+     Keyword: constant contact vs drip
+     Local: article_constant-contact-vs-drip_20260814_180146.html
+     WordPress: https://equinoxen.com/constant-contact-vs-drip/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260807_170147.json
+   🧹 Removed old article: article_constant-contact-vs-drip_20260814_180146.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-14 21:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260814_170305.json
+
+📋 Found 4 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 4)
+============================================================
+⏭️  Skipping — comparison already covered: constant contact+drip
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 4)
+============================================================
+
+✍️  Generating article: Asana vs Todoist 2026: Project Management Showdown
+   Keyword: asana vs todoist
+   Type: comparison
+   ✅ Article generated (17085 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_asana-vs-todoist_20260814_210156.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Asana vs Todoist 2026: Project Management Showdown
+   ✅ Landscape image generated (82KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1204
+   🔗 URL: https://equinoxen.com/asana-vs-todoist/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: asana vs todoist
+   📝 Tracked: Asana vs Todoist 2026: Project Management Showdown
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1415 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/asana-vs-todoist-2026-project-management-showdown-2l6m
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/asana-vs-todoist/
+   ✅ Google Indexing API submitted: https://equinoxen.com/asana-vs-todoist/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Asana vs Todoist 2026: Project Management Showdown
+     Keyword: asana vs todoist
+     Local: article_asana-vs-todoist_20260814_210156.html
+     WordPress: https://equinoxen.com/asana-vs-todoist/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_asana-vs-todoist_20260814_210156.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-15 15:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260814_170305.json
+
+📋 Found 4 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 4)
+============================================================
+⏭️  Skipping — comparison already covered: constant contact+drip
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 4)
+============================================================
+⏭️  Skipping — comparison already covered: asana+todoist
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 4)
+============================================================
+
+✍️  Generating article: Xero vs QuickBooks 2026: Which Accounting Software for Small Business
+   Keyword: xero vs quickbooks
+   Type: comparison
+   ✅ Article generated (15796 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_xero-vs-quickbooks_20260815_150136.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Xero vs QuickBooks 2026: Which Accounting Software for Small Business
+   ✅ Landscape image generated (87KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1207
+   🔗 URL: https://equinoxen.com/xero-vs-quickbooks/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: xero vs quickbooks
+   📝 Tracked: Xero vs QuickBooks 2026: Which Accounting Software for Small Business
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1508 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/xero-vs-quickbooks-2026-which-accounting-software-for-small-business-2e3n
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/xero-vs-quickbooks/
+   ✅ Google Indexing API submitted: https://equinoxen.com/xero-vs-quickbooks/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Xero vs QuickBooks 2026: Which Accounting Software for Small Business
+     Keyword: xero vs quickbooks
+     Local: article_xero-vs-quickbooks_20260815_150136.html
+     WordPress: https://equinoxen.com/xero-vs-quickbooks/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_xero-vs-quickbooks_20260815_150136.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-15 18:00:12
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260815_170220.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+
+✍️  Generating article: Monday.com Review 2026: Features, Pricing and Real User Experience
+   Keyword: monday project management software review
+   Type: review
+   ✅ Article generated (11021 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_monday-project-management-software-review_20260815_180122.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Monday.com Review 2026: Features, Pricing and Real User Experience
+   ✅ Landscape image generated (73KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1210
+   🔗 URL: https://equinoxen.com/monday-project-management-software-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: monday project management software review
+   📝 Tracked: Monday.com Review 2026: Features, Pricing and Real User Experience
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1530 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/mondaycom-review-2026-features-pricing-and-real-user-experience-1hcl
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/monday-project-management-software-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/monday-project-management-software-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Monday.com Review 2026: Features, Pricing and Real User Experience
+     Keyword: monday project management software review
+     Local: article_monday-project-management-software-review_20260815_180122.html
+     WordPress: https://equinoxen.com/monday-project-management-software-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260808_170149.json
+   🧹 Removed old article: article_monday-project-management-software-review_20260815_180122.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-15 21:00:10
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260815_170220.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: monday project management software
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — already published (title match):
+   Best Project Management Software for Construction in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+
+✍️  Generating article: ActiveCampaign Review 2026: Email Marketing Automation Platform Tested
+   Keyword: activecampaign review
+   Type: review
+   ✅ Article generated (13154 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_activecampaign-review_20260815_210123.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: ActiveCampaign Review 2026: Email Marketing Automation Platform Tested
+   ✅ Landscape image generated (63KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1213
+   🔗 URL: https://equinoxen.com/activecampaign-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: activecampaign review
+   📝 Tracked: ActiveCampaign Review 2026: Email Marketing Automation Platform Tested
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1537 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/activecampaign-review-2026-email-marketing-automation-platform-tested-1ph6
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/activecampaign-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/activecampaign-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 ActiveCampaign Review 2026: Email Marketing Automation Platform Tested
+     Keyword: activecampaign review
+     Local: article_activecampaign-review_20260815_210123.html
+     WordPress: https://equinoxen.com/activecampaign-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_activecampaign-review_20260815_210123.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-16 15:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260815_170220.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: monday project management software
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — already published (title match):
+   Best Project Management Software for Construction in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: activecampaign
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 7)
+============================================================
+
+✍️  Generating article: Semrush vs Mangools 2026: Which SEO Tool Offers Better Value
+   Keyword: semrush vs mangools
+   Type: comparison
+   ✅ Article generated (15684 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_semrush-vs-mangools_20260816_150135.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Semrush vs Mangools 2026: Which SEO Tool Offers Better Value
+   ✅ Landscape image generated (79KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1216
+   🔗 URL: https://equinoxen.com/semrush-vs-mangools/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: semrush vs mangools
+   📝 Tracked: Semrush vs Mangools 2026: Which SEO Tool Offers Better Value
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1366 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/semrush-vs-mangools-2026-which-seo-tool-offers-better-value-56m3
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/semrush-vs-mangools/
+   ✅ Google Indexing API submitted: https://equinoxen.com/semrush-vs-mangools/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Semrush vs Mangools 2026: Which SEO Tool Offers Better Value
+     Keyword: semrush vs mangools
+     Local: article_semrush-vs-mangools_20260816_150135.html
+     WordPress: https://equinoxen.com/semrush-vs-mangools/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_semrush-vs-mangools_20260816_150135.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-16 18:00:14
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260816_170236.json
+❌ No opportunities found in intelligence report
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-16 21:00:13
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260816_170236.json
+❌ No opportunities found in intelligence report
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-17 15:00:18
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260816_170236.json
+❌ No opportunities found in intelligence report
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-17 18:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260817_170245.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+
+✍️  Generating article: Moz Review 2026: Is This SEO Tool Still Worth It?
+   Keyword: moz review
+   Type: review
+   ✅ Article generated (10634 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_moz-review_20260817_180120.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Moz Review 2026: Is This SEO Tool Still Worth It?
+   ✅ Landscape image generated (72KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1219
+   🔗 URL: https://equinoxen.com/moz-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: moz review
+   📝 Tracked: Moz Review 2026: Is This SEO Tool Still Worth It?
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1449 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/moz-review-2026-is-this-seo-tool-still-worth-it-4hn
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/moz-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/moz-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Moz Review 2026: Is This SEO Tool Still Worth It?
+     Keyword: moz review
+     Local: article_moz-review_20260817_180120.html
+     WordPress: https://equinoxen.com/moz-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260809_170233.json
+   🧹 Removed old report: intelligence_report_20260810_170253.json
+   🧹 Removed old article: article_moz-review_20260817_180120.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-17 21:00:14
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260817_170245.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: moz
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Ubersuggest Review 2026: Neil Patel's Budget SEO Tool Tested
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+
+✍️  Generating article: Sage Review 2026: Accounting Software for Growing Businesses
+   Keyword: sage review
+   Type: review
+   ✅ Article generated (9748 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_sage-review_20260817_210115.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Sage Review 2026: Accounting Software for Growing Businesses
+   ✅ Landscape image generated (98KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1222
+   🔗 URL: https://equinoxen.com/sage-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: sage review
+   📝 Tracked: Sage Review 2026: Accounting Software for Growing Businesses
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1520 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/sage-review-2026-accounting-software-for-growing-businesses-co0
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/sage-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/sage-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Sage Review 2026: Accounting Software for Growing Businesses
+     Keyword: sage review
+     Local: article_sage-review_20260817_210115.html
+     WordPress: https://equinoxen.com/sage-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_sage-review_20260817_210115.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-18 15:00:14
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260817_170245.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: moz
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Ubersuggest Review 2026: Neil Patel's Budget SEO Tool Tested
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: sage
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 0 of 1 target articles:
+
+⚠️  Only published 0 of 1 — run intelligence.py for fresh opportunities
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-18 18:00:19
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260818_170238.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+
+✍️  Generating article: Teamwork vs Asana: Which Project Management Tool is Better in 2026
+   Keyword: teamwork vs asana
+   Type: comparison
+   ✅ Article generated (18875 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_teamwork-vs-asana_20260818_180208.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Teamwork vs Asana: Which Project Management Tool is Better in 2026
+   ✅ Landscape image generated (81KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1225
+   🔗 URL: https://equinoxen.com/teamwork-vs-asana/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: teamwork vs asana
+   📝 Tracked: Teamwork vs Asana: Which Project Management Tool is Better in 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1339 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/teamwork-vs-asana-which-project-management-tool-is-better-in-2026-3f09
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/teamwork-vs-asana/
+   ✅ Google Indexing API submitted: https://equinoxen.com/teamwork-vs-asana/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Teamwork vs Asana: Which Project Management Tool is Better in 2026
+     Keyword: teamwork vs asana
+     Local: article_teamwork-vs-asana_20260818_180208.html
+     WordPress: https://equinoxen.com/teamwork-vs-asana/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260811_170314.json
+   🧹 Removed old article: article_teamwork-vs-asana_20260818_180208.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-18 21:00:19
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260818_170238.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: asana+teamwork
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+
+✍️  Generating article: ClickUp vs Wrike: 2026 Comparison for Growing Teams
+   Keyword: clickup vs wrike
+   Type: comparison
+   ✅ Article generated (19274 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_clickup-vs-wrike-comparison-growing-teams_20260818_210208.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: ClickUp vs Wrike: 2026 Comparison for Growing Teams
+   ✅ Landscape image generated (92KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1228
+   🔗 URL: https://equinoxen.com/clickup-vs-wrike-comparison-growing-teams/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: clickup vs wrike
+   📝 Tracked: ClickUp vs Wrike: 2026 Comparison for Growing Teams
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1605 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/clickup-vs-wrike-2026-comparison-for-growing-teams-4koa
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/clickup-vs-wrike-comparison-growing-teams/
+   ✅ Google Indexing API submitted: https://equinoxen.com/clickup-vs-wrike-comparison-growing-teams/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 ClickUp vs Wrike: 2026 Comparison for Growing Teams
+     Keyword: clickup vs wrike
+     Local: article_clickup-vs-wrike-comparison-growing-teams_20260818_210208.html
+     WordPress: https://equinoxen.com/clickup-vs-wrike-comparison-growing-teams/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_clickup-vs-wrike-comparison-growing-teams_20260818_210208.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-19 15:00:21
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260818_170238.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: asana+teamwork
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: clickup+wrike
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+⏭️  Skipping — already published (title match):
+   Best Project Management Software for Construction in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 7)
+============================================================
+
+✍️  Generating article: Brevo vs Mailchimp: Email Marketing Showdown for 2026
+   Keyword: brevo vs mailchimp
+   Type: comparison
+   ✅ Article generated (19061 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_brevo-vs-mailchimp_20260819_150214.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Brevo vs Mailchimp: Email Marketing Showdown for 2026
+   ✅ Landscape image generated (66KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1231
+   🔗 URL: https://equinoxen.com/brevo-vs-mailchimp/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: brevo vs mailchimp
+   📝 Tracked: Brevo vs Mailchimp: Email Marketing Showdown for 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1405 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/brevo-vs-mailchimp-email-marketing-showdown-for-2026-5gni
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/brevo-vs-mailchimp/
+   ✅ Google Indexing API submitted: https://equinoxen.com/brevo-vs-mailchimp/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Brevo vs Mailchimp: Email Marketing Showdown for 2026
+     Keyword: brevo vs mailchimp
+     Local: article_brevo-vs-mailchimp_20260819_150214.html
+     WordPress: https://equinoxen.com/brevo-vs-mailchimp/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_brevo-vs-mailchimp_20260819_150214.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-19 18:00:16
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260819_170303.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+
+✍️  Generating article: Integrately vs n8n: Which Automation Tool is Better in 2026
+   Keyword: integrately vs n8n
+   Type: comparison
+   ✅ Article generated (17483 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_integrately-vs-n8n_20260819_180152.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Integrately vs n8n: Which Automation Tool is Better in 2026
+   ✅ Landscape image generated (72KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1234
+   🔗 URL: https://equinoxen.com/integrately-vs-n8n/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: integrately vs n8n
+   📝 Tracked: Integrately vs n8n: Which Automation Tool is Better in 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1459 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/integrately-vs-n8n-which-automation-tool-is-better-in-2026-43g
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/integrately-vs-n8n/
+   ✅ Google Indexing API submitted: https://equinoxen.com/integrately-vs-n8n/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Integrately vs n8n: Which Automation Tool is Better in 2026
+     Keyword: integrately vs n8n
+     Local: article_integrately-vs-n8n_20260819_180152.html
+     WordPress: https://equinoxen.com/integrately-vs-n8n/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260812_170253.json
+   🧹 Removed old article: article_integrately-vs-n8n_20260819_180152.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-19 21:00:13
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260819_170303.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: integrately+n8n
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+
+✍️  Generating article: FreshBooks vs Sage: Accounting Software Compared for 2026
+   Keyword: freshbooks vs sage
+   Type: comparison
+   ✅ Article generated (17897 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_freshbooks-vs-sage_20260819_210155.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: FreshBooks vs Sage: Accounting Software Compared for 2026
+   ✅ Landscape image generated (113KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1237
+   🔗 URL: https://equinoxen.com/freshbooks-vs-sage/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: freshbooks vs sage
+   📝 Tracked: FreshBooks vs Sage: Accounting Software Compared for 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1537 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/freshbooks-vs-sage-accounting-software-compared-for-2026-44l7
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/freshbooks-vs-sage/
+   ✅ Google Indexing API submitted: https://equinoxen.com/freshbooks-vs-sage/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 FreshBooks vs Sage: Accounting Software Compared for 2026
+     Keyword: freshbooks vs sage
+     Local: article_freshbooks-vs-sage_20260819_210155.html
+     WordPress: https://equinoxen.com/freshbooks-vs-sage/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_freshbooks-vs-sage_20260819_210155.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-20 15:00:14
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260819_170303.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: integrately+n8n
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: freshbooks+sage
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+
+✍️  Generating article: Basecamp vs Wrike: Project Management Software Review 2026
+   Keyword: basecamp vs wrike
+   Type: comparison
+   ✅ Article generated (19311 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_basecamp-vs-wrike-project-management-review_20260820_150219.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Basecamp vs Wrike: Project Management Software Review 2026
+   ✅ Landscape image generated (94KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1242
+   🔗 URL: https://equinoxen.com/basecamp-vs-wrike-project-management-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: basecamp vs wrike
+   📝 Tracked: Basecamp vs Wrike: Project Management Software Review 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1625 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/basecamp-vs-wrike-project-management-software-review-2026-4f27
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/basecamp-vs-wrike-project-management-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/basecamp-vs-wrike-project-management-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Basecamp vs Wrike: Project Management Software Review 2026
+     Keyword: basecamp vs wrike
+     Local: article_basecamp-vs-wrike-project-management-review_20260820_150219.html
+     WordPress: https://equinoxen.com/basecamp-vs-wrike-project-management-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_basecamp-vs-wrike-project-management-review_20260820_150219.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-20 18:00:11
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260820_170340.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+
+✍️  Generating article: Leadpages vs Unbounce: Which Landing Page Builder Wins in 2026
+   Keyword: leadpages vs unbounce
+   Type: comparison
+   ✅ Article generated (16277 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_leadpages-vs-unbounce_20260820_180143.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Leadpages vs Unbounce: Which Landing Page Builder Wins in 2026
+   ✅ Landscape image generated (113KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1245
+   🔗 URL: https://equinoxen.com/leadpages-vs-unbounce/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: leadpages vs unbounce
+   📝 Tracked: Leadpages vs Unbounce: Which Landing Page Builder Wins in 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1597 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/leadpages-vs-unbounce-which-landing-page-builder-wins-in-2026-3ime
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/leadpages-vs-unbounce/
+   ✅ Google Indexing API submitted: https://equinoxen.com/leadpages-vs-unbounce/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Leadpages vs Unbounce: Which Landing Page Builder Wins in 2026
+     Keyword: leadpages vs unbounce
+     Local: article_leadpages-vs-unbounce_20260820_180143.html
+     WordPress: https://equinoxen.com/leadpages-vs-unbounce/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260813_170231.json
+   🧹 Removed old article: article_leadpages-vs-unbounce_20260820_180143.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-20 21:00:16
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260820_170340.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: leadpages  unbounce
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+
+✍️  Generating article: Kartra Review 2026: Is This All-in-One Marketing Platform Worth It
+   Keyword: kartra review
+   Type: review
+   ✅ Article generated (10531 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_kartra-review_20260820_210124.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Kartra Review 2026: Is This All-in-One Marketing Platform Worth It
+   ✅ Landscape image generated (96KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1248
+   🔗 URL: https://equinoxen.com/kartra-review/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: kartra review
+   📝 Tracked: Kartra Review 2026: Is This All-in-One Marketing Platform Worth It
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1545 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/kartra-review-2026-is-this-all-in-one-marketing-platform-worth-it-466f
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/kartra-review/
+   ✅ Google Indexing API submitted: https://equinoxen.com/kartra-review/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Kartra Review 2026: Is This All-in-One Marketing Platform Worth It
+     Keyword: kartra review
+     Local: article_kartra-review_20260820_210124.html
+     WordPress: https://equinoxen.com/kartra-review/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_kartra-review_20260820_210124.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-21 15:00:13
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260820_170340.json
+
+📋 Found 7 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: leadpages  unbounce
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 7)
+============================================================
+⏭️  Skipping — comparison already covered: kartra
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 7)
+============================================================
+
+✍️  Generating article: Mailchimp vs ActiveCampaign: Best Email Marketing Platform for 2026
+   Keyword: mailchimp vs activecampaign
+   Type: comparison
+   ✅ Article generated (19865 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_mailchimp-vs-activecampaign_20260821_150203.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Mailchimp vs ActiveCampaign: Best Email Marketing Platform for 2026
+   ✅ Landscape image generated (93KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1253
+   🔗 URL: https://equinoxen.com/mailchimp-vs-activecampaign/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: mailchimp vs activecampaign
+   📝 Tracked: Mailchimp vs ActiveCampaign: Best Email Marketing Platform for 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1592 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/mailchimp-vs-activecampaign-best-email-marketing-platform-for-2026-133h
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/mailchimp-vs-activecampaign/
+   ✅ Google Indexing API submitted: https://equinoxen.com/mailchimp-vs-activecampaign/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Mailchimp vs ActiveCampaign: Best Email Marketing Platform for 2026
+     Keyword: mailchimp vs activecampaign
+     Local: article_mailchimp-vs-activecampaign_20260821_150203.html
+     WordPress: https://equinoxen.com/mailchimp-vs-activecampaign/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_mailchimp-vs-activecampaign_20260821_150203.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-21 18:00:19
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260821_170244.json
+
+📋 Found 5 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 5)
+============================================================
+
+✍️  Generating article: GetResponse vs Klaviyo: Which Email Platform Wins in 2026
+   Keyword: getresponse vs klaviyo
+   Type: comparison
+   ✅ Article generated (18565 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_getresponse-vs-klaviyo_20260821_180157.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: GetResponse vs Klaviyo: Which Email Platform Wins in 2026
+   ✅ Landscape image generated (74KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1256
+   🔗 URL: https://equinoxen.com/getresponse-vs-klaviyo/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: getresponse vs klaviyo
+   📝 Tracked: GetResponse vs Klaviyo: Which Email Platform Wins in 2026
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1424 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/getresponse-vs-klaviyo-which-email-platform-wins-in-2026-17da
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/getresponse-vs-klaviyo/
+   ✅ Google Indexing API submitted: https://equinoxen.com/getresponse-vs-klaviyo/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 GetResponse vs Klaviyo: Which Email Platform Wins in 2026
+     Keyword: getresponse vs klaviyo
+     Local: article_getresponse-vs-klaviyo_20260821_180157.html
+     WordPress: https://equinoxen.com/getresponse-vs-klaviyo/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260814_170305.json
+   🧹 Removed old article: article_getresponse-vs-klaviyo_20260821_180157.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-21 21:00:19
+  Target: 1 articles
+============================================================
+📂 Loading intelligence report: intelligence_report_20260821_170244.json
+
+📋 Found 5 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: getresponse+klaviyo
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 5)
+============================================================
+
+✍️  Generating article: SE Ranking vs Ubersuggest: Best Budget SEO Tool for 2026
+   Keyword: se ranking vs ubersuggest
+   Type: comparison
+   ✅ Article generated (17195 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_se-ranking-vs-ubersuggest_20260821_210147.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: SE Ranking vs Ubersuggest: Best Budget SEO Tool for 2026
+   ✅ Landscape image generated (84KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1259
+   🔗 URL: https://equinoxen.com/se-ranking-vs-ubersuggest/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: se ranking vs ubersuggest
+   📝 Tracked: SE Ranking vs Ubersuggest: Best Budget SEO Tool for 2026
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — already posted today
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1602 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/se-ranking-vs-ubersuggest-best-budget-seo-tool-for-2026-2k29
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/se-ranking-vs-ubersuggest/
+   ✅ Google Indexing API submitted: https://equinoxen.com/se-ranking-vs-ubersuggest/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 SE Ranking vs Ubersuggest: Best Budget SEO Tool for 2026
+     Keyword: se ranking vs ubersuggest
+     Local: article_se-ranking-vs-ubersuggest_20260821_210147.html
+     WordPress: https://equinoxen.com/se-ranking-vs-ubersuggest/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_se-ranking-vs-ubersuggest_20260821_210147.html
+   ✅ Cleanup complete

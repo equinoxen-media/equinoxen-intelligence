@@ -15,7 +15,9 @@ WP_URL = os.getenv("WORDPRESS_URL")
 WP_USER = os.getenv("WORDPRESS_USERNAME")
 WP_PASS = os.getenv("WORDPRESS_APP_PASSWORD")
 
-PINTEREST_ACCESS_TOKEN = os.getenv("PINTEREST_ACCESS_TOKEN")
+#PINTEREST_ACCESS_TOKEN = os.getenv("PINTEREST_ACCESS_TOKEN")
+PINTEREST_ACCESS_TOKEN = os.getenv("PINTEREST_SANDBOX_TOKEN")  # temporarily use sandbox token for testing DELETE
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
@@ -468,7 +470,8 @@ def post_to_pinterest(title, excerpt, post_url, board_id, image_url):
 
     try:
         response = requests.post(
-            "https://api.pinterest.com/v5/pins",
+#            "https://api.pinterest.com/v5/pins",
+            "https://api-sandbox.pinterest.com/v5/pins",
             headers=headers,
             json=pin_data,
         )
@@ -593,11 +596,11 @@ def run(identifier, programs=None):
         print("\n❌ Image upload failed — exiting")
         return False
 
-    # 8. Before posting to Pinterest, refresh the token
-    fresh_token = refresh_pinterest_token()
-    if fresh_token:
-        global PINTEREST_ACCESS_TOKEN
-        PINTEREST_ACCESS_TOKEN = fresh_token
+    # 8. Before posting to Pinterest, refresh the token    UNDELETE-or UNCOMMENT
+    #fresh_token = refresh_pinterest_token()
+    #if fresh_token:
+    #    global PINTEREST_ACCESS_TOKEN
+    #    PINTEREST_ACCESS_TOKEN = fresh_token
 
     # 9. Post to Pinterest
     success = post_to_pinterest(title, excerpt, link, board_id, image_url)

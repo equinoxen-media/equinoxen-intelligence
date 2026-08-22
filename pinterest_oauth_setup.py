@@ -127,6 +127,60 @@ PINTEREST_REFRESH_TOKEN={refresh_token}
     """
 
 
+@app.route("/pinterest/refresh")
+def refresh():
+    """
+    Demo route: uses the refresh_token obtained during /pinterest/callback
+    to get a new access_token. Pass it in as a query param for this demo:
+    /pinterest/refresh?refresh_token=xxx
+    (In production, content_pipeline.py reads this from .env instead.)
+    """
+    refresh_token = request.args.get("refresh_token") or os.getenv("PINTEREST_REFRESH_TOKEN")
+    if not refresh_token:
+        return "No refresh_token provided or found in environment.", 400
+
+    credentials = f"{PINTEREST_CLIENT_ID}:{PINTEREST_CLIENT_SECRET}"
+    encoded_creds = base64.b64encode(credentials.encode()).decode()
+
+    resp = requests.post(
+        "https://api.pinterest.com/v5/oauth/token",
+        headers={
+            "Authorization": f"Basic {encoded_creds}",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        data={
+            "grant_type": "refresh_token",
+            "refresh_token": refresh_token,
+        },
+    )
+
+    if resp.status_code != 200:
+        return f"<h2>Refresh failed ({resp.status_code})</h2><pre>{resp.text}</pre>", 500
+
+    tokens = resp.json()
+    new_access_token = tokens.get("access_token")
+    new_refresh_token = tokens.get("refresh_token")  # only present if Pinterest rotates it
+    expires_in = tokens.get("expires_in")
+
+    # Sanity check — confirm the refreshed token actually works
+    verify = requests.get(
+        "https://api.pinterest.com/v5/boards",
+        headers={"Authorization": f"Bearer {new_access_token}"},
+    )
+    boards_preview = verify.json() if verify.status_code == 200 else {"error": verify.text}
+
+    return f"""
+    <h2>Token refreshed successfully</h2>
+    <pre>
+NEW PINTEREST_ACCESS_TOKEN={new_access_token}
+{"NEW PINTEREST_REFRESH_TOKEN=" + new_refresh_token if new_refresh_token else "(refresh_token not rotated — original still valid)"}
+    </pre>
+    <p>New access token expires in {expires_in} seconds.</p>
+    <h3>Boards confirmed accessible with refreshed token:</h3>
+    <pre>{boards_preview}</pre>
+    """
+
+
 if __name__ == "__main__":
     if not PINTEREST_CLIENT_ID or not PINTEREST_CLIENT_SECRET:
         print("WARNING: PINTEREST_CLIENT_ID / PINTEREST_CLIENT_SECRET not found in environment.")
