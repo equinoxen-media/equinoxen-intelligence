@@ -21,16 +21,7 @@ crontab -l
 #get LinkedIn code
 https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86k0i096lhhnp3&redirect_uri=https://equinoxen.com&scope=openid%20profile%20w_member_social%20w_organization_social
 
-#Lists every cached product with its score, assessed date, and days remaining before auto-reassessment
+#Lists every cached product with its score, assessed date, and days remaining before auto-reassessment.
 python3 content_pipeline.py ratings
 #Manually forces a reassessment
 python3 content_pipeline.py clear-rating FreshBooks
-
-python3 audit_claims.py --list                    # see what's auditable
-python3 audit_claims.py kartra-review              # audit one post by slug
-python3 audit_claims.py --all 20                   # audit your 20 most recent posts
-
-python3 rewrite_article.py kartra-review --type review
-python3 rewrite_article.py freshbooks-vs-quickbooks --type comparison
-python3 rewrite_article.py best-crm-software --type buying_guide
-python3 rewrite_article.py --list

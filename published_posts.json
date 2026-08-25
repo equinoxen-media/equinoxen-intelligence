@@ -275,7 +275,17 @@
     "kartra-review",
     "mailchimp-vs-activecampaign",
     "getresponse-vs-klaviyo",
-    "se-ranking-vs-ubersuggest"
+    "se-ranking-vs-ubersuggest",
+    "hive-project-management-review",
+    "notion-vs-airtable-workspace-database-comparison",
+    "convertkit-vs-activecampaign",
+    "basecamp-review",
+    "monday-com-vs-notion-project-management",
+    "moz-vs-se-ranking",
+    "wave-accounting-review",
+    "squarespace-vs-elementor",
+    "best-crm-software-for-real-estate-agents",
+    "mailerlite-review"
   ],
   "titles": [
     "11 best crm software for small business in 2026 (tested & compared)",
@@ -553,7 +563,17 @@
     "kartra review 2026: is this all-in-one marketing platform worth it",
     "mailchimp vs activecampaign: best email marketing platform for 2026",
     "getresponse vs klaviyo: which email platform wins in 2026",
-    "se ranking vs ubersuggest: best budget seo tool for 2026"
+    "se ranking vs ubersuggest: best budget seo tool for 2026",
+    "hive project management review 2026: is it worth switching",
+    "notion vs airtable: which workspace database is better in 2026?",
+    "convertkit vs activecampaign: email marketing showdown 2026",
+    "basecamp review 2026: is this project management tool worth it?",
+    "monday.com vs notion: project management face-off 2026",
+    "moz vs se ranking 2026: best seo tool for mid-sized agencies",
+    "wave accounting review 2026: is free accounting software worth it",
+    "squarespace vs elementor 2026: website builder showdown for small business",
+    "best crm software for real estate agents in 2026: top 5 picks",
+    "mailerlite review 2026: is this email marketing tool worth it for small business"
   ],
   "keywords": [
     "best crm small business",
@@ -831,7 +851,17 @@
     "kartra review",
     "mailchimp vs activecampaign",
     "getresponse vs klaviyo",
-    "se ranking vs ubersuggest"
+    "se ranking vs ubersuggest",
+    "hive project management review",
+    "notion vs airtable",
+    "convertkit vs activecampaign",
+    "basecamp review",
+    "monday.com vs notion",
+    "moz vs se ranking",
+    "wave accounting review",
+    "squarespace vs elementor",
+    "best crm software for real estate",
+    "mailerlite review"
   ],
   "posts": [
     {
@@ -3041,6 +3071,103 @@
       "post_id": 1259,
       "post_url": "https://equinoxen.com/se-ranking-vs-ubersuggest/",
       "created_at": "2026-08-21T21:02:50.831012"
+    },
+    {
+      "title": "Hive Project Management Review 2026: Is It Worth Switching",
+      "slug": "hive-project-management-review",
+      "keyword": "hive project management review",
+      "post_id": 1274,
+      "post_url": "https://equinoxen.com/hive-project-management-review/",
+      "created_at": "2026-08-22T15:02:26.140334"
+    },
+    {
+      "title": "Notion vs Airtable: Which Workspace Database is Better in 2026?",
+      "slug": "notion-vs-airtable-workspace-database-comparison",
+      "keyword": "notion vs airtable",
+      "post_id": 1277,
+      "post_url": "https://equinoxen.com/notion-vs-airtable-workspace-database-comparison/",
+      "created_at": "2026-08-22T18:02:54.309924"
+    },
+    {
+      "title": "ConvertKit vs ActiveCampaign: Email Marketing Showdown 2026",
+      "slug": "convertkit-vs-activecampaign",
+      "keyword": "convertkit vs activecampaign",
+      "post_id": 1280,
+      "post_url": "https://equinoxen.com/convertkit-vs-activecampaign/",
+      "created_at": "2026-08-22T21:02:53.672483"
+    },
+    {
+      "title": "Basecamp Review 2026: Is This Project Management Tool Worth It?",
+      "slug": "basecamp-review",
+      "keyword": "basecamp review",
+      "post_id": 1283,
+      "post_url": "https://equinoxen.com/basecamp-review/",
+      "created_at": "2026-08-23T05:49:14.296276"
+    },
+    {
+      "title": "Monday.com vs Notion: Project Management Face-Off 2026",
+      "slug": "monday-com-vs-notion-project-management",
+      "keyword": "monday.com vs notion",
+      "post_id": 1287,
+      "post_url": "https://equinoxen.com/monday-com-vs-notion-project-management/",
+      "created_at": "2026-08-23T15:02:44.807399"
+    },
+    {
+      "title": "Moz vs SE Ranking 2026: Best SEO Tool for Mid-Sized Agencies",
+      "slug": "moz-vs-se-ranking",
+      "keyword": "moz vs se ranking",
+      "post_id": 1290,
+      "post_url": "https://equinoxen.com/moz-vs-se-ranking/",
+      "created_at": "2026-08-23T18:02:50.036489"
+    },
+    {
+      "title": "Wave Accounting Review 2026: Is Free Accounting Software Worth It",
+      "slug": "wave-accounting-review",
+      "keyword": "wave accounting review",
+      "post_id": 1293,
+      "post_url": "https://equinoxen.com/wave-accounting-review/",
+      "created_at": "2026-08-23T21:02:13.940203"
+    },
+    {
+      "title": "Squarespace vs Elementor 2026: Website Builder Showdown for Small Business",
+      "slug": "squarespace-vs-elementor",
+      "keyword": "squarespace vs elementor",
+      "post_id": 1298,
+      "post_url": "https://equinoxen.com/squarespace-vs-elementor/",
+      "content_type": "comparison",
+      "programs": [
+        "Squarespace",
+        "Elementor"
+      ],
+      "created_at": "2026-08-24T15:04:23.627074"
+    },
+    {
+      "title": "Best CRM Software for Real Estate Agents in 2026: Top 5 Picks",
+      "slug": "best-crm-software-for-real-estate-agents",
+      "keyword": "best crm software for real estate",
+      "post_id": 1301,
+      "post_url": "https://equinoxen.com/best-crm-software-for-real-estate-agents/",
+      "content_type": "buying_guide",
+      "programs": [
+        "HubSpot",
+        "Pipedrive",
+        "Close CRM",
+        "Copper",
+        "Keap"
+      ],
+      "created_at": "2026-08-24T18:06:23.565410"
+    },
+    {
+      "title": "MailerLite Review 2026: Is This Email Marketing Tool Worth It for Small Business",
+      "slug": "mailerlite-review",
+      "keyword": "mailerlite review",
+      "post_id": 1304,
+      "post_url": "https://equinoxen.com/mailerlite-review/",
+      "content_type": "review",
+      "programs": [
+        "MailerLite"
+      ],
+      "created_at": "2026-08-24T21:03:07.568145"
     }
   ],
   "comparison_keys": [
@@ -3199,6 +3326,16 @@
     "kartra",
     "mailchimp  activecampaign",
     "getresponse+klaviyo",
-    "se ranking+ubersuggest"
+    "se ranking+ubersuggest",
+    "hive project management",
+    "notion  airtable",
+    "convertkit  activecampaign",
+    "basecamp",
+    "monday.com+notion",
+    "moz+se ranking",
+    "wave accounting",
+    "elementor+squarespace",
+    "hubspot+pipedrive",
+    "mailerlite"
   ]
 }

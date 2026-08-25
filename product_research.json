@@ -1,0 +1,164 @@
+{
+  "squarespace": {
+    "product": "Squarespace",
+    "data": {
+      "pricing": "Four plans billed annually: Basic at $16/month ($25/month if billed monthly), Core at $23/month ($36/month monthly), Plus at $39/month ($56/month monthly), and Advanced at $99/month ($139/month monthly). Annual billing saves approximately 30% and includes a free custom domain for the first year.",
+      "key_features": [
+        "AI-powered website builder with templates and drag-and-drop editing",
+        "Built-in SEO tools with AI-generated titles, descriptions, and alt text",
+        "Fully integrated e-commerce with unlimited products (features vary by plan)",
+        "Unlimited bandwidth and storage on all plans",
+        "Built-in analytics, payment processing (Squarespace Payments), and mobile app management"
+      ],
+      "limitations": [
+        "Limited deep customization - templates restrict significant layout and functionality changes beyond basic elements",
+        "No phone support available - support is limited to email and chat only"
+      ],
+      "notable_limits": "Basic plan: limited to 2 contributors, no custom code access, 3% transaction fee on sales. Core plan: 0% transaction fee on physical products but 1% on digital content. Transaction fees eliminated only on Plus and Advanced plans. No advanced keyword research tools for SEO. Limited third-party integrations compared to competitors.",
+      "source_url": "https://www.squarespace.com/pricing"
+    },
+    "researched_date": "2026-08-24"
+  },
+  "elementor": {
+    "product": "Elementor",
+    "data": {
+      "pricing": "Elementor Pro pricing starts at $49/year (per official site) with multiple tiers: Essential ($59/year for 1 site), Advanced Solo ($79-84/year for 1 site with eCommerce), Advanced ($99/year for 3 sites), Expert ($199/year for 25 sites), and Agency ($399/year for 1,000 sites). All plans are annual subscriptions only\u2014no monthly billing. There's also Elementor One bundle at $228/year ($168 first year) that includes Pro plus AI credits and additional tools.",
+      "key_features": [
+        "Drag-and-drop visual page builder with 40+ widgets in free version, 85+ widgets in Pro, plus 100+ pre-built templates and website kits",
+        "Theme Builder for creating custom headers, footers, and archive templates (Pro only)",
+        "WooCommerce Builder with custom product pages, cart, and checkout design capabilities (Pro only)",
+        "Popup Builder and Form Builder with CRM integrations and conditional logic (Pro only)",
+        "AI-powered features including Elementor AI for text, image, and code generation (available with trial credits, then $3.99/month or included in One plan)"
+      ],
+      "limitations": [
+        "Cannot edit on mobile phones or tablets\u2014editing only available on desktop computers",
+        "Can cause performance issues and slower page load times due to extra code and DOM size, potentially affecting SEO rankings",
+        "Limited built-in SEO tools\u2014requires additional plugins like Yoast or Rank Math for comprehensive optimization",
+        "Difficult migration away from Elementor due to proprietary shortcodes and content structures\u2014content is not easily portable to other platforms"
+      ],
+      "notable_limits": "Free version permanently available but lacks Theme Builder, Popup Builder, WooCommerce integration, custom CSS, and advanced widgets. Pro plans limited by number of site activations (1, 3, 25, or 1,000 sites depending on tier). Elementor One includes shared monthly credit pool for AI, image optimization, and email deliverability. 30-day money-back guarantee for annual plans (not a traditional free trial).",
+      "source_url": "https://elementor.com/pricing/"
+    },
+    "researched_date": "2026-08-24"
+  },
+  "hubspot": {
+    "product": "HubSpot",
+    "data": {
+      "pricing": "Free Plan: $0 (basic CRM, 2,000 email sends/month, live chat, unlimited contacts). Starter: $15-20/seat/month (includes 1,000 marketing contacts, available month-to-month or annual). Professional: $890/month (includes 3 seats, 2,000 marketing contacts) plus mandatory $3,000 onboarding fee. Enterprise: $3,600/month (includes 5 seats, 10,000 marketing contacts) plus $7,000 onboarding fee. Additional contacts cost extra at all paid tiers. Sales Hub Professional starts at $100/seat/month, Service Hub follows similar tiered structure.",
+      "key_features": [
+        "All-in-one CRM platform with unified contact management, deal tracking, and email integration across marketing, sales, and service hubs",
+        "Marketing automation including email marketing, landing pages, forms, workflows, lead scoring, and campaign management (Professional tier and above)",
+        "AI-powered features via Breeze including customer agents, prospecting agents, content creation, and data enrichment (usage-based credits included with paid plans)",
+        "Comprehensive reporting and analytics with customizable dashboards, funnel analytics, and attribution data (advanced features in Professional/Enterprise)",
+        "Extensive integrations with 1,500+ third-party apps and HubSpot Academy for free training and certifications"
+      ],
+      "limitations": [
+        "No workflow automation or advanced marketing features on Free or Starter plans - sequences, A/B testing, custom reporting, and smart content require Professional tier ($890/month minimum)",
+        "Free plan lacks role-based permissions and access controls, has 2,000 monthly email limit for entire account, HubSpot branding on all communications, and no custom reporting or forecasting"
+      ],
+      "notable_limits": "Marketing Hub pricing based on marketing contacts (not total contacts) - Professional includes 2,000 contacts, additional 5,000 costs ~$224/month. Professional and Enterprise require annual commitment. Professional plans include minimum 3 seats, Enterprise includes 5 seats. Advanced AI features and deeper automation locked behind Professional/Enterprise tiers. Monthly HubSpot Credits allotted per plan (500 on Starter, 3,000-5,000 on Professional, up to 10,000 on Enterprise) for AI and data features.",
+      "source_url": "https://blog.hubspot.com/marketing/hubspot-marketing-hub-pricing"
+    },
+    "researched_date": "2026-08-24"
+  },
+  "pipedrive": {
+    "product": "Pipedrive",
+    "data": {
+      "pricing": "Pipedrive offers 4 plans: Lite at $14/user/month, Growth at $39/user/month, Premium at $49/user/month, and Ultimate at $79/user/month (all billed annually). Monthly billing is higher at $24, $49, $79, and $99 respectively.",
+      "key_features": [
+        "Visual pipeline management with drag-and-drop interface for tracking deals through custom sales stages",
+        "Two-way email sync with templates and tracking, integrated directly with Gmail and other email providers",
+        "Workflow automations and AI-powered features including automated activities, deal routing, and sales tips",
+        "Over 400-500 integrations with tools like Google Workspace, Slack, QuickBooks, and Zapier",
+        "Customizable pipelines, fields, and activity types with mobile CRM apps for on-the-go deal management"
+      ],
+      "limitations": [
+        "Does not include native multichannel prospecting or lead generation - focused on managing relationships rather than creating them, requiring paid add-ons like LeadBooster for lead capture",
+        "Limited marketing automation capabilities - email marketing (Campaigns) and website tracking (Web Visitors) are paid add-ons on all plans, not suitable for marketing-heavy organizations compared to HubSpot or ActiveCampaign"
+      ],
+      "notable_limits": "Automation workflows have a 90-day maximum duration, making them unsuitable for long sales cycles or lifecycle automation. No permanent free plan available, only a 14-day free trial with no credit card required. Essential add-ons like LeadBooster ($32.50/company/month), Web Visitors ($49/month), and Campaigns ($16/month) significantly increase total cost beyond base pricing.",
+      "source_url": "https://www.pipedrive.com/en/pricing"
+    },
+    "researched_date": "2026-08-24"
+  },
+  "close crm": {
+    "product": "Close CRM",
+    "data": {
+      "pricing": "Solo at $9/user/month, Essentials at $35/user/month, Growth at $99/user/month, and Scale at $139/user/month (annual billing). Monthly billing adds 25-35% to each plan.",
+      "key_features": [
+        "Built-in Power Dialer with VoIP calling, call recording, and automatic call logging directly in the CRM",
+        "Chloe AI sales agent that calls leads, qualifies prospects through conversations, and books meetings automatically",
+        "Integrated email, SMS, and calling in a single platform with pipeline management and workflow automation (Growth plan and above)",
+        "Two-way email sync, bulk email sequences, and task management with Smart Views for lead segmentation",
+        "Native web forms builder (Close Forms) to capture and route website leads directly into the CRM"
+      ],
+      "limitations": [
+        "No built-in prospecting data, contact database, or buyer intent signals - requires external data sources or enrichment tools",
+        "No marketing automation, no native LinkedIn integration, limited customization (cannot create custom objects, only custom fields), and SMS limited to US, Canada, GB, and Australia only"
+      ],
+      "notable_limits": "Solo plan limited to 1 user and 10,000 leads. Call recording retention is 30-90 days on lower plans (unlimited only on Scale). Calling and SMS usage billed separately as variable costs. No free forever plan available.",
+      "source_url": "https://close.com/pricing"
+    },
+    "researched_date": "2026-08-24"
+  },
+  "copper": {
+    "product": "Copper",
+    "data": {
+      "pricing": "Starter: $9/user/month (annual) or $12/user/month (monthly), max 3 users; Basic: $23/user/month (annual) or $29/user/month (monthly); Professional: $59/user/month (annual) or $69/user/month (monthly); Business: $99/user/month (annual) or $134/user/month (monthly)",
+      "key_features": [
+        "Deep Google Workspace integration with Chrome extension that embeds CRM directly in Gmail, Google Calendar, and Google Drive",
+        "Automated contact and email capture from Gmail with automatic data enrichment from social networks and web sources",
+        "Visual drag-and-drop sales pipeline management with workflow automation and AI-driven deal alerts",
+        "Customizable fields, reports, and email templates with workflow triggers for automated follow-ups and task assignments",
+        "Mobile access across iOS and Android with 100+ integrations including Slack, Mailchimp, DocuSign, QuickBooks, and Zapier"
+      ],
+      "limitations": [
+        "Only works with Gmail and Google Workspace - not suitable for teams using Office 365, Yahoo, or other email providers",
+        "No free plan available, lacks inventory management and incident management capabilities, and advanced features like custom reports are restricted to the Business plan only"
+      ],
+      "notable_limits": "Basic plan limited to 3 users and 2,500 contacts; Professional plan limited to 15,000 contacts; Starter plan lacks customizable pipelines, reporting capabilities, and advanced integrations; contact limits and feature-gating increase costs as teams scale",
+      "source_url": "https://www.copper.com/pricing"
+    },
+    "researched_date": "2026-08-24"
+  },
+  "keap": {
+    "product": "Keap",
+    "data": {
+      "pricing": "Single plan at $249/month billed annually (or $299/month billed monthly). Includes 2 users and 1,500 contacts. Additional users cost $39/month each. Additional contacts charged in tiers. Mandatory $500 onboarding fee for new customers. 14-day free trial available.",
+      "key_features": [
+        "All-in-one CRM with advanced marketing automation, sales pipeline, email marketing, and AI-powered workflow builder",
+        "Integrated payment processing, invoicing, and appointment scheduling built directly into the platform",
+        "Visual drag-and-drop automation builder with if-then branching logic for sophisticated multi-path sequences",
+        "Built-in business phone line and SMS marketing with text automation capabilities",
+        "Landing pages, lead capture forms, contact tagging and segmentation with comprehensive contact management"
+      ],
+      "limitations": [
+        "Steep learning curve and can be overcomplicated for very small lists or simple needs",
+        "Limited native two-way SMS automation and no ringless voicemail drops; automation is primarily email-centric rather than true multi-channel"
+      ],
+      "notable_limits": "Free trial has 25-email sending limit, no payment processing, and no SMS capability. Contact-based pricing scales up quickly as list grows. Additional users at $39/month each beyond the included 2 users. Mandatory $500 onboarding fee applies to all new accounts.",
+      "source_url": "https://keap.com/pricing"
+    },
+    "researched_date": "2026-08-24"
+  },
+  "mailerlite": {
+    "product": "MailerLite",
+    "data": {
+      "pricing": "Free plan: up to 250 subscribers, 2,500 emails/month. Comfort plan: starts at $12/month for 500 subscribers with 10x subscriber limit on monthly emails (5,000 emails for 500 subscribers). Power plan: starts at $25/month for 500 subscribers with unlimited monthly emails. Enterprise: custom pricing for 200,000+ subscribers. 10% discount on annual billing. 14-day free trial of paid features available.",
+      "key_features": [
+        "Drag-and-drop email builder with 100+ templates and all three email editors (drag-and-drop, custom HTML, simple)",
+        "Marketing automation with visual workflow builder, multi-trigger automations on higher plans",
+        "Landing pages and website builder with hosting included",
+        "AI writing assistant for email content and subject lines (Comfort plan and above)",
+        "Digital product sales and paid newsletter subscriptions with 0% commission"
+      ],
+      "limitations": [
+        "Does not include transactional emails - requires separate MailerSend product starting at $7/month for 5,000 emails",
+        "Free plan limited to 3 automations, 3 forms, 1 landing page, 1 website, and includes MailerLite branding on emails"
+      ],
+      "notable_limits": "Comfort plan has 3 user seats and caps monthly sends at 10x your subscriber count. Power plan offers unlimited users, unlimited sends, and unlimited landing pages/websites. Free plan subscriber limit was recently reduced from 500 to 250 (June 2026) and email sends reduced from 12,000 to 2,500/month.",
+      "source_url": "https://www.mailerlite.com/pricing"
+    },
+    "researched_date": "2026-08-24"
+  }
+}

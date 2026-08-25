@@ -1,0 +1,198 @@
+{
+  "basecamp": {
+    "product": "Basecamp",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 6,
+      "value": 7,
+      "integrations": 4,
+      "support": 7,
+      "scalability": 8,
+      "mobile_experience": 8
+    },
+    "weighted_total": 69,
+    "assessed_date": "2026-08-23"
+  },
+  "monday.com": {
+    "product": "Monday.com",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 9,
+      "value": 7,
+      "integrations": 9,
+      "support": 8,
+      "scalability": 9,
+      "mobile_experience": 8
+    },
+    "weighted_total": 84,
+    "assessed_date": "2026-08-23"
+  },
+  "notion": {
+    "product": "Notion",
+    "scores": {
+      "ease_of_use": 7,
+      "features": 8,
+      "value": 9,
+      "integrations": 7,
+      "support": 6,
+      "scalability": 8,
+      "mobile_experience": 7
+    },
+    "weighted_total": 76,
+    "assessed_date": "2026-08-23"
+  },
+  "moz": {
+    "product": "Moz",
+    "scores": {
+      "ease_of_use": 8,
+      "features": 7,
+      "value": 5,
+      "integrations": 6,
+      "support": 7,
+      "scalability": 7,
+      "mobile_experience": 6
+    },
+    "weighted_total": 66,
+    "assessed_date": "2026-08-23"
+  },
+  "se ranking": {
+    "product": "SE Ranking",
+    "scores": {
+      "ease_of_use": 7,
+      "features": 8,
+      "value": 9,
+      "integrations": 7,
+      "support": 8,
+      "scalability": 8,
+      "mobile_experience": 7
+    },
+    "weighted_total": 78,
+    "assessed_date": "2026-08-23"
+  },
+  "wave": {
+    "product": "Wave",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 6,
+      "value": 10,
+      "integrations": 5,
+      "support": 5,
+      "scalability": 4,
+      "mobile_experience": 7
+    },
+    "weighted_total": 70,
+    "assessed_date": "2026-08-23"
+  },
+  "squarespace": {
+    "product": "Squarespace",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 7,
+      "value": 6,
+      "integrations": 5,
+      "support": 8,
+      "scalability": 6,
+      "mobile_experience": 9
+    },
+    "weighted_total": 70,
+    "assessed_date": "2026-08-24"
+  },
+  "elementor": {
+    "product": "Elementor",
+    "scores": {
+      "ease_of_use": 6,
+      "features": 9,
+      "value": 8,
+      "integrations": 9,
+      "support": 6,
+      "scalability": 8,
+      "mobile_experience": 4
+    },
+    "weighted_total": 76,
+    "assessed_date": "2026-08-24"
+  },
+  "hubspot": {
+    "product": "HubSpot",
+    "scores": {
+      "ease_of_use": 7,
+      "features": 10,
+      "value": 9,
+      "integrations": 10,
+      "support": 9,
+      "scalability": 10,
+      "mobile_experience": 8
+    },
+    "weighted_total": 90,
+    "assessed_date": "2026-08-24"
+  },
+  "pipedrive": {
+    "product": "Pipedrive",
+    "scores": {
+      "ease_of_use": 10,
+      "features": 7,
+      "value": 8,
+      "integrations": 8,
+      "support": 8,
+      "scalability": 7,
+      "mobile_experience": 9
+    },
+    "weighted_total": 82,
+    "assessed_date": "2026-08-24"
+  },
+  "close crm": {
+    "product": "Close CRM",
+    "scores": {
+      "ease_of_use": 8,
+      "features": 8,
+      "value": 7,
+      "integrations": 6,
+      "support": 8,
+      "scalability": 8,
+      "mobile_experience": 8
+    },
+    "weighted_total": 75,
+    "assessed_date": "2026-08-24"
+  },
+  "copper": {
+    "product": "Copper",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 7,
+      "value": 7,
+      "integrations": 7,
+      "support": 7,
+      "scalability": 6,
+      "mobile_experience": 8
+    },
+    "weighted_total": 74,
+    "assessed_date": "2026-08-24"
+  },
+  "keap": {
+    "product": "Keap",
+    "scores": {
+      "ease_of_use": 5,
+      "features": 9,
+      "value": 6,
+      "integrations": 7,
+      "support": 8,
+      "scalability": 8,
+      "mobile_experience": 7
+    },
+    "weighted_total": 70,
+    "assessed_date": "2026-08-24"
+  },
+  "mailerlite": {
+    "product": "MailerLite",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 8,
+      "value": 9,
+      "integrations": 6,
+      "support": 7,
+      "scalability": 7,
+      "mobile_experience": 8
+    },
+    "weighted_total": 79,
+    "assessed_date": "2026-08-24"
+  }
+}

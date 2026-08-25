@@ -673,7 +673,7 @@ def load_published_posts():
             return json.load(f)
     return {"slugs": [], "titles": [], "keywords": []}
 
-def save_published_post(title, slug, keyword, post_id, post_url, comparison_key=None, content_type=None, programs=None):
+def save_published_post(title, slug, keyword, post_id, post_url, comparison_key=None):
     tracker = load_published_posts()
     tracker["slugs"].append(slug)
     tracker["titles"].append(title.lower())
@@ -685,8 +685,6 @@ def save_published_post(title, slug, keyword, post_id, post_url, comparison_key=
         "keyword": keyword,
         "post_id": post_id,
         "post_url": post_url,
-        "content_type": content_type,
-        "programs": programs or [],
         "created_at": datetime.now().isoformat()
     })
     if comparison_key:
@@ -813,211 +811,12 @@ def load_latest_intelligence():
     with open(latest, 'r') as f:
         return json.load(f)
 
-# ─── PRODUCT RESEARCH CACHE ───────────────────────────────────
-# Same pattern as the rating cache, but for the pricing/features research
-# itself. Without this, every article mentioning a product pays for a
-# fresh web search, even if another article searched the same product
-# last week. This is the bigger cost lever versus merging the research
-# and generation calls, since it skips the search entirely on a hit
-# rather than just packaging an unavoidable search more efficiently.
-RESEARCH_CACHE_FILE = "product_research.json"
-RESEARCH_TTL_DAYS = 365  # matches the rating cache; reassess yearly unless cleared sooner
-
-def load_research_cache():
-    if os.path.exists(RESEARCH_CACHE_FILE):
-        with open(RESEARCH_CACHE_FILE, 'r') as f:
-            return json.load(f)
-    return {}
-
-def save_research_cache(cache):
-    with open(RESEARCH_CACHE_FILE, 'w') as f:
-        json.dump(cache, f, indent=2)
-
-def _research_key(product):
-    return product.strip().lower()
-
-def get_cached_research(product):
-    cache = load_research_cache()
-    entry = cache.get(_research_key(product))
-    if not entry:
-        return None
-    researched = datetime.fromisoformat(entry["researched_date"])
-    if (datetime.now() - researched).days > RESEARCH_TTL_DAYS:
-        print(f"   ⏳ Cached research for {product} expired ({entry['researched_date']}) — will re-research")
-        return None
-    return entry["data"]
-
-def save_research(product, data):
-    cache = load_research_cache()
-    cache[_research_key(product)] = {
-        "product": product,
-        "data": data,
-        "researched_date": datetime.now().strftime("%Y-%m-%d"),
-    }
-    save_research_cache(cache)
-    print(f"   💾 Cached research for {product} (valid {RESEARCH_TTL_DAYS} days)")
-
-def clear_research(product):
-    cache = load_research_cache()
-    key = _research_key(product)
-    if key in cache:
-        del cache[key]
-        save_research_cache(cache)
-        print(f"   🗑️  Cleared cached research for '{product}' — will re-research on next article")
-    else:
-        print(f"   ⚠️  No cached research found for '{product}'")
-
-def list_research():
-    cache = load_research_cache()
-    if not cache:
-        print("No product research cached yet")
-        return
-    print(f"\n🔎 CACHED PRODUCT RESEARCH ({len(cache)} total):")
-    print("=" * 60)
-    for entry in cache.values():
-        researched = datetime.fromisoformat(entry["researched_date"])
-        age_days = (datetime.now() - researched).days
-        status = "expired" if age_days > RESEARCH_TTL_DAYS else f"{RESEARCH_TTL_DAYS - age_days} days left"
-        print(f"\n  📄 {entry['product']}")
-        print(f"     Researched: {entry['researched_date']} ({status})")
-        pricing = entry.get("data", {}).get("pricing", "")
-        if pricing:
-            print(f"     Pricing on file: {pricing[:80]}")
-
-
-# ─── PRE-WRITE RESEARCH ────────────────────────────────────────
-# Gathers current, web-verified facts about a product BEFORE Claude
-# writes about it, so new articles are grounded in reality from the
-# start instead of Claude's training knowledge, which is how stale or
-# wrong claims get published in the first place. This is the "before"
-# counterpart to rewrite_article.py's "after" audit-and-fix pass.
-def research_product(product):
-    cached = get_cached_research(product)
-    if cached:
-        print(f"   🔎 Using cached research for {product}")
-        return cached
-
-    print(f"   🔎 Researching {product} (web search)...")
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
-    prompt = f"""Research {product} using current, live information from the web.
-Prioritize the vendor's own pricing and features pages over third-party sources.
-
-Find and report:
-- Current pricing tiers (plan names and exact prices)
-- Any free plan or free trial details
-- 3-5 key features worth highlighting
-- 1-2 notable limitations or things it does NOT do
-- Any employee-count, usage, or plan limits worth mentioning
-
-Return ONLY a JSON object, no markdown, no preamble, in this exact format:
-{{
-  "pricing": "plain text summary of pricing tiers with exact numbers",
-  "key_features": ["feature 1", "feature 2", "feature 3"],
-  "limitations": ["limitation 1", "limitation 2"],
-  "notable_limits": "plain text, e.g. usage caps or plan restrictions, or empty string",
-  "source_url": "the primary URL you verified this against"
-}}
-
-If you cannot find reliable current information, return:
-{{"pricing": "", "key_features": [], "limitations": [], "notable_limits": "", "source_url": ""}}"""
-
-    try:
-        message = client.messages.create(
-            model="claude-sonnet-4-5",
-            max_tokens=1200,
-            tools=[{"type": "web_search_20250305", "name": "web_search"}],
-            messages=[{"role": "user", "content": prompt}],
-        )
-        text_parts = [block.text for block in message.content if getattr(block, "type", None) == "text"]
-        response_text = "\n".join(text_parts).strip()
-        response_text = response_text.replace("```json", "").replace("```", "").strip()
-        match = re.search(r'\{.*\}', response_text, re.DOTALL)
-        if not match:
-            print(f"   ⚠️  Research parse failed for {product}")
-            return None
-        data = json.loads(match.group(0))
-        save_research(product, data)
-        print(f"   ✅ Research complete for {product}")
-        return data
-    except Exception as e:
-        print(f"   ⚠️  Research error for {product}: {e}")
-        return None
-
-
-def build_research_facts_block(products_research):
-    """
-    Turn a {product: research_dict_or_None} map into the plain-text
-    VERIFIED FACTS block handed to the generation prompt.
-    """
-    if not products_research:
-        return ""
-
-    lines = []
-    for product, research in products_research.items():
-        if not research or not any(research.values()):
-            lines.append(f"\n{product}: No verified research available. Avoid specific numeric claims (pricing, limits) for this product, describe generally instead.")
-            continue
-        lines.append(f"\n{product}:")
-        if research.get("pricing"):
-            lines.append(f"  Pricing: {research['pricing']}")
-        if research.get("key_features"):
-            lines.append(f"  Key features: {', '.join(research['key_features'])}")
-        if research.get("limitations"):
-            lines.append(f"  Limitations: {', '.join(research['limitations'])}")
-        if research.get("notable_limits"):
-            lines.append(f"  Notable limits: {research['notable_limits']}")
-        if research.get("source_url"):
-            lines.append(f"  Source: {research['source_url']}")
-    return "\n".join(lines)
-
-
-# ─── TL;DR SCORE STAMP ──────────────────────────────────────────
-def apply_tldr_scores(article_content, scored_products):
-    """
-    Fill every <!--TLDR_SCORE:ProductName--> marker with that product's
-    weighted score from the same rubric table computation, so the TL;DR
-    number(s) can never drift from the table itself. Named markers mean
-    this works uniformly whether there's one product (review) or several
-    (comparison, buying guide), unlike the old single generic marker.
-    """
-    score_lookup = {product.lower(): total for product, total in scored_products}
-
-    def _replace(match):
-        product_name = match.group(1).strip()
-        total = score_lookup.get(product_name.lower())
-        if total is None:
-            print(f"   ⚠️  TL;DR score marker for '{product_name}' has no matching rubric score — using N/A")
-            return "N/A"
-        return str(total)
-
-    return re.sub(r'<!--TLDR_SCORE:(.*?)-->', _replace, article_content)
-
-
-# ─── VERIFIED DATE STAMP ────────────────────────────────────────
-# Same principle as the rubric table and rating cache: the date is
-# Python-controlled, never written by Claude itself, so it's guaranteed
-# accurate rather than being whatever date the model happened to guess.
-def apply_verified_date(article_content):
-    today = datetime.now().strftime("%B %-d, %Y") if os.name != "nt" else datetime.now().strftime("%B %d, %Y")
-    banner = (
-        f'<p><em>Pricing and features last verified: {today}. '
-        f'This review is reassessed periodically, if anything looks out of date, '
-        f'let us know at hello@equinoxen.com.</em></p>'
-    )
-    if "<!--VERIFIED_DATE-->" in article_content:
-        return article_content.replace("<!--VERIFIED_DATE-->", banner)
-    print("   ⚠️  No VERIFIED_DATE marker found in generated article — banner not inserted")
-    return article_content
-
-
 # ─── STEP 2: GENERATE ARTICLE WITH CLAUDE ─────────────────────
-def generate_article(opportunity, use_research=True):
+def generate_article(opportunity):
     title = opportunity.get('title', '')
     keyword = opportunity.get('keyword', '')
     content_type = opportunity.get('type', 'review')
     programs = opportunity.get('programs', [])
-    product = programs[0] if programs else keyword
 
     print(f"\n✍️  Generating article: {title}")
     print(f"   Keyword: {keyword}")
@@ -1038,23 +837,12 @@ def generate_article(opportunity, use_research=True):
         f"- {p['title']}: {p['url']}" for p in published_posts
     ) if published_posts else "None yet"
 
-    facts_block = ""
-    if use_research:
-        products_to_research = programs if programs else [keyword]
-        products_research = {}
-        for p in products_to_research:
-            products_research[p] = research_product(p)
-            time.sleep(1)
-        facts_block = build_research_facts_block(products_research)
-    else:
-        print("   ⏭️  Pre-write research disabled (--no-research) — writing from model knowledge only")
-
     if content_type == "review":
-        prompt = build_review_prompt(title, keyword, programs, affiliate_str, internal_links_str, facts_block=facts_block)
+        prompt = build_review_prompt(title, keyword, programs, affiliate_str, internal_links_str)
     elif content_type == "comparison":
-        prompt = build_comparison_prompt(title, keyword, programs, affiliate_str, internal_links_str, facts_block=facts_block)
+        prompt = build_comparison_prompt(title, keyword, programs, affiliate_str, internal_links_str)
     else:
-        prompt = build_buying_guide_prompt(title, keyword, programs, affiliate_str, internal_links_str, facts_block=facts_block)
+        prompt = build_buying_guide_prompt(title, keyword, programs, affiliate_str, internal_links_str)
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -1066,303 +854,15 @@ def generate_article(opportunity, use_research=True):
         )
         content = message.content[0].text
         content = clean_html_response(content)
-
-        content, scored_products = apply_all_rubric_tables(content)
-        for scored_product, weighted_total in scored_products:
-            print(f"   📊 {scored_product} rubric score: {weighted_total}/100")
-
-        content = apply_tldr_scores(content, scored_products)
-        content = apply_verified_date(content)
-
         print(f"   ✅ Article generated ({len(content)} characters)")
         return content
     except Exception as e:
         print(f"   ❌ Generation error: {e}")
         return None
 
-# ─── PRODUCT RATING CACHE ─────────────────────────────────────
-# Keeps a product's rubric score consistent across every article that
-# mentions it (review, comparison, buying guide) until either the TTL
-# expires or someone manually clears it to force a fresh assessment.
-RATING_CACHE_FILE = "product_ratings.json"
-RATING_TTL_DAYS = 365  # reassess once a year unless cleared sooner
-
-def load_rating_cache():
-    if os.path.exists(RATING_CACHE_FILE):
-        with open(RATING_CACHE_FILE, 'r') as f:
-            return json.load(f)
-    return {}
-
-def save_rating_cache(cache):
-    with open(RATING_CACHE_FILE, 'w') as f:
-        json.dump(cache, f, indent=2)
-
-def _rating_key(product):
-    return product.strip().lower()
-
-def get_cached_rating(product):
-    """
-    Return the cached {scores, weighted_total, assessed_date} for a product
-    if one exists and hasn't passed its TTL. Returns None if there's no
-    entry, or if it's expired (in which case it's treated as due for
-    reassessment, same as if it had been manually cleared).
-    """
-    cache = load_rating_cache()
-    entry = cache.get(_rating_key(product))
-    if not entry:
-        return None
-    assessed = datetime.fromisoformat(entry["assessed_date"])
-    if (datetime.now() - assessed).days > RATING_TTL_DAYS:
-        print(f"   ⏳ Cached rating for {product} expired ({entry['assessed_date']}) — will reassess")
-        return None
-    return entry
-
-def save_rating(product, scores, weighted_total):
-    cache = load_rating_cache()
-    cache[_rating_key(product)] = {
-        "product": product,
-        "scores": scores,
-        "weighted_total": weighted_total,
-        "assessed_date": datetime.now().strftime("%Y-%m-%d"),
-    }
-    save_rating_cache(cache)
-    print(f"   💾 Cached rating for {product}: {weighted_total}/100 (valid {RATING_TTL_DAYS} days)")
-
-def clear_rating(product):
-    """Force a product to be reassessed on its next article, ahead of TTL expiry."""
-    cache = load_rating_cache()
-    key = _rating_key(product)
-    if key in cache:
-        del cache[key]
-        save_rating_cache(cache)
-        print(f"   🗑️  Cleared cached rating for '{product}' — will reassess on next article")
-    else:
-        print(f"   ⚠️  No cached rating found for '{product}'")
-
-def list_ratings():
-    cache = load_rating_cache()
-    if not cache:
-        print("No product ratings cached yet")
-        return
-    print(f"\n📊 CACHED PRODUCT RATINGS ({len(cache)} total):")
-    print("=" * 60)
-    for entry in cache.values():
-        assessed = datetime.fromisoformat(entry["assessed_date"])
-        age_days = (datetime.now() - assessed).days
-        status = "expired" if age_days > RATING_TTL_DAYS else f"{RATING_TTL_DAYS - age_days} days left"
-        print(f"\n  📄 {entry['product']}")
-        print(f"     Score: {entry['weighted_total']}/100")
-        print(f"     Assessed: {entry['assessed_date']} ({status})")
-
-# ─── SCORING RUBRIC ────────────────────────────────────────────
-# Fixed category weights, matching the rubric published on the
-# methodology page. Do not let Claude invent its own weights —
-# these must stay identical across every review for scores to be
-# comparable across the site.
-SCORING_RUBRIC = [
-    ("Ease of use", 20),
-    ("Features", 20),
-    ("Value", 20),
-    ("Integrations", 15),
-    ("Support", 10),
-    ("Scalability", 10),
-    ("Mobile experience", 5),
-]
-
-def render_rubric_table(scores, product=None):
-    """
-    Build the static, on-brand HTML rubric table from a dict of
-    {category_key: score_1_to_10}. Returns (html, weighted_total_out_of_100).
-    Missing categories default to a neutral 7/10 rather than breaking
-    the table, since a partial parse shouldn't block publishing.
-    If `product` is given, the heading names it, so this can render
-    cleanly inside comparison and buying guide articles that show
-    multiple products' tables in the same piece.
-    """
-    rows = ""
-    weighted_total = 0.0
-    for category, weight in SCORING_RUBRIC:
-        key = category.lower().replace(" ", "_")
-        score = scores.get(key, 7)
-        score = max(1, min(10, score))
-        weighted_total += (score / 10) * weight
-        rows += (
-            "<tr>"
-            f'<td style="border:1px solid #D4AF37; padding:8px;">{category}</td>'
-            f'<td style="border:1px solid #D4AF37; padding:8px;">{weight}%</td>'
-            f'<td style="border:1px solid #D4AF37; padding:8px;">{score}/10</td>'
-            "</tr>"
-        )
-
-    weighted_total = round(weighted_total)
-    heading = f"{product}: Scoring Breakdown" if product else "Our Testing Method &amp; Scoring"
-    table_html = (
-        f"<h3>{heading}</h3>"
-        "<p>Every review on Equinoxen Media is scored against the same weighted "
-        "rubric so scores are directly comparable across categories. "
-        "<a href=\"https://equinoxen.com/about/jon-haack/\">Read our full methodology →</a></p>"
-        '<table style="width:100%; border-collapse:collapse;">'
-        "<tr>"
-        '<th style="border:1px solid #D4AF37; padding:8px; text-align:left;">Category</th>'
-        '<th style="border:1px solid #D4AF37; padding:8px; text-align:left;">Weight</th>'
-        '<th style="border:1px solid #D4AF37; padding:8px; text-align:left;">Score</th>'
-        "</tr>"
-        f"{rows}"
-        "</table>"
-        f"<h5>Overall Score: {weighted_total}/100</h5>"
-    )
-    return table_html, weighted_total
-
-
-def render_combined_rubric_table(product_score_pairs):
-    """
-    Build ONE table covering multiple products, with a score column per
-    product instead of a separate table per product, so a comparison or
-    buying guide reader can scan every product against the rubric at a
-    glance. product_score_pairs is a list of (product_name, scores_dict)
-    in the order their SCORES blocks appeared in the article.
-    Returns (html, [(product, weighted_total_out_of_100), ...]).
-    """
-    header_cells = "".join(
-        f'<th style="border:1px solid #D4AF37; padding:8px; text-align:left;">{product}</th>'
-        for product, _ in product_score_pairs
-    )
-
-    rows = ""
-    totals = {product: 0.0 for product, _ in product_score_pairs}
-    for category, weight in SCORING_RUBRIC:
-        key = category.lower().replace(" ", "_")
-        row_cells = ""
-        for product, scores in product_score_pairs:
-            score = max(1, min(10, scores.get(key, 7)))
-            totals[product] += (score / 10) * weight
-            row_cells += f'<td style="border:1px solid #D4AF37; padding:8px;">{score}/10</td>'
-        rows += (
-            "<tr>"
-            f'<td style="border:1px solid #D4AF37; padding:8px;">{category}</td>'
-            f'<td style="border:1px solid #D4AF37; padding:8px;">{weight}%</td>'
-            f"{row_cells}"
-            "</tr>"
-        )
-
-    table_html = (
-        "<h3>Scoring Breakdown</h3>"
-        "<p>Every product on Equinoxen Media is scored against the same weighted "
-        "rubric so scores are directly comparable. "
-        "<a href=\"https://equinoxen.com/about/jon-haack/\">Read our full methodology →</a></p>"
-        '<table style="width:100%; border-collapse:collapse;">'
-        "<tr>"
-        '<th style="border:1px solid #D4AF37; padding:8px; text-align:left;">Category</th>'
-        '<th style="border:1px solid #D4AF37; padding:8px; text-align:left;">Weight</th>'
-        f"{header_cells}"
-        "</tr>"
-        f"{rows}"
-        "</table>"
-    )
-
-    results = []
-    for product, _ in product_score_pairs:
-        weighted_total = round(totals[product])
-        table_html += f"<h5>{product} — Overall Score: {weighted_total}/100</h5>"
-        results.append((product, weighted_total))
-
-    return table_html, results
-
-
-def apply_all_rubric_tables(article_content):
-    """
-    Find every hidden <!--SCORES ...--> block in the article. A review
-    has one, so it gets the single-product table (unchanged behavior).
-    A comparison or buying guide has several, those get combined into
-    ONE table with a score column per product, rather than several
-    separate tables stacked in a row, so they're actually easy to
-    compare side by side. The combined table is inserted at the first
-    marker's position; any additional markers are simply removed.
-
-    Each product's score is still resolved against the shared rating
-    cache first, same as before, so a cached score is reused rather than
-    silently overwritten by a fresh one.
-
-    Returns (updated_content, [(product_name, weighted_total), ...]).
-    """
-    pattern = re.compile(r'<!--SCORES(.*?)-->', re.DOTALL)
-    matches = list(pattern.finditer(article_content))
-    if not matches:
-        return article_content, []
-
-    parsed = []
-    for match in matches:
-        block = match.group(1)
-        product = None
-        scores = {}
-        for line in block.strip().splitlines():
-            if ":" not in line:
-                continue
-            key, val = line.split(":", 1)
-            key = key.strip().lower()
-            val = val.strip()
-            if key == "product":
-                product = val
-                continue
-            digits = re.search(r'\d+', val)
-            if digits:
-                scores[key.replace(" ", "_")] = int(digits.group())
-        if product:
-            parsed.append((product, scores))
-        else:
-            print("   ⚠️  SCORES block missing a 'product:' line — skipped")
-
-    if not parsed:
-        return article_content, []
-
-    resolved = []  # (product, scores, was_cached)
-    for product, scores in parsed:
-        cached = get_cached_rating(product)
-        if cached:
-            print(f"   📊 Using cached rating for {product} (assessed {cached['assessed_date']})")
-            resolved.append((product, cached["scores"], True))
-        else:
-            resolved.append((product, scores, False))
-
-    if len(resolved) == 1:
-        product, scores, was_cached = resolved[0]
-        table_html, weighted_total = render_rubric_table(scores, product=product)
-        if not was_cached:
-            save_rating(product, scores, weighted_total)
-        scored_products = [(product, weighted_total)]
-    else:
-        pairs = [(p, s) for p, s, _ in resolved]
-        table_html, scored_products = render_combined_rubric_table(pairs)
-        for (product, scores, was_cached), (_, weighted_total) in zip(resolved, scored_products):
-            if not was_cached:
-                save_rating(product, scores, weighted_total)
-
-    first = matches[0]
-    updated_content = article_content[:first.start()] + table_html + article_content[first.end():]
-    updated_content = pattern.sub("", updated_content)  # strip any remaining markers
-
-    return updated_content, scored_products
-
 # ─── REVIEW ARTICLE PROMPT ────────────────────────────────────
-def build_review_prompt(title, keyword, programs, affiliate_links, internal_links_str, facts_block=""):
+def build_review_prompt(title, keyword, programs, affiliate_links, internal_links_str):
     product = programs[0] if programs else keyword
-
-    rubric_lines = "\n".join(
-        f"- {category} ({weight}%)" for category, weight in SCORING_RUBRIC
-    )
-    rubric_keys = "\n".join(
-        f"{category.lower().replace(' ', '_')}: [1-10]" for category, weight in SCORING_RUBRIC
-    )
-    scores_block_format = f"product: {product}\n{rubric_keys}"
-
-    facts_section = (
-        f"""
-VERIFIED FACTS (from live web research, use these for any specific pricing
-or numeric claims, do not invent or assume beyond what's listed here):
-{facts_block}
-"""
-        if facts_block else ""
-    )
 
     return f"""You are an expert SaaS reviewer writing for {SITE_NAME}, an independent 
 software review publication. Write a comprehensive, SEO-optimized review article.
@@ -1373,7 +873,6 @@ Note: Include {CURRENT_YEAR} in the article title only — not in headings, slug
 Primary keyword: {keyword}
 Product being reviewed: {product}
 Affiliate links to include: {affiliate_links}
-{facts_section}
 
 ARTICLE REQUIREMENTS:
 - Length: 1,200-1,500 words
@@ -1382,25 +881,6 @@ ARTICLE REQUIREMENTS:
 - Natural keyword usage — not stuffed
 - Use the exact phrase "{keyword}" at least 3 times naturally in the article
 - Include it in the first paragraph, one H2 heading, and the conclusion
-
-TL;DR AND VERIFIED DATE:
-Place these two things at the very top of the article, in this exact
-order, before the Introduction:
-
-1. A short TL;DR block, plain HTML (no H2 heading), formatted as a
-   bolded label "In short:" followed by 40-60 words giving the direct
-   answer a reader (or an AI search engine) needs immediately: what
-   {product} is best for, its starting price if available from verified
-   facts above (omit price entirely rather than guessing if not
-   available), and a one-line bottom-line recommendation. End with
-   exactly this sentence, using the hidden marker verbatim: "Our score:
-   <!--TLDR_SCORE:{product}--> out of 100." Do not write a number
-   yourself, it is filled in automatically from the same score computed
-   below, so the two numbers always match.
-2. Immediately after the TL;DR, this exact hidden marker on its own
-   line: <!--VERIFIED_DATE--> This will be replaced automatically with
-   an accurate "last verified" date, do not write your own date text
-   anywhere in the article.
 
 REQUIRED STRUCTURE:
 1. Introduction — what problem does this solve (100 words)
@@ -1412,41 +892,13 @@ REQUIRED STRUCTURE:
    - Include CTA button here: Try [Product] →
 6. Who is it best for — specific use cases (100 words)
 7. [Product] Alternatives — 2-3 competitors briefly (120 words)
-8. "Don't Buy [Product] If..." — a bulleted list of 3-5 specific
-   situations where a reader should choose something else instead, each
-   with a one-line reason. Be genuinely specific, not generic hedging.
-9. Scoring block — see SCORING INSTRUCTIONS below. Place it immediately after
-   the Don't Buy If section and before Our Verdict.
-10. Our Verdict — final recommendation (100 words). Base this on the scores
-    you assigned above, but do not restate a specific overall number in this
-    section, the exact weighted score is inserted automatically right before it.
-11. CTA — Try [Product] with affiliate link
-    - Include CTA button here
-
-SCORING INSTRUCTIONS:
-Score {product} against these fixed categories, each on a scale of 1 to 10,
-based on everything you covered in the Key Features, Pricing, and Pros/Cons
-sections above. Be honest and differentiated. Do not default to 8 or 9 across
-the board. A genuinely mediocre category should score in the 4-6 range.
-
-Rubric categories and their site-wide weights (for context only, you do not
-need to calculate the weighted total yourself, that is done automatically):
-{rubric_lines}
-
-Output your scores as a hidden HTML comment block in EXACTLY this format,
-with no extra commentary inside it, placed at the location specified in
-step 8 above:
-
-<!--SCORES
-{scores_block_format}
--->
-
-This comment block will not be visible to readers. Do not also write a
-star rating (⭐) or any other numeric score anywhere else in the article,
-since it would conflict with the automatically generated score.
+8. Our Verdict — final recommendation with star rating out of 5 (100 words)
+9. CTA — Try [Product] with affiliate link
+   - Include CTA button here
 
 FORMAT REQUIREMENTS:
 - Use HTML formatting (h2, h3, p, ul, li, strong tags)
+- Include a star rating like: ⭐⭐⭐⭐⭐ (X/5)
 - Make the CTA button: <a href="AFFILIATE_LINK" rel="nofollow sponsored" target="_blank" class="button">Try [Product] →</a>
 
 CRITICAL FORMATTING RULES:
@@ -1488,25 +940,9 @@ Add 2-3 internal links maximum — only where genuinely relevant, never forced.
 Write the complete article now in HTML format:"""
 
 # ─── COMPARISON ARTICLE PROMPT ────────────────────────────────
-def build_comparison_prompt(title, keyword, programs, affiliate_links, internal_links_str, facts_block=""):
+def build_comparison_prompt(title, keyword, programs, affiliate_links, internal_links_str):
     product1 = programs[0] if len(programs) > 0 else "Product A"
     product2 = programs[1] if len(programs) > 1 else "Product B"
-
-    rubric_lines = "\n".join(
-        f"- {category} ({weight}%)" for category, weight in SCORING_RUBRIC
-    )
-    rubric_keys = "\n".join(
-        f"{category.lower().replace(' ', '_')}: [1-10]" for category, weight in SCORING_RUBRIC
-    )
-
-    facts_section = (
-        f"""
-VERIFIED FACTS (from live web research, use these for any specific pricing
-or numeric claims, do not invent or assume beyond what's listed here):
-{facts_block}
-"""
-        if facts_block else ""
-    )
 
     return f"""You are an expert SaaS reviewer writing for {SITE_NAME}, an independent
 software review publication. Write a comprehensive, SEO-optimized comparison article.
@@ -1517,7 +953,6 @@ Note: Include {CURRENT_YEAR} in the article title only — not in headings, slug
 Primary keyword: {keyword}
 Products compared: {product1} vs {product2}
 Affiliate links: {affiliate_links}
-{facts_section}
 
 ARTICLE REQUIREMENTS:
 - Length: 1,500-2,000 words
@@ -1527,73 +962,23 @@ ARTICLE REQUIREMENTS:
 - Use the exact phrase "{keyword}" at least 3 times naturally in the article
 - Include it in the first paragraph, one H2 heading, and the conclusion
 
-VERIFIED DATE MARKER:
-Place this exact hidden HTML comment as the very first line of the
-article, before the TL;DR block below: <!--VERIFIED_DATE--> This will
-be replaced automatically with an accurate "last verified" date, do not
-write your own date text anywhere in the article.
-
-TL;DR:
-Immediately after the verified date marker, place a short TL;DR block,
-plain HTML (no H2 heading), formatted as a bolded label "In short:"
-followed by 40-60 words giving the direct answer a reader (or an AI
-search engine) needs immediately: which of {product1} or {product2} is
-better for which situation, in one sentence each. End with exactly this
-sentence, using both hidden markers verbatim: "{product1} scores
-<!--TLDR_SCORE:{product1}--> out of 100, {product2} scores
-<!--TLDR_SCORE:{product2}--> out of 100." Do not write numbers yourself,
-they are filled in automatically from the same scores computed below.
-
 REQUIRED STRUCTURE:
 1. Introduction — why this comparison matters (100 words)
 2. Quick Verdict — summary table showing winner in each category (HTML table)
    - Include CTA button here for both products: Try [Product] →
-3. Scoring Breakdown — see SCORING INSTRUCTIONS below. Place two hidden
-   SCORES blocks here, one for {product1} and one for {product2}, right
-   after the Quick Verdict table and before the {product1} Overview section.
-4. {product1} Overview — key features and pricing (250 words)
-5. {product2} Overview — key features and pricing (250 words)
-6. Head-to-Head Comparison — 5 categories with winner declared each time (500 words)
+3. {product1} Overview — key features and pricing (250 words)
+4. {product2} Overview — key features and pricing (250 words)
+5. Head-to-Head Comparison — 5 categories with winner declared each time (500 words)
    - Include CTA button here: Try [Product] →
-7. Pricing Comparison — clear breakdown (150 words)
-8. Who Should Choose {product1} — specific use cases (100 words)
-9. Who Should Choose {product2} — specific use cases (100 words)
-10. Who Should Skip {product1} — one short paragraph on who is genuinely
-    better served by {product2} or a third alternative, and why
-11. Who Should Skip {product2} — one short paragraph on who is genuinely
-    better served by {product1} or a third alternative, and why
-12. Final Verdict — clear recommendation (100 words)
-13. CTAs for both products with affiliate links
-
-SCORING INSTRUCTIONS:
-Score both {product1} and {product2} against these fixed categories, each
-on a scale of 1 to 10, based on what you cover in their Overview and
-Head-to-Head sections. Be honest and differentiated between the two, do
-not give them identical or near-identical scores across the board unless
-they are genuinely comparable in that specific category.
-
-Rubric categories and their site-wide weights (for context only, the
-weighted total is calculated automatically):
-{rubric_lines}
-
-Output two separate hidden HTML comment blocks in EXACTLY this format,
-placed one after the other at the location specified in step 3 above:
-
-<!--SCORES
-product: {product1}
-{rubric_keys}
--->
-<!--SCORES
-product: {product2}
-{rubric_keys}
--->
-
-These comment blocks will not be visible to readers. Do not also write
-star ratings (⭐) anywhere in the article, since they would conflict with
-the automatically generated scores.
+6. Pricing Comparison — clear breakdown (150 words)
+7. Who Should Choose {product1} — specific use cases (100 words)
+8. Who Should Choose {product2} — specific use cases (100 words)
+9. Final Verdict — clear recommendation (100 words)
+10. CTAs for both products with affiliate links
 
 FORMAT: Use HTML with h2, h3, p, ul, li, table tags.
 Include comparison table with checkmarks ✓ and ✗
+Star ratings for each product. ⭐⭐⭐⭐⭐ (X/5)
 
 CRITICAL FORMATTING RULES:
 - Do NOT use H1 tags anywhere in the article — the page title is already H1
@@ -1634,24 +1019,7 @@ Add 2-3 internal links maximum — only where genuinely relevant, never forced.
 Write the complete article now in HTML:"""
 
 # ─── BUYING GUIDE PROMPT ──────────────────────────────────────
-def build_buying_guide_prompt(title, keyword, programs, affiliate_links, internal_links_str, facts_block=""):
-    rubric_lines = "\n".join(
-        f"- {category} ({weight}%)" for category, weight in SCORING_RUBRIC
-    )
-    rubric_keys = "\n".join(
-        f"{category.lower().replace(' ', '_')}: [1-10]" for category, weight in SCORING_RUBRIC
-    )
-    products_list_str = ", ".join(programs) if programs else keyword
-
-    facts_section = (
-        f"""
-VERIFIED FACTS (from live web research, use these for any specific pricing
-or numeric claims, do not invent or assume beyond what's listed here):
-{facts_block}
-"""
-        if facts_block else ""
-    )
-
+def build_buying_guide_prompt(title, keyword, programs, affiliate_links, internal_links_str):
     return f"""You are an expert SaaS reviewer writing for {SITE_NAME}, an independent
 software review publication. Write a comprehensive, SEO-optimized buying guide article.
 
@@ -1659,9 +1027,8 @@ ARTICLE DETAILS:
 Title: {title}
 Note: Include {CURRENT_YEAR} in the article title only — not in headings, slug, or keyword references throughout the body.
 Primary keyword: {keyword}
-Products to feature: {products_list_str}
+Products to feature: {', '.join(programs)}
 Affiliate links: {affiliate_links}
-{facts_section}
 
 ARTICLE REQUIREMENTS:
 - Length: 1,500-2,000 words
@@ -1671,66 +1038,21 @@ ARTICLE REQUIREMENTS:
 - Use the exact phrase "{keyword}" at least 3 times naturally in the article
 - Include it in the first paragraph, one H2 heading, and the conclusion
 
-VERIFIED DATE MARKER:
-Place this exact hidden HTML comment as the very first line of the
-article, before the TL;DR block below: <!--VERIFIED_DATE--> This will
-be replaced automatically with an accurate "last verified" date, do not
-write your own date text anywhere in the article.
-
-TL;DR:
-Immediately after the verified date marker, place a short TL;DR block,
-plain HTML (no H2 heading), formatted as a bolded label "In short:"
-followed by 40-60 words naming your top 1-2 picks from {products_list_str}
-and who each is best for. For each product you name, include its score
-using the hidden marker verbatim, using the EXACT product name as listed
-above so it matches, for example: "<!--TLDR_SCORE:ExactProductName-->
-out of 100." Do not write numbers yourself, they are filled in
-automatically from the scores computed below.
-
 REQUIRED STRUCTURE:
 1. Introduction — why this category matters (100 words)
 2. What to look for — buying criteria with H3 subheadings (200 words)
-3. Top picks — 3-5 products (800 words total section):
+3. Top picks — 3-5 products each ending with an affiliate CTA button (800 words total section):
    - Brief overview
    - Key features
    - Pricing
    - Best for
-   - One line starting with "Skip this if..." describing who it's NOT a good fit for
    - Affiliate link CTA
-4. Scoring Breakdown — see SCORING INSTRUCTIONS below. Place all hidden
-   SCORES blocks together here, one per product, immediately after Top
-   Picks and before the Comparison table. This becomes one combined
-   table covering every product, so keep them grouped together in this
-   one place rather than scattered.
-5. Comparison table — all products side by side (HTML table)
-6. How to choose — decision framework (200 words)
-7. Final recommendations — top 3 for different needs (150 words)
+4. Comparison table — all products side by side (HTML table)
+5. How to choose — decision framework (200 words)
+6. Final recommendations — top 3 for different needs (150 words)
 
-SCORING INSTRUCTIONS:
-Score every product you cover ({products_list_str}) against these fixed
-categories, each on a scale of 1 to 10, based on what you write about it
-in its Top Picks entry. Be honest and differentiated between products, a
-genuinely weaker product in a category should score in the 4-6 range, not
-default to 8-9 across the board just because it made the list.
-
-Rubric categories and their site-wide weights (for context only, the
-weighted total is calculated automatically):
-{rubric_lines}
-
-For EACH product, output a separate hidden HTML comment block in EXACTLY
-this format, all placed together in the Scoring Breakdown section (step 4
-above), one immediately after another:
-
-<!--SCORES
-product: [exact product name]
-{rubric_keys}
--->
-
-These comment blocks will not be visible to readers. Do not also write
-star ratings (⭐) anywhere in the article, since they would conflict with
-the automatically generated scores.
-
-FORMAT: Use HTML. Each product section should have an affiliate CTA button.
+FORMAT: Use HTML. Include star ratings. ⭐⭐⭐⭐⭐ (X/5)
+Each product section should have an affiliate CTA button.
 
 CRITICAL FORMATTING RULES:
 - Do NOT use H1 tags anywhere in the article — the page title is already H1
@@ -2469,12 +1791,11 @@ def cleanup_old_files():
     print("   ✅ Cleanup complete")
 
 # ─── MAIN PIPELINE ────────────────────────────────────────────
-def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True, use_research=True):
+def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True):
     print("=" * 60)
     print("  EQUINOXEN MEDIA — CONTENT PIPELINE")
     print(f"  Running at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"  Target: {num_articles} articles")
-    print(f"  Pre-write research: {'ON' if use_research else 'OFF (--no-research)'}")
     print("=" * 60)
 
     intelligence = load_latest_intelligence()
@@ -2524,7 +1845,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True, use
             continue
 
         # Generate article
-        article_content = generate_article(opp, use_research=use_research)
+        article_content = generate_article(opp)
         if not article_content:
             continue
 
@@ -2576,9 +1897,7 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True, use
                 keyword,
                 post_id,
                 post_url,
-                comparison_key=comparison_key,
-                content_type=opp.get('type', 'review'),
-                programs=opp.get('programs', []),
+                comparison_key=comparison_key
             )
             published_count += 1
 
@@ -2640,24 +1959,11 @@ def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True, use
 if __name__ == "__main__":
     import sys
 
-    args = sys.argv[1:]
-    use_research = "--no-research" not in args
-    args = [a for a in args if a != "--no-research"]
-
-    if args and args[0] == "list":
+    if len(sys.argv) > 1 and sys.argv[1] == "list":
         show_published()
-    elif args and args[0] == "ratings":
-        list_ratings()
-    elif args and args[0] == "research":
-        list_research()
-    elif len(args) > 1 and args[0] == "clear-rating":
-        clear_rating(" ".join(args[1:]))
-    elif len(args) > 1 and args[0] == "clear-research":
-        clear_research(" ".join(args[1:]))
     else:
         run_pipeline(
             num_articles=1,
             publish_as_draft=False,
-            publish_to_wp=True,
-            use_research=use_research
+            publish_to_wp=True
         )
