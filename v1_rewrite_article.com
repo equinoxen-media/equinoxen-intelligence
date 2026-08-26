@@ -417,17 +417,6 @@ def update_wordpress_post(post_id, new_content, meta_description=None):
         return False
 
 
-def mark_retrofitted(post_id):
-    """Stamp the tracker entry itself so --list can show retrofit status."""
-    tracker = load_published_posts()
-    for post in tracker.get("posts", []):
-        if post.get("post_id") == post_id:
-            post["last_retrofitted"] = datetime.now().isoformat()
-            break
-    with open("published_posts.json", "w") as f:
-        json.dump(tracker, f, indent=2)
-
-
 # ─── FULL RETROFIT FOR ONE POST ────────────────────────────────────
 def retrofit_post(post, forced_type=None):
     post_id = post["post_id"]
@@ -522,9 +511,7 @@ def retrofit_post(post, forced_type=None):
     # ── Step 5: update WordPress in place (same slug/URL/image) ──────
     today = datetime.now().strftime("%Y-%m-%d")
     meta_description = f"Independent {keyword} review, verified {today}. Honest pricing, features, and our take."
-    updated = update_wordpress_post(post_id, new_content, meta_description=meta_description)
-    if updated:
-        mark_retrofitted(post_id)
+    update_wordpress_post(post_id, new_content, meta_description=meta_description)
 
     return {
         "post_id": post_id,
@@ -539,25 +526,19 @@ def retrofit_post(post, forced_type=None):
 
 
 # ─── CLI ────────────────────────────────────────────────────────────
-def list_candidates(pending_only=False):
+def list_candidates():
     tracker = load_published_posts()
     posts = tracker.get("posts", [])
     if not posts:
         print("No published posts found")
         return
-    if pending_only:
-        posts = [p for p in posts if not p.get("last_retrofitted")]
-    print(f"\n📚 RETROFIT CANDIDATES ({len(posts)}{' pending' if pending_only else ' total'})")
+    print(f"\n📚 RETROFIT CANDIDATES ({len(posts)} total)")
     print(f"   Priority products (retrofitted first in --all runs): {', '.join(PRIORITY_PRODUCTS)}")
     print("=" * 60)
     for post in posts:
         ctype = post.get("content_type") or f"(untracked, guessed: {detect_content_type(post['title'])})"
         flag = "⭐ PRIORITY  " if _post_priority(post) == 0 else ""
-        retrofitted = post.get("last_retrofitted")
-        status = f"✅ retrofitted {retrofitted[:10]}" if retrofitted else "○ not yet retrofitted"
         print(f"\n  {flag}📄 {post['title']}")
-        print(f"     Post ID: {post['post_id']}  |  Slug: {post['slug']}  |  Type: {ctype}")
-        print(f"     {status}")
         print(f"     Slug: {post['slug']}  |  Type: {ctype}")
 
 
@@ -598,7 +579,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
     if sys.argv[1] == "--list":
-        list_candidates(pending_only="--pending" in sys.argv)
+        list_candidates()
 
     elif sys.argv[1] == "--all":
         limit = int(sys.argv[2]) if len(sys.argv) > 2 else 20

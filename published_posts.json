@@ -285,7 +285,9 @@
     "wave-accounting-review",
     "squarespace-vs-elementor",
     "best-crm-software-for-real-estate-agents",
-    "mailerlite-review"
+    "mailerlite-review",
+    "descript-vs-jasper",
+    "smartsheet-vs-notion"
   ],
   "titles": [
     "11 best crm software for small business in 2026 (tested & compared)",
@@ -573,7 +575,9 @@
     "wave accounting review 2026: is free accounting software worth it",
     "squarespace vs elementor 2026: website builder showdown for small business",
     "best crm software for real estate agents in 2026: top 5 picks",
-    "mailerlite review 2026: is this email marketing tool worth it for small business"
+    "mailerlite review 2026: is this email marketing tool worth it for small business",
+    "descript vs jasper ai 2026: best ai tool for content creators",
+    "smartsheet vs notion: which project management tool wins in 2026?"
   ],
   "keywords": [
     "best crm small business",
@@ -861,7 +865,9 @@
     "wave accounting review",
     "squarespace vs elementor",
     "best crm software for real estate",
-    "mailerlite review"
+    "mailerlite review",
+    "descript vs jasper",
+    "smartsheet vs notion"
   ],
   "posts": [
     {
@@ -3168,6 +3174,32 @@
         "MailerLite"
       ],
       "created_at": "2026-08-24T21:03:07.568145"
+    },
+    {
+      "title": "Descript vs Jasper AI 2026: Best AI Tool for Content Creators",
+      "slug": "descript-vs-jasper",
+      "keyword": "descript vs jasper",
+      "post_id": 1310,
+      "post_url": "https://equinoxen.com/descript-vs-jasper/",
+      "content_type": "comparison",
+      "programs": [
+        "Descript",
+        "Jasper"
+      ],
+      "created_at": "2026-08-25T15:04:39.556091"
+    },
+    {
+      "title": "Smartsheet vs Notion: Which Project Management Tool Wins in 2026?",
+      "slug": "smartsheet-vs-notion",
+      "keyword": "smartsheet vs notion",
+      "post_id": 1313,
+      "post_url": "https://equinoxen.com/smartsheet-vs-notion/",
+      "content_type": "comparison",
+      "programs": [
+        "Smartsheet",
+        "Notion"
+      ],
+      "created_at": "2026-08-25T18:04:20.408330"
     }
   ],
   "comparison_keys": [
@@ -3336,6 +3368,8 @@
     "wave accounting",
     "elementor+squarespace",
     "hubspot+pipedrive",
-    "mailerlite"
+    "mailerlite",
+    "descript+jasper",
+    "notion+smartsheet"
   ]
 }

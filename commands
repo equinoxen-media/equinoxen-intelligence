@@ -30,7 +30,14 @@ python3 audit_claims.py --list                    # see what's auditable
 python3 audit_claims.py kartra-review              # audit one post by slug
 python3 audit_claims.py --all 20                   # audit your 20 most recent posts
 
+python3 rewrite_article.py 1847 
+
 python3 rewrite_article.py kartra-review --type review
+review — single product (e.g., "Kartra Review")
+comparison — two products, "X vs Y" style
+buying_guide — multiple products, "Best X for Y" style
+
 python3 rewrite_article.py freshbooks-vs-quickbooks --type comparison
 python3 rewrite_article.py best-crm-software --type buying_guide
 python3 rewrite_article.py --list
+python3 rewrite_article.py --list | grep -i "5 Best SEO Tools for Agencies"

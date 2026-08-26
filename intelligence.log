@@ -9661,3 +9661,142 @@
   Opportunities: 3 identified
   Report: intelligence_report_20260824_170242.json
 ============================================================
+============================================================
+  EQUINOXEN MEDIA — INTELLIGENCE LAYER v3
+  2026-08-25 17:00:19
+  Keywords: Google Autocomplete (free) + SerpAPI
+  Reddit: RSS feeds (no API needed)
+============================================================
+
+📊 PHASE 1: Keyword Research
+----------------------------------------
+
+🔍 Google Autocomplete for: project management software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: project management software
+  Found 10 keywords for 'best project management software 2026'
+
+🔍 Google Autocomplete for: SEO tools
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: SEO tools
+  Found 8 keywords for 'best SEO tools 2026'
+
+🔍 Google Autocomplete for: business automation software
+  Found 5 autocomplete suggestions
+
+📈 Finding keywords for: business automation software
+  Found 11 keywords for 'best business automation software 2026'
+
+🔍 Google Autocomplete for: accounting software
+  Found 20 autocomplete suggestions
+
+📈 Finding keywords for: accounting software
+  Found 11 keywords for 'best accounting software 2026'
+
+  ✅ Total keywords: 105
+
+💬 PHASE 2: Reddit RSS Analysis
+----------------------------------------
+
+🔍 Scanning r/entrepreneur via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/entrepreneur/new.rss
+  Found 1 relevant posts
+
+🔍 Scanning r/smallbusiness via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/smallbusiness/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/SaaS via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/SaaS/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/marketing via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/marketing/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/productivity via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/productivity/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/startups via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/startups/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/digitalnomad via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/digitalnomad/new.rss
+  Found 0 relevant posts
+
+🔍 Scanning r/freelance via RSS...
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/hot.rss
+  ⚠️  RSS error 429 for https://www.reddit.com/r/freelance/new.rss
+  Found 0 relevant posts
+
+  ✅ Total Reddit posts: 1
+
+🧠 PHASE 3: AI Opportunity Analysis
+----------------------------------------
+
+🤖 Analyzing opportunities with Claude...
+  🔍 Checking keyword competition...
+  🚫 Filtered duplicate comparison from Claude's suggestions: Todoist Review 2026: Can This Simple Task Manager Scale for Teams?
+  🚫 Filtered duplicate comparison from Claude's suggestions: Close CRM Review 2026: Is This Sales Platform Worth the Premium Price?
+  🚫 Filtered duplicate comparison from Claude's suggestions: Typeform vs Jotform: Which Form Builder Delivers Better ROI in 2026?
+  🚫 Filtered duplicate comparison from Claude's suggestions: 5 Best Email Marketing Software for Small Business in 2026
+  🚫 Filtered duplicate comparison from Claude's suggestions: Pabbly Connect vs Integrately: Best Zapier Alternative for Budget-Conscious Teams in 2026
+  ✅ Found 5 opportunities
+
+🎯 TOP CONTENT OPPORTUNITIES:
+============================================================
+
+1. Smartsheet vs Notion: Which Project Management Tool Wins in 2026?
+   Keyword: smartsheet vs notion
+   Type: comparison
+   Programs: Smartsheet, Notion
+   Urgency: 9/10
+   Why: Both tools are evolving rapidly with AI features in 2026. Smartsheet targets enterprise teams while Notion appeals to startups. Low competition comparison not yet covered, high commercial intent from teams evaluating structured vs flexible project management.
+
+2. Best Project Management Software for Construction in 2026
+   Keyword: best project management software for construction
+   Type: buying_guide
+   Programs: Monday.com, Smartsheet, ClickUp, Basecamp, Teamwork
+   Urgency: 9/10
+   Why: Appears in autocomplete data with low commercial competition. Construction is high-value niche with specific needs like job costing, field management. Can feature vertical-specific tools alongside general PM platforms.
+
+3. Writesonic Review 2026: How This AI Writer Stacks Up Against ChatGPT
+   Keyword: writesonic review
+   Type: review
+   Programs: Writesonic
+   Urgency: 8/10
+   Why: AI writing tools surging in 2026. Writesonic offers competitive affiliate rates and appeals to content marketers seeking ChatGPT alternatives. Lesser-known than Jasper but growing market share with lower pricing.
+
+4. Ubersuggest Review 2026: Is Neil Patel's SEO Tool Still Competitive?
+   Keyword: ubersuggest review
+   Type: review
+   Programs: Ubersuggest
+   Urgency: 7/10
+   Why: Affordable SEO tool with strong affiliate program. Not individually reviewed yet despite being featured in comparisons. Appeals to budget-conscious marketers seeking Ahrefs/Semrush alternatives at fraction of cost.
+
+5. Bench Accounting Review 2026: Is Bookkeeping-as-a-Service Worth the Cost?
+   Keyword: bench accounting review
+   Type: review
+   Programs: Bench
+   Urgency: 7/10
+   Why: Unique hybrid model combining software and human bookkeepers. Bench offers affiliate commissions on high-ticket service. Appeals to busy entrepreneurs who want hands-off bookkeeping but need individual assessment not covered in comparison articles.
+
+✅ Report saved: intelligence_report_20260825_170233.json
+
+============================================================
+  INTELLIGENCE RUN COMPLETE
+  Trends: 105 keywords
+  Reddit: 1 posts analyzed
+  Opportunities: 5 identified
+  Report: intelligence_report_20260825_170233.json
+============================================================

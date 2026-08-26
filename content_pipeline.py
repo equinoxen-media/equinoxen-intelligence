@@ -1195,6 +1195,13 @@ def render_rubric_table(scores, product=None):
         )
 
     weighted_total = round(weighted_total)
+    rows += (
+        "<tr>"
+        '<td style="border:1px solid #D4AF37; padding:8px;"><strong>Overall Score</strong></td>'
+        '<td style="border:1px solid #D4AF37; padding:8px;"></td>'
+        f'<td style="border:1px solid #D4AF37; padding:8px;"><strong>{weighted_total}/100</strong></td>'
+        "</tr>"
+    )
     heading = f"{product}: Scoring Breakdown" if product else "Our Testing Method &amp; Scoring"
     table_html = (
         f"<h3>{heading}</h3>"
@@ -1209,7 +1216,6 @@ def render_rubric_table(scores, product=None):
         "</tr>"
         f"{rows}"
         "</table>"
-        f"<h5>Overall Score: {weighted_total}/100</h5>"
     )
     return table_html, weighted_total
 
@@ -1245,6 +1251,21 @@ def render_combined_rubric_table(product_score_pairs):
             "</tr>"
         )
 
+    overall_cells = ""
+    results = []
+    for product, _ in product_score_pairs:
+        weighted_total = round(totals[product])
+        overall_cells += f'<td style="border:1px solid #D4AF37; padding:8px;"><strong>{weighted_total}/100</strong></td>'
+        results.append((product, weighted_total))
+
+    rows += (
+        "<tr>"
+        '<td style="border:1px solid #D4AF37; padding:8px;"><strong>Overall Score</strong></td>'
+        '<td style="border:1px solid #D4AF37; padding:8px;"></td>'
+        f"{overall_cells}"
+        "</tr>"
+    )
+
     table_html = (
         "<h3>Scoring Breakdown</h3>"
         "<p>Every product on Equinoxen Media is scored against the same weighted "
@@ -1259,12 +1280,6 @@ def render_combined_rubric_table(product_score_pairs):
         f"{rows}"
         "</table>"
     )
-
-    results = []
-    for product, _ in product_score_pairs:
-        weighted_total = round(totals[product])
-        table_html += f"<h5>{product} — Overall Score: {weighted_total}/100</h5>"
-        results.append((product, weighted_total))
 
     return table_html, results
 

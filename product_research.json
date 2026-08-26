@@ -160,5 +160,85 @@
       "source_url": "https://www.mailerlite.com/pricing"
     },
     "researched_date": "2026-08-24"
+  },
+  "descript": {
+    "product": "Descript",
+    "data": {
+      "pricing": "Free plan at $0/month with 1 hour media/month and 100 AI credits. Hobbyist plan at $16/month (annual) or $24/month (monthly) with 10 hours media/month. Creator plan at $24/month (annual) or $35/month (monthly) with 30 hours media/month. Business plan at $50/month (annual) or $65/month (monthly) with 40 hours media/month. Enterprise plan with custom pricing.",
+      "key_features": [
+        "Text-based video and audio editing - edit media by editing the transcript, with AI transcription in 25 languages",
+        "Studio Sound - AI-powered audio enhancement that removes background noise and improves recording quality",
+        "AI features including filler word removal, automated captions, eye contact correction, and AI voice cloning (Overdub)",
+        "Multitrack editing with speaker detection and labeling for podcasts and interviews",
+        "Built-in screen recording, remote recording, and collaboration tools with royalty-free stock media library"
+      ],
+      "limitations": [
+        "Not a replacement for professional video editors like Adobe Premiere or Final Cut Pro - lacks advanced color grading, motion graphics, and detailed codec/export controls",
+        "No mobile app for editing on the go - desktop only"
+      ],
+      "notable_limits": "Free plan: 1 hour media/month, 720p export with watermark (1 watermark-free export/month), 100 AI credits one-time, 5GB storage. Media hours track all uploaded/recorded media and do not roll over monthly. AI credits track usage of AI features. Plan limits vary by tier with transcription accuracy issues reported for non-American/British accents. Performance can slow on larger projects with heavy edits.",
+      "source_url": "https://www.descript.com/pricing"
+    },
+    "researched_date": "2026-08-25"
+  },
+  "jasper": {
+    "product": "Jasper",
+    "data": {
+      "pricing": "Pro plan: $69/month (monthly billing) or $59/month (annual billing) per seat with unlimited AI-generated words. Business plan: Custom pricing (contact sales). Annual billing saves approximately 20%.",
+      "key_features": [
+        "Unlimited AI-generated words on all plans with seat-based pricing model",
+        "Brand Voice customization - Pro includes 2 Brand Voices, Business offers unlimited",
+        "50+ marketing templates for blogs, ads, emails, social media, and product descriptions",
+        "Jasper IQ knowledge base integration to ground AI in company-specific facts and reduce hallucinations",
+        "Content Pipelines and AI Agents for automating campaign-scale content workflows (Business plan)"
+      ],
+      "limitations": [
+        "Does not include native SEO capabilities - no keyword research, SERP analysis, or rank tracking (requires separate tools like Surfer SEO)",
+        "Long-form content requires significant human editing to avoid formulaic AI tone and fact-checking for accuracy"
+      ],
+      "notable_limits": "Pro plan limited to 1 user seat (additional seats require Business plan), 2 Brand Voices, 5 Knowledge assets, and 3 Audiences. No permanent free plan available.",
+      "source_url": "https://www.jasper.ai/pricing"
+    },
+    "researched_date": "2026-08-25"
+  },
+  "smartsheet": {
+    "product": "Smartsheet",
+    "data": {
+      "pricing": "Pro plan: $9 per user/month (billed annually, 1-10 users). Business plan: $19 per user/month (billed annually, minimum 3 users). Enterprise plan: Custom pricing (minimum 10 users). Advanced Work Management plan: Custom pricing. Monthly billing available at approximately 25% higher rates.",
+      "key_features": [
+        "Multiple work views including Gantt charts, Calendar, Grid, Board, and Card views for flexible project visualization",
+        "AI-powered features including Smart Assist for natural language queries, Smart Columns for automated sentiment analysis and translation, and AI dashboard builder",
+        "Unlimited automations on Business plan and above with 250 automations per month on Pro plan for workflow efficiency",
+        "Real-time collaboration with unlimited free viewers on Pro plan and unlimited free guests on Business/Enterprise plans",
+        "Extensive integrations with 100+ tools including Microsoft 365, Google Workspace, Slack, Salesforce, and JIRA"
+      ],
+      "limitations": [
+        "No permanent free plan available (discontinued in 2025); only offers a 30-day free trial with no credit card required",
+        "Sheet capacity limits: 20,000 rows, 400 columns, and 500,000 cells maximum per sheet which can cause performance issues with large datasets and lack of true relational database functionality"
+      ],
+      "notable_limits": "Pro plan limited to 10 licensed users maximum. Business plan requires minimum 3 users. Enterprise requires minimum 10 users. Pro plan includes 250 automations/month and 20 GB storage. Premium add-ons (Dynamic View, Control Center, Data Shuttle, Bridge, WorkApps) cost extra and can add 20-50% to total contract value.",
+      "source_url": "https://www.smartsheet.com/pricing"
+    },
+    "researched_date": "2026-08-25"
+  },
+  "notion": {
+    "product": "Notion",
+    "data": {
+      "pricing": "Free: $0 (unlimited pages and blocks for individuals). Plus: $10/user/month billed annually or $12/month billed monthly (unlimited file uploads, 30-day version history, unlimited guests). Business: $20/user/month billed annually or $24/month billed monthly (includes full Notion AI with Agents, AI Meeting Notes, SSO, advanced permissions). Enterprise: Custom pricing (SCIM provisioning, audit logs, unlimited version history, advanced security, dedicated support).",
+      "key_features": [
+        "All-in-one workspace combining docs, wikis, projects, and databases with unlimited pages and blocks",
+        "Notion AI Agents that automate workflows and tasks across your workspace (Business plan and up)",
+        "Cross-platform search across Notion, Slack, Google Drive, GitHub and more integrated tools",
+        "Flexible database views (boards, timelines, calendars, tables) with relational properties and filters",
+        "Real-time collaboration with version history, page analytics, and team permissions"
+      ],
+      "limitations": [
+        "Does not manage email or calendar natively - no inbox management or scheduling features built-in",
+        "Cannot connect to live external systems for real-time data - AI works only with data already inside Notion workspace"
+      ],
+      "notable_limits": "Free plan: 5MB file upload limit, 7-day page history, 10 guest maximum. Plus/Free plans get only 20 AI trial responses (one-time). Business and Enterprise require Notion credits as add-on for Custom Agents/Workers automation. Annual billing saves ~17-20% vs monthly.",
+      "source_url": "https://www.notion.com/pricing"
+    },
+    "researched_date": "2026-08-25"
   }
 }

@@ -194,5 +194,47 @@
     },
     "weighted_total": 79,
     "assessed_date": "2026-08-24"
+  },
+  "descript": {
+    "product": "Descript",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 8,
+      "value": 8,
+      "integrations": 6,
+      "support": 7,
+      "scalability": 7,
+      "mobile_experience": 3
+    },
+    "weighted_total": 74,
+    "assessed_date": "2026-08-25"
+  },
+  "jasper": {
+    "product": "Jasper",
+    "scores": {
+      "ease_of_use": 7,
+      "features": 8,
+      "value": 6,
+      "integrations": 7,
+      "support": 7,
+      "scalability": 9,
+      "mobile_experience": 6
+    },
+    "weighted_total": 72,
+    "assessed_date": "2026-08-25"
+  },
+  "smartsheet": {
+    "product": "Smartsheet",
+    "scores": {
+      "ease_of_use": 6,
+      "features": 9,
+      "value": 6,
+      "integrations": 9,
+      "support": 7,
+      "scalability": 9,
+      "mobile_experience": 7
+    },
+    "weighted_total": 75,
+    "assessed_date": "2026-08-25"
   }
 }

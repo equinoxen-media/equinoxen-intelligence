@@ -11352,3 +11352,210 @@
    2. Verify affiliate links are working
    🧹 Removed old article: article_mailerlite-review_20260824_210203.html
    ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-25 15:00:11
+  Target: 1 articles
+  Pre-write research: ON
+============================================================
+📂 Loading intelligence report: intelligence_report_20260824_170242.json
+
+📋 Found 3 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: hubspot+pipedrive
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 3)
+============================================================
+⏭️  Skipping — comparison already covered: mailerlite
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 3)
+============================================================
+
+✍️  Generating article: Descript vs Jasper AI 2026: Best AI Tool for Content Creators
+   Keyword: descript vs jasper
+   Type: comparison
+   🔎 Researching Descript (web search)...
+   💾 Cached research for Descript (valid 365 days)
+   ✅ Research complete for Descript
+   🔎 Researching Jasper (web search)...
+   💾 Cached research for Jasper (valid 365 days)
+   ✅ Research complete for Jasper
+   💾 Cached rating for Descript: 74/100 (valid 365 days)
+   💾 Cached rating for Jasper: 72/100 (valid 365 days)
+   📊 Descript rubric score: 74/100
+   📊 Jasper rubric score: 72/100
+   ✅ Article generated (19388 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_descript-vs-jasper_20260825_150333.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Descript vs Jasper AI 2026: Best AI Tool for Content Creators
+   ✅ Landscape image generated (84KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1310
+   🔗 URL: https://equinoxen.com/descript-vs-jasper/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: descript vs jasper
+   📝 Tracked: Descript vs Jasper AI 2026: Best AI Tool for Content Creators
+
+📱 Posting to social media...
+   ⏭️  LinkedIn — outside posting window (10am-12pm Pacific)
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1539 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/descript-vs-jasper-ai-2026-best-ai-tool-for-content-creators-60p
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/descript-vs-jasper/
+   ✅ Google Indexing API submitted: https://equinoxen.com/descript-vs-jasper/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Descript vs Jasper AI 2026: Best AI Tool for Content Creators
+     Keyword: descript vs jasper
+     Local: article_descript-vs-jasper_20260825_150333.html
+     WordPress: https://equinoxen.com/descript-vs-jasper/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old article: article_descript-vs-jasper_20260825_150333.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-25 18:00:12
+  Target: 1 articles
+  Pre-write research: ON
+============================================================
+📂 Loading intelligence report: intelligence_report_20260825_170233.json
+
+📋 Found 5 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 5)
+============================================================
+
+✍️  Generating article: Smartsheet vs Notion: Which Project Management Tool Wins in 2026?
+   Keyword: smartsheet vs notion
+   Type: comparison
+   🔎 Researching Smartsheet (web search)...
+   💾 Cached research for Smartsheet (valid 365 days)
+   ✅ Research complete for Smartsheet
+   🔎 Researching Notion (web search)...
+   💾 Cached research for Notion (valid 365 days)
+   ✅ Research complete for Notion
+   📊 Using cached rating for Notion (assessed 2026-08-23)
+   💾 Cached rating for Smartsheet: 75/100 (valid 365 days)
+   📊 Smartsheet rubric score: 75/100
+   📊 Notion rubric score: 76/100
+   ✅ Article generated (24693 characters)
+   🔍 Generating SEO metadata...
+   💾 Saved locally: article_smartsheet-vs-notion_20260825_180309.html
+   🎨 Generating AI featured images...
+   🎨 Generating landscape AI image for: Smartsheet vs Notion: Which Project Management Tool Wins in 2026?
+   ✅ Landscape image generated (54KB)
+
+📤 Publishing to WordPress as publish...
+   ✅ Published! ID: 1313
+   🔗 URL: https://equinoxen.com/smartsheet-vs-notion/
+   🔄 WordPress hooks triggered
+   🎯 Rank Math focus keyword set: smartsheet vs notion
+   📝 Tracked: Smartsheet vs Notion: Which Project Management Tool Wins in 2026?
+
+📱 Posting to social media...
+   📤 Posting to LinkedIn...
+   🖼️  Uploading image to LinkedIn...
+   ⚠️  Image registration failed: 401
+   ❌ LinkedIn failed: 401 — {"status":401,"serviceErrorCode":65602,"code":"EXPIRED_ACCESS_TOKEN","message":"The token used in the request has expired"}
+   📤 Posting to X...
+   ✅ X posted successfully
+   📤 Posting to Dev.to...
+   ✍️  Generating Dev.to summary...
+   ✅ Dev.to summary generated (1631 chars)
+   ✅ Dev.to posted successfully
+   🔗 Dev.to URL: https://dev.to/jdhaack1/smartsheet-vs-notion-which-project-management-tool-wins-in-2026-147m
+   📱 Social posting complete
+   ✅ IndexNow submitted: https://equinoxen.com/smartsheet-vs-notion/
+   ✅ Google Indexing API submitted: https://equinoxen.com/smartsheet-vs-notion/
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 1 of 1 target articles:
+
+  📄 Smartsheet vs Notion: Which Project Management Tool Wins in 2026?
+     Keyword: smartsheet vs notion
+     Local: article_smartsheet-vs-notion_20260825_180309.html
+     WordPress: https://equinoxen.com/smartsheet-vs-notion/
+     Status: published
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   🧹 Removed old report: intelligence_report_20260818_170238.json
+   🧹 Removed old article: article_smartsheet-vs-notion_20260825_180309.html
+   ✅ Cleanup complete
+============================================================
+  EQUINOXEN MEDIA — CONTENT PIPELINE
+  Running at: 2026-08-25 21:00:15
+  Target: 1 articles
+  Pre-write research: ON
+============================================================
+📂 Loading intelligence report: intelligence_report_20260825_170233.json
+
+📋 Found 5 opportunities
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 1 of 5)
+============================================================
+⏭️  Skipping — comparison already covered: notion+smartsheet
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 2 of 5)
+============================================================
+⏭️  Skipping — already published (title match):
+   Best Project Management Software for Construction in 2026
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 3 of 5)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Writesonic Review 2026: How This AI Writer Stacks Up Against ChatGPT
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 4 of 5)
+============================================================
+⏭️  Skipping — already published (keyword match):
+   Ubersuggest Review 2026: Is Neil Patel's SEO Tool Still Competitive?
+
+============================================================
+  ARTICLE 1 of 1 (opportunity 5 of 5)
+============================================================
+⏭️  Skipping — already published (slug match):
+   Bench Accounting Review 2026: Is Bookkeeping-as-a-Service Worth the Cost?
+
+============================================================
+  PIPELINE COMPLETE
+============================================================
+
+✅ Published 0 of 1 target articles:
+
+⚠️  Only published 0 of 1 — run intelligence.py for fresh opportunities
+
+💡 Next steps:
+   1. Review articles in WordPress
+   2. Verify affiliate links are working
+   ✅ Cleanup complete
