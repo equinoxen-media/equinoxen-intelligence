@@ -59,9 +59,8 @@ from content_pipeline import (
     AFFILIATE_LINKS, SCORING_RUBRIC, apply_all_rubric_tables, apply_tldr_scores,
     load_published_posts, clean_html_response,
     clear_rating, clear_research, save_research, get_cached_research,
-    VOICE_GUIDANCE, SOURCE_PARAPHRASE_GUIDANCE,
 )
-from audit_claims import fetch_post_content, extract_claims, verify_claim, save_report, AUDIT_MODEL, AUDIT_REPORTS_DIR
+from audit_claims import fetch_post_content, extract_claims, verify_claim, save_report, AUDIT_MODEL
 
 RETROFIT_MODEL = "claude-sonnet-4-5"
 AUDIT_REPORT_TTL_DAYS = 7  # reuse a recent audit_claims.py report instead of re-auditing from scratch
@@ -71,7 +70,7 @@ AUDIT_REPORT_TTL_DAYS = 7  # reuse a recent audit_claims.py report instead of re
 # PartnerStack itself is a network, not a single product, so there's no
 # way to auto-detect its member programs, add them here by name as you
 # identify them (or as you get approved for more).
-PRIORITY_PRODUCTS = ["freshbooks", "constant contact", "jotform", "zoho"]
+PRIORITY_PRODUCTS = ["freshbooks", "constant contact"]
 
 
 def _post_priority(post):
@@ -124,7 +123,7 @@ def find_recent_audit_report(title):
     claims list, or None if nothing recent enough was found.
     """
     slug = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:50]
-    candidates = sorted(glob.glob(os.path.join(AUDIT_REPORTS_DIR, f"audit_report_{slug}_*.json")))
+    candidates = sorted(glob.glob(f"audit_report_{slug}_*.json"))
     if not candidates:
         return None
 
@@ -138,24 +137,7 @@ def find_recent_audit_report(title):
             print(f"   ⏳ Found audit report ({latest}) but it's {age_days} day(s) old — re-auditing")
             return None
         print(f"   📂 Reusing recent audit report: {latest} ({age_days} day(s) old)")
-        raw_claims = report.get("claims", [])
-
-        valid_claims = []
-        dropped = 0
-        for c in raw_claims:
-            if not isinstance(c, dict) or not c.get("claim_text") or not c.get("product"):
-                dropped += 1
-                continue
-            valid_claims.append(c)
-
-        if dropped and not valid_claims and raw_claims:
-            print(f"   ⚠️  This cached report is entirely malformed ({dropped}/{len(raw_claims)} claims broken) — it was likely saved before a bug fix. Falling back to a fresh audit instead of using it. Consider deleting {latest}.")
-            return None
-
-        if dropped:
-            print(f"   ⚠️  {dropped} malformed claim(s) in cached report were dropped, {len(valid_claims)} usable claim(s) kept")
-
-        return valid_claims
+        return report.get("claims", [])
     except Exception as e:
         print(f"   ⚠️  Could not read {latest}: {e}")
         return None
@@ -173,13 +155,7 @@ def find_post(identifier):
 def detect_content_type(title):
     """Fallback heuristic for posts published before content_type was tracked."""
     title_lower = title.lower()
-    vs_count = len(re.findall(r'\bvs\.?\b', title_lower))
-    if vs_count >= 2:
-        # "X vs Y vs Z" names 3+ products, the comparison prompt only
-        # supports exactly 2, so this needs the buying_guide structure
-        # instead, even though it reads like a comparison title.
-        return "buying_guide"
-    if vs_count == 1:
+    if " vs " in title_lower or " vs. " in title_lower:
         return "comparison"
     if re.search(r'\b(best|top)\b', title_lower):
         return "buying_guide"
@@ -217,14 +193,14 @@ def build_verified_facts_block(audited_claims):
         status = c.get("status")
 
         if status == "confirmed":
-            lines.append(f"- [{claim_type}] {c.get('claim_text', '')} (confirmed accurate)")
+            lines.append(f"- [{claim_type}] {c['claim_text']} (confirmed accurate)")
             if c.get("source_url"):
-                sources.append((product, c["source_url"], claim_type))
+                sources.append((product, c["source_url"]))
 
         elif status in ("discrepancy", "outdated"):
-            lines.append(f"- [{claim_type}] CORRECTED: {c.get('finding', '')} (previous claim was: \"{c.get('claim_text', '')}\", now outdated or wrong)")
+            lines.append(f"- [{claim_type}] CORRECTED: {c['finding']} (previous claim was: \"{c['claim_text']}\", now outdated or wrong)")
             if c.get("source_url"):
-                sources.append((product, c["source_url"], claim_type))
+                sources.append((product, c["source_url"]))
 
         elif status == "unverifiable":
             unverifiable.append(c)
@@ -243,9 +219,6 @@ def build_retrofit_prompt(content_type, title, keyword, product, programs,
     if content_type == "comparison":
         product1 = programs[0] if len(programs) > 0 else product
         product2 = programs[1] if len(programs) > 1 else "the alternative"
-        if len(programs) > 2:
-            dropped = programs[2:]
-            print(f"   ⚠️  Comparison only supports 2 products, dropping: {', '.join(dropped)}. Consider --type buying_guide instead for 3+ products.")
         scoring_blocks = (
             f"<!--SCORES\nproduct: {product1}\n{rubric_keys}\n-->\n"
             f"<!--SCORES\nproduct: {product2}\n{rubric_keys}\n-->"
@@ -286,8 +259,6 @@ Affiliate links: {affiliate_str}
 VERIFIED FACTS (from a live fact-check against vendor sources, use these,
 do not contradict them):
 {facts_block}
-{VOICE_GUIDANCE}
-{SOURCE_PARAPHRASE_GUIDANCE}
 
 REQUIRED STANDARD STRUCTURE (same shape used across the whole site):
 
@@ -378,40 +349,18 @@ def apply_verified_date(article_content):
     return article_content.replace("<!--VERIFIED_DATE-->", banner)
 
 
-CLAIM_TYPE_LABELS = {
-    "price": "pricing",
-    "plan_limit": "plan limits",
-    "feature": "feature details",
-    "integration": "integration details",
-    "other": "product details",
-}
-
-
 def apply_sources_section(article_content, sources):
     if not sources:
         return article_content.replace("<!--SOURCES-->", "")
 
-    # Group by (product, url) and collect every claim type verified against
-    # that specific source, so the link description says what was actually
-    # checked there instead of a repeated generic label.
-    grouped = {}
-    for product, url, claim_type in sources:
-        key = (product, url)
-        grouped.setdefault(key, set()).add(claim_type)
-
+    seen = set()
     items = []
-    for (product, url), claim_types in grouped.items():
-        labels = sorted({CLAIM_TYPE_LABELS.get(t, "product details") for t in claim_types})
-        if len(labels) == 1:
-            label_str = labels[0]
-        elif len(labels) == 2:
-            label_str = f"{labels[0]} and {labels[1]}"
-        else:
-            label_str = ", ".join(labels[:-1]) + f", and {labels[-1]}"
-        items.append(
-            f'<li><a href="{url}" rel="nofollow" target="_blank">'
-            f'{product} — {label_str} verified against official source</a></li>'
-        )
+    for product, url in sources:
+        key = (product, url)
+        if key in seen:
+            continue
+        seen.add(key)
+        items.append(f'<li><a href="{url}" rel="nofollow" target="_blank">{product} — official source</a></li>')
 
     section = (
         "<h3>Sources</h3>"
@@ -543,7 +492,7 @@ def retrofit_post(post, forced_type=None, forced_products=None, refresh=False):
     if unverifiable:
         print(f"   ⚠️  {len(unverifiable)} claim(s) unverifiable — omitted from rewrite, review manually:")
         for c in unverifiable:
-            print(f"      - {c.get('claim_text', '(malformed claim, missing text)')}")
+            print(f"      - {c['claim_text']}")
 
     # ── Step 2: determine type + product list ──────────────────────
     content_type = forced_type or post.get("content_type") or detect_content_type(title)
@@ -555,10 +504,6 @@ def retrofit_post(post, forced_type=None, forced_products=None, refresh=False):
             if p and p not in seen:
                 seen.append(p)
         programs = seen
-    if content_type == "buying_guide" and len(programs) > 3:
-        print(f"   ✂️  Buying guides are capped at 3 products, trimming {len(programs)} down to the first 3: {', '.join(programs[:3])}")
-        programs = programs[:3]
-
     print(f"   ℹ️  Type: {content_type} | Products: {', '.join(programs) if programs else keyword}")
 
     # ── Step 2.5: only clear caches if --refresh was explicitly passed ──

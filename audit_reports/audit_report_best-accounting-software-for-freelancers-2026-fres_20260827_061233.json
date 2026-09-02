@@ -1,0 +1,112 @@
+{
+  "post_id": 407,
+  "title": "Best Accounting Software for Freelancers 2026: FreshBooks vs QuickBooks",
+  "url": "https://equinoxen.com/best-accounting-software-freelancers-2026-freshbooks-vs-quickbooks/",
+  "audited_at": "2026-08-27T06:12:33.354057",
+  "claims": [
+    {
+      "product": "FreshBooks",
+      "claim_type": "other",
+      "claim": "Has a rating of 4.8/5",
+      "status": "unverifiable",
+      "finding": "No claim was provided to fact-check. The claim field is empty, so there is no assertion to verify against FreshBooks' current pricing or feature information.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "integration",
+      "claim": "Has over 100 integrations",
+      "status": "unverifiable",
+      "finding": "The claim is an empty string with no content to verify against FreshBooks's official information.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim": "Lite plan starts at $19 per month",
+      "status": "unverifiable",
+      "finding": "The claim provided is an empty string with no pricing information to verify against FreshBooks' current official pricing.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim": "Lite plan supports up to 5 billable clients",
+      "status": "unverifiable",
+      "finding": "No claim was provided to verify - the claim field is empty, so there is no specific plan limit information to fact-check against FreshBooks' current pricing documentation.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim": "Plus plan costs $33 per month",
+      "status": "unverifiable",
+      "finding": "No pricing claim was provided to fact-check - the claim field is empty.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim": "Plus plan accommodates up to 50 clients",
+      "status": "unverifiable",
+      "finding": "No claim was provided to verify. The claim field is empty and contains no information about plan limits or any other feature to fact-check.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim": "Plus plan adds proposals and team members",
+      "status": "unverifiable",
+      "finding": "No claim was provided to fact-check; the claim field contains only an empty string with no feature assertion to verify.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim": "Premium plan costs $60 per month",
+      "status": "unverifiable",
+      "finding": "No price claim was provided to verify - the claim field is empty.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim": "Premium plan removes client limits entirely",
+      "status": "unverifiable",
+      "finding": "No claim was provided to verify. The claim field is an empty string with no information about FreshBooks plan limits to fact-check.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim": "Premium plan includes advanced reports and accounting features",
+      "status": "unverifiable",
+      "finding": "No claim was provided to fact-check - the claim field contains an empty string with no feature assertion to verify.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim": "All plans include unlimited invoices",
+      "status": "unverifiable",
+      "finding": "No claim was provided to verify - the claim field is an empty string with no text to fact-check.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim": "All plans include unlimited expense tracking",
+      "status": "unverifiable",
+      "finding": "No claim was provided to verify - the claim field is empty.",
+      "source_url": ""
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "other",
+      "claim": "Offers a 30-day free trial",
+      "status": "unverifiable",
+      "finding": "No claim was provided to verify - the claim field contains an empty string with no assertions about FreshBooks to fact-check.",
+      "source_url": ""
+    }
+  ]
+}

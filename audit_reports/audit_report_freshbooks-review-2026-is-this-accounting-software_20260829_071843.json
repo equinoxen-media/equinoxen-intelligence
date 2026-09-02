@@ -1,0 +1,96 @@
+{
+  "post_id": 438,
+  "title": "FreshBooks Review 2026: Is This Accounting Software Worth It for Freelancers?",
+  "url": "https://equinoxen.com/freshbooks-review-2026-accounting-software-freelancers/",
+  "audited_at": "2026-08-29T07:18:43.295702",
+  "claims": [
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim_text": "Designed for businesses with fewer than 500 employees",
+      "status": "discrepancy",
+      "finding": "FreshBooks Premium plan supports up to 500 billable clients (customers you invoice), not 500 employees. The software is actually designed for freelancers and small businesses, typically with far fewer than 500 employees.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "other",
+      "claim_text": "Founded in 2003",
+      "status": "confirmed",
+      "finding": "FreshBooks's official About page confirms the company was founded in 2003 by Mike McDerment, matching the claim exactly.",
+      "source_url": "https://www.freshbooks.com/about"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "other",
+      "claim_text": "Has over 30 million users worldwide",
+      "status": "confirmed",
+      "finding": "FreshBooks officially states that over 30 million people have used their platform worldwide, which matches the claim. However, this represents lifetime cumulative users since founding in 2003, not current active subscribers.",
+      "source_url": "https://www.freshbooks.com/about"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "integration",
+      "claim_text": "Integrates with over 100 third-party apps",
+      "status": "confirmed",
+      "finding": "FreshBooks official blog pages confirm there are more than 100 apps available in their AppStore, matching the claim about integrating with over 100 third-party apps.",
+      "source_url": "https://www.freshbooks.com/hub/feature-news/appstore"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "other",
+      "claim_text": "Invoices sent through the platform get paid 11 days faster on average compared to traditional invoicing methods",
+      "status": "confirmed",
+      "finding": "FreshBooks currently states on their official invoicing software page that clients can pay their preferred way online and get paid up to 11 days faster, which matches the claim exactly.",
+      "source_url": "https://www.freshbooks.com/en-ca/invoicing-software"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Offers mobile apps for iOS and Android",
+      "status": "confirmed",
+      "finding": "FreshBooks currently offers mobile apps for both iOS and Android devices, as confirmed on their official mobile apps page and support documentation.",
+      "source_url": "https://www.freshbooks.com/mobile-apps"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Includes time tracking capabilities",
+      "status": "confirmed",
+      "finding": "FreshBooks includes time tracking capabilities with both timer and manual logging options, available across all subscription plans from Lite to Select.",
+      "source_url": "https://www.freshbooks.com/timesheets-and-time-tracking"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Supports recurring invoices",
+      "status": "confirmed",
+      "finding": "FreshBooks officially supports recurring invoices across all plans, allowing users to create recurring templates that automatically generate invoices based on a chosen schedule for subscription-based or ongoing work.",
+      "source_url": "https://support.freshbooks.com/hc/en-us/articles/222843308-How-do-I-create-a-recurring-template"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Includes client portal functionality",
+      "status": "confirmed",
+      "finding": "FreshBooks does include client portal functionality, which allows clients to view invoices, make payments, collaborate on projects, share files, and communicate with the business owner in real-time.",
+      "source_url": "https://www.freshbooks.com/client-management-software"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Supports multi-currency expenses",
+      "status": "confirmed",
+      "finding": "FreshBooks officially supports multi-currency expenses, allowing users to choose which currency each expense was purchased in and toggle between multiple currencies in expense reports.",
+      "source_url": "https://www.freshbooks.com/blog/bring-clarity-to-your-multi-currency-accounting"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Connects to bank accounts and credit cards to automatically import transactions",
+      "status": "confirmed",
+      "finding": "FreshBooks currently supports connecting bank accounts and credit cards to automatically import transactions through their Bank Connections feature, which uses third-party connectors Plaid and Yodlee.",
+      "source_url": "https://support.freshbooks.com/hc/en-us/articles/232009268-How-can-I-import-transactions-from-my-bank-account"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "post_id": 407,
+  "title": "Best Accounting Software for Freelancers 2026: FreshBooks vs QuickBooks",
+  "url": "https://equinoxen.com/best-accounting-software-freelancers-2026-freshbooks-vs-quickbooks/",
+  "audited_at": "2026-08-28T04:32:37.709224",
+  "claims": [
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim_text": "Lite plan starts at $19 per month",
+      "status": "outdated",
+      "finding": "Current official FreshBooks pricing shows the Lite plan at $23 per month as of 2026, not $19. Multiple sources indicate FreshBooks raised prices from $19 to $23 in late 2025 or early 2026.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim_text": "Lite plan supports up to 5 billable clients",
+      "status": "confirmed",
+      "finding": "Multiple current sources from 2026, including FreshBooks' official blog, consistently confirm that the Lite plan supports up to 5 billable clients.",
+      "source_url": "https://www.freshbooks.com/blog/freshbooks-plan-public"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim_text": "Plus plan costs $33 per month",
+      "status": "outdated",
+      "finding": "The Plus plan currently costs $43 per month according to multiple sources from 2026, including verification from June and July 2026. One source notes that pricing increased from $33/month in early 2025 to the current $43/month.",
+      "source_url": "https://costbench.com/software/accounting/freshbooks/"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim_text": "Plus plan accommodates up to 50 clients",
+      "status": "confirmed",
+      "finding": "FreshBooks's official pricing page confirms the Plus plan allows users to send invoices to 50 clients, which matches the published claim exactly.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim_text": "Premium plan costs $60 per month",
+      "status": "discrepancy",
+      "finding": "FreshBooks Premium plan currently costs $70 per month when billed monthly, not $60 per month as claimed. Multiple recent sources from 2026 confirm this $70/month pricing.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim_text": "Premium plan removes client limits entirely",
+      "status": "confirmed",
+      "finding": "FreshBooks Premium plan does offer unlimited billable clients, removing the client cap that exists on lower tiers (Lite has 5 clients, Plus has 50 clients).",
+      "source_url": "https://www.freshbooks.com/hub/feature-news/freshbooks-plan-public"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "All plans include unlimited invoices",
+      "status": "confirmed",
+      "finding": "Multiple current sources including FreshBooks' official documentation and recent third-party reviews confirm that all FreshBooks plans include unlimited invoices, though the number of billable clients varies by plan (Lite allows 5, Plus allows 50, Premium allows unlimited).",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "All plans include unlimited expense tracking",
+      "status": "confirmed",
+      "finding": "All FreshBooks plans (Lite, Plus, Premium, and Select) include unlimited expense tracking with features like receipt photo capture and expense categorization, regardless of the billable client limits on each plan.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Offers a 30-day free trial",
+      "status": "confirmed",
+      "finding": "FreshBooks currently offers a 30-day free trial with no credit card required and full access to features, as confirmed by their official support documentation and pricing pages.",
+      "source_url": "https://support.freshbooks.com/hc/en-us/articles/360006873232-What-is-the-pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "integration",
+      "claim_text": "Has over 100 integrations with other tools",
+      "status": "confirmed",
+      "finding": "FreshBooks' official Everlance integration page states they have 250+ popular third-party integrations, which exceeds the claimed 100+ integrations and confirms the claim is accurate.",
+      "source_url": "https://www.freshbooks.com/pages/everlance"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Plus plan adds proposals",
+      "status": "confirmed",
+      "finding": "FreshBooks official documentation confirms that proposals are available on the Plus plan (as well as Premium and Select plans), and multiple sources indicate the Plus plan includes unlimited proposals.",
+      "source_url": "https://support.freshbooks.com/hc/en-us/articles/360006873232-What-is-the-pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Plus plan adds team members",
+      "status": "discrepancy",
+      "finding": "Team Members are available as a paid add-on ($11/month per user) across all FreshBooks plans including Lite, Plus, and Premium, not a feature that Plus specifically adds. All base plans include only one user by default.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Premium plan includes advanced reports",
+      "status": "confirmed",
+      "finding": "FreshBooks Premium plan does include advanced reports according to both official support documentation and vendor descriptions, which specify it provides advanced accounting reports including features like project profitability tracking and enhanced reporting capabilities beyond the Plus plan.",
+      "source_url": "https://support.freshbooks.com/hc/en-us/articles/360006873232-What-is-the-pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "Premium plan includes accounting features",
+      "status": "confirmed",
+      "finding": "FreshBooks Premium plan includes double-entry accounting features such as Chart of Accounts, General Ledger, Trial Balance, and Bank Reconciliation, along with Accounts Payable functionality according to official FreshBooks support documentation.",
+      "source_url": "https://support.freshbooks.com/hc/en-us/articles/360006873232-What-is-the-pricing"
+    }
+  ]
+}

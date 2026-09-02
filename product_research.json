@@ -240,5 +240,88 @@
       "source_url": "https://www.notion.com/pricing"
     },
     "researched_date": "2026-08-25"
+  },
+  "semrush": {
+    "product": "Semrush",
+    "data": {
+      "pricing": "Current official Semrush documentation and multiple sources show the Pro plan at $139.95 per month for monthly billing, not $129.95 as claimed in the statement.; Guru plan costs $249.95/month; Business plan costs $499.95/month",
+      "key_features": [],
+      "limitations": [],
+      "notable_limits": "According to Semrush's official documentation, Position Tracking supports up to 5,000 keywords on the Business plan, not 20,000. The keyword limits are: Pro (500), Guru (1,500), and Business (5,000).; Pro plan includes 5 projects; Guru plan includes 15 projects; Business plan includes 40 projects",
+      "source_url": "https://www.semrush.com/kb/244-semrush-reports-tools"
+    },
+    "researched_date": "2026-08-26"
+  },
+  "ahrefs": {
+    "product": "Ahrefs",
+    "data": {
+      "pricing": "The Lite plan currently costs $129/month, not $99/month. Ahrefs increased prices in April 2024, raising the Lite plan from $99 to $129 per month.; The current Ahrefs Standard plan costs $249/month according to official sources, not $199/month. Ahrefs' own help documentation confirms that $199 was the legacy Standard plan price before it increased to $249.; The Advanced plan costs $449/month when billed monthly, not $399/month. The $399/month price only applies to annual billing commitments.; Current sources from 2026 consistently report the Ahrefs Enterprise plan costs $1,499 per month, not $999 per month. The $999 figure appears in one source as part of a range ($999-$1,499) but the actual starting Enterprise price is $1,499.",
+      "key_features": [],
+      "limitations": [],
+      "notable_limits": "According to Ahrefs' current official pricing page and documentation, the Standard plan provides 500,000 crawl credits per month (not a per-crawl limit of 500,000 pages). The claim conflates monthly crawl credit allocation with per-crawl page limits, which are separate settings in Site Audit.; Lite plan includes 5 projects; Standard plan includes 20 projects; Advanced plan includes 50 projects; The Enterprise plan includes 100 unverified projects and unlimited verified projects, not unlimited projects outright. Verified projects require ownership verification through Ahrefs's process.",
+      "source_url": "https://ahrefs.com/academy/how-to-use-ahrefs/ahrefs-crawler/overview"
+    },
+    "researched_date": "2026-08-26"
+  },
+  "freshbooks": {
+    "product": "FreshBooks",
+    "data": {
+      "pricing": "Current official FreshBooks pricing shows the Lite plan at $23 per month as of 2026, not $19. Multiple sources indicate FreshBooks raised prices from $19 to $23 in late 2025 or early 2026.; The Plus plan currently costs $43 per month according to multiple sources from 2026, including verification from June and July 2026. One source notes that pricing increased from $33/month in early 2025 to the current $43/month.; FreshBooks Premium plan currently costs $70 per month when billed monthly, not $60 per month as claimed. Multiple recent sources from 2026 confirm this $70/month pricing.",
+      "key_features": [
+        "All plans include unlimited invoices",
+        "All plans include unlimited expense tracking",
+        "Offers a 30-day free trial",
+        "Has over 100 integrations with other tools",
+        "Plus plan adds proposals"
+      ],
+      "limitations": [],
+      "notable_limits": "Lite plan supports up to 5 billable clients; Plus plan accommodates up to 50 clients; Premium plan removes client limits entirely",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    "researched_date": "2026-08-28"
+  },
+  "constant contact": {
+    "product": "Constant Contact",
+    "data": {
+      "pricing": "Lite plan starts at $12 per month for up to 500 contacts; Standard plan begins at $35 per month for 500 contacts; Current sources from 2026 consistently report that Constant Contact's Standard plan costs approximately $160 per month for 10,000 contacts, not $290. The $290 figure appears closer to Premium plan pricing at that contact level.",
+      "key_features": [
+        "Constant Contact's official website currently states they offer 600+ professional email templates, not over 200 as claimed. A third-party review from 2026 mentions 200+ templates but the vendor's own site shows a much higher number.",
+        "Does not offer a free tier",
+        "Constant Contact currently offers a 30-day free trial, not a 14-day trial. This is confirmed across multiple official Constant Contact pages including their pricing page and blog posts from July-August 2026.",
+        "Lite plan includes basic email marketing, reporting, and templates",
+        "The Standard plan includes automation and A/B testing, but dynamic content is a Premium plan feature, not Standard. Constant Contact's official pricing page confirms dynamic content is only available on the Premium plan ($80/month)."
+      ],
+      "limitations": [],
+      "notable_limits": "Lite plan supports up to 500 contacts; Standard plan for 500 contacts; Standard plan pricing tier for 10,000 contacts",
+      "source_url": "https://www.constantcontact.com/about"
+    },
+    "researched_date": "2026-08-28"
+  },
+  "quickbooks online": {
+    "product": "QuickBooks Online",
+    "data": {
+      "pricing": "The current official pricing for QuickBooks Online Simple Start is $38 per month, not $35 per month as claimed.; The current official price for QuickBooks Online Essentials is $85 per month as of August 1, 2026, following a price increase from the previous $75/month rate. The claimed price of $65/month does not match current vendor pricing.; QuickBooks Online Plus pricing was increased from $99 to $140 per month in August 2026, so the claim is no longer accurate.; QuickBooks Online Advanced currently costs $340 per month as of August 1, 2026, following a price increase from the previous $275 per month. The claimed $235 price appears to be from an earlier period.",
+      "key_features": [
+        "Current evidence suggests QuickBooks Online connects to approximately 2,936 U.S. financial institutions, not over 20,000. Official QuickBooks documentation does not cite the 20,000 figure."
+      ],
+      "limitations": [],
+      "notable_limits": "Simple Start plan covers one user; Essentials plan includes three users; Plus tier supports five users; Advanced plan offers 25 users",
+      "source_url": "https://quickbooks.intuit.com/global/bank-feeds/"
+    },
+    "researched_date": "2026-08-28"
+  },
+  "zoho crm": {
+    "product": "Zoho CRM",
+    "data": {
+      "pricing": "",
+      "key_features": [
+        "Zoho CRM's official website currently states it integrates with more than 1,200 business apps, which is significantly higher than the claimed 800 integrations.",
+        "Email integration syncs with Gmail and Outlook"
+      ],
+      "limitations": [],
+      "notable_limits": "",
+      "source_url": "https://www.zoho.com/en-us/crm/"
+    },
+    "researched_date": "2026-08-28"
   }
 }

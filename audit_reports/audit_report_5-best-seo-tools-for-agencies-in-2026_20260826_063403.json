@@ -1,0 +1,176 @@
+{
+  "post_id": 630,
+  "title": "5 Best SEO Tools for Agencies in 2026",
+  "url": "https://equinoxen.com/best-seo-tools-for-agencies/",
+  "audited_at": "2026-08-26T06:34:03.740253",
+  "claims": [
+    {
+      "product": "Semrush",
+      "claim_type": "other",
+      "claim_text": "Has over 55 tools",
+      "status": "confirmed",
+      "finding": "Semrush's official website and multiple third-party sources confirm the platform offers 55 tools as of 2026, matching the claim.",
+      "source_url": "https://www.semrush.com/kb/244-semrush-reports-tools"
+    },
+    {
+      "product": "Semrush",
+      "claim_type": "plan_limit",
+      "claim_text": "Position Tracking supports up to 20,000 keywords",
+      "status": "discrepancy",
+      "finding": "According to Semrush's official documentation, Position Tracking supports up to 5,000 keywords on the Business plan, not 20,000. The keyword limits are: Pro (500), Guru (1,500), and Business (5,000).",
+      "source_url": "https://semrush.com/kb/696-what-are-the-limits-of-my-position-tracking-campaign"
+    },
+    {
+      "product": "Semrush",
+      "claim_type": "price",
+      "claim_text": "Pro plan starts at $129.95/month",
+      "status": "discrepancy",
+      "finding": "Current official Semrush documentation and multiple sources show the Pro plan at $139.95 per month for monthly billing, not $129.95 as claimed in the statement.",
+      "source_url": "https://it.semrush.com/kb/1547-seo-toolkit-pricing-limits"
+    },
+    {
+      "product": "Semrush",
+      "claim_type": "plan_limit",
+      "claim_text": "Pro plan includes 5 projects",
+      "status": "confirmed",
+      "finding": "Multiple current sources from 2026, including one citing Semrush's official pricing page from April 2026, confirm that the Pro plan includes 5 projects.",
+      "source_url": "https://www.semrush.com/pricing/"
+    },
+    {
+      "product": "Semrush",
+      "claim_type": "price",
+      "claim_text": "Guru plan costs $249.95/month",
+      "status": "confirmed",
+      "finding": "The Guru plan costs $249.95/month when billed monthly, as stated in Semrush's official documentation and confirmed across multiple current sources from 2026.",
+      "source_url": "https://www.semrush.com/kb/1624-semrush-one-vs-seo-toolkit"
+    },
+    {
+      "product": "Semrush",
+      "claim_type": "plan_limit",
+      "claim_text": "Guru plan includes 15 projects",
+      "status": "confirmed",
+      "finding": "Semrush's official help documentation confirms that the Guru plan includes 15 projects, matching the claim exactly.",
+      "source_url": "https://help.semrush.com/FAQ/en/articles/6811367-what-can-you-do-with-your-guru-subscription"
+    },
+    {
+      "product": "Semrush",
+      "claim_type": "price",
+      "claim_text": "Business plan costs $499.95/month",
+      "status": "confirmed",
+      "finding": "Semrush's Business plan costs $499.95 per month when billed monthly, as confirmed by official Semrush knowledge base pages and their pricing documentation across multiple regional sites.",
+      "source_url": "https://it.semrush.com/kb/1547-seo-toolkit-pricing-limits"
+    },
+    {
+      "product": "Semrush",
+      "claim_type": "plan_limit",
+      "claim_text": "Business plan includes 40 projects",
+      "status": "confirmed",
+      "finding": "Semrush's official pricing page confirms the Advanced plan (formerly Business) includes 40 websites to monitor, which corresponds to 40 projects as stated in the claim.",
+      "source_url": "https://www.semrush.com/pricing/seo-ai-search/"
+    },
+    {
+      "product": "Semrush",
+      "claim_type": "other",
+      "claim_text": "Annual billing provides two months free",
+      "status": "confirmed",
+      "finding": "Semrush's official documentation states annual billing saves around 17% across their plans, which is mathematically equivalent to approximately two months free (16.67%). The claim accurately represents the annual billing discount.",
+      "source_url": "https://www.semrush.com/kb/1011-subscriptions"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "other",
+      "claim_text": "Updates its index with 8 billion pages daily",
+      "status": "confirmed",
+      "finding": "Ahrefs official documentation confirms their crawler visits 8 billion web pages every 24 hours, which matches the claim exactly.",
+      "source_url": "https://ahrefs.com/academy/how-to-use-ahrefs/ahrefs-crawler/overview"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "other",
+      "claim_text": "Has 36 trillion backlinks in the index",
+      "status": "discrepancy",
+      "finding": "Ahrefs' official pages currently report 35 trillion external backlinks in their index, not 36 trillion as claimed.",
+      "source_url": "https://ahrefs.com/backlink-checker"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "plan_limit",
+      "claim_text": "Site Audit can crawl up to 500,000 pages",
+      "status": "discrepancy",
+      "finding": "According to Ahrefs' current official pricing page and documentation, the Standard plan provides 500,000 crawl credits per month (not a per-crawl limit of 500,000 pages). The claim conflates monthly crawl credit allocation with per-crawl page limits, which are separate settings in Site Audit.",
+      "source_url": "https://ahrefs.com/pricing"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "other",
+      "claim_text": "Keywords Explorer has 171 million keyword database across 10 search engines",
+      "status": "discrepancy",
+      "finding": "Ahrefs currently reports 28.7 billion keywords across 217 locations, not 171 million keywords across 10 search engines. The claim appears to be severely outdated or confused with other metrics.",
+      "source_url": "https://ahrefs.com/big-data/"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "price",
+      "claim_text": "Lite plan costs $99/month",
+      "status": "outdated",
+      "finding": "The Lite plan currently costs $129/month, not $99/month. Ahrefs increased prices in April 2024, raising the Lite plan from $99 to $129 per month.",
+      "source_url": "https://ahrefs.com/pricing"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "plan_limit",
+      "claim_text": "Lite plan includes 5 projects",
+      "status": "confirmed",
+      "finding": "According to Ahrefs' official documentation and pricing page, the Lite plan does include 5 projects, along with 750 tracked keywords and other features.",
+      "source_url": "https://ahrefs.com/pricing"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "price",
+      "claim_text": "Standard plan costs $199/month",
+      "status": "outdated",
+      "finding": "The current Ahrefs Standard plan costs $249/month according to official sources, not $199/month. Ahrefs' own help documentation confirms that $199 was the legacy Standard plan price before it increased to $249.",
+      "source_url": "https://help.ahrefs.com/en/articles/9720420-what-is-my-subscription-plan-how-can-i-check-what-i-have"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "plan_limit",
+      "claim_text": "Standard plan includes 20 projects",
+      "status": "confirmed",
+      "finding": "The Ahrefs Standard plan currently includes 20 unverified projects according to official Ahrefs help documentation and multiple third-party sources verified against ahrefs.com in 2026.",
+      "source_url": "https://help.ahrefs.com/en/articles/6117209-what-s-the-difference-between-all-ahrefs-credit-based-plans"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "price",
+      "claim_text": "Advanced plan costs $399/month",
+      "status": "discrepancy",
+      "finding": "The Advanced plan costs $449/month when billed monthly, not $399/month. The $399/month price only applies to annual billing commitments.",
+      "source_url": "https://ahrefs.com/pricing"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "plan_limit",
+      "claim_text": "Advanced plan includes 50 projects",
+      "status": "confirmed",
+      "finding": "The Advanced plan currently includes 50 projects according to Ahrefs' official pricing page at $449 per month.",
+      "source_url": "https://ahrefs.com/pricing"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "price",
+      "claim_text": "Enterprise plan costs $999/month",
+      "status": "discrepancy",
+      "finding": "Current sources from 2026 consistently report the Ahrefs Enterprise plan costs $1,499 per month, not $999 per month. The $999 figure appears in one source as part of a range ($999-$1,499) but the actual starting Enterprise price is $1,499.",
+      "source_url": "https://ahrefs.com/pricing"
+    },
+    {
+      "product": "Ahrefs",
+      "claim_type": "plan_limit",
+      "claim_text": "Enterprise plan includes unlimited projects",
+      "status": "discrepancy",
+      "finding": "The Enterprise plan includes 100 unverified projects and unlimited verified projects, not unlimited projects outright. Verified projects require ownership verification through Ahrefs's process.",
+      "source_url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/4e13af92-0ee3-49ae-a842-781c82d62d92"
+    }
+  ]
+}

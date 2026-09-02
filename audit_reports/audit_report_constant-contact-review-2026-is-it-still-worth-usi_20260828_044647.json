@@ -1,0 +1,152 @@
+{
+  "post_id": 856,
+  "title": "Constant Contact Review 2026: Is It Still Worth Using",
+  "url": "https://equinoxen.com/constant-contact-review/",
+  "audited_at": "2026-08-28T04:46:47.276477",
+  "claims": [
+    {
+      "product": "Constant Contact",
+      "claim_type": "other",
+      "claim_text": "Launched in 1995",
+      "status": "confirmed",
+      "finding": "Constant Contact's official About page states that in 1995 their mission was to give small businesses a way to level the playing field, confirming the 1995 founding date. The company was originally founded as Roving Software in 1995 before rebranding to Constant Contact in 2004.",
+      "source_url": "https://www.constantcontact.com/about"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "feature",
+      "claim_text": "Provides over 200 customizable templates",
+      "status": "discrepancy",
+      "finding": "Constant Contact's official website currently states they offer 600+ professional email templates, not over 200 as claimed. A third-party review from 2026 mentions 200+ templates but the vendor's own site shows a much higher number.",
+      "source_url": "https://www.constantcontact.com/features/email-templates"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "price",
+      "claim_text": "Lite plan starts at $12 per month for up to 500 contacts",
+      "status": "confirmed",
+      "finding": "Constant Contact's official pricing page confirms that plans start at $12/month, and multiple sources indicate this is specifically for the Lite plan with up to 500 contacts.",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "plan_limit",
+      "claim_text": "Lite plan supports up to 500 contacts",
+      "status": "confirmed",
+      "finding": "Constant Contact's official website confirms the Lite plan starts at $12/month for up to 500 contacts, with pricing increasing as the contact list grows beyond that tier.",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "price",
+      "claim_text": "Standard plan begins at $35 per month for 500 contacts",
+      "status": "confirmed",
+      "finding": "Multiple recent sources consistently report that Constant Contact's Standard plan begins at $35 per month for 500 contacts, matching the claim exactly.",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "plan_limit",
+      "claim_text": "Standard plan for 500 contacts",
+      "status": "confirmed",
+      "finding": "Constant Contact's Standard plan is currently priced at $35 per month for 500 contacts according to their official pricing page and documentation.",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "price",
+      "claim_text": "Standard plan costs $290 per month for 10,000 contacts",
+      "status": "discrepancy",
+      "finding": "Current sources from 2026 consistently report that Constant Contact's Standard plan costs approximately $160 per month for 10,000 contacts, not $290. The $290 figure appears closer to Premium plan pricing at that contact level.",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "plan_limit",
+      "claim_text": "Standard plan pricing tier for 10,000 contacts",
+      "status": "confirmed",
+      "finding": "Constant Contact currently offers a Standard plan that includes a pricing tier for 10,000 contacts, which multiple 2026 sources consistently report as approximately $160 per month before any annual prepayment discounts.",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "feature",
+      "claim_text": "Does not offer a free tier",
+      "status": "confirmed",
+      "finding": "Constant Contact does not offer a permanent free tier. The platform only provides a free trial (no credit card required) before requiring a paid subscription starting at $12/month.",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "feature",
+      "claim_text": "Offers a 14-day free trial",
+      "status": "discrepancy",
+      "finding": "Constant Contact currently offers a 30-day free trial, not a 14-day trial. This is confirmed across multiple official Constant Contact pages including their pricing page and blog posts from July-August 2026.",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "feature",
+      "claim_text": "Lite plan includes basic email marketing, reporting, and templates",
+      "status": "confirmed",
+      "finding": "Constant Contact's official pages confirm the Lite plan includes basic email marketing features, hundreds of email templates, and reporting that tracks opens, clicks, and sharing metrics.",
+      "source_url": "https://www.constantcontact.com/lite"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "feature",
+      "claim_text": "Standard plan adds automation, dynamic content, and A/B testing",
+      "status": "discrepancy",
+      "finding": "The Standard plan includes automation and A/B testing, but dynamic content is a Premium plan feature, not Standard. Constant Contact's official pricing page confirms dynamic content is only available on the Premium plan ($80/month).",
+      "source_url": "https://www.constantcontact.com/pricing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "integration",
+      "claim_text": "Integrates with Shopify",
+      "status": "confirmed",
+      "finding": "Constant Contact's official ecommerce page confirms that it integrates with Shopify, and multiple vendor pages describe features including automated abandoned cart reminders and synced product/customer data.",
+      "source_url": "https://www.constantcontact.com/features/ecommerce"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "integration",
+      "claim_text": "Integrates with WordPress",
+      "status": "confirmed",
+      "finding": "Constant Contact offers an official WordPress plugin called Constant Contact Forms that adds contact forms to WordPress sites, and the integration is documented in their knowledge base and community pages.",
+      "source_url": "https://knowledgebase.constantcontact.com/email-digital-marketing/articles/KnowledgeBase/10054-Install-the-Constant-Contact-Forms-plugin-for-WordPress-to-gather-sign-ups-and-feedback?lang=en_US"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "integration",
+      "claim_text": "Integrates with Salesforce",
+      "status": "confirmed",
+      "finding": "Constant Contact's official community page lists Salesforce as one of their available integrations, stating it allows users to automatically sync contacts and leads from Salesforce CRM into Constant Contact.",
+      "source_url": "https://community.constantcontact.com/list-building-tools/post/connect-to-your-customers-with-integrations-GOZxOkMmGtwBn6n"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "feature",
+      "claim_text": "Does not support testing multiple variables simultaneously in A/B testing",
+      "status": "confirmed",
+      "finding": "Constant Contact's A/B testing only supports testing two different subject lines at a time, not multiple variables simultaneously. The feature does not offer multivariate testing capabilities for content, images, send times, or other elements.",
+      "source_url": "https://www.constantcontact.com/features/a-b-testing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "feature",
+      "claim_text": "Offers basic A/B testing for subject lines",
+      "status": "confirmed",
+      "finding": "Constant Contact does offer A/B testing for subject lines, which tests two subject line variants and automatically sends the winner to the remaining audience. This feature is available on Standard and Premium plans, not on the entry-level Lite plan.",
+      "source_url": "https://www.constantcontact.com/features/a-b-testing"
+    },
+    {
+      "product": "Constant Contact",
+      "claim_type": "feature",
+      "claim_text": "API is available for custom integrations",
+      "status": "confirmed",
+      "finding": "Constant Contact provides a V3 RESTful API with comprehensive documentation, authentication via OAuth 2.0, and endpoints for managing contacts, campaigns, and other resources, enabling custom integrations.",
+      "source_url": "https://developer.constantcontact.com/"
+    }
+  ]
+}

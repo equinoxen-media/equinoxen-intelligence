@@ -1,0 +1,40 @@
+{
+  "post_id": 413,
+  "title": "Zoho CRM Review 2026: Best Alternative to Salesforce for SMBs?",
+  "url": "https://equinoxen.com/zoho-crm-software-reviews-2026-salesforce-alternative-smbs/",
+  "audited_at": "2026-08-28T06:27:51.789327",
+  "claims": [
+    {
+      "product": "Zoho CRM",
+      "claim_type": "integration",
+      "claim_text": "Integrates with over 800 third-party applications",
+      "status": "discrepancy",
+      "finding": "Zoho CRM's official website currently states it integrates with more than 1,200 business apps, which is significantly higher than the claimed 800 integrations.",
+      "source_url": "https://www.zoho.com/en-us/crm/"
+    },
+    {
+      "product": "Zoho CRM",
+      "claim_type": "other",
+      "claim_text": "Serves over 250,000 businesses worldwide",
+      "status": "discrepancy",
+      "finding": "Zoho's official pages currently state they serve over 300,000 businesses worldwide, not 250,000. The claim appears outdated compared to their current marketing materials.",
+      "source_url": "https://www.zoho.com/crm/favorite/"
+    },
+    {
+      "product": "Zoho CRM",
+      "claim_type": "other",
+      "claim_text": "Available in 180 countries",
+      "status": "confirmed",
+      "finding": "Zoho's official pages confirm that Zoho CRM is available in 180 countries, as stated on their What is Zoho CRM page and Enterprise CRM page.",
+      "source_url": "https://www.zoho.com/crm/what-is-zoho-crm.html"
+    },
+    {
+      "product": "Zoho CRM",
+      "claim_type": "integration",
+      "claim_text": "Email integration syncs with Gmail and Outlook",
+      "status": "confirmed",
+      "finding": "Zoho CRM's official documentation confirms email integration syncs with both Gmail and Outlook, along with other providers like Google Workspace, Microsoft 365, Office 365, and Yahoo using IMAP and POP3 protocols.",
+      "source_url": "https://help.zoho.com/portal/en/kb/crm/connect-with-customers/email/user-functions/articles/email-communication-send-and-receive-mails"
+    }
+  ]
+}

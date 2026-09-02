@@ -41,34 +41,6 @@
     "weighted_total": 76,
     "assessed_date": "2026-08-23"
   },
-  "moz": {
-    "product": "Moz",
-    "scores": {
-      "ease_of_use": 8,
-      "features": 7,
-      "value": 5,
-      "integrations": 6,
-      "support": 7,
-      "scalability": 7,
-      "mobile_experience": 6
-    },
-    "weighted_total": 66,
-    "assessed_date": "2026-08-23"
-  },
-  "se ranking": {
-    "product": "SE Ranking",
-    "scores": {
-      "ease_of_use": 7,
-      "features": 8,
-      "value": 9,
-      "integrations": 7,
-      "support": 8,
-      "scalability": 8,
-      "mobile_experience": 7
-    },
-    "weighted_total": 78,
-    "assessed_date": "2026-08-23"
-  },
   "wave": {
     "product": "Wave",
     "scores": {
@@ -236,5 +208,145 @@
     },
     "weighted_total": 75,
     "assessed_date": "2026-08-25"
+  },
+  "semrush": {
+    "product": "Semrush",
+    "scores": {
+      "ease_of_use": 7,
+      "features": 10,
+      "value": 8,
+      "integrations": 9,
+      "support": 8,
+      "scalability": 9,
+      "mobile_experience": 7
+    },
+    "weighted_total": 84,
+    "assessed_date": "2026-08-26"
+  },
+  "ahrefs": {
+    "product": "Ahrefs",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 9,
+      "value": 7,
+      "integrations": 6,
+      "support": 8,
+      "scalability": 8,
+      "mobile_experience": 8
+    },
+    "weighted_total": 79,
+    "assessed_date": "2026-08-26"
+  },
+  "moz": {
+    "product": "Moz",
+    "scores": {
+      "ease_of_use": 9,
+      "features": 7,
+      "value": 7,
+      "integrations": 7,
+      "support": 9,
+      "scalability": 6,
+      "mobile_experience": 8
+    },
+    "weighted_total": 76,
+    "assessed_date": "2026-08-26"
+  },
+  "se ranking": {
+    "product": "SE Ranking",
+    "scores": {
+      "ease_of_use": 8,
+      "features": 8,
+      "value": 9,
+      "integrations": 7,
+      "support": 7,
+      "scalability": 7,
+      "mobile_experience": 7
+    },
+    "weighted_total": 78,
+    "assessed_date": "2026-08-26"
+  },
+  "ubersuggest": {
+    "product": "Ubersuggest",
+    "scores": {
+      "ease_of_use": 10,
+      "features": 6,
+      "value": 9,
+      "integrations": 5,
+      "support": 6,
+      "scalability": 5,
+      "mobile_experience": 8
+    },
+    "weighted_total": 72,
+    "assessed_date": "2026-08-26"
+  },
+  "freshbooks": {
+    "product": "FreshBooks",
+    "scores": {
+      "ease_of_use": 8,
+      "features": 7,
+      "value": 6,
+      "integrations": 8,
+      "support": 7,
+      "scalability": 7,
+      "mobile_experience": 8
+    },
+    "weighted_total": 72,
+    "assessed_date": "2026-08-28"
+  },
+  "quickbooks self-employed": {
+    "product": "QuickBooks Self-Employed",
+    "scores": {
+      "ease_of_use": 8,
+      "features": 5,
+      "value": 7,
+      "integrations": 6,
+      "support": 7,
+      "scalability": 4,
+      "mobile_experience": 7
+    },
+    "weighted_total": 64,
+    "assessed_date": "2026-08-28"
+  },
+  "constant contact": {
+    "product": "Constant Contact",
+    "scores": {
+      "ease_of_use": 8,
+      "features": 6,
+      "value": 6,
+      "integrations": 7,
+      "support": 7,
+      "scalability": 6,
+      "mobile_experience": 7
+    },
+    "weighted_total": 67,
+    "assessed_date": "2026-08-28"
+  },
+  "quickbooks online": {
+    "product": "QuickBooks Online",
+    "scores": {
+      "ease_of_use": 5,
+      "features": 9,
+      "value": 5,
+      "integrations": 8,
+      "support": 6,
+      "scalability": 9,
+      "mobile_experience": 6
+    },
+    "weighted_total": 68,
+    "assessed_date": "2026-08-28"
+  },
+  "zoho crm": {
+    "product": "Zoho CRM",
+    "scores": {
+      "ease_of_use": 6,
+      "features": 8,
+      "value": 8,
+      "integrations": 9,
+      "support": 6,
+      "scalability": 8,
+      "mobile_experience": 7
+    },
+    "weighted_total": 75,
+    "assessed_date": "2026-08-28"
   }
 }

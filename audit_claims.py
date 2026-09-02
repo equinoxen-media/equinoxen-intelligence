@@ -35,6 +35,7 @@ from content_pipeline import (
 )
 
 AUDIT_MODEL = "claude-sonnet-4-5"
+AUDIT_REPORTS_DIR = "audit_reports"
 
 
 # ─── FETCH POST CONTENT ────────────────────────────────────────
@@ -110,7 +111,20 @@ If there are no specific checkable claims, return an empty array: []"""
         )
         response_text = message.content[0].text.strip()
         response_text = response_text.replace("```json", "").replace("```", "").strip()
-        claims = json.loads(response_text)
+        raw_claims = json.loads(response_text)
+
+        claims = []
+        dropped = 0
+        for item in raw_claims:
+            if not isinstance(item, dict) or not item.get("claim_text") or not item.get("product"):
+                dropped += 1
+                continue
+            item.setdefault("claim_type", "other")
+            claims.append(item)
+
+        if dropped:
+            print(f"   ⚠️  Dropped {dropped} malformed claim(s) missing required fields")
+
         print(f"   ✅ Extracted {len(claims)} checkable claims")
         return claims
     except Exception as e:
@@ -240,14 +254,16 @@ def save_report(audit_result):
     if not audit_result:
         return
 
+    os.makedirs(AUDIT_REPORTS_DIR, exist_ok=True)
+
     slug = re.sub(r'[^a-z0-9]+', '-', audit_result["title"].lower()).strip('-')[:50]
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    json_filename = f"audit_report_{slug}_{timestamp}.json"
+    json_filename = os.path.join(AUDIT_REPORTS_DIR, f"audit_report_{slug}_{timestamp}.json")
     with open(json_filename, "w") as f:
         json.dump(audit_result, f, indent=2)
 
-    md_filename = f"audit_report_{slug}_{timestamp}.md"
+    md_filename = os.path.join(AUDIT_REPORTS_DIR, f"audit_report_{slug}_{timestamp}.md")
     lines = [
         f"# Claim Audit: {audit_result['title']}",
         f"",
@@ -257,10 +273,10 @@ def save_report(audit_result):
     ]
 
     claims = audit_result.get("claims", [])
-    discrepancies = [c for c in claims if c["status"] == "discrepancy"]
-    outdated = [c for c in claims if c["status"] == "outdated"]
-    confirmed = [c for c in claims if c["status"] == "confirmed"]
-    unverifiable = [c for c in claims if c["status"] == "unverifiable"]
+    discrepancies = [c for c in claims if c.get("status") == "discrepancy"]
+    outdated = [c for c in claims if c.get("status") == "outdated"]
+    confirmed = [c for c in claims if c.get("status") == "confirmed"]
+    unverifiable = [c for c in claims if c.get("status") == "unverifiable"]
 
     lines.append(
         f"**Summary:** {len(claims)} claims checked — "
@@ -272,32 +288,32 @@ def save_report(audit_result):
     if discrepancies:
         lines.append("## 🔴 Discrepancies (fix these first)")
         for c in discrepancies:
-            lines.append(f"- **{c['product']}** ({c['claim_type']}): \"{c['claim_text']}\"")
-            lines.append(f"  - Found: {c['finding']}")
-            if c["source_url"]:
+            lines.append(f"- **{c.get('product', 'Unknown')}** ({c.get('claim_type', 'other')}): \"{c.get('claim_text', '(missing)')}\"")
+            lines.append(f"  - Found: {c.get('finding', '(no finding recorded)')}")
+            if c.get("source_url"):
                 lines.append(f"  - Source: {c['source_url']}")
         lines.append("")
 
     if outdated:
         lines.append("## 🟡 Possibly Outdated")
         for c in outdated:
-            lines.append(f"- **{c['product']}** ({c['claim_type']}): \"{c['claim_text']}\"")
-            lines.append(f"  - Found: {c['finding']}")
-            if c["source_url"]:
+            lines.append(f"- **{c.get('product', 'Unknown')}** ({c.get('claim_type', 'other')}): \"{c.get('claim_text', '(missing)')}\"")
+            lines.append(f"  - Found: {c.get('finding', '(no finding recorded)')}")
+            if c.get("source_url"):
                 lines.append(f"  - Source: {c['source_url']}")
         lines.append("")
 
     if unverifiable:
         lines.append("## ⚪ Unverifiable")
         for c in unverifiable:
-            lines.append(f"- **{c['product']}** ({c['claim_type']}): \"{c['claim_text']}\"")
-            lines.append(f"  - {c['finding']}")
+            lines.append(f"- **{c.get('product', 'Unknown')}** ({c.get('claim_type', 'other')}): \"{c.get('claim_text', '(missing)')}\"")
+            lines.append(f"  - {c.get('finding', '(no finding recorded)')}")
         lines.append("")
 
     if confirmed:
         lines.append("## ✅ Confirmed Accurate")
         for c in confirmed:
-            lines.append(f"- **{c['product']}** ({c['claim_type']}): \"{c['claim_text']}\"")
+            lines.append(f"- **{c.get('product', 'Unknown')}** ({c.get('claim_type', 'other')}): \"{c.get('claim_text', '(missing)')}\"")
         lines.append("")
 
     with open(md_filename, "w") as f:

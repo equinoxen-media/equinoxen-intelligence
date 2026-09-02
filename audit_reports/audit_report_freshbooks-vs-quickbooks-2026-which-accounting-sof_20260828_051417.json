@@ -1,0 +1,160 @@
+{
+  "post_id": 700,
+  "title": "FreshBooks vs QuickBooks 2026: Which Accounting Software Wins",
+  "url": "https://equinoxen.com/freshbooks-vs-quickbooks/",
+  "audited_at": "2026-08-28T05:14:17.520861",
+  "claims": [
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim_text": "Lite plan costs $19 per month",
+      "status": "discrepancy",
+      "finding": "Current official pricing shows the Lite plan costs $23 per month when billed monthly, not $19. Multiple sources verified from FreshBooks' official pricing page show $23/month as of mid-2026, though the price was $19/month in early 2025.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim_text": "Lite plan supports up to 5 billable clients",
+      "status": "confirmed",
+      "finding": "Multiple sources from 2026 confirm the Lite plan supports up to 5 billable clients, with verification cited from freshbooks.com/pricing and official FreshBooks support documentation.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim_text": "Plus plan costs $33 per month",
+      "status": "discrepancy",
+      "finding": "The FreshBooks Plus plan currently costs $43 per month, not $33 per month. Multiple sources verified this pricing from FreshBooks' official website as of mid-2026, and one source noted that pricing increased from $33/month in early 2025 to $43/month.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim_text": "Plus plan accommodates up to 50 clients",
+      "status": "confirmed",
+      "finding": "FreshBooks' official pricing page confirms the Plus plan supports up to 50 billable clients, matching the claim exactly.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "price",
+      "claim_text": "Premium tier costs $60 per month",
+      "status": "discrepancy",
+      "finding": "The FreshBooks Premium tier currently costs $70 per month when billed monthly, not $60 per month. Multiple sources verified against the official FreshBooks pricing page confirm this rate as of 2026.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "plan_limit",
+      "claim_text": "Premium tier supports unlimited clients",
+      "status": "confirmed",
+      "finding": "FreshBooks Premium tier does support unlimited clients according to the official pricing page and multiple current sources from 2026.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "All plans include unlimited invoicing",
+      "status": "confirmed",
+      "finding": "FreshBooks' official website confirms that all plans include unlimited invoices, with the Lite plan specifically stating it provides unlimited invoices for up to 5 clients, and higher tiers expanding the client limits while maintaining unlimited invoicing.",
+      "source_url": "https://www.freshbooks.com/hub/accounting/accounts-receivable-software"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "All plans include expense tracking",
+      "status": "confirmed",
+      "finding": "All FreshBooks plans (Lite, Plus, Premium, and Select) include expense tracking as a core feature, along with unlimited invoices and time tracking capabilities.",
+      "source_url": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "product": "FreshBooks",
+      "claim_type": "feature",
+      "claim_text": "All plans include basic reporting",
+      "status": "confirmed",
+      "finding": "FreshBooks Lite plan includes basic reporting features such as profit and loss statements, expense reports, tax summaries, and accounts aging reports, while advanced accounting reports are limited to Plus and higher tiers.",
+      "source_url": "https://support.freshbooks.com/hc/en-us/articles/360006873232-What-is-the-pricing"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "integration",
+      "claim_text": "Connects with over 20,000 financial institutions",
+      "status": "discrepancy",
+      "finding": "Current evidence suggests QuickBooks Online connects to approximately 2,936 U.S. financial institutions, not over 20,000. Official QuickBooks documentation does not cite the 20,000 figure.",
+      "source_url": "https://quickbooks.intuit.com/global/bank-feeds/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "other",
+      "claim_text": "Generates over 100 customizable reports",
+      "status": "unverifiable",
+      "finding": "Official Intuit documentation states QuickBooks Online includes 'hundreds of reports' but does not specify 'over 100' as a precise figure. Third-party sources reference 100+ reports for higher-tier plans, but current vendor pages lack specific numerical confirmation.",
+      "source_url": "https://quickbooks.intuit.com/learn-support/en-us/help-article/product-setup/use-reports-center-categories-insights-information/L2KcVzxB7_US_en_US"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Simple Start plan costs $35 per month",
+      "status": "discrepancy",
+      "finding": "The current official pricing for QuickBooks Online Simple Start is $38 per month, not $35 per month as claimed.",
+      "source_url": "https://quickbooks.intuit.com/pricing/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "plan_limit",
+      "claim_text": "Simple Start plan covers one user",
+      "status": "confirmed",
+      "finding": "The QuickBooks Online Simple Start plan supports 1 user according to the official Intuit pricing pages, with additional access available for up to 2 accountants at no extra charge.",
+      "source_url": "https://quickbooks.intuit.com/accounting/planning/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Essentials plan costs $65 per month",
+      "status": "discrepancy",
+      "finding": "The current official price for QuickBooks Online Essentials is $85 per month as of August 1, 2026, following a price increase from the previous $75/month rate. The claimed price of $65/month does not match current vendor pricing.",
+      "source_url": "https://quickbooks.intuit.com/r/product-update/quickbooks-price-changes/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "plan_limit",
+      "claim_text": "Essentials plan includes three users",
+      "status": "confirmed",
+      "finding": "QuickBooks Online Essentials plan allows up to 3 users according to the official Intuit QuickBooks product page and multiple third-party sources.",
+      "source_url": "https://quickbooks.intuit.com/online/essentials/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Plus tier costs $99 per month",
+      "status": "outdated",
+      "finding": "QuickBooks Online Plus pricing was increased from $99 to $140 per month in August 2026, so the claim is no longer accurate.",
+      "source_url": "https://www.certumsolutions.com/library/quickbooks-online-plans-compared"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "plan_limit",
+      "claim_text": "Plus tier supports five users",
+      "status": "confirmed",
+      "finding": "QuickBooks Online Plus tier supports up to five billable users according to current official Intuit documentation, plus two accountant firm users who are non-billable.",
+      "source_url": "https://quickbooks.intuit.com/pricing/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Advanced plan costs $235 per month",
+      "status": "outdated",
+      "finding": "QuickBooks Online Advanced currently costs $340 per month as of August 1, 2026, following a price increase from the previous $275 per month. The claimed $235 price appears to be from an earlier period.",
+      "source_url": "https://quickbooks.intuit.com/r/product-update/quickbooks-price-changes/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "plan_limit",
+      "claim_text": "Advanced plan offers 25 users",
+      "status": "confirmed",
+      "finding": "QuickBooks Online Advanced plan supports up to 25 users according to Intuit's official subscription documentation, confirming the claim.",
+      "source_url": "https://quickbooks.intuit.com/subscription/"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "post_id": 436,
+  "title": "Best Accounting Software for Small Business 2026: QuickBooks vs FreshBooks vs Zoho Books",
+  "url": "https://equinoxen.com/best-accounting-software-small-business-2026/",
+  "audited_at": "2026-08-29T06:55:44.937489",
+  "claims": [
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "other",
+      "claim_text": "Automated transaction categorization correctly classifies roughly 95% of expenses without manual intervention",
+      "claim_number": 95,
+      "status": "unverifiable",
+      "finding": "Intuit's official documentation states QuickBooks Online can auto-categorize expenses with a 'high rate of accuracy' but does not specify a 95% accuracy figure. Third-party sources cite 85-95% or 50% accuracy depending on context, but no official Intuit pages confirm the specific 95% claim.",
+      "source_url": "https://quickbooks.intuit.com/learn-support/en-us/help-article/manage-expenses/automatically-categorize-expenses-quickbooks/L2I4JyDvA_US_en_US"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "feature",
+      "claim_text": "Provides over 60 customizable report templates",
+      "status": "confirmed",
+      "finding": "QuickBooks Online Plus provides 60+ standard report templates according to official Intuit documentation, which aligns with the claim of over 60 customizable report templates.",
+      "source_url": "https://www.intuit.com/content/dam/intuit/intuitcom/partners/documents/icom-education-program-ca-qbo-ch11-reports-in-quickbooks.pdf"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "integration",
+      "claim_text": "Has over 750 connected apps in its third-party integration ecosystem",
+      "status": "confirmed",
+      "finding": "QuickBooks Online's official integration page states they integrate with over 750 popular business apps, and their accountant ecosystem page also confirms 750+ integrated apps available.",
+      "source_url": "https://quickbooks.intuit.com/online/integrations/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Simple Start tier costs $35/month",
+      "status": "outdated",
+      "finding": "QuickBooks Online Simple Start currently costs $38 per month, not $35. The price increased from $35 to $38 as part of Intuit's pricing changes that took effect in mid-2025 and apply to 2026 subscriptions.",
+      "source_url": "https://quickbooks.intuit.com/compare/square-vs-quickbooks/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Essentials tier costs $65/month",
+      "status": "discrepancy",
+      "finding": "The current official price for QuickBooks Online Essentials is $85 per month as of August 2026, not $65 per month. The price increased from $75/month to $85/month effective August 1, 2026.",
+      "source_url": "https://quickbooks.intuit.com/r/product-update/quickbooks-price-changes/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Plus tier costs $99/month",
+      "status": "outdated",
+      "finding": "The Plus tier now costs $140/month as of August 2026, according to multiple current sources including vendor-related pricing information. The claim of $99/month was the previous price before the August 2026 price increase.",
+      "source_url": "https://www.certumsolutions.com/library/quickbooks-online-plans-compared"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Advanced tier costs $235/month",
+      "status": "discrepancy",
+      "finding": "According to current official pricing information, QuickBooks Online Advanced costs $275 per month, not $235 per month as claimed.",
+      "source_url": "https://quickbooks.intuit.com/pricing/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "plan_limit",
+      "claim_text": "Plus tier includes up to five users",
+      "status": "confirmed",
+      "finding": "QuickBooks Online Plus includes up to 5 users according to official Intuit documentation, which matches the claim exactly.",
+      "source_url": "https://quickbooks.intuit.com/products/"
+    },
+    {
+      "product": "QuickBooks Online",
+      "claim_type": "price",
+      "claim_text": "Payroll services cost an additional $45/month plus $5 per employee",
+      "status": "outdated",
+      "finding": "Current QuickBooks Workforce Payroll pricing is $50/month plus $6.50 per employee as of July 2026, not $45/month plus $5 per employee as claimed. The product was also rebranded from QuickBooks Online Payroll to QuickBooks Workforce.",
+      "source_url": "https://quickbooks.intuit.com/payroll/pricing/"
+    }
+  ]
+}

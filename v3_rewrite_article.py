@@ -173,13 +173,7 @@ def find_post(identifier):
 def detect_content_type(title):
     """Fallback heuristic for posts published before content_type was tracked."""
     title_lower = title.lower()
-    vs_count = len(re.findall(r'\bvs\.?\b', title_lower))
-    if vs_count >= 2:
-        # "X vs Y vs Z" names 3+ products, the comparison prompt only
-        # supports exactly 2, so this needs the buying_guide structure
-        # instead, even though it reads like a comparison title.
-        return "buying_guide"
-    if vs_count == 1:
+    if " vs " in title_lower or " vs. " in title_lower:
         return "comparison"
     if re.search(r'\b(best|top)\b', title_lower):
         return "buying_guide"
@@ -243,9 +237,6 @@ def build_retrofit_prompt(content_type, title, keyword, product, programs,
     if content_type == "comparison":
         product1 = programs[0] if len(programs) > 0 else product
         product2 = programs[1] if len(programs) > 1 else "the alternative"
-        if len(programs) > 2:
-            dropped = programs[2:]
-            print(f"   ⚠️  Comparison only supports 2 products, dropping: {', '.join(dropped)}. Consider --type buying_guide instead for 3+ products.")
         scoring_blocks = (
             f"<!--SCORES\nproduct: {product1}\n{rubric_keys}\n-->\n"
             f"<!--SCORES\nproduct: {product2}\n{rubric_keys}\n-->"

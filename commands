@@ -21,6 +21,8 @@ crontab -l
 #get LinkedIn code
 https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86k0i096lhhnp3&redirect_uri=https://equinoxen.com&scope=openid%20profile%20w_member_social%20w_organization_social
 
+#Publishes after draft set, and pushes to all social as well
+python3 content_pipeline.py publish <post_id>
 #Lists every cached product with its score, assessed date, and days remaining before auto-reassessment
 python3 content_pipeline.py ratings
 #Manually forces a reassessment
@@ -40,4 +42,6 @@ buying_guide — multiple products, "Best X for Y" style
 python3 rewrite_article.py freshbooks-vs-quickbooks --type comparison
 python3 rewrite_article.py best-crm-software --type buying_guide
 python3 rewrite_article.py --list
-python3 rewrite_article.py --list | grep -i "5 Best SEO Tools for Agencies"
+python3 rewrite_article.py --list | grep -iA 4 "5 Best SEO Tools for Agencies"
+--refresh (to refresh the scoring, otherwise auto at 365 days)
+

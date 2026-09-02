@@ -754,103 +754,6 @@ def get_published_urls():
     posts = tracker.get("posts", [])
     return [{"title": p["title"], "url": p["post_url"], "keyword": p["keyword"]} for p in posts if p.get("post_url")]
 
-
-# ─── PROMOTE A REVIEWED DRAFT TO LIVE ─────────────────────────
-def publish_draft(post_id):
-    """
-    Flips a draft to published after human review, then runs the same
-    distribution steps a live-published run would: social posting,
-    IndexNow, Google Indexing API. This is the second half of the
-    draft-first workflow: run_pipeline() creates the draft, a human
-    reviews/edits it in wp-admin, then this promotes it and fires
-    distribution once it's actually ready to be public.
-    """
-    print(f"\n📤 Publishing draft {post_id}...")
-
-    try:
-        response = requests.get(
-            f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
-            auth=(WP_USER, WP_PASS),
-            params={"context": "edit"},
-        )
-        if response.status_code != 200:
-            print(f"   ❌ Could not fetch post {post_id}: {response.status_code}")
-            return False
-        post = response.json()
-        current_status = post.get("status")
-    except Exception as e:
-        print(f"   ❌ Error fetching post: {e}")
-        return False
-
-    if current_status == "publish":
-        print(f"   ℹ️  Post {post_id} is already published, skipping status change")
-    else:
-        try:
-            update_response = requests.post(
-                f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
-                json={"status": "publish"},
-                auth=(WP_USER, WP_PASS),
-                headers={"Content-Type": "application/json"},
-            )
-            if update_response.status_code not in (200, 201):
-                print(f"   ❌ Failed to publish: {update_response.status_code} — {update_response.text[:200]}")
-                return False
-            post = update_response.json()
-            print(f"   ✅ Post {post_id} is now live")
-        except Exception as e:
-            print(f"   ❌ Error publishing: {e}")
-            return False
-
-    title = post.get("title", {}).get("rendered", "")
-    excerpt = post.get("excerpt", {}).get("rendered", "")
-    excerpt = re.sub(r'<[^>]+>', '', excerpt).strip()
-    content_html = post.get("content", {}).get("rendered", "")
-    post_url = post.get("link", "")
-    category_id = post.get("categories", [1])[0] if post.get("categories") else 1
-
-    image_url = None
-    featured_media_id = post.get("featured_media")
-    if featured_media_id:
-        try:
-            media_response = requests.get(
-                f"{WP_URL}/wp-json/wp/v2/media/{featured_media_id}",
-                auth=(WP_USER, WP_PASS),
-            )
-            if media_response.status_code == 200:
-                image_url = media_response.json().get("source_url")
-        except Exception:
-            pass
-
-    # Pull keyword and content_type back from the tracker, saved when
-    # the draft was first created.
-    tracker = load_published_posts()
-    tracked_entry = next((p for p in tracker.get("posts", []) if p.get("post_id") == post_id), None)
-    keyword = tracked_entry.get("keyword", title) if tracked_entry else title
-
-    # Keep the tracker's post_url current in case it still had a draft/
-    # preview-style link saved from creation time.
-    if tracked_entry and tracked_entry.get("post_url") != post_url:
-        tracked_entry["post_url"] = post_url
-        with open(PUBLISHED_TRACKER, "w") as f:
-            json.dump(tracker, f, indent=2)
-
-    post_to_social(
-        title,
-        excerpt,
-        post_url,
-        category_id=category_id,
-        image_url=image_url,
-        pinterest_image_url=image_url,
-        article_html=content_html,
-        keyword=keyword,
-    )
-
-    submit_to_indexnow(post_url)
-    submit_to_google(post_url)
-
-    print(f"\n✅ Draft promoted and distributed: {post_url}")
-    return True
-
 def normalize_comparison_key(keyword, programs):
     if programs and len(programs) >= 2:
         normalized = sorted(p.lower().strip() for p in programs[:2])
@@ -1256,33 +1159,6 @@ def list_ratings():
 # methodology page. Do not let Claude invent its own weights —
 # these must stay identical across every review for scores to be
 # comparable across the site.
-# ─── VOICE AND SOURCE-PARAPHRASE GUIDANCE ─────────────────────
-# Shared across all three prompt builders so tone stays consistent
-# sitewide. Consistent with the site's real author persona (an
-# engineer), not a marketing-copy voice.
-VOICE_GUIDANCE = """
-VOICE AND TONE:
-Write like an engineer explaining something to a colleague, not like a
-marketing copywriter. Prioritize directness and technical precision
-over polish. Shorter, plainer sentences are fine, and an occasional
-passive-voice construction is fine, it reads more like a real person
-than uniformly polished prose does. State what a feature does and what
-it costs. Don't sell it. Avoid hype language, superlatives, and
-manufactured urgency in both headings and body text (examples to avoid:
-"game-changing", "revolutionary", "must-have", "the ultimate guide").
-Titles should be clear and specific about what the article covers
-rather than dramatic or urgency-driven.
-"""
-
-SOURCE_PARAPHRASE_GUIDANCE = """
-SOURCE MATERIAL:
-Where this prompt gives you verified facts, research findings, or any
-other source-derived information, restate the underlying facts entirely
-in your own words and sentence structure. Do not reuse phrasing from
-that material, even short phrases, take the meaning and write it fresh.
-"""
-
-
 SCORING_RUBRIC = [
     ("Ease of use", 20),
     ("Features", 20),
@@ -1513,8 +1389,6 @@ Primary keyword: {keyword}
 Product being reviewed: {product}
 Affiliate links to include: {affiliate_links}
 {facts_section}
-{VOICE_GUIDANCE}
-{SOURCE_PARAPHRASE_GUIDANCE}
 
 ARTICLE REQUIREMENTS:
 - Length: 1,200-1,500 words
@@ -1602,8 +1476,10 @@ CRITICAL FORMATTING RULES:
 - Example WRONG: "HubSpot is a CRM — and a powerful one at that"
 - Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
 - Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
-- Titles and headings should be clear and specific, not dramatic or hype-driven
-- See VOICE AND TONE guidance above for language style throughout the article
+- Use powerful, dramatic word choices in the article title and headings
+- Use action-driven, benefit-focused language that creates urgency
+- Examples of strong title words: Ultimate, Definitive, Proven, Powerful, Essential, Complete, Brutal, Honest, Exposed, Dominate, Crushing, Game-Changing
+- Headings should create curiosity or promise a specific outcome
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -1631,10 +1507,6 @@ def build_comparison_prompt(title, keyword, programs, affiliate_links, internal_
     product1 = programs[0] if len(programs) > 0 else "Product A"
     product2 = programs[1] if len(programs) > 1 else "Product B"
 
-    if len(programs) > 2:
-        dropped = programs[2:]
-        print(f"   ⚠️  Comparison only supports 2 products, dropping: {', '.join(dropped)}. Consider --type buying_guide instead for 3+ products.")
-
     rubric_lines = "\n".join(
         f"- {category} ({weight}%)" for category, weight in SCORING_RUBRIC
     )
@@ -1661,8 +1533,6 @@ Primary keyword: {keyword}
 Products compared: {product1} vs {product2}
 Affiliate links: {affiliate_links}
 {facts_section}
-{VOICE_GUIDANCE}
-{SOURCE_PARAPHRASE_GUIDANCE}
 
 ARTICLE REQUIREMENTS:
 - Length: 1,500-2,000 words
@@ -1752,8 +1622,10 @@ CRITICAL FORMATTING RULES:
 - Example WRONG: "HubSpot is a CRM — and a powerful one at that"
 - Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
 - Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
-- Titles and headings should be clear and specific, not dramatic or hype-driven
-- See VOICE AND TONE guidance above for language style throughout the article
+- Use powerful, dramatic word choices in the article title and headings
+- Use action-driven, benefit-focused language that creates urgency
+- Examples of strong title words: Ultimate, Definitive, Proven, Powerful, Essential, Complete, Brutal, Honest, Exposed, Dominate, Crushing, Game-Changing
+- Headings should create curiosity or promise a specific outcome
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -1802,11 +1674,9 @@ ARTICLE DETAILS:
 Title: {title}
 Note: Include {CURRENT_YEAR} in the article title only — not in headings, slug, or keyword references throughout the body.
 Primary keyword: {keyword}
-Candidate products (choose your strongest 3 to feature, don't cover all of these if there are more than 3): {products_list_str}
+Products to feature: {products_list_str}
 Affiliate links: {affiliate_links}
 {facts_section}
-{VOICE_GUIDANCE}
-{SOURCE_PARAPHRASE_GUIDANCE}
 
 ARTICLE REQUIREMENTS:
 - Length: 1,500-2,000 words
@@ -1835,7 +1705,7 @@ automatically from the scores computed below.
 REQUIRED STRUCTURE:
 1. Introduction — why this category matters (100 words)
 2. What to look for — buying criteria with H3 subheadings (200 words)
-3. Top picks — exactly 3 products, your strongest picks only (600 words total section):
+3. Top picks — 3-5 products (800 words total section):
    - Brief overview
    - Key features
    - Pricing
@@ -1849,10 +1719,10 @@ REQUIRED STRUCTURE:
    one place rather than scattered.
 5. Comparison table — all products side by side (HTML table)
 6. How to choose — decision framework (200 words)
-7. Final recommendations — which of your 3 picks fits which situation (150 words)
+7. Final recommendations — top 3 for different needs (150 words)
 
 SCORING INSTRUCTIONS:
-Score each of the 3 products you chose to feature against these fixed
+Score every product you cover ({products_list_str}) against these fixed
 categories, each on a scale of 1 to 10, based on what you write about it
 in its Top Picks entry. Be honest and differentiated between products, a
 genuinely weaker product in a category should score in the 4-6 range, not
@@ -1889,8 +1759,10 @@ CRITICAL FORMATTING RULES:
 - Example WRONG: "HubSpot is a CRM — and a powerful one at that"
 - Example CORRECT: "HubSpot is a CRM, and it is one of the most powerful options available"
 - Hyphens are only allowed in hyphenated compound words like "well-known" or "data-driven"
-- Titles and headings should be clear and specific, not dramatic or hype-driven
-- See VOICE AND TONE guidance above for language style throughout the article
+- Use powerful, dramatic word choices in the article title and headings
+- Use action-driven, benefit-focused language that creates urgency
+- Examples of strong title words: Ultimate, Definitive, Proven, Powerful, Essential, Complete, Brutal, Honest, Exposed, Dominate, Crushing, Game-Changing
+- Headings should create curiosity or promise a specific outcome
 
 CRITICAL STYLING RULES:
 - Do NOT add any inline styles except on tables
@@ -2538,18 +2410,17 @@ def publish_to_wordpress(title, content, metadata, category_id, draft=True, feat
             print(f"   ✅ Published! ID: {post_id}")
             print(f"   🔗 URL: {post_link}")
 
-            if not draft:
-                time.sleep(2)
-                try:
-                    requests.post(
-                        f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
-                        json={"status": "publish"},
-                        auth=(WP_USER, WP_PASS),
-                        headers={"Content-Type": "application/json"}
-                    )
-                    print(f"   🔄 WordPress hooks triggered")
-                except Exception as e:
-                    print(f"   ⚠️  Hook trigger failed: {e}")
+            time.sleep(2)
+            try:
+                requests.post(
+                    f"{WP_URL}/wp-json/wp/v2/posts/{post_id}",
+                    json={"status": "publish"},
+                    auth=(WP_USER, WP_PASS),
+                    headers={"Content-Type": "application/json"}
+                )
+                print(f"   🔄 WordPress hooks triggered")
+            except Exception as e:
+                print(f"   ⚠️  Hook trigger failed: {e}")
 
             if post_id and focus_keyword:
                 try:
@@ -2613,7 +2484,7 @@ def cleanup_old_files():
     print("   ✅ Cleanup complete")
 
 # ─── MAIN PIPELINE ────────────────────────────────────────────
-def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True, use_research=True):
+def run_pipeline(num_articles=3, publish_as_draft=False, publish_to_wp=True, use_research=True):
     print("=" * 60)
     print("  EQUINOXEN MEDIA — CONTENT PIPELINE")
     print(f"  Running at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -2752,8 +2623,8 @@ def run_pipeline(num_articles=3, publish_as_draft=True, publish_to_wp=True, use_
             print(f"\n⏳ Waiting 5 seconds before next article...")
             time.sleep(5)
 
-        # ── SUBMIT TO INDEXNOW & GOOGLE (only for actually-live posts) ──
-        if post_id and post_url and not publish_as_draft:
+        # ── SUBMIT TO INDEXNOW & GOOGLE ───────────────────────────
+        if post_id and post_url:
             submit_to_indexnow(post_url)
             submit_to_google(post_url)
 
@@ -2798,12 +2669,10 @@ if __name__ == "__main__":
         clear_rating(" ".join(args[1:]))
     elif len(args) > 1 and args[0] == "clear-research":
         clear_research(" ".join(args[1:]))
-    elif len(args) > 1 and args[0] == "publish":
-        publish_draft(int(args[1]))
     else:
         run_pipeline(
             num_articles=1,
-            publish_as_draft=True,
+            publish_as_draft=False,
             publish_to_wp=True,
             use_research=use_research
         )
